@@ -1,0 +1,366 @@
+type User @aws_cognito_user_pools {
+  id: ID!
+  email: String!
+  clubs(filter: ModelUserClubFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelUserClubConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+type Club {
+  id: ID!
+  name: String!
+  members(filter: ModelUserClubFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelUserClubConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type UserClub {
+  id: ID!
+  user: User!
+  club: Club!
+  role: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  userClubsId: ID
+  clubMembersId: ID
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelUserConnection @aws_cognito_user_pools {
+  items: [User]!
+  nextToken: String
+}
+
+input ModelUserFilterInput {
+  id: ModelIDInput
+  email: ModelStringInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelUserFilterInput]
+  or: [ModelUserFilterInput]
+  not: ModelUserFilterInput
+  owner: ModelStringInput
+}
+
+type Query {
+  getClub(id: ID!): Club
+  listClubs(filter: ModelClubFilterInput, limit: Int, nextToken: String): ModelClubConnection
+  getUserClub(id: ID!): UserClub
+  listUserClubs(filter: ModelUserClubFilterInput, limit: Int, nextToken: String): ModelUserClubConnection
+  getClubByName(name: String!, sortDirection: ModelSortDirection, filter: ModelClubFilterInput, limit: Int, nextToken: String): ModelClubConnection
+  getUser(id: ID!): User @aws_cognito_user_pools
+  listUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection @aws_cognito_user_pools
+  getUserByEmail(email: String!, sortDirection: ModelSortDirection, filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection @aws_cognito_user_pools
+}
+
+input ModelUserConditionInput {
+  email: ModelStringInput
+  and: [ModelUserConditionInput]
+  or: [ModelUserConditionInput]
+  not: ModelUserConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  owner: ModelStringInput
+}
+
+input CreateUserInput {
+  id: ID
+  email: String!
+}
+
+input UpdateUserInput {
+  id: ID!
+  email: String
+}
+
+input DeleteUserInput {
+  id: ID!
+}
+
+type Mutation {
+  createClub(input: CreateClubInput!, condition: ModelClubConditionInput): Club
+  updateClub(input: UpdateClubInput!, condition: ModelClubConditionInput): Club
+  deleteClub(input: DeleteClubInput!, condition: ModelClubConditionInput): Club
+  createUserClub(input: CreateUserClubInput!, condition: ModelUserClubConditionInput): UserClub
+  updateUserClub(input: UpdateUserClubInput!, condition: ModelUserClubConditionInput): UserClub
+  deleteUserClub(input: DeleteUserClubInput!, condition: ModelUserClubConditionInput): UserClub
+  createUser(input: CreateUserInput!, condition: ModelUserConditionInput): User @aws_cognito_user_pools
+  updateUser(input: UpdateUserInput!, condition: ModelUserConditionInput): User @aws_cognito_user_pools
+  deleteUser(input: DeleteUserInput!, condition: ModelUserConditionInput): User @aws_cognito_user_pools
+}
+
+input ModelSubscriptionUserFilterInput {
+  id: ModelSubscriptionIDInput
+  email: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionUserFilterInput]
+  or: [ModelSubscriptionUserFilterInput]
+  userClubsId: ModelSubscriptionIDInput
+  owner: ModelStringInput
+}
+
+type Subscription {
+  onCreateClub(filter: ModelSubscriptionClubFilterInput): Club @aws_subscribe(mutations: ["createClub"])
+  onUpdateClub(filter: ModelSubscriptionClubFilterInput): Club @aws_subscribe(mutations: ["updateClub"])
+  onDeleteClub(filter: ModelSubscriptionClubFilterInput): Club @aws_subscribe(mutations: ["deleteClub"])
+  onCreateUserClub(filter: ModelSubscriptionUserClubFilterInput): UserClub @aws_subscribe(mutations: ["createUserClub"])
+  onUpdateUserClub(filter: ModelSubscriptionUserClubFilterInput): UserClub @aws_subscribe(mutations: ["updateUserClub"])
+  onDeleteUserClub(filter: ModelSubscriptionUserClubFilterInput): UserClub @aws_subscribe(mutations: ["deleteUserClub"])
+  onCreateUser(filter: ModelSubscriptionUserFilterInput, owner: String): User @aws_subscribe(mutations: ["createUser"]) @aws_cognito_user_pools
+  onUpdateUser(filter: ModelSubscriptionUserFilterInput, owner: String): User @aws_subscribe(mutations: ["updateUser"]) @aws_cognito_user_pools
+  onDeleteUser(filter: ModelSubscriptionUserFilterInput, owner: String): User @aws_subscribe(mutations: ["deleteUser"]) @aws_cognito_user_pools
+}
+
+type ModelClubConnection {
+  items: [Club]!
+  nextToken: String
+}
+
+input ModelClubFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelClubFilterInput]
+  or: [ModelClubFilterInput]
+  not: ModelClubFilterInput
+}
+
+input ModelClubConditionInput {
+  name: ModelStringInput
+  and: [ModelClubConditionInput]
+  or: [ModelClubConditionInput]
+  not: ModelClubConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+}
+
+input CreateClubInput {
+  id: ID
+  name: String!
+}
+
+input UpdateClubInput {
+  id: ID!
+  name: String
+}
+
+input DeleteClubInput {
+  id: ID!
+}
+
+input ModelSubscriptionClubFilterInput {
+  id: ModelSubscriptionIDInput
+  name: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionClubFilterInput]
+  or: [ModelSubscriptionClubFilterInput]
+  clubMembersId: ModelSubscriptionIDInput
+}
+
+type ModelUserClubConnection @aws_cognito_user_pools {
+  items: [UserClub]!
+  nextToken: String
+}
+
+input ModelUserClubFilterInput {
+  id: ModelIDInput
+  role: ModelStringInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelUserClubFilterInput]
+  or: [ModelUserClubFilterInput]
+  not: ModelUserClubFilterInput
+  userClubsId: ModelIDInput
+  clubMembersId: ModelIDInput
+}
+
+input ModelUserClubConditionInput {
+  role: ModelStringInput
+  and: [ModelUserClubConditionInput]
+  or: [ModelUserClubConditionInput]
+  not: ModelUserClubConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  userClubsId: ModelIDInput
+  clubMembersId: ModelIDInput
+}
+
+input CreateUserClubInput {
+  id: ID
+  role: String!
+  userClubsId: ID
+  clubMembersId: ID
+}
+
+input UpdateUserClubInput {
+  id: ID!
+  role: String
+  userClubsId: ID
+  clubMembersId: ID
+}
+
+input DeleteUserClubInput {
+  id: ID!
+}
+
+input ModelSubscriptionUserClubFilterInput {
+  id: ModelSubscriptionIDInput
+  role: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionUserClubFilterInput]
+  or: [ModelSubscriptionUserClubFilterInput]
+}

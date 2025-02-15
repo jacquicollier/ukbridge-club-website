@@ -1,0 +1,51 @@
+{
+  "name": "ukbridge-club-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "prettier --check . && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "build:local": "prettier --write . && next build",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@aws-amplify/api": "^6.3.0",
+    "@aws-amplify/auth": "^6.10.2",
+    "@aws-amplify/ui-react": "^6.9.1",
+    "@googlemaps/markerclusterer": "^2.5.1",
+    "@turf/turf": "^7.2.0",
+    "@vis.gl/react-google-maps": "latest",
+    "aws-amplify": "^6.13.0",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.14.1",
+    "@aws-amplify/backend-cli": "^1.4.10",
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "aws-cdk": "^2.178.2",
+    "aws-cdk-lib": "^2.178.2",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "postcss": "^8",
+    "prettier": "^3.5.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ukbridgeclubamplify-dev-0c489-authRole",
+      "UnauthRoleArn": "arn:aws:iam::124355663536:role/amplify-ukbridgeclubamplify-dev-0c489-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::124355663536:role/amplify-ukbridgeclubamplify-dev-0c489-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-ukbridgeclubamplify-dev-0c489-deployment",
+      "UnauthRoleName": "amplify-ukbridgeclubamplify-dev-0c489-unauthRole",
+      "StackName": "amplify-ukbridgeclubamplify-dev-0c489",
+      "StackId": "arn:aws:cloudformation:eu-west-2:124355663536:stack/amplify-ukbridgeclubamplify-dev-0c489/1a971860-ebc1-11ef-9c66-02db4c6db733",
+      "AmplifyAppId": "d2milbgcllk9dz"
+    },
+    "categories": {
+      "auth": {
+        "ukbridgeclubamplifyb1a78a80": {}
+      },
+      "api": {
+        "ukbridgeclubamplify": {}
+      }
+    }
+  }
+}
