@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Coordinate, County } from '@/app/model/types';
-import { parseStringPromise, ParsedXml } from 'xml2js';
+import { parseStringPromise } from 'xml2js';
 
 export async function GET() {
   try {
@@ -10,71 +10,86 @@ export async function GET() {
       throw new Error("KML URL doesn't exist");
     }
 
-    const text = await (await fetch(kmlUrl)).text();
-    const xmlDoc = await parseStringPromise(text);
-    return buildSuccessResponse(extractCountiesFromKML(xmlDoc), 200);
+    const response = await fetch(kmlUrl);
+    const text = await response.text();
+
+    const counties = await extractCountiesFromKML(text);
+    return buildSuccessResponse(counties, 200);
   } catch (error) {
     console.error('Error loading KML:', error);
     return buildErrorResponse(error, 500);
   }
 }
 
-const extractCountiesFromKML = (xmlDoc: ParsedXml): County[] => {
-  // Extract county data from KML `<Placemark>`
-  const placemarks = xmlDoc.kml.Document[0].Folder[0].Placemark || []; // Get all Placemark elements from the parsed XML
+// Define a type for Placemark
+interface Placemark {
+  ExtendedData?: {
+    SchemaData?: {
+      SimpleData?: { $: { name: string }; _: string }[];
+    }[];
+  }[];
+  MultiGeometry?: {
+    Polygon?: {
+      outerBoundaryIs?: {
+        LinearRing?: { coordinates?: string[] }[];
+      }[];
+    }[];
+  }[];
+  Polygon?: {
+    outerBoundaryIs?: {
+      LinearRing?: { coordinates?: string[] }[];
+    }[];
+  }[];
+}
+
+async function extractCountiesFromKML(text: string): Promise<County[]> {
+  const parsedData = await parseStringPromise(text);
+  const placemarks: Placemark[] =
+    parsedData?.kml?.Document?.[0]?.Folder?.[0]?.Placemark || [];
 
   return placemarks
     .map((placemark) => {
-      // Extract county name from `ctyua_name`
       const nameElement =
         placemark.ExtendedData?.[0]?.SchemaData?.[0]?.SimpleData?.find(
-          (el: { $: { name: string }; _: string }) => el.$.name === 'COUNTY',
+          (el) => el.$.name === 'COUNTY',
         );
 
-      return {
-        name: nameElement?._ ?? 'Unknown', // Handle missing county names
-        coordinates: extractCoordinatesFromKML(placemark),
-      } as County;
-    })
-    .filter((county): county is County => county !== null); // Filter out null values
-};
+      if (!nameElement) return null;
 
-function extractCoordinatesFromKML(placemark: any): Coordinate[][] {
-  // Initialize an empty array to hold arrays of coordinates
+      return {
+        name: nameElement._ ?? 'Unknown',
+        coordinates: extractCoordinatesFromKML(placemark),
+      };
+    })
+    .filter((county): county is County => county !== null); // Proper type guard
+}
+
+function extractCoordinatesFromKML(placemark: Placemark): Coordinate[][] {
   const coordinates: Coordinate[][] = [];
 
-  const parseCoordinates = (
-    coordinatesText: string | undefined,
-  ): Coordinate[] => {
+  const parseCoordinates = (coordinatesText?: string): Coordinate[] => {
     if (!coordinatesText) return [];
 
     return coordinatesText
       .trim()
-      .split(/\s+/) // Use regex to handle multiple spaces
+      .split(/\s+/)
       .map((coord) => {
         const [lng, lat] = coord.split(',').map(Number);
-        if (isNaN(lat) || isNaN(lng)) {
-          console.warn('Invalid coordinate found:', coord);
-          return null; // Mark invalid entries
-        }
-        return { lat, lng };
+        return isNaN(lat) || isNaN(lng) ? null : { lat, lng };
       })
-      .filter((coord): coord is Coordinate => coord !== null); // Remove invalid entries
+      .filter((coord): coord is Coordinate => coord !== null);
   };
 
-  // Check if we have a MultiGeometry, and handle it accordingly
-  if (placemark.MultiGeometry) {
-    // MultiGeometry can have multiple Polygons
-    placemark.MultiGeometry[0].Polygon?.forEach((polygon: any) => {
+  if (placemark.MultiGeometry?.[0]?.Polygon) {
+    placemark.MultiGeometry[0].Polygon.forEach((polygon) => {
       const coordinatesText =
         polygon?.outerBoundaryIs?.[0]?.LinearRing?.[0]?.coordinates?.[0];
       const parsed = parseCoordinates(coordinatesText);
       if (parsed.length > 0) coordinates.push(parsed);
     });
-  } else if (placemark.Polygon) {
-    // If not MultiGeometry, it should be a regular Polygon
+  } else if (placemark.Polygon?.[0]) {
     const coordinatesText =
-      placemark.Polygon?.[0]?.outerBoundaryIs?.[0]?.LinearRing?.[0]
+      placemark.Polygon[0]?.outerBoundaryIs?.[0]?.LinearRing?.[0]
         ?.coordinates?.[0];
     const parsed = parseCoordinates(coordinatesText);
     if (parsed.length > 0) coordinates.push(parsed);
@@ -93,8 +108,7 @@ function buildSuccessResponse(data: County[], statusCode: number) {
   );
 }
 
-export async function buildErrorResponse(error: unknown, statusCode: number) {
-  // Ensure the error is an instance of Error
+function buildErrorResponse(error: unknown, statusCode: number) {
   const errorMessage = error instanceof Error ? error.message : String(error);
 
   return NextResponse.json(

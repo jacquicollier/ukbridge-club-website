@@ -36,26 +36,24 @@ const Counties = (props: {
   const [counties, setCounties] = useState<County[]>([]);
   const [polygons, setPolygons] = useState<google.maps.Polygon[]>([]);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const loadCounties = async () => {
-      setLoading(true);
-      setError(null); // Reset any previous errors
+      // setLoading(true);
+      // setError(null); // Reset any previous errors
 
       try {
         const data = await fetchCounties();
         setCounties(data);
         props.onCountiesLoaded(data);
       } catch (err) {
-        setError(
-          err instanceof Error
-            ? err.message
-            : 'An error occurred while fetching counties',
-        );
+        console.error(err);
+        // setError(
+        //   err instanceof Error
+        //     ? err.message
+        //     : 'An error occurred while fetching counties',
+        // );
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 

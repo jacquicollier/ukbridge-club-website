@@ -131,6 +131,7 @@ function useCircle(props: CircleProps) {
   return circle;
 }
 
+// eslint-disable-next-line react/display-name
 export const Circle = forwardRef((props: CircleProps, ref: CircleRef) => {
   const circle = useCircle(props);
   const map = useContext(GoogleMapsContext)?.map;

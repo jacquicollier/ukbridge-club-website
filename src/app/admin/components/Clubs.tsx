@@ -3,7 +3,7 @@
 import { generateClient } from 'aws-amplify/api';
 import { listClubs } from '@/graphql/queries';
 import { useEffect, useState } from 'react';
-import type { Club } from '@/graphql/types';
+import { Club } from '@/API';
 
 export default function Clubs() {
   const [clubs, setClubs] = useState<Club[]>([]);

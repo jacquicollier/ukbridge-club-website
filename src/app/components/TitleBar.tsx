@@ -14,6 +14,7 @@ const TitleBar: React.FunctionComponent = () => {
         const currentUser = await getCurrentUser();
         setUser(currentUser);
       } catch (error) {
+        console.error('Error fetching user:', error);
         setUser(null);
       }
     };

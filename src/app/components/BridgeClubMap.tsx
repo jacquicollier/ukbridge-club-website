@@ -8,7 +8,6 @@ import {
 import Counties from '@/app/components/Counties';
 import { County } from '@/app/model/types';
 // import MapMask from "@/app/components/MapMask";
-import { useState } from 'react';
 import PoiMarkers from '@/app/components/PoiMarkers';
 import { england } from '@/app/model/england';
 import { scotland } from '@/app/model/scotland';
