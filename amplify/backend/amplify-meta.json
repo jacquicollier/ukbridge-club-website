@@ -46,7 +46,7 @@
         "GraphQLAPIEndpointOutput": "https://gue2wkmzc5fmnljlaabbdbla5m.appsync-api.eu-west-2.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-lub5egadcfdeve5w4r6plhdcfe"
       },
-      "lastPushTimeStamp": "2025-02-15T22:41:25.003Z",
+      "lastPushTimeStamp": "2025-02-16T14:33:01.825Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiukbridgeclubamplify"
@@ -84,7 +84,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/auth/ukbridgeclubamplifyb1a78a80-cloudformation-template.json",
         "logicalId": "authukbridgeclubamplifyb1a78a80"
       },
-      "lastPushTimeStamp": "2025-02-15T22:41:25.007Z",
+      "lastPushTimeStamp": "2025-02-16T14:33:01.827Z",
       "output": {
         "UserPoolId": "eu-west-2_HtanvtmuD",
         "AppClientIDWeb": "23vc6p9ikchfnbtb6a1vcau28m",

@@ -26,8 +26,10 @@ const BridgeClubMap = (props: {
   const defaultCenter = { lat: 52.3555, lng: -1.1743 }; // UK Center
   const defaultZoom = 6;
 
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API!;
+
   return (
-    <APIProvider apiKey='AIzaSyCgWG8HhEPvmF_Qw2KaKG2N86mDDXaNwcA'>
+    <APIProvider apiKey={apiKey}>
       <Map
         defaultZoom={defaultZoom}
         defaultCenter={defaultCenter}
