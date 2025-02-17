@@ -2,12 +2,12 @@
 
 import BridgeClubMap from '@/app/components/BridgeClubMap';
 import { useState } from 'react';
-import { County } from '@/app/model/types';
-// import { Auth } from 'aws-amplify/auth';
 import TitleBar from '@/app/components/TitleBar';
+import { Country, County } from '@/app/model/types';
+import { countries } from '@/app/model/countries';
 
 export default function Home() {
-  const [counties, setCounties] = useState<County[]>([]);
+  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [selectedCounty, setSelectedCounty] = useState<County | null>(null);
 
   // const claimClub = async (clubName: string) => {
@@ -34,28 +34,48 @@ export default function Home() {
           {/* Left Column */}
           <div className='w-1/2 bg-gray-100 p-2'>
             <BridgeClubMap
+              selectedCountry={selectedCountry}
               selectedCounty={selectedCounty}
-              onCountiesLoaded={setCounties}
-              onSelectedCounty={setSelectedCounty}
             />
           </div>
 
           {/* Right Column */}
           <div className='w-1/2 bg-gray-200 p-2'>
             <label>Select County: </label>
+
+            {/* Country Dropdown */}
             <select
-              value={selectedCounty?.name || ''} // Ensure state controls the value
-              onChange={(e) =>
-                setSelectedCounty(
-                  counties.find((it) => it.name === e.target.value) || null,
-                )
-              }
+              value={selectedCountry?.id || ''}
+              onChange={(e) => {
+                const country =
+                  countries.find((c) => c.id === e.target.value) || null;
+                setSelectedCountry(country);
+                setSelectedCounty(null); // Reset county when country changes
+              }}
             >
-              <option value='' disabled>
-                Select a county
-              </option>
-              {counties.map((county) => (
-                <option key={county.name} value={county.name}>
+              <option value=''>Any</option>
+              {countries.map((country) => (
+                <option key={country.id} value={country.id}>
+                  {country.name}
+                </option>
+              ))}
+            </select>
+
+            {/* County Dropdown */}
+            <select
+              value={selectedCounty?.id || ''}
+              onChange={(e) => {
+                const county =
+                  selectedCountry?.counties.find(
+                    (c) => c.id === e.target.value,
+                  ) || null;
+                setSelectedCounty(county);
+              }}
+              disabled={!selectedCountry} // Disable until a country is selected
+            >
+              <option value=''>Any</option>
+              {selectedCountry?.counties.map((county) => (
+                <option key={county.id} value={county.id}>
                   {county.name}
                 </option>
               ))}
