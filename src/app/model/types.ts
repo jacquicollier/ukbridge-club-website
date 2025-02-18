@@ -8,4 +8,8 @@ export type Bound = {
 export type Coordinate = { lat: number; lng: number };
 export type County = { id: string; name: string };
 export type Country = { id: string; name: string; counties: County[] };
-export type Poi = { key: string; location: google.maps.LatLngLiteral };
+export type Poi = {
+  key: string;
+  location: google.maps.LatLngLiteral;
+  affiliations: string[];
+};

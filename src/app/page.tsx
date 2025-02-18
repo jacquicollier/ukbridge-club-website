@@ -3,17 +3,15 @@
 import BridgeClubMap from '@/app/components/BridgeClubMap';
 import { useState } from 'react';
 import TitleBar from '@/app/components/TitleBar';
-import { Country, County } from '@/app/model/types';
+import { Country, County, Poi } from '@/app/model/types';
 import Form from '@/app/components/Form';
 import Results from '@/app/components/Results';
-import { england } from '@/app/model/england';
-import { scotland } from '@/app/model/scotland';
-import { wales } from '@/app/model/wales';
-import { northernIreland } from '@/app/model/northern-ireland';
+import { pois } from '@/app/model/constants';
 
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [selectedCounty, setSelectedCounty] = useState<County | null>(null);
+  const [filteredPois, setFilteredPois] = useState<Poi[]>(pois);
 
   // const claimClub = async (clubName: string) => {
   //   try {
@@ -41,9 +39,10 @@ export default function Home() {
           {/* Left Column */}
           <div className='w-1/2 bg-gray-100 p-2'>
             <BridgeClubMap
-              pois={[...england, ...scotland, ...wales, ...northernIreland]}
+              pois={pois}
               selectedCountry={selectedCountry}
               selectedCounty={selectedCounty}
+              onPoisFiltered={setFilteredPois}
             />
           </div>
 
@@ -62,9 +61,7 @@ export default function Home() {
 
               {/* Second Row: Results (Takes up remaining space) */}
               <div className='grow flex-row overflow-auto bg-white p-4'>
-                <Results
-                  pois={[...england, ...scotland, ...wales, ...northernIreland]}
-                />
+                <Results pois={filteredPois} />
               </div>
             </div>
           </div>
