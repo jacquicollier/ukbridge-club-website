@@ -3,6 +3,7 @@
 import { Coordinate, Country, County } from '@/app/model/types';
 import { useMap } from '@vis.gl/react-google-maps';
 import { useEffect, useState } from 'react';
+import { defaultBounds } from '@/app/model/constants';
 
 async function fetchCounty(
   country: string,
@@ -36,10 +37,7 @@ const Counties = (props: {
     polygons.forEach((polygon) => polygon.setMap(null));
 
     if (!props.selectedCountry || !props.selectedCounty) {
-      const bounds = new google.maps.LatLngBounds();
-      bounds.extend(new google.maps.LatLng(49.959999905, -7.57216793459));
-      bounds.extend(new google.maps.LatLng(58.6350001085, 1.68153079591));
-      map.fitBounds(bounds);
+      map.fitBounds(defaultBounds);
       return;
     }
 

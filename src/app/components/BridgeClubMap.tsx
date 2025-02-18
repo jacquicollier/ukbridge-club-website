@@ -3,11 +3,8 @@
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import Counties from '@/app/components/Counties';
 import PoiMarkers from '@/app/components/PoiMarkers';
-import { england } from '@/app/model/england';
-import { scotland } from '@/app/model/scotland';
-import { wales } from '@/app/model/wales';
-import { northernIreland } from '@/app/model/northern-ireland';
-import { Country, County } from '@/app/model/types';
+import { Country, County, Poi } from '@/app/model/types';
+import { defaultBounds } from '@/app/model/constants';
 
 const containerStyle = {
   width: '100%',
@@ -15,6 +12,7 @@ const containerStyle = {
 };
 
 const BridgeClubMap = (props: {
+  pois: Poi[];
   selectedCountry: Country | null;
   selectedCounty: County | null;
 }) => {
@@ -23,19 +21,19 @@ const BridgeClubMap = (props: {
   return (
     <APIProvider apiKey={apiKey}>
       <Map
+        defaultBounds={defaultBounds}
         mapId='da37f3254c6a6d1c'
         style={containerStyle}
         fullscreenControl={false}
         streetViewControl={false}
         mapTypeControl={false}
+        restriction={{ latLngBounds: defaultBounds }}
       >
         <Counties
           selectedCountry={props.selectedCountry}
           selectedCounty={props.selectedCounty}
         />
-        <PoiMarkers
-          pois={[...england, ...scotland, ...wales, ...northernIreland]}
-        />
+        <PoiMarkers pois={props.pois} />
       </Map>
     </APIProvider>
   );
