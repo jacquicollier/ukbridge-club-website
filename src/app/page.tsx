@@ -4,7 +4,12 @@ import BridgeClubMap from '@/app/components/BridgeClubMap';
 import { useState } from 'react';
 import TitleBar from '@/app/components/TitleBar';
 import { Country, County } from '@/app/model/types';
-import { countries } from '@/app/model/countries';
+import Form from '@/app/components/Form';
+import Results from '@/app/components/Results';
+import { england } from '@/app/model/england';
+import { scotland } from '@/app/model/scotland';
+import { wales } from '@/app/model/wales';
+import { northernIreland } from '@/app/model/northern-ireland';
 
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
@@ -28,12 +33,15 @@ export default function Home() {
   return (
     <>
       <div className='flex min-h-screen flex-col'>
-        <TitleBar />
+        <div className='sticky top-0 z-10 bg-white shadow-md'>
+          <TitleBar />
+        </div>
 
         <div className='flex flex-1'>
           {/* Left Column */}
           <div className='w-1/2 bg-gray-100 p-2'>
             <BridgeClubMap
+              pois={[...england, ...scotland, ...wales, ...northernIreland]}
               selectedCountry={selectedCountry}
               selectedCounty={selectedCounty}
             />
@@ -41,45 +49,24 @@ export default function Home() {
 
           {/* Right Column */}
           <div className='w-1/2 bg-gray-200 p-2'>
-            <label>Select County: </label>
+            <div className='flex h-screen flex-col'>
+              {/* First Row: Form */}
+              <div className='bg-gray-200 pb-2'>
+                <Form
+                  selectedCountry={selectedCountry}
+                  onSelectCountry={setSelectedCountry}
+                  selectedCounty={selectedCounty}
+                  onSelectCounty={setSelectedCounty}
+                />
+              </div>
 
-            {/* Country Dropdown */}
-            <select
-              value={selectedCountry?.id || ''}
-              onChange={(e) => {
-                const country =
-                  countries.find((c) => c.id === e.target.value) || null;
-                setSelectedCountry(country);
-                setSelectedCounty(null); // Reset county when country changes
-              }}
-            >
-              <option value=''>Any</option>
-              {countries.map((country) => (
-                <option key={country.id} value={country.id}>
-                  {country.name}
-                </option>
-              ))}
-            </select>
-
-            {/* County Dropdown */}
-            <select
-              value={selectedCounty?.id || ''}
-              onChange={(e) => {
-                const county =
-                  selectedCountry?.counties.find(
-                    (c) => c.id === e.target.value,
-                  ) || null;
-                setSelectedCounty(county);
-              }}
-              disabled={!selectedCountry} // Disable until a country is selected
-            >
-              <option value=''>Any</option>
-              {selectedCountry?.counties.map((county) => (
-                <option key={county.id} value={county.id}>
-                  {county.name}
-                </option>
-              ))}
-            </select>
+              {/* Second Row: Results (Takes up remaining space) */}
+              <div className='grow flex-row overflow-auto bg-white p-4'>
+                <Results
+                  pois={[...england, ...scotland, ...wales, ...northernIreland]}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
