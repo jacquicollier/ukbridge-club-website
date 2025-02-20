@@ -4,7 +4,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Armagh',
     location: { lat: 54.34482962025346, lng: -6.647571343966383 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/armagh
     // Colette McAleavey
     // tcmcaleavey@gmail.com
@@ -12,7 +17,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Banbridge',
     location: { lat: 54.352488566394236, lng: -6.269566337256631 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/banbridge
     // Roisin Mullan
     // mullan475@btinternet.com
@@ -21,7 +31,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Bangor',
     location: { lat: 54.66107487510507, lng: -5.664287099778466 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/bangor
     // Christopher Harte
     // ccjharte@gmail.com
@@ -30,7 +45,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Bann',
     location: { lat: 54.40511841188408, lng: -6.410661628621893 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/bann
     // Rosemary O'Neill
     // jh.oneill@btinternet.com
@@ -39,7 +59,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Breffni-Iveagh',
     location: { lat: 54.17460072763772, lng: -6.34281527095759 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/breffniiveagh
     // Geraldine McNamee
     // geradine.mcnamee@gmail.com
@@ -48,7 +73,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Carrickfergus',
     location: { lat: 54.72256956845424, lng: -5.807684504944191 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/carrickfergus
     // Pat Braden
     // pat.braden51@gmail.com
@@ -57,7 +87,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'City of Derry',
     location: { lat: 55.01600402687853, lng: -7.28043754065654 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/cityofderry
     // Una McFeely
     // unamcfeely@gmail.com
@@ -66,7 +101,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Derryvolgie',
     location: { lat: 54.58026791518891, lng: -5.944381674644433 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/derryvolgie
     // Judy Young
     // judyyoung_vcb@yahoo.co.uk
@@ -75,7 +115,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Devenish',
     location: { lat: 54.47145239580032, lng: -7.633263859305103 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/devenish
     // Robbie Russell
     // ernerobbie@aol.com
@@ -84,7 +129,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Downshire',
     location: { lat: 54.324841992874305, lng: -5.700613105280429 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/downshirehospital
     // Maureen Kelly
     // mk@sjp.clara.co.uk
@@ -93,7 +143,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Dromore',
     location: { lat: 54.41273606186487, lng: -6.151276730471243 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/dromore
     // Eshter Ervin
     // esther.ervin@Hotmail.com
@@ -102,7 +157,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'St Michaels',
     location: { lat: 54.34509498866776, lng: -7.642174142116775 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/michaels
     // Gerry Hegarty
     // gerry_hegarty@yahoo.ie
@@ -111,7 +171,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Kelvin Malone',
     location: { lat: 54.63333486145358, lng: -5.8663583633094 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/kelvinmalone
     // Rosemary Kilpatrick
     // rosemary.kilpatrick@gmail.com
@@ -120,7 +185,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Killyleagh',
     location: { lat: 54.482568399430335, lng: -5.648227688140435 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/killyleagh
     // Heather Booth
     // killyleaghbridgec@gmail.com
@@ -129,7 +199,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Limavady',
     location: { lat: 55.04396878459498, lng: -7.011367443945072 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/limavady
     // Lorraine Byrne
     // lorraine.m.byrne@btinternet.com
@@ -138,7 +213,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Lisburn City',
     location: { lat: 54.519758790541196, lng: -6.037486743961001 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/lisburncity
     // Mervyn Elder
     // mervynelder@btinternet.com
@@ -146,7 +226,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Maghera',
     location: { lat: 54.839593654229354, lng: -6.685584659293924 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/maghera
     // Eric McNicholl
     // ericmcnicholl@hotmail.com
@@ -155,7 +240,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Mourne',
     location: { lat: 54.216847693002116, lng: -5.8832050439702455 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/newcastlebc
     // Irene Martin
     // pjismartin@gmail.com
@@ -163,7 +253,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Newcastle',
     location: { lat: 54.216847693002116, lng: -5.8832050439702455 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/newcastlebc
     // Frank McGreevy
     // frankamcgreevy@gmail.com
@@ -171,7 +266,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Newry 21',
     location: { lat: 54.1951066757592, lng: -6.334037955614347 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/21bridgeclub
     // Rita McQuaid
     // mcquaidrita3@gmail.com
@@ -180,7 +280,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Portadown',
     location: { lat: 54.40511841188408, lng: -6.410629442114931 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/portadown
     // Christine Byrne
     // byrnedout44@btinternet.com
@@ -188,7 +293,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Portstewart',
     location: { lat: 55.18370706423472, lng: -6.717351457433773 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/portstewart
     // Gordon Morrisson
     // pstewartbc@outlook.com
@@ -196,7 +306,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'St Malachys Old Boys',
     location: { lat: 54.62639020344625, lng: -5.938379372793436 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/smcoba
     // Jacinta McKeown
     // jacintamckeown2@gmail.com
@@ -205,7 +320,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Spa',
     location: { lat: 54.39287027445762, lng: -5.894257926585504 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/spa
     // Suzanne Aiken
     // saikenspa@hotmail.com
@@ -214,7 +334,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'St Colmcilles',
     location: { lat: 54.6323133073197, lng: -5.8672171134427735 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/stcolmcilles
     // Lynn Forsythe
     // stcbridgeclub@gmail.com
@@ -222,7 +347,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'St Josephs',
     location: { lat: 54.52994381536608, lng: -5.893628415125037 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/stjosephs
     // Mary Crawford
     // stjosephsbridge@yahoo.com
@@ -231,7 +361,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Strabane',
     location: { lat: 54.82557770850829, lng: -7.461475343951767 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/strabane
     // Collette Carlin
     // collette_ecdl@yahoo.co.uk
@@ -240,7 +375,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Teconnaught',
     location: { lat: 54.36941152531778, lng: -5.7917019728012695 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/teconnaught
     // Ethna Cahill
     // ethnacahill@hotmail.com
@@ -249,7 +389,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Warrenpoint',
     location: { lat: 54.10817573926882, lng: -6.26510941698741 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/warrenpoint
     // Emmet Devlin
     // emmetdev@hotmail.com
@@ -258,7 +403,12 @@ export const northernIreland: Poi[] = [
   {
     key: 'Windsor LT',
     location: { lat: 54.579079618633855, lng: -5.942734542109654 },
-    affiliations: ['nibu'],
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'nibu',
+      },
+    ],
     // https://www.bridgewebs.com/windsorltbelfast
     // Brian Moore
     // brian.moore53@hotmail.co.uk
