@@ -8,13 +8,29 @@ const SmallCard = (props: { poi: Poi }) => {
       {/* Heading with Image */}
       <div className='flex items-center justify-between bg-gray-100 p-2'>
         <h3 className='text-lg font-semibold'>{props.poi.key}</h3>
-        <Image
-          src={`/affiliation-logos/${props.poi.affiliations[0]}.png`}
-          alt='EBU Logo'
-          width={32}
-          height={32}
-          className='object-contain'
-        />
+        <div>
+          {props.poi.affiliations.map((affiliation) => (
+            <div key={affiliation.name} className='flex items-center'>
+              {affiliation.type === 'uk-federation' &&
+                affiliation.subdivision && (
+                  <Image
+                    src={`/affiliation-logos/${affiliation.name}/${affiliation.subdivision}.png`}
+                    alt={`${affiliation.subdivision} Logo`}
+                    width={32}
+                    height={32}
+                    className='object-contain'
+                  />
+                )}
+              <Image
+                src={`/affiliation-logos/${affiliation.name}.png`}
+                alt={`${affiliation.name} Logo`}
+                width={32}
+                height={32}
+                className='object-contain'
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Card Content */}
