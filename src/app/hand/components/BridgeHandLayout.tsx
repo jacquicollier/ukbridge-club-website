@@ -7,6 +7,7 @@ import PointCountTable from '@/app/hand/components/PointCountTable';
 export default function BridgeHandLayout(props: {
   hand: Hand;
   result: boolean;
+  playedCards?: { [key: string]: { suit: string; rank: string } }; // Cards played by each player
 }) {
   const vulnerability = {
     N: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
@@ -19,12 +20,8 @@ export default function BridgeHandLayout(props: {
 
   return (
     <div className='relative m-2 flex size-[450px] flex-col items-center justify-center rounded-lg border-2 border-black p-4'>
+      {/* Auction Table */}
       <AuctionTable auction={props.hand.auction} />
-
-      {/*<div className='absolute right-2 top-2 rounded-lg border bg-gray-100 shadow-lg'>*/}
-      {/*  <h3 className='font-bold'>Optimal Contract</h3>*/}
-      {/*  <p>4♠ by West</p>*/}
-      {/*</div>*/}
 
       {/* Dealer & Vulnerability Box */}
       <div className='absolute left-1 top-1 rounded-md px-3 py-2 shadow-md'>
@@ -36,26 +33,20 @@ export default function BridgeHandLayout(props: {
         </p>
       </div>
 
-      {/* North Hand */}
+      {/* Hands */}
       <div className='absolute top-2'>{renderHand(hands.N)}</div>
-
-      {/* West Hand */}
       <div className='absolute left-2 top-1/2 -translate-y-1/2'>
         {renderHand(hands.W)}
       </div>
-
-      {/* East Hand */}
       <div className='absolute right-2 top-1/2 -translate-y-1/2'>
         {renderHand(hands.E)}
       </div>
-
-      {/* South Hand */}
       <div className='absolute bottom-2'>{renderHand(hands.S)}</div>
 
-      {/* Board Box with Compass Labels and Vulnerability Colors */}
+      {/* Board */}
       <div className='absolute flex size-32 flex-col items-center justify-center border-4 border-white bg-gray-800 text-lg font-bold text-white'>
         <div
-          className={`absolute top-2 px-2 py-1 ${vulnerability.N ? 'bg-red-500' : 'bg-green-500'} ${props.hand.dealer === 'N' ? 'text-white' : 'text-black'}`}
+          className={`absolute top-2 px-2 py-1 ${vulnerability.N ? 'bg-red-500' : 'bg-green-500'}`}
         >
           N
         </div>
@@ -63,29 +54,59 @@ export default function BridgeHandLayout(props: {
           {props.hand.board}
         </div>
         <div
-          className={`absolute bottom-2 px-2 py-1 ${vulnerability.S ? 'bg-red-500' : 'bg-green-500'} ${props.hand.dealer === 'S' ? 'text-white' : 'text-black'}`}
+          className={`absolute bottom-2 px-2 py-1 ${vulnerability.S ? 'bg-red-500' : 'bg-green-500'}`}
         >
           S
         </div>
         <div
-          className={`absolute left-2 px-2 py-1 ${vulnerability.W ? 'bg-red-500' : 'bg-green-500'} ${props.hand.dealer === 'W' ? 'text-white' : 'text-black'}`}
+          className={`absolute left-2 px-2 py-1 ${vulnerability.W ? 'bg-red-500' : 'bg-green-500'}`}
         >
           W
         </div>
         <div
-          className={`absolute right-2 px-2 py-1 ${vulnerability.E ? 'bg-red-500' : 'bg-green-500'} ${props.hand.dealer === 'E' ? 'text-white' : 'text-black'}`}
+          className={`absolute right-2 px-2 py-1 ${vulnerability.E ? 'bg-red-500' : 'bg-green-500'}`}
         >
           E
         </div>
       </div>
 
-      <PointCountTable deal={props.hand.deal} />
+      {/* Played Cards */}
+      {props.playedCards &&
+        Object.entries(props.playedCards).map(([player, card]) => (
+          <div
+            key={player}
+            className='absolute flex items-center justify-center rounded-lg border-2 border-black bg-white p-2 text-xl font-bold shadow-lg'
+            style={{
+              ...getCardPosition(player),
+              color: card.suit === '♥' || card.suit === '♦' ? 'red' : 'black',
+            }}
+          >
+            {card.rank}
+            {card.suit}
+          </div>
+        ))}
 
-      {/*<Result contract={props.hand.contract} declarer={props.hand.declarer} result={props.hand.result} />*/}
+      {/* Extra Info */}
+      <PointCountTable deal={props.hand.deal} />
       <DDSTable />
     </div>
   );
 }
+
+const getCardPosition = (player: string) => {
+  switch (player) {
+    case 'N':
+      return { top: '125px', left: '50%', transform: 'translateX(-50%)' };
+    case 'E':
+      return { right: '125px', top: '50%', transform: 'translateY(-50%)' };
+    case 'S':
+      return { bottom: '125px', left: '50%', transform: 'translateX(-50%)' };
+    case 'W':
+      return { left: '125px', top: '50%', transform: 'translateY(-50%)' };
+    default:
+      return {};
+  }
+};
 
 const getSuitClass = (suit: string) =>
   suit === '♥' || suit === '♦' ? 'text-red-500' : 'text-black';
