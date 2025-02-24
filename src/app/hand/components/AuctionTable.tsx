@@ -1,6 +1,5 @@
 import React from 'react';
 import { ValueAndDetails } from '@/app/model/pbn/hand';
-import ExpandableDiv from '@/app/hand/components/ExpandableDiv';
 
 const directions = ['N', 'E', 'S', 'W'];
 
