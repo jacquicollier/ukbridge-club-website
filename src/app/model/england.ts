@@ -11,6 +11,7 @@ const avon: Poi[] = [
         subdivision: 'avon',
       },
     ],
+    website: 'https://www.bristolbridgeclub.co.uk',
   },
   {
     key: 'West of England',
@@ -22,6 +23,7 @@ const avon: Poi[] = [
         subdivision: 'avon',
       },
     ],
+    website: 'https://www.woebridgeclub.co.uk',
   },
 ];
 
@@ -36,17 +38,7 @@ const beds: Poi[] = [
         subdivision: 'bedfordshire',
       },
     ],
-  },
-  {
-    key: 'Cranfield',
-    location: { lat: 52.06844265292672, lng: -0.6064948322875117 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'bedfordshire',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/bedfordbrickhill',
   },
   {
     key: 'Leighton Buzzard',
@@ -58,6 +50,7 @@ const beds: Poi[] = [
         subdivision: 'bedfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/leightonbuzzard',
   },
   {
     key: 'Milton Keynes',
@@ -69,6 +62,7 @@ const beds: Poi[] = [
         subdivision: 'bedfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/miltonkeynes',
   },
   {
     key: 'Olney',
@@ -80,6 +74,7 @@ const beds: Poi[] = [
         subdivision: 'bedfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/olney',
   },
 ];
 
@@ -94,6 +89,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/amersham',
   },
   {
     key: 'Ascot',
@@ -105,6 +101,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/ascot',
   },
   {
     key: 'Austenwood',
@@ -116,6 +113,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/austenwood',
   },
   {
     key: 'Beaconsfield',
@@ -127,6 +125,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/beaconsfield',
   },
   {
     key: 'Bourne End',
@@ -138,6 +137,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/bourneend',
   },
   {
     key: 'Bradshaw',
@@ -149,6 +149,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/bradshaw',
   },
   {
     key: 'Burnham',
@@ -160,6 +161,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/burnham',
   },
   {
     key: 'Caversham Park',
@@ -171,6 +173,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/cavershampark',
   },
   {
     key: 'Finchampstead',
@@ -182,6 +185,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/finchampstead',
   },
   {
     key: 'Five Aces',
@@ -193,6 +197,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/fiveaces',
   },
   {
     key: 'Goring & Streatley',
@@ -204,6 +209,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/goringstreatley',
   },
   {
     key: 'Hambelden',
@@ -215,6 +221,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/hambleden',
   },
   {
     key: 'Hazlemere',
@@ -226,6 +233,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/hazlemere',
   },
   {
     key: 'Hungerford',
@@ -237,6 +245,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/hungerford',
   },
   {
     key: 'Lane End',
@@ -248,6 +257,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/laneend',
   },
   {
     key: 'Loddon Vale',
@@ -259,6 +269,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/loddonvale',
   },
   {
     key: 'Maidenhead',
@@ -270,6 +281,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/maidenhead',
   },
   {
     key: 'Naphill',
@@ -281,6 +293,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/naphill',
   },
   {
     key: 'Risborough & District',
@@ -292,6 +305,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/risborough',
   },
   {
     key: 'Seer Green',
@@ -303,17 +317,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
-  },
-  {
-    key: 'Slough',
-    location: { lat: 51.54813849531803, lng: -0.5856236476486719 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'berksbucks',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/seergreen',
   },
   {
     key: 'South Bucks',
@@ -325,6 +329,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/embryo',
   },
   {
     key: 'Stoke Mandeville',
@@ -336,6 +341,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/smbc',
   },
   {
     key: 'Gerrards Cross',
@@ -347,6 +353,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/gerrardscross',
   },
   {
     key: 'The Garden Room',
@@ -358,6 +365,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/gardenroom',
   },
   {
     key: 'The Upper Basildon',
@@ -369,6 +377,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/upperbasildon',
   },
   {
     key: 'Windsor',
@@ -380,6 +389,7 @@ const berksandbucks: Poi[] = [
         subdivision: 'berksbucks',
       },
     ],
+    website: 'https://www.bridgewebs.com/windsor',
   },
 ];
 
@@ -394,6 +404,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.cambridgebridgeclub.org',
   },
   {
     key: 'Cambridge University',
@@ -405,6 +416,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/cubc',
   },
   {
     key: 'Dry Drayton',
@@ -416,6 +428,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/drydrayton',
   },
   {
     key: 'Ely',
@@ -427,6 +440,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/ely',
   },
   {
     key: 'Fulbourn',
@@ -438,6 +452,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/fulbourn',
   },
   {
     key: 'Huntingdon',
@@ -449,6 +464,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/huntingdon',
   },
   {
     key: 'Lines',
@@ -460,6 +476,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/linessaffronwalden',
   },
   {
     key: 'Morden Ruffians',
@@ -471,6 +488,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/mordenruffians',
   },
   {
     key: 'North Cambridge',
@@ -482,6 +500,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/northcambridge',
   },
   {
     key: 'Peterborough',
@@ -493,6 +512,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/peterborough',
   },
   {
     key: 'Thursday',
@@ -504,6 +524,7 @@ const cambsandhunts: Poi[] = [
         subdivision: 'cambshunts',
       },
     ],
+    website: 'https://www.bridgewebs.com/thursday',
   },
 ];
 
@@ -518,6 +539,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/bude',
   },
   {
     key: 'Camborne',
@@ -529,6 +551,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/cambornebc',
   },
   {
     key: 'Falmouth',
@@ -540,6 +563,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/falmouth',
   },
   {
     key: 'Liskeard',
@@ -551,6 +575,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/liskeard',
   },
   {
     key: 'Penventon',
@@ -562,6 +587,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/penventon',
   },
   {
     key: 'Penzance',
@@ -573,6 +599,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/penzance',
   },
   {
     key: 'St Ives',
@@ -584,6 +611,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/stives',
   },
   {
     key: 'Wadebridge',
@@ -595,6 +623,7 @@ const cornwall: Poi[] = [
         subdivision: 'cornwall',
       },
     ],
+    website: 'https://www.bridgewebs.com/northcornwall',
   },
 ];
 
@@ -609,6 +638,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/barrow',
   },
   {
     key: 'Eden',
@@ -620,6 +650,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/eden',
   },
   {
     key: 'Grange-Over-Sands',
@@ -631,6 +662,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/grangeoversands',
   },
   {
     key: 'Keswick',
@@ -642,6 +674,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/keswick',
   },
   {
     key: 'St Bees and District',
@@ -653,6 +686,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/stbees',
   },
   {
     key: 'Workington',
@@ -664,6 +698,7 @@ const cumbria: Poi[] = [
         subdivision: 'cumbria',
       },
     ],
+    website: 'https://www.bridgewebs.com/workington',
   },
 ];
 
@@ -678,6 +713,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/allestree',
   },
   {
     key: 'Bakewell',
@@ -689,6 +725,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/bakewell',
   },
   {
     key: 'Belper',
@@ -700,6 +737,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/belper',
   },
   {
     key: 'British Rail',
@@ -711,6 +749,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/britishrail',
   },
   {
     key: 'Club 52',
@@ -722,6 +761,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/club52',
   },
   {
     key: 'Derby',
@@ -733,6 +773,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/derby',
   },
   {
     key: 'East Midlands',
@@ -744,6 +785,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/eastmidlands',
   },
   {
     key: 'Markeaton',
@@ -755,6 +797,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/markeaton',
   },
   {
     key: 'Matlock',
@@ -766,6 +809,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/matlock',
   },
   {
     key: 'Ringwood',
@@ -777,6 +821,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/ringwood',
   },
   {
     key: 'Ripley',
@@ -788,6 +833,7 @@ const derbyshire: Poi[] = [
         subdivision: 'derbyshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/ripley',
   },
 ];
 
@@ -802,6 +848,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/barnstaple',
   },
   {
     key: 'Braunton',
@@ -813,6 +860,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/braunton',
   },
   {
     key: 'Exeter',
@@ -824,6 +872,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/exeter',
   },
   {
     key: 'Exmouth',
@@ -835,6 +884,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/exmouth',
   },
   {
     key: 'Fort Stamford',
@@ -846,6 +896,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/fortstamford',
   },
   {
     key: 'Honiton',
@@ -857,6 +908,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/honiton',
   },
   {
     key: 'Kingsbridge Estuary',
@@ -868,6 +920,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/kingsbridgeestuary',
   },
   {
     key: 'Kingsbridge Regal',
@@ -879,6 +932,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/kingsbridge',
   },
   {
     key: 'Newton Abbot',
@@ -890,6 +944,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/newton',
   },
   {
     key: 'Plymouth',
@@ -901,6 +956,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.plymouthbridge.co.uk',
   },
   {
     key: 'Taw Vale',
@@ -912,6 +968,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/tawvale',
   },
   {
     key: 'Teignmouth',
@@ -923,6 +980,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/teignmouth',
   },
   {
     key: 'Thurlestone',
@@ -934,6 +992,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/thurlestone',
   },
   {
     key: 'Tipton St John Acolites',
@@ -945,6 +1004,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/acolites',
   },
   {
     key: 'Torquay',
@@ -956,6 +1016,7 @@ const devon: Poi[] = [
         subdivision: 'devon',
       },
     ],
+    website: 'https://www.bridgewebs.com/torquay',
   },
 ];
 
@@ -970,6 +1031,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/allendale',
   },
   {
     key: 'Bridport',
@@ -981,6 +1043,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/bridport',
   },
   {
     key: 'Christchurch',
@@ -992,6 +1055,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/christchurch',
   },
   {
     key: 'Dorchester',
@@ -1003,6 +1067,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/dorchester',
   },
   {
     key: 'Shaftesbury',
@@ -1014,6 +1079,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/shaftesbury',
   },
   {
     key: 'Sherborne',
@@ -1025,6 +1091,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/sherborne',
   },
   {
     key: 'Weymouth',
@@ -1036,6 +1103,7 @@ const dorset: Poi[] = [
         subdivision: 'dorset',
       },
     ],
+    website: 'https://www.bridgewebs.com/weymouth',
   },
 ];
 
@@ -1050,6 +1118,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'http://bridgewebs.com/brevion',
   },
   {
     key: 'Chelmsford',
@@ -1061,6 +1130,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/chelmsford',
   },
   {
     key: 'Eves Corner',
@@ -1072,6 +1142,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/evescorner',
   },
   {
     key: 'Felsted',
@@ -1083,6 +1154,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/felstedbc',
   },
   {
     key: 'Fyfield',
@@ -1094,28 +1166,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
-  },
-  {
-    key: 'Hamlet Court',
-    location: { lat: 51.54216372555244, lng: 0.7421549837656072 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'essex',
-      },
-    ],
-  },
-  {
-    key: 'Jubilee',
-    location: { lat: 51.601265660095606, lng: 0.44558433959194416 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'essex',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/fyfield',
   },
   {
     key: 'Loughton',
@@ -1127,6 +1178,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/loughton',
   },
   {
     key: 'Mayflower',
@@ -1138,6 +1190,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/billericaymayflower',
   },
   {
     key: 'Mid Essex',
@@ -1149,6 +1202,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/firstclassbridge',
   },
   {
     key: 'Southend and Leigh',
@@ -1160,6 +1214,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/southendleigh',
   },
   {
     key: "St Anne's",
@@ -1171,6 +1226,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/sabc',
   },
   {
     key: 'Thorpe Bay',
@@ -1182,6 +1238,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/thorpebay',
   },
   {
     key: 'Upminster & Cranham',
@@ -1193,6 +1250,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/upminstercranham',
   },
   {
     key: 'Waltham Forest',
@@ -1204,6 +1262,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/walthamforest',
   },
   {
     key: 'Westbury',
@@ -1215,6 +1274,7 @@ const essex: Poi[] = [
         subdivision: 'essex',
       },
     ],
+    website: 'https://www.bridgewebs.com/westbury',
   },
 ];
 
@@ -1224,11 +1284,16 @@ const glocestershire: Poi[] = [
     location: { lat: 51.681972336975164, lng: -2.3541060585424702 },
     affiliations: [
       {
+        type: 'u3a',
+        name: 'u3a',
+      },
+      {
         type: 'uk-federation',
         name: 'ebu',
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://cam-dursley.u3asite.uk/u3a_groups/bridge-group',
   },
   {
     key: 'Cheltenham',
@@ -1240,6 +1305,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/cheltenham',
   },
   {
     key: 'Chipping Campden',
@@ -1251,6 +1317,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/chippingcampden',
   },
   {
     key: 'Churchdown',
@@ -1262,6 +1329,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/churchdown',
   },
   {
     key: 'Forest of Dean',
@@ -1273,6 +1341,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/forestdean',
   },
   {
     key: 'Glocester',
@@ -1284,6 +1353,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/gloucester01',
   },
   {
     key: 'Newent',
@@ -1295,6 +1365,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/newent',
   },
   {
     key: 'Northleach',
@@ -1306,9 +1377,10 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/northleach',
   },
   {
-    key: 'Somerford',
+    key: 'Somerford Keynes',
     location: { lat: 51.65416202809462, lng: -1.9688353315550269 },
     affiliations: [
       {
@@ -1317,6 +1389,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/somerfordkeynes',
   },
   {
     key: 'South Cotswold',
@@ -1328,6 +1401,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.southcotswoldbridgeclub.co.uk',
   },
   {
     key: 'Stroud',
@@ -1339,6 +1413,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.stroudbc.co.uk',
   },
   {
     key: 'Tewkesbury',
@@ -1350,6 +1425,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/tewkesbury',
   },
   {
     key: 'Tudor',
@@ -1361,6 +1437,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/tudorchippingsodbury',
   },
   {
     key: 'Winchcombe',
@@ -1372,6 +1449,7 @@ const glocestershire: Poi[] = [
         subdivision: 'glocestershire',
       },
     ],
+    website: 'https://www.bridgewebs.com/winchcombe',
   },
 ];
 
@@ -1386,6 +1464,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/alton',
   },
   {
     key: 'Badger Farm Acol',
@@ -1397,6 +1476,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/badgerfarmwinchester',
   },
   {
     key: 'Basingstoke',
@@ -1408,6 +1488,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/basingstoke',
   },
   {
     key: 'Bordon',
@@ -1419,6 +1500,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/bordon',
   },
   {
     key: 'Hayling Island',
@@ -1430,6 +1512,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/haylingisland',
   },
   {
     key: 'Island',
@@ -1441,6 +1524,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/islandiow',
   },
   {
     key: 'Lockswood',
@@ -1452,6 +1536,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/lockswood',
   },
   {
     key: 'Lymington',
@@ -1463,17 +1548,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
-  },
-  {
-    key: 'Lymington League',
-    location: { lat: 50.759867640978285, lng: -1.5425052727999031 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'hantsiow',
-      },
-    ],
+    website: 'https://www.lymingtonbridgeclub.co.uk',
   },
   {
     key: 'Meon',
@@ -1485,6 +1560,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/meon',
   },
   {
     key: 'Newbury',
@@ -1496,6 +1572,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/newbury',
   },
   {
     key: 'Nursling & Rownhams',
@@ -1507,6 +1584,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/nurslingrownhams',
   },
   {
     key: 'Petersfield',
@@ -1518,6 +1596,19 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/petersfield',
+  },
+  {
+    key: 'Pilley',
+    location: { lat: 50.759867640978285, lng: -1.5425052727999031 },
+    affiliations: [
+      {
+        type: 'uk-federation',
+        name: 'ebu',
+        subdivision: 'hantsiow',
+      },
+    ],
+    website: 'https://www.bridgewebs.com/pilley',
   },
   {
     key: 'Swanmore',
@@ -1529,6 +1620,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.swanmorebridgeclub.org.u',
   },
   {
     key: 'Titchfield',
@@ -1540,6 +1632,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/titchfield',
   },
   {
     key: 'West Wight',
@@ -1551,6 +1644,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/westwight',
   },
   {
     key: 'Winchester',
@@ -1562,6 +1656,7 @@ const hantsiow: Poi[] = [
         subdivision: 'hantsiow',
       },
     ],
+    website: 'https://www.bridgewebs.com/winchester',
   },
 ];
 
@@ -1576,9 +1671,10 @@ const herefordshire: Poi[] = [
         subdivision: 'herefordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/marchesall',
   },
   {
-    key: 'Marcie',
+    key: 'Marcle',
     location: { lat: 51.998928983948154, lng: -2.3798518158814512 },
     affiliations: [
       {
@@ -1587,6 +1683,7 @@ const herefordshire: Poi[] = [
         subdivision: 'herefordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/marcle',
   },
   {
     key: 'Ross-On-Wye',
@@ -1598,6 +1695,7 @@ const herefordshire: Poi[] = [
         subdivision: 'herefordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/rossonwye',
   },
   {
     key: 'The Birches',
@@ -1609,6 +1707,7 @@ const herefordshire: Poi[] = [
         subdivision: 'herefordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/birches',
   },
   {
     key: 'Wellington Heath',
@@ -1620,6 +1719,7 @@ const herefordshire: Poi[] = [
         subdivision: 'herefordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/wellingtonheath',
   },
 ];
 
@@ -1634,6 +1734,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/welwyngardencity',
   },
   {
     key: 'Berkhamsted',
@@ -1645,6 +1746,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/berkhamsted',
   },
   {
     key: 'Broxbourne',
@@ -1656,6 +1758,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/broxbourne',
   },
   {
     key: 'Hadley Wood',
@@ -1667,6 +1770,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/hadleywood',
   },
   {
     key: 'Harpenden',
@@ -1678,6 +1782,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/harpenden',
   },
   {
     key: 'Hatfield Heath',
@@ -1689,6 +1794,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/hatfieldheath',
   },
   {
     key: 'Herts and Essex',
@@ -1700,6 +1806,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/hertsandessex',
   },
   {
     key: 'Hitchin',
@@ -1711,17 +1818,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
-  },
-  {
-    key: 'Letchworth',
-    location: { lat: 52.01544033613308, lng: -0.22409288910165617 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'hertfordshire',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/hitchin',
   },
   {
     key: 'Letchworth Heritage',
@@ -1733,6 +1830,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/letchworthheritagebc',
   },
   {
     key: 'Leverstock Green',
@@ -1744,6 +1842,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/leverstock',
   },
   {
     key: 'Lowewood',
@@ -1755,6 +1854,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/lowewood',
   },
   {
     key: 'New Hertford',
@@ -1766,6 +1866,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/newhertford',
   },
   {
     key: 'Royston',
@@ -1777,6 +1878,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/roystonherts',
   },
   {
     key: 'Sobell',
@@ -1788,6 +1890,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'http://www.sobell-bridge.org.uk',
   },
   {
     key: 'St Albans Duplicate',
@@ -1799,6 +1902,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/stalbans',
   },
   {
     key: 'Watford and Bushey',
@@ -1810,6 +1914,7 @@ const herts: Poi[] = [
         subdivision: 'hertfordshire',
       },
     ],
+    website: 'https://www.bridgewebs.com/watford',
   },
 ];
 
@@ -1824,17 +1929,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
-  },
-  {
-    key: 'Aces',
-    location: { lat: 51.36384164425841, lng: 0.11448482608612066 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'kent',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/ace1',
   },
   {
     key: 'Ashford',
@@ -1846,6 +1941,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/ashford',
   },
   {
     key: 'Beckenham',
@@ -1857,9 +1953,10 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/beckenham',
   },
   {
-    key: 'Bekesbourne Pilgrims',
+    key: 'Tyler Hill',
     location: { lat: 51.260447577894396, lng: 1.1393636549163226 },
     affiliations: [
       {
@@ -1868,6 +1965,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/tylerhill',
   },
   {
     key: 'Blackheath',
@@ -1879,6 +1977,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/blackheath',
   },
   {
     key: 'Blackheath Quantum',
@@ -1890,6 +1989,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://quantumbridgeclub.co.uk',
   },
   {
     key: 'Broadstairs',
@@ -1901,6 +2001,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/broadstairs',
   },
   {
     key: 'Bromley North',
@@ -1912,6 +2013,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/bromleynorth',
   },
   {
     key: 'Canterbury',
@@ -1923,6 +2025,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/canterbury',
   },
   {
     key: 'Chislehurst',
@@ -1934,6 +2037,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/chislehurst',
   },
   {
     key: 'Deal & Dover',
@@ -1945,6 +2049,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/deal',
   },
   {
     key: 'Farnborough',
@@ -1956,6 +2061,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/farnboroughkent',
   },
   {
     key: 'Folkestone',
@@ -1967,6 +2073,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/folkestone',
   },
   {
     key: 'Gravesend',
@@ -1978,6 +2085,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/gravesend',
   },
   {
     key: 'Hampton Duplicate',
@@ -1989,6 +2097,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/hampton',
   },
   {
     key: 'Maidestone',
@@ -2000,6 +2109,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/maidstone',
   },
   {
     key: 'Medway Towns',
@@ -2011,6 +2121,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/medwaytowns',
   },
   {
     key: 'Orpington',
@@ -2022,6 +2133,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/orpington',
   },
   {
     key: 'Otford',
@@ -2033,6 +2145,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/otford',
   },
   {
     key: 'Pembury',
@@ -2044,17 +2157,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
-  },
-  {
-    key: 'Pembury (Tues)',
-    location: { lat: 51.14278489344625, lng: 0.3181304684045775 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'kent',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/pembury',
   },
   {
     key: 'Sevenoaks',
@@ -2066,6 +2169,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/sevenoaks',
   },
   {
     key: 'Spring Park',
@@ -2077,6 +2181,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/springpark',
   },
   {
     key: 'Tenterden',
@@ -2088,6 +2193,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/tenterden',
   },
   {
     key: 'Thanet',
@@ -2099,17 +2205,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
-  },
-  {
-    key: 'Thursday Evening',
-    location: { lat: 51.21729179743118, lng: 0.24147824142018684 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'ebu',
-        subdivision: 'kent',
-      },
-    ],
+    website: 'https://www.bridgewebs.com/thanet',
   },
   {
     key: 'Tonbridge',
@@ -2121,6 +2217,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/tonbridge',
   },
   {
     key: 'Tunbridge Wells',
@@ -2132,6 +2229,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/tunbridge',
   },
   {
     key: 'Weald of Kent',
@@ -2143,6 +2241,7 @@ const kent: Poi[] = [
         subdivision: 'kent',
       },
     ],
+    website: 'https://www.bridgewebs.com/wealdkent',
   },
 ];
 
@@ -2157,6 +2256,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Brierfield',
@@ -2168,6 +2268,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bury Athenaeum',
@@ -2179,6 +2280,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Chorley',
@@ -2190,6 +2292,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Formby',
@@ -2201,6 +2304,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Gables',
@@ -2212,6 +2316,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Lancaster',
@@ -2223,6 +2328,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Lytham',
@@ -2234,6 +2340,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Oakfield',
@@ -2245,6 +2352,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Poulton',
@@ -2256,6 +2364,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Preston',
@@ -2267,6 +2376,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'Southport',
@@ -2278,6 +2388,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
   {
     key: 'St Annes',
@@ -2289,6 +2400,7 @@ const lancashire: Poi[] = [
         subdivision: 'lancashire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2303,6 +2415,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Blaby',
@@ -2314,6 +2427,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bradgate',
@@ -2325,6 +2439,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Charnwood',
@@ -2336,6 +2451,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'County',
@@ -2347,6 +2463,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Glenfield',
@@ -2358,6 +2475,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Grantham',
@@ -2369,6 +2487,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Hickley',
@@ -2380,6 +2499,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Hoby',
@@ -2391,6 +2511,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Loughborough',
@@ -2402,6 +2523,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Market Harborough',
@@ -2413,6 +2535,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Rutland and Oakham',
@@ -2424,6 +2547,7 @@ const leicestershire: Poi[] = [
         subdivision: 'leicestershire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2438,6 +2562,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Boston',
@@ -2449,6 +2574,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Falconer',
@@ -2460,6 +2586,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Heighington',
@@ -2471,6 +2598,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Louth Central',
@@ -2482,6 +2610,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Louth Duplicate',
@@ -2493,6 +2622,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Market Rasen & District',
@@ -2504,6 +2634,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Pinchbeck',
@@ -2515,6 +2646,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Scunthorpe',
@@ -2526,6 +2658,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Spalding',
@@ -2537,6 +2670,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Lincoln',
@@ -2548,6 +2682,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Welton',
@@ -2559,6 +2694,7 @@ const lincolnshire: Poi[] = [
         subdivision: 'lincolnshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2573,6 +2709,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'London',
@@ -2584,6 +2721,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Marylebone',
@@ -2595,6 +2733,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Ned Paul',
@@ -2606,6 +2745,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Royal Automobile Club (London)',
@@ -2617,6 +2757,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Upper Norwood',
@@ -2628,6 +2769,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'West London Gay',
@@ -2639,6 +2781,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Woodberry',
@@ -2650,6 +2793,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
   {
     key: 'Young Chelsea',
@@ -2661,6 +2805,7 @@ const london: Poi[] = [
         subdivision: 'london',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2675,6 +2820,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Ashton and District',
@@ -2686,6 +2832,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: "Besses O'Th'barn",
@@ -2697,6 +2844,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Bramhall and Cheadle Hulme',
@@ -2708,6 +2856,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Chorlton',
@@ -2719,6 +2868,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Manchester',
@@ -2730,6 +2880,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Marple',
@@ -2741,6 +2892,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Prestbury',
@@ -2752,6 +2904,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Stretford',
@@ -2763,6 +2916,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'The Monday (Manchester)',
@@ -2774,6 +2928,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
   {
     key: 'Trafford',
@@ -2785,6 +2940,7 @@ const manchester: Poi[] = [
         subdivision: 'manchester',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2799,6 +2955,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Deva',
@@ -2810,6 +2967,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Hartford',
@@ -2821,6 +2979,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Liverpool',
@@ -2832,6 +2991,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Merseyside',
@@ -2843,6 +3003,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Warrington',
@@ -2854,6 +3015,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wirral',
@@ -2865,6 +3027,7 @@ const merseysideandcheshire: Poi[] = [
         subdivision: 'merseysidecheshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2879,6 +3042,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
   {
     key: 'Ealing',
@@ -2890,6 +3054,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
   {
     key: 'Pinner',
@@ -2901,6 +3066,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
   {
     key: 'TGR',
@@ -2912,6 +3078,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
   {
     key: 'Thistleworth',
@@ -2923,6 +3090,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
   {
     key: 'Vagabonds',
@@ -2934,6 +3102,7 @@ const middlesex: Poi[] = [
         subdivision: 'middlesex',
       },
     ],
+    website: null,
   },
 ];
 
@@ -2948,6 +3117,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Alpha',
@@ -2959,6 +3129,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Aylsham',
@@ -2970,6 +3141,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Bawburgh',
@@ -2981,6 +3153,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Beccles',
@@ -2992,6 +3165,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Dip-Your-Toe-In',
@@ -3003,6 +3177,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Diss',
@@ -3014,6 +3189,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Great Yarmouth',
@@ -3025,6 +3201,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Holt',
@@ -3036,6 +3213,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Horning',
@@ -3047,6 +3225,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Hunstanton',
@@ -3058,6 +3237,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Lowestoft',
@@ -3069,6 +3249,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Norfolk & Norwich',
@@ -3080,6 +3261,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Noverre',
@@ -3091,6 +3273,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Swaffham',
@@ -3102,6 +3285,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Wymondham',
@@ -3113,6 +3297,7 @@ const norfolk: Poi[] = [
         subdivision: 'norfolk',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3127,6 +3312,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Heart of England',
@@ -3138,6 +3324,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Kettering',
@@ -3149,6 +3336,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Northampton',
@@ -3160,6 +3348,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Orton',
@@ -3171,6 +3360,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Oundle',
@@ -3182,6 +3372,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Stamford',
@@ -3193,6 +3384,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Towcester',
@@ -3204,6 +3396,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wellingborough',
@@ -3215,6 +3408,7 @@ const northamptonshire: Poi[] = [
         subdivision: 'northamptonshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3229,6 +3423,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Brunton',
@@ -3240,6 +3435,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Castle Morpeth',
@@ -3251,6 +3447,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Chester-Le-Street',
@@ -3262,6 +3459,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Darlington',
@@ -3273,6 +3471,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Durham',
@@ -3284,6 +3483,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Hartlepool',
@@ -3295,6 +3495,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Hexham',
@@ -3306,6 +3507,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Middlesbrough',
@@ -3317,6 +3519,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Morpeth',
@@ -3328,6 +3531,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Ryton',
@@ -3339,6 +3543,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Stannington',
@@ -3350,6 +3555,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Wearside',
@@ -3361,6 +3567,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Whitby',
@@ -3372,6 +3579,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
   {
     key: 'Whitley Bay and Tynemouth',
@@ -3383,6 +3591,7 @@ const northeast: Poi[] = [
         subdivision: 'northeast',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3397,6 +3606,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Keyworth',
@@ -3408,6 +3618,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Mansfield Mechanics',
@@ -3419,6 +3630,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Nottingham',
@@ -3430,6 +3642,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Phoenix',
@@ -3441,6 +3654,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Retford',
@@ -3452,6 +3666,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'South Mansfield & Blidworth',
@@ -3463,6 +3678,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'West Bridgford',
@@ -3474,6 +3690,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Woodborough',
@@ -3485,6 +3702,7 @@ const nottinghamshire: Poi[] = [
         subdivision: 'nottinghamshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3499,6 +3717,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Abingdon',
@@ -3510,6 +3729,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Aylesbury Aces',
@@ -3521,6 +3741,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bicester',
@@ -3532,6 +3753,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Blewbury',
@@ -3543,6 +3765,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Buckingham',
@@ -3554,6 +3777,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Central Yarnton',
@@ -3565,6 +3789,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Chipping Norton',
@@ -3576,6 +3801,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Diamond',
@@ -3587,6 +3813,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Henley',
@@ -3598,6 +3825,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Henley Wednesday',
@@ -3609,6 +3837,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Kings Sutton',
@@ -3620,6 +3849,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Oxford',
@@ -3631,6 +3861,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Oxford University',
@@ -3642,6 +3873,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Thame',
@@ -3653,6 +3885,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wallingford',
@@ -3664,6 +3897,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wantage',
@@ -3675,6 +3909,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Witney',
@@ -3686,6 +3921,7 @@ const oxfordshire: Poi[] = [
         subdivision: 'oxfordshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3700,6 +3936,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Castle Cary',
@@ -3711,6 +3948,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Cheddar and Wedmore',
@@ -3722,6 +3960,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Clevedon & Portishead',
@@ -3733,6 +3972,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Coxley',
@@ -3744,6 +3984,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Crewkerne',
@@ -3755,6 +3996,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Frome & District',
@@ -3766,6 +4008,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Ilminster',
@@ -3777,6 +4020,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Kingston Seymour',
@@ -3788,6 +4032,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Langport',
@@ -3799,6 +4044,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Minehead',
@@ -3810,6 +4056,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Nailsea',
@@ -3821,6 +4068,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Taunton',
@@ -3832,6 +4080,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Wells City',
@@ -3843,6 +4092,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Wilton (Somerset)',
@@ -3854,6 +4104,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Winscombe & District',
@@ -3865,6 +4116,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
   {
     key: 'Yeovil Phoenix',
@@ -3876,6 +4128,7 @@ const somerset: Poi[] = [
         subdivision: 'somerset',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3890,6 +4143,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Eccleshall',
@@ -3901,6 +4155,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Nantwich',
@@ -3912,6 +4167,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Newcastle & District',
@@ -3923,6 +4179,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Oswestry',
@@ -3934,6 +4191,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Stafford',
@@ -3945,6 +4203,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Tettenhall',
@@ -3956,6 +4215,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Wolverhampton',
@@ -3967,6 +4227,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
   {
     key: 'Wrekin',
@@ -3978,6 +4239,7 @@ const staffsandshrops: Poi[] = [
         subdivision: 'staffsandshrops',
       },
     ],
+    website: null,
   },
 ];
 
@@ -3992,6 +4254,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Aldeburgh',
@@ -4003,6 +4266,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Bury St Edmunds',
@@ -4014,6 +4278,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Clare',
@@ -4025,6 +4290,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Dovercourt',
@@ -4036,6 +4302,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Felixstowe',
@@ -4047,6 +4314,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Framlingham',
@@ -4058,6 +4326,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Frinton',
@@ -4069,6 +4338,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Heritage Coast',
@@ -4080,6 +4350,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Ipswich & Kesgrave',
@@ -4091,6 +4362,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Little Clacton',
@@ -4102,6 +4374,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Newmarket',
@@ -4113,6 +4386,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Stansfield',
@@ -4124,6 +4398,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Stowmarket',
@@ -4135,6 +4410,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Stratford St Mary',
@@ -4146,6 +4422,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
   {
     key: 'Woodbridge',
@@ -4157,6 +4434,7 @@ const suffolk: Poi[] = [
         subdivision: 'suffolk',
       },
     ],
+    website: null,
   },
 ];
 
@@ -4171,6 +4449,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Acacia',
@@ -4182,6 +4461,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Allingham',
@@ -4193,6 +4473,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Ashford & District',
@@ -4204,6 +4485,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Bletchingley',
@@ -4215,6 +4497,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Bookham Afternoon',
@@ -4226,6 +4509,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Bourne (Surrey)',
@@ -4237,6 +4521,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Buckland',
@@ -4248,6 +4533,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'By the Wey (Thurs)',
@@ -4259,6 +4545,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'By the Wey (Fri)',
@@ -4270,6 +4557,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Camberley',
@@ -4281,6 +4569,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Caterham',
@@ -4292,6 +4581,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'CCF Coulsdon',
@@ -4303,6 +4593,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Claygate',
@@ -4314,6 +4605,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Dell',
@@ -4325,6 +4617,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Ditton',
@@ -4336,6 +4629,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Dorking',
@@ -4347,6 +4641,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Godalming',
@@ -4358,6 +4653,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Horley',
@@ -4369,6 +4665,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Kenley',
@@ -4380,6 +4677,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Lavender',
@@ -4391,6 +4689,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Leatherhead',
@@ -4402,6 +4701,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Mayfield',
@@ -4413,6 +4713,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Moreton',
@@ -4424,6 +4725,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Oxshott',
@@ -4435,6 +4737,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Reigate',
@@ -4446,6 +4749,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Richmond',
@@ -4457,6 +4761,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Royal Automobile Club (Surrey)',
@@ -4468,6 +4773,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Selsdon',
@@ -4479,6 +4785,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'South Croydon',
@@ -4490,6 +4797,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'South London Oshwal',
@@ -4501,6 +4809,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'The Monday (Surrey)',
@@ -4512,6 +4821,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Tudor & Guildford',
@@ -4523,6 +4833,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Welcome',
@@ -4534,6 +4845,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Wimbledon',
@@ -4545,6 +4857,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Woking',
@@ -4556,6 +4869,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Wyvern',
@@ -4567,6 +4881,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
   {
     key: 'Yateley and Hawley',
@@ -4578,6 +4893,7 @@ const surrey: Poi[] = [
         subdivision: 'surrey',
       },
     ],
+    website: null,
   },
 ];
 
@@ -4592,6 +4908,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Bailey',
@@ -4603,6 +4920,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Bexhill',
@@ -4614,6 +4932,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Chichester',
@@ -4625,6 +4944,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Crawley',
@@ -4636,6 +4956,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Cross In Hand',
@@ -4647,6 +4968,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Crowborough',
@@ -4658,6 +4980,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'East Sussex',
@@ -4669,6 +4992,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Eastbourne',
@@ -4680,6 +5004,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Forest Row',
@@ -4691,6 +5016,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Horsham',
@@ -4702,6 +5028,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Kiplings',
@@ -4713,6 +5040,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Lewes',
@@ -4724,6 +5052,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Meridian',
@@ -4735,6 +5064,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Mid Sussex',
@@ -4746,6 +5076,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Patcham',
@@ -4757,6 +5088,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Pulborough',
@@ -4768,6 +5100,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Rottingdean',
@@ -4779,6 +5112,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Seaford',
@@ -4790,6 +5124,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Soverign Harbour',
@@ -4801,6 +5136,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'St. Leonards',
@@ -4812,6 +5148,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Thakeham',
@@ -4823,6 +5160,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'The Bognor',
@@ -4834,6 +5172,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'West Sussex',
@@ -4845,6 +5184,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'West Worthing',
@@ -4856,6 +5196,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Wilton (Sussex)',
@@ -4867,6 +5208,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
   {
     key: 'Worthing',
@@ -4878,6 +5220,7 @@ const sussex: Poi[] = [
         subdivision: 'sussex',
       },
     ],
+    website: null,
   },
 ];
 
@@ -4892,6 +5235,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Coventry & North Warwickshire',
@@ -4903,6 +5247,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Edgbaston',
@@ -4914,6 +5259,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Heathercroft',
@@ -4925,6 +5271,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Kenilworth',
@@ -4936,6 +5283,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Moseley',
@@ -4947,6 +5295,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Northfield',
@@ -4958,6 +5307,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Rugby',
@@ -4969,6 +5319,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Silhill',
@@ -4980,6 +5331,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Stratford-Upon-Avon',
@@ -4991,6 +5343,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Sutton Coldfield',
@@ -5002,6 +5355,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
   {
     key: 'West Midlands',
@@ -5013,6 +5367,7 @@ const warwickshire: Poi[] = [
         subdivision: 'warwickshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -5027,6 +5382,7 @@ const westmorland: Poi[] = [
         subdivision: 'westmorland',
       },
     ],
+    website: null,
   },
   {
     key: 'Windermere',
@@ -5038,6 +5394,7 @@ const westmorland: Poi[] = [
         subdivision: 'westmorland',
       },
     ],
+    website: null,
   },
 ];
 
@@ -5052,6 +5409,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bath',
@@ -5063,6 +5421,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bradford on Avon',
@@ -5074,6 +5433,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Chippenham',
@@ -5085,6 +5445,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Corsham',
@@ -5096,6 +5457,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Devizes',
@@ -5107,6 +5469,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Malmesbury',
@@ -5118,6 +5481,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Marlborough',
@@ -5129,6 +5493,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Sarum',
@@ -5140,6 +5505,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Swindon',
@@ -5151,6 +5517,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Trowbridge',
@@ -5162,6 +5529,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Warminster',
@@ -5173,6 +5541,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wootton Bassett',
@@ -5184,6 +5553,7 @@ const wiltshire: Poi[] = [
         subdivision: 'wiltshire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -5198,6 +5568,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bromsgrove & District',
@@ -5209,6 +5580,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Droitwich Spa',
@@ -5220,6 +5592,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Eckington',
@@ -5231,6 +5604,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Evesham',
@@ -5242,6 +5616,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Malvern',
@@ -5253,6 +5628,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Ridgeway',
@@ -5264,6 +5640,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Stourbridge',
@@ -5275,6 +5652,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
   {
     key: 'Worcester',
@@ -5286,6 +5664,7 @@ const worcestershire: Poi[] = [
         subdivision: 'worcestershire',
       },
     ],
+    website: null,
   },
 ];
 
@@ -5300,6 +5679,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Beauchief',
@@ -5311,6 +5691,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Beverley',
@@ -5322,6 +5703,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bradford',
@@ -5333,6 +5715,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Bridlington',
@@ -5344,6 +5727,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Brighouse',
@@ -5355,6 +5739,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Doncaster',
@@ -5366,6 +5751,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Easingwold',
@@ -5377,6 +5763,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Garforth',
@@ -5388,6 +5775,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Halifax',
@@ -5399,6 +5787,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Harrogate',
@@ -5410,6 +5799,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Huddersfield',
@@ -5421,6 +5811,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Hull',
@@ -5432,6 +5823,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Keighley',
@@ -5443,6 +5835,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Leeds',
@@ -5454,6 +5847,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Malton',
@@ -5465,6 +5859,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Northallerton',
@@ -5476,6 +5871,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Olicana',
@@ -5487,6 +5883,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Ripon City',
@@ -5498,6 +5895,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Scarborough & District',
@@ -5509,6 +5907,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Selby & Hambleton',
@@ -5520,6 +5919,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Settle',
@@ -5531,6 +5931,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Sheffield',
@@ -5542,6 +5943,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Shelley',
@@ -5553,6 +5955,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Thirsk',
@@ -5564,6 +5967,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Thornton-Le-Dale',
@@ -5575,6 +5979,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wakefield',
@@ -5586,6 +5991,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wensleydale',
@@ -5597,6 +6003,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'Wetherby',
@@ -5608,6 +6015,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
   {
     key: 'York',
@@ -5619,6 +6027,7 @@ const yorkshire: Poi[] = [
         subdivision: 'yorkshire',
       },
     ],
+    website: null,
   },
 ];
 

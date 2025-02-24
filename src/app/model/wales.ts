@@ -11,7 +11,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/abergavenny
+    website: 'https://www.bridgewebs.com/abergavenny',
     // Iain Brisbane
     // iain.brisbane@btinternet.com
     // 01633865410
@@ -26,7 +26,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/barrivale
+    website: 'https://www.bridgewebs.com/barrivale',
     // Celia Thomas
     // 01446 418380
   },
@@ -40,7 +40,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/chepstowarchway
+    website: 'https://www.bridgewebs.com/chepstowarchway',
     // Ray Mardon
     // rtmardon@yahoo.co.uk
     // 07399992742
@@ -55,6 +55,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
+    website: 'https://www.bridgewebs.com/northcardiff',
     // Gwynn Davis
     // bethanybridgeclub@gmail.com
   },
@@ -68,7 +69,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/brecon
+    website: 'https://www.bridgewebs.com/brecon',
     // Christine Forbes
     // forbes.chris@btinternet.com
     // 01874622158
@@ -83,7 +84,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/cardiff
+    website: 'https://www.bridgewebs.com/cardiff',
     // David Buttrick
     // cbcweb01@gmail.com
     // 07854561501
@@ -98,7 +99,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/crickhowell
+    website: 'https://www.bridgewebs.com/crickhowell',
     // Mike Miles
     // mikemiles37@btinternet.com
     // 01873830612
@@ -113,7 +114,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/gwentacademy
+    website: 'https://www.bridgewebs.com/gwentacademy',
     // William Parkinson
     // william.parkinson@sky.com
     // 01633222224
@@ -128,7 +129,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/lisvane
+    website: 'https://www.bridgewebs.com/lisvane',
     // John Basford
     // johnbasford1940@gmail.com
     // 02920616156
@@ -143,7 +144,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/midglam
+    website: 'https://www.bridgewebs.com/midglam',
     // Linda Spiri
     // Lindaspiri70@hotmail.com
     // 07967224181
@@ -158,7 +159,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/monmouth
+    website: 'https://www.bridgewebs.com/monmouth',
     // Julie Davies
     // davieslea@hotmail.co.uk
     // 01600715595
@@ -173,7 +174,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/penarth
+    website: 'https://www.bridgewebs.com/penarth',
     // Tony Campbell
     // campbellak@cf.ac.uk
     // 07966139722
@@ -188,7 +189,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/rhiwbina
+    website: 'https://www.bridgewebs.com/rhiwbina',
     // Cath Simpson
     // simpson_catherine@hotmail.com
     // 02920692867
@@ -203,7 +204,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/sully
+    website: 'https://www.bridgewebs.com/sully',
     // Rod Hudson
     // rodhudson34@gmail.com
   },
@@ -217,7 +218,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/vogbc
+    website: 'https://www.bridgewebs.com/vogbc',
     // Lou Millhouse
     // lou.millhouse@talk21.com
   },
@@ -234,7 +235,7 @@ const mid: Poi[] = [
         subdivision: 'mid',
       },
     ],
-    // https://www.bridgewebs.com/ceredigionclubs
+    website: 'https://www.bridgewebs.com/ceredigionclubs',
     // Gill Howells
     // gillhowells67@gmail.com
     // 01239811718
@@ -249,24 +250,10 @@ const mid: Poi[] = [
         subdivision: 'mid',
       },
     ],
-    // https://www.bridgewebs.com/aberystwyth
+    website: 'https://www.bridgewebs.com/aberystwyth',
     // Jeff Thomas
     // jefflynthomas@gmail.com
     // 01970828765
-  },
-  {
-    key: 'Cardigan',
-    location: { lat: 52.083844752158036, lng: -4.660964486362329 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'wbu',
-        subdivision: 'mid',
-      },
-    ],
-    // Jenny Harris
-    // jenny@jennyharris.co.uk
-    // 01239810490
   },
   {
     key: 'Lampeter',
@@ -278,7 +265,7 @@ const mid: Poi[] = [
         subdivision: 'mid',
       },
     ],
-    // https://www.bridgewebs.com/ceredigionclubs
+    website: 'https://www.bridgewebs.com/ceredigionclubs',
     // Norman Turner
     // 01570471591
   },
@@ -292,7 +279,7 @@ const mid: Poi[] = [
         subdivision: 'ayrshire',
       },
     ],
-    // https://monty.welshbridgeunion.club
+    website: 'https://monty.welshbridgeunion.club',
   },
   {
     key: 'Radnorshire',
@@ -304,7 +291,7 @@ const mid: Poi[] = [
         subdivision: 'mid',
       },
     ],
-    // https://radnorshire.welshbridgeunion.club
+    website: 'https://radnorshire.welshbridgeunion.club',
     // Kay Taylor
     // kay.tony@me.com
     // 01547528614
@@ -322,7 +309,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/colwynbay
+    website: 'https://www.bridgewebs.com/colwynbay',
     // Angela Mayner
     // angela.mayner@btinternet.com
     // 01492572536
@@ -337,7 +324,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/llandudno
+    website: 'https://www.bridgewebs.com/llandudno',
     // Morag Clare
     // moragclare@hotmail.com
     // 01492512254
@@ -352,7 +339,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/mold
+    website: 'https://www.bridgewebs.com/mold',
     // Mark Davies
     // moldbridgeclub@gmail.com
     // 01244814757
@@ -367,7 +354,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/parkview
+    website: 'https://www.bridgewebs.com/parkview',
     // Roger Bowman
     // r.w.bowman@btinternet.com
     // 01244570656
@@ -382,7 +369,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/wrexhamgardenvillage
+    website: 'https://www.bridgewebs.com/wrexhamgardenvillage',
     // Roger Bowman
     // r.w.bowman@btinternet.com
     // 01244570656
@@ -397,7 +384,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/ynysmon
+    website: 'https://www.bridgewebs.com/ynysmon',
     // Marian Wille
     // 01407840820
   },
@@ -414,7 +401,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/bridgend
+    website: 'https://www.bridgewebs.com/bridgend',
     // Glyn Williams
     // g.williams26@sky.com
     // 01656503285
@@ -429,7 +416,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/carmarthen
+    website: 'https://www.bridgewebs.com/carmarthen',
     // Rosemund Halls
     // erapnel@yahoo.com
     // 01994 230036
@@ -444,7 +431,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/haverfordwestbc
+    website: 'https://www.bridgewebs.com/haverfordwestbc',
     // Beryl Warner
     // 01437710253
   },
@@ -458,7 +445,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://llanelli-bc.welshbridgeunion.club
+    website: 'https://llanelli-bc.welshbridgeunion.club',
     // Geoff Griffiths
     // grg6@sky.com
   },
@@ -472,7 +459,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/merlinsbridge
+    website: 'https://www.bridgewebs.com/merlinsbridge',
     // Nigel Astley
     // astleynigel@aol.com
     // 01437767561 or 07807778717
@@ -487,7 +474,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/pembroke
+    website: 'https://www.bridgewebs.com/pembroke',
     // Irene Delahunty
     // irene.dela@btinternet.com
     // 01646622002 or 07879856512
@@ -502,7 +489,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/rest
+    website: 'https://www.bridgewebs.com/rest',
   },
   {
     key: 'Swansea',
@@ -514,7 +501,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/swansea
+    website: 'https://www.bridgewebs.com/swansea',
     // Geoff White
     // gandawhite@sky.com
     // 01639643603
@@ -529,7 +516,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/tenby
+    website: 'https://www.bridgewebs.com/tenby',
     // Brenda Badham
     // brendabadham@hotmail.co.uk
     // 01834812132
