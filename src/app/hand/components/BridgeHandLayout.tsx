@@ -3,7 +3,6 @@ import { Hand } from '@/app/model/pbn/hand';
 import { parseBridgeHand } from '@/app/model/pbn/utils';
 import AuctionTable from '@/app/hand/components/AuctionTable';
 import PointCountTable from '@/app/hand/components/PointCountTable';
-import Result from '@/app/hand/components/Result';
 
 export default function BridgeHandLayout(props: {
   hand: Hand;
