@@ -10,7 +10,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/armagh
+    website: 'https://www.bridgewebs.com/armagh',
     // Colette McAleavey
     // tcmcaleavey@gmail.com
   },
@@ -23,7 +23,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/banbridge
+    website: 'https://www.bridgewebs.com/banbridge',
     // Roisin Mullan
     // mullan475@btinternet.com
     // 07743508489
@@ -37,7 +37,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/bangor
+    website: 'https://www.bridgewebs.com/bangor',
     // Christopher Harte
     // ccjharte@gmail.com
     // 02891468001, 07969462314
@@ -51,7 +51,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/bann
+    website: 'https://www.bridgewebs.com/bann',
     // Rosemary O'Neill
     // jh.oneill@btinternet.com
     // 02838362821
@@ -65,7 +65,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/breffniiveagh
+    website: 'https://www.bridgewebs.com/breffniiveagh',
     // Geraldine McNamee
     // geradine.mcnamee@gmail.com
     // 07980292286
@@ -79,7 +79,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/carrickfergus
+    website: 'https://www.bridgewebs.com/carrickfergus',
     // Pat Braden
     // pat.braden51@gmail.com
     // 07984714911
@@ -93,7 +93,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/cityofderry
+    website: 'https://www.bridgewebs.com/cityofderry',
     // Una McFeely
     // unamcfeely@gmail.com
     // 07586351055
@@ -107,7 +107,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/derryvolgie
+    website: 'https://www.bridgewebs.com/derryvolgie',
     // Judy Young
     // judyyoung_vcb@yahoo.co.uk
     // 02890614406
@@ -121,7 +121,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/devenish
+    website: 'https://www.bridgewebs.com/devenish',
     // Robbie Russell
     // ernerobbie@aol.com
     // 02866324735, 07540846553
@@ -135,7 +135,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/downshirehospital
+    website: 'https://www.bridgewebs.com/downshirehospital',
     // Maureen Kelly
     // mk@sjp.clara.co.uk
     // 02844841610
@@ -149,7 +149,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/dromore
+    website: 'https://www.bridgewebs.com/dromore',
     // Eshter Ervin
     // esther.ervin@Hotmail.com
     // 07871250905
@@ -163,7 +163,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/michaels
+    website: 'https://www.bridgewebs.com/michaels',
     // Gerry Hegarty
     // gerry_hegarty@yahoo.ie
     // 07765602228
@@ -177,7 +177,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/kelvinmalone
+    website: 'https://www.bridgewebs.com/kelvinmalone',
     // Rosemary Kilpatrick
     // rosemary.kilpatrick@gmail.com
     // 07759390967
@@ -191,7 +191,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/killyleagh
+    website: 'https://www.bridgewebs.com/killyleagh',
     // Heather Booth
     // killyleaghbridgec@gmail.com
     //
@@ -205,7 +205,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/limavady
+    website: 'https://www.bridgewebs.com/limavady',
     // Lorraine Byrne
     // lorraine.m.byrne@btinternet.com
     // 02877742019, 07719654699
@@ -219,7 +219,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/lisburncity
+    website: 'https://www.bridgewebs.com/lisburncity',
     // Mervyn Elder
     // mervynelder@btinternet.com
   },
@@ -232,7 +232,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/maghera
+    website: 'https://www.bridgewebs.com/maghera',
     // Eric McNicholl
     // ericmcnicholl@hotmail.com
     // 02879642286
@@ -246,7 +246,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/newcastlebc
+    website: 'https://www.bridgewebs.com/newcastlebc',
     // Irene Martin
     // pjismartin@gmail.com
   },
@@ -259,7 +259,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/newcastlebc
+    website: 'https://www.bridgewebs.com/newcastlebc',
     // Frank McGreevy
     // frankamcgreevy@gmail.com
   },
@@ -272,7 +272,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/21bridgeclub
+    website: 'https://www.bridgewebs.com/21bridgeclub',
     // Rita McQuaid
     // mcquaidrita3@gmail.com
     // 02838832251
@@ -286,7 +286,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/portadown
+    website: 'https://www.bridgewebs.com/portadown',
     // Christine Byrne
     // byrnedout44@btinternet.com
   },
@@ -299,7 +299,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/portstewart
+    website: 'https://www.bridgewebs.com/portstewart',
     // Gordon Morrisson
     // pstewartbc@outlook.com
   },
@@ -312,7 +312,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/smcoba
+    website: 'https://www.bridgewebs.com/smcoba',
     // Jacinta McKeown
     // jacintamckeown2@gmail.com
     // 07763857595
@@ -326,7 +326,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/spa
+    website: 'https://www.bridgewebs.com/spa',
     // Suzanne Aiken
     // saikenspa@hotmail.com
     // 07779579235
@@ -340,7 +340,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/stcolmcilles
+    website: 'https://www.bridgewebs.com/stcolmcilles',
     // Lynn Forsythe
     // stcbridgeclub@gmail.com
   },
@@ -353,7 +353,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/stjosephs
+    website: 'https://www.bridgewebs.com/stjosephs',
     // Mary Crawford
     // stjosephsbridge@yahoo.com
     // 07713156812
@@ -367,7 +367,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/strabane
+    website: 'https://www.bridgewebs.com/strabane',
     // Collette Carlin
     // collette_ecdl@yahoo.co.uk
     // 0876707164
@@ -381,7 +381,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/teconnaught
+    website: 'https://www.bridgewebs.com/teconnaught',
     // Ethna Cahill
     // ethnacahill@hotmail.com
     // 077133305938
@@ -395,7 +395,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/warrenpoint
+    website: 'https://www.bridgewebs.com/warrenpoint',
     // Emmet Devlin
     // emmetdev@hotmail.com
     // 07769150614
@@ -409,7 +409,7 @@ export const northernIreland: Poi[] = [
         name: 'nibu',
       },
     ],
-    // https://www.bridgewebs.com/windsorltbelfast
+    website: 'https://www.bridgewebs.com/windsorltbelfast',
     // Brian Moore
     // brian.moore53@hotmail.co.uk
     // 0754087495

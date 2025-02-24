@@ -2,19 +2,6 @@ import { Poi } from '@/app/model/types';
 
 const ayrshire: Poi[] = [
   {
-    key: 'Afton',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Alison Tudor
-    // 01563 830130
-  },
-  {
     key: 'Arran',
     location: { lat: 55.498165279400354, lng: -5.094145643593626 },
     affiliations: [
@@ -24,73 +11,7 @@ const ayrshire: Poi[] = [
         subdivision: 'ayrshire',
       },
     ],
-    // https://www.bridgewebs.com/arran
-  },
-  {
-    key: 'Doon',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Fiona Braid
-    // fiona.braid1@gmail.com
-    // 01292 257282
-  },
-  {
-    key: 'Doon Improvers',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // doonimprovers@gmail.com
-  },
-  {
-    key: 'Kilmarnock',
-    location: { lat: 55.586300461489046, lng: -4.50844575742139 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Becki Staunton
-    // staunton.family4@gmail.com
-    // 07824 718731
-  },
-  {
-    key: 'Kilwinning',
-    location: { lat: 55.64782627562112, lng: -4.697524832283004 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Anne Murdoch
-  },
-  {
-    key: 'Kyle of Lochalsh',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // https://www.bridgewebs.com/kyleoflochalsh
-    // Alison Tudor
-    // 01563 830130
+    website: 'https://www.bridgewebs.com/arran',
   },
   {
     key: 'Largs',
@@ -102,47 +23,7 @@ const ayrshire: Poi[] = [
         subdivision: 'ayrshire',
       },
     ],
-    // https://www.bridgewebs.com/largs
-  },
-  {
-    key: 'Prestwick',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Donald Cattanach
-    // 01292478656
-    // dj.cattanach@btinternet.com
-  },
-  {
-    key: 'Riggs',
-    location: { lat: 55.50236866154569, lng: -4.611593143930963 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // David Allison
-    // davidhallison@yahoo.co.uk
-  },
-  {
-    key: 'St Leonards',
-    location: { lat: 55.446298205968326, lng: -4.613696815097072 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'ayrshire',
-      },
-    ],
-    // Isobel Hollingsworth
-    // 01292 445215
+    website: 'https://www.bridgewebs.com/largs',
   },
   {
     key: 'Darley',
@@ -154,7 +35,7 @@ const ayrshire: Poi[] = [
         subdivision: 'ayrshire',
       },
     ],
-    // https://www.bridgewebs.com/darley
+    website: 'https://www.bridgewebs.com/darley',
   },
 ];
 
@@ -169,7 +50,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/annandale
+    website: 'https://www.bridgewebs.com/annandale',
     // Mairi Shiels
     // mairishiels@btinternet.com
     // 01382543495
@@ -184,7 +65,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/arbroath
+    website: 'https://www.bridgewebs.com/arbroath',
     // Alan Kennedy
     // jakalankennedy@btinternet.com
     // 01241876951
@@ -199,24 +80,10 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/brechin
+    website: 'https://www.bridgewebs.com/brechin',
     // John Ogilvie
     // johncogilvie@aol.com
     // 01356622672
-  },
-  {
-    key: 'Crieff',
-    location: { lat: 56.3782618609245, lng: -3.8562463745890145 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'central',
-      },
-    ],
-    // Ken Arton
-    // karton1@btinernet.com
-    // 01764652061
   },
   {
     key: 'Dundee',
@@ -228,7 +95,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/dundee
+    website: 'https://www.bridgewebs.com/dundee',
     // Sheila Herd
     // sheila.herd@virgin.ne
     // 01382739632
@@ -243,24 +110,10 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/forfar
+    website: 'https://www.bridgewebs.com/forfar',
     // Juliet Rivers
     // juliet.vivers@hotmail.co.uk
     // 01307840987
-  },
-  {
-    key: 'Glenrothes',
-    location: { lat: 56.19433759764486, lng: -3.1529815304164863 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'central',
-      },
-    ],
-    // Anna Maciocia
-    // annathedramaqueen@gmail.com
-    // 01592269261
   },
   {
     key: 'Kirkcaldy',
@@ -272,7 +125,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/kirkcaldy
+    website: 'https://www.bridgewebs.com/kirkcaldy',
     // Enid Allan
     // enid@enidallan.plus.com
     // 01592263022
@@ -287,7 +140,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/milnathort
+    website: 'https://www.bridgewebs.com/milnathort',
     // Gloria Wilson
     // gairneyview@gmail.com
     // 01577 862553
@@ -302,7 +155,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/montrose
+    website: 'https://www.bridgewebs.com/montrose',
     // Sarah Williams
     // sarahwilliams2702@btinternet.com
     // 01674676308
@@ -317,7 +170,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/perth
+    website: 'https://www.bridgewebs.com/perth',
     // Mark Lincoln
     // perthbridgeclub@gmail.com
     // 07786633877
@@ -332,7 +185,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/standrews
+    website: 'https://www.bridgewebs.com/standrews',
     // Howard Greenwell
     // howardgreenwell@gmail.com
     // 01334473963
@@ -347,7 +200,7 @@ const central: Poi[] = [
         subdivision: 'central',
       },
     ],
-    // https://www.bridgewebs.com/steppingstone
+    website: 'https://www.bridgewebs.com/steppingstone',
     // Christian Gourlay
     // dcgourlay@gmail.com
     // 01241410757
@@ -365,7 +218,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/carlton
+    website: 'https://www.bridgewebs.com/carlton',
     // secretary@carltonbridge.co.uk
   },
   {
@@ -378,7 +231,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/newmelville
+    website: 'https://www.bridgewebs.com/newmelville',
     // Andrew Harborow
     // bridge.manager@melvillebridge.club
   },
@@ -392,7 +245,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://berwickbridgeclub.co.uk/
+    website: 'https://berwickbridgeclub.co.uk',
     // Paul Gipson
     // webmaster@berwickbridgeclub.co.uk
   },
@@ -406,7 +259,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/colintoncastlebridgeclub
+    website: 'https://www.bridgewebs.com/colintoncastlebridgeclub',
   },
   {
     key: 'Dunbar',
@@ -418,7 +271,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/dunbar
+    website: 'https://www.bridgewebs.com/dunbar',
     // Donald Grant
     // 01368 863691
   },
@@ -432,7 +285,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/dunfermline
+    website: 'https://www.bridgewebs.com/dunfermline',
     // Sue Smith
     // 01383 860119
   },
@@ -446,7 +299,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/duns
+    website: 'https://www.bridgewebs.com/duns',
     // Sue Denyer
     // 01361882376
   },
@@ -460,7 +313,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/hillfoots
+    website: 'https://www.bridgewebs.com/hillfoots',
     // Margo Webster
     // 01259213798
   },
@@ -474,7 +327,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/jedburgh
+    website: 'https://www.bridgewebs.com/jedburgh',
     // Marian Miller
     // 01450 870737
   },
@@ -488,7 +341,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/kelso
+    website: 'https://www.bridgewebs.com/kelso',
     // Shirley Redgrave
     //
   },
@@ -502,7 +355,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/linlithgow
+    website: 'https://www.bridgewebs.com/linlithgow',
     // Graham Vincent
   },
   {
@@ -515,7 +368,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/longniddry
+    website: 'https://www.bridgewebs.com/longniddry',
     // Kate Borgman
     // 01875 852425
   },
@@ -529,7 +382,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/marmion
+    website: 'https://www.bridgewebs.com/marmion',
     // Norman Lazonby
   },
   {
@@ -542,7 +395,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/ormiston
+    website: 'https://www.bridgewebs.com/ormiston',
     // Donald Swanson
   },
   {
@@ -555,7 +408,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/peebles
+    website: 'https://www.bridgewebs.com/peebles',
     // Katherine Carson
   },
   {
@@ -568,7 +421,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/pentland
+    website: 'https://www.bridgewebs.com/pentland',
     // Ken Brown
   },
   {
@@ -581,7 +434,7 @@ const east: Poi[] = [
         subdivision: 'east',
       },
     ],
-    // https://www.bridgewebs.com/tryst
+    website: 'https://www.bridgewebs.com/tryst',
     // Mike Scully
   },
 ];
@@ -597,7 +450,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/dingwall
+    website: 'https://www.bridgewebs.com/dingwall',
     // Dave Cotton
     // 01349877421
   },
@@ -611,7 +464,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/elginbridgecentre
+    website: 'https://www.bridgewebs.com/elginbridgecentre',
   },
   {
     key: 'Inverness Caledonian',
@@ -623,7 +476,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/caledonian
+    website: 'https://www.bridgewebs.com/caledonian',
     // Fiona Scully
     // 07470188607
   },
@@ -637,7 +490,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/ness
+    website: 'https://www.bridgewebs.com/ness',
     // Val Skelton
     // 01381 621379
   },
@@ -651,7 +504,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/nairn
+    website: 'https://www.bridgewebs.com/nairn',
     // nairn@bridgewebsemail.com
   },
   {
@@ -664,7 +517,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/orkney
+    website: 'https://www.bridgewebs.com/orkney',
     // Iso Tipler
   },
   {
@@ -677,7 +530,7 @@ const highland: Poi[] = [
         subdivision: 'highland',
       },
     ],
-    // https://www.bridgewebs.com/stornoway
+    website: 'https://www.bridgewebs.com/stornoway',
     // Jenny Morrison
     // Stornowaybridge@gmail.com
   },
@@ -694,7 +547,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.aberdeenbridgeclub.co.uk
+    website: 'https://www.aberdeenbridgeclub.co.uk',
     // secretary@aberdeenbridgeclub.co.uk
     // 01224 644773
   },
@@ -708,22 +561,9 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.sbunorth.co.uk/clubs/banchory-district.html
+    website: 'https://www.sbunorth.co.uk/clubs/banchory-district.html',
     // Graham Stewart
     // kiltaraglen@gmail.com
-  },
-  {
-    key: 'Bon Accord',
-    location: { lat: 57.15064508827786, lng: -2.169647028536907 },
-    affiliations: [
-      {
-        type: 'uk-federation',
-        name: 'sbu',
-        subdivision: 'north',
-      },
-    ],
-    // Catherine Mutch
-    // catherinemutch1@gmail.com
   },
   {
     key: 'Lerwick',
@@ -735,7 +575,7 @@ const north: Poi[] = [
         subdivision: 'north',
       },
     ],
-    // https://www.bridgewebs.com/lerwick
+    website: 'https://www.bridgewebs.com/lerwick',
     // Penelope Smith
     // penelopeannesmith@outlook.com
     // 07769698254
@@ -753,7 +593,7 @@ const south: Poi[] = [
         subdivision: 'south',
       },
     ],
-    // https://www.annan.org.uk/societies-and-groups/bridge-club.html
+    website: 'https://www.annan.org.uk/societies-and-groups/bridge-club.html',
     // John Hay
     // johnha42@yahoo.com
     // 01387870286
@@ -768,7 +608,7 @@ const south: Poi[] = [
         subdivision: 'south',
       },
     ],
-    // https://www.bridgewebs.com/cargen
+    website: 'https://www.bridgewebs.com/cargen',
     // Robert Hulley
     // 07766727105
   },
@@ -782,7 +622,7 @@ const south: Poi[] = [
         subdivision: 'south',
       },
     ],
-    // https://www.bridgewebs.com/dalbeattiestewartryclubs
+    website: 'https://www.bridgewebs.com/dalbeattiestewartryclubs',
     // Mandy Neilson
     // 01556610455
   },
@@ -796,7 +636,7 @@ const south: Poi[] = [
         subdivision: 'south',
       },
     ],
-    // https://www.bridgewebs.com/loreburn
+    website: 'https://www.bridgewebs.com/loreburn',
     // 01387261391
   },
   {
@@ -809,7 +649,7 @@ const south: Poi[] = [
         subdivision: 'south',
       },
     ],
-    // https://www.bridgewebs.com/solway
+    website: 'https://www.bridgewebs.com/solway',
     // Prter Allen
     // 07801267493
   },
@@ -826,7 +666,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/biggar
+    website: 'https://www.bridgewebs.com/biggar',
   },
   {
     key: 'Buchanan',
@@ -838,7 +678,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/buchananbc
+    website: 'https://www.bridgewebs.com/buchananbc',
     // Maria Jackson
   },
   {
@@ -851,7 +691,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/dunoon
+    website: 'https://www.bridgewebs.com/dunoon',
   },
   {
     key: 'Fort Matilda',
@@ -863,7 +703,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/fortmatilda
+    website: 'https://www.bridgewebs.com/fortmatilda',
     // Iain Banks
     // 01475 727139
   },
@@ -877,7 +717,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/glasgow
+    website: 'https://www.bridgewebs.com/glasgow',
   },
   {
     key: 'Maccabi',
@@ -889,7 +729,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/maccabi
+    website: 'https://www.bridgewebs.com/maccabi',
     // Geraldine Gardner
   },
   {
@@ -902,7 +742,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/hamilton
+    website: 'https://www.bridgewebs.com/hamilton',
     // Jean Robertson
   },
   {
@@ -915,7 +755,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/helensburgh
+    website: 'https://www.bridgewebs.com/helensburgh',
   },
   {
     key: 'Kelvin',
@@ -927,7 +767,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/kelvin
+    website: 'https://www.bridgewebs.com/kelvin',
   },
   {
     key: 'Killearn',
@@ -939,7 +779,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/killearn
+    website: 'https://www.bridgewebs.com/killearn',
     // Doug Ashworth
   },
   {
@@ -952,7 +792,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/kilmacolm
+    website: 'https://www.bridgewebs.com/kilmacolm',
   },
   {
     key: 'Oban',
@@ -964,7 +804,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/oban
+    website: 'https://www.bridgewebs.com/oban',
   },
   {
     key: 'Ogilvie',
@@ -976,7 +816,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/ogilvie
+    website: 'https://www.bridgewebs.com/ogilvie',
     // Jeanette Muir
     // 01415715665
   },
@@ -990,7 +830,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/standrew
+    website: 'https://www.bridgewebs.com/standrew',
     // Jennie Macdonald
   },
   {
@@ -1003,7 +843,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/stjosephsclarkston
+    website: 'https://www.bridgewebs.com/stjosephsclarkston',
   },
   {
     key: 'Stirling & Union',
@@ -1015,7 +855,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/stirling
+    website: 'https://www.bridgewebs.com/stirling',
     // Kathy McCabe
     // 07775605080
   },
@@ -1029,7 +869,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/powmill
+    website: 'https://www.bridgewebs.com/powmill',
   },
   {
     key: 'Western',
@@ -1041,7 +881,7 @@ const west: Poi[] = [
         subdivision: 'west',
       },
     ],
-    // https://www.bridgewebs.com/western
+    website: 'https://www.bridgewebs.com/western',
     // Annette Monaghan
     // 07870271117
   },

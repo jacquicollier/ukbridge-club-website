@@ -1,4 +1,4 @@
-import SmallCard from '@/app/components/SmallCard';
+import PoiCard from '@/app/components/PoiCard';
 import { Poi } from '@/app/model/types';
 
 const Results = (props: { pois: Poi[] }) => {
@@ -6,7 +6,7 @@ const Results = (props: { pois: Poi[] }) => {
     <>
       <div className='flex flex-wrap gap-4'>
         {props.pois.map((poi) => (
-          <SmallCard key={poi.key} poi={poi}></SmallCard>
+          <PoiCard key={poi.key} poi={poi}></PoiCard>
         ))}
       </div>
     </>
