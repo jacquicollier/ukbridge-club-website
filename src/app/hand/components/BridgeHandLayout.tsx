@@ -1,4 +1,4 @@
-import DDSTable from '@/app/hand/components/DDSTable';
+// import DDSTable from '@/app/hand/components/DDSTable';
 import { Hand } from '@/app/model/pbn/hand';
 import { parseBridgeHand } from '@/app/model/pbn/utils';
 import AuctionTable from '@/app/hand/components/AuctionTable';
@@ -11,12 +11,12 @@ export default function BridgeHandLayout(props: {
   result: boolean;
   playedCards?: { [key: string]: { suit: string; rank: string } }; // Cards played by each player
 }) {
-  const vulnerability = {
-    N: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
-    S: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
-    E: ['EW', 'Both', 'All'].includes(props.hand.vulnerable),
-    W: ['EW', 'Both', 'All'].includes(props.hand.vulnerable),
-  };
+  // const vulnerability = {
+  //   N: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
+  //   S: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
+  //   E: ['EW', 'Both', 'All'].includes(props.hand.vulnerable),
+  //   W: ['EW', 'Both', 'All'].includes(props.hand.vulnerable),
+  // };
 
   const hands = parseBridgeHand(props.hand.deal);
 
