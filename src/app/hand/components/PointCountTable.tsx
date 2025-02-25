@@ -1,8 +1,8 @@
-import { parseBridgeHand } from '@/app/model/pbn/utils';
+import { PlayerHolding } from '@/app/hand/components/PlayerHoldings';
 
-export default function PointCountTable(props: { deal: string }) {
-  const hands = parseBridgeHand(props.deal);
-
+export default function PointCountTable(props: {
+  playerHoldings: Record<string, PlayerHolding>;
+}) {
   function calculateMiltonPointCount(hand: Record<string, string[]>): number {
     const pointValues: Record<string, number> = { J: 1, Q: 2, K: 3, A: 4 };
 
@@ -18,16 +18,16 @@ export default function PointCountTable(props: { deal: string }) {
       {/* Set width & height to prevent absolute children from overflowing */}
       <div className='relative flex size-20 items-center justify-center'>
         <div className='absolute top-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(hands.N)}
+          {calculateMiltonPointCount(props.playerHoldings.N)}
         </div>
         <div className='absolute bottom-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(hands.S)}
+          {calculateMiltonPointCount(props.playerHoldings.S)}
         </div>
         <div className='absolute left-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(hands.W)}
+          {calculateMiltonPointCount(props.playerHoldings.W)}
         </div>
         <div className='absolute right-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(hands.E)}
+          {calculateMiltonPointCount(props.playerHoldings.E)}
         </div>
       </div>
     </div>
