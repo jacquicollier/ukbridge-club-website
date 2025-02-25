@@ -1,27 +1,19 @@
-export default function Result(props: {
-  contract: string;
-  declarer: string;
-  result: string;
-}) {
-  // <div className='absolute left-1 top-1 rounded-md px-3 py-2 shadow-md'>
-  //   <p>
-  //     Dealer: <span className='font-bold'>{props.hand.dealer}</span>
-  //   </p>
-  //   <p>
-  //     Vul: <span className='font-bold'>{props.hand.vulnerable}</span>
-  //   </p>
-  // </div>
+import { Hand } from '@/app/model/pbn/hand';
 
+export default function Result(props: { hand: Hand }) {
   return (
     <div className='absolute bottom-2 right-2 rounded-md px-3 py-2 shadow-md'>
       <p>
-        Contract: <span className='font-bold'>{props.contract}</span>
+        Contract: <span className='font-bold'>{props.hand.contract}</span>
       </p>
       <p>
-        Declarer: <span className='font-bold'>{props.declarer}</span>
+        Declarer: <span className='font-bold'>{props.hand.declarer}</span>
       </p>
       <p>
-        Result: <span className='font-bold'>{props.result}</span>
+        Result: <span className='font-bold'>{props.hand.result}</span>
+      </p>
+      <p>
+        Score: <span className='font-bold'>{props.hand.score}</span>
       </p>
     </div>
   );
