@@ -3,14 +3,20 @@ import { PlayerHolding } from '@/app/hand/components/PlayerHoldings';
 export default function PointCountTable(props: {
   playerHoldings: Record<string, PlayerHolding>;
 }) {
-  function calculateMiltonPointCount(hand: Record<string, string[]>): number {
+  function calculateMiltonPointCount(playerHolding: PlayerHolding): number {
     const pointValues: Record<string, number> = { J: 1, Q: 2, K: 3, A: 4 };
 
-    return Object.values(hand)
-      .flat()
-      .reduce((total, card) => {
-        return total + (pointValues[card] || 0);
-      }, 0);
+    // Iterate over suits and their cards
+    return Object.values(playerHolding).reduce((total, suit) => {
+      // Iterate over cards in each suit
+      return (
+        total +
+        Object.keys(suit).reduce((suitTotal, rank) => {
+          // Add points for each card based on its rank
+          return suitTotal + (pointValues[rank] || 0);
+        }, 0)
+      );
+    }, 0);
   }
 
   return (

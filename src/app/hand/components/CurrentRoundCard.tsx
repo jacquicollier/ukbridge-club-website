@@ -1,4 +1,4 @@
-export default function PlayedCard({
+export default function CurrentRoundCard({
   player,
   card,
   leadPlayer,

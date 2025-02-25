@@ -1,4 +1,8 @@
-export type PlayerHolding = Record<string, string[]>;
+import { rankOrder } from '@/app/model/constants';
+
+export type PlayerHolding = {
+  [suit: string]: Record<string, boolean>;
+};
 
 export default function PlayerHoldings(props: {
   playerHoldings: Record<string, PlayerHolding>;
@@ -20,28 +24,41 @@ export default function PlayerHoldings(props: {
 }
 
 // Helper function to render a hand with aligned suits
-function renderHand(hand: Record<string, string[]>) {
+function renderHand(playerHolding: PlayerHolding) {
   return (
     <div className='flex flex-col items-start text-lg'>
-      {Object.entries(hand).map(([suit, cards]) => (
-        <div key={suit} className='flex items-start'>
-          <span
-            className='font-bold'
-            style={{
-              color: suit === '♥' || suit === '♦' ? 'red' : 'black',
-            }}
-          >
-            {suit}
-          </span>
-          <div className='ml-2 flex max-w-[80px] flex-wrap'>
-            {cards.map((card, index) => (
-              <span key={index} className='mr-0.5'>
-                {card}
-              </span>
-            ))}
+      {Object.entries(playerHolding).map(([suit, cards]) => {
+        const sortedCards = Object.keys(cards).sort(
+          (a, b) => rankOrder.indexOf(a) - rankOrder.indexOf(b),
+        );
+
+        return (
+          <div key={suit} className='flex items-start'>
+            <span
+              className='font-bold'
+              style={{
+                color: suit === '♥' || suit === '♦' ? 'red' : 'black',
+              }}
+            >
+              {suit}
+            </span>{' '}
+            {/* Display suit (♠, ♥, etc.) */}
+            <div className='ml-2 flex max-w-[80px] flex-wrap'>
+              {sortedCards.map(([rank, played]) => {
+                // Extract rank and suit
+                const card = `${rank}${suit}`;
+                const cardClass = played ? 'bg-gray-400 opacity-50' : ''; // Grey and faded if played
+
+                return (
+                  <div key={card} className={`flex items-center ${cardClass}`}>
+                    <span className='mr-0.5'>{rank}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

@@ -3,6 +3,22 @@ import { scotland } from '@/app/model/scotland';
 import { wales } from '@/app/model/wales';
 import { northernIreland } from '@/app/model/northern-ireland';
 
+export const rankOrder = [
+  'A',
+  'K',
+  'Q',
+  'J',
+  'T',
+  '9',
+  '8',
+  '7',
+  '6',
+  '5',
+  '4',
+  '3',
+  '2',
+];
+
 type Affiliation = {
   name: string;
   website: string;

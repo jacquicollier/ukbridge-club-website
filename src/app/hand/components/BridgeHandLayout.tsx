@@ -7,8 +7,8 @@ import DealerAndVul from '@/app/hand/components/DealerAndVul';
 import PlayerHoldings, {
   PlayerHolding,
 } from '@/app/hand/components/PlayerHoldings';
-import Vulnerabilities from '@/app/hand/components/Vulnerabilities';
-import PlayedCards from '@/app/hand/components/PlayedCards';
+// import Vulnerabilities from '@/app/hand/components/Vulnerabilities';
+import CurrentRoundCards from '@/app/hand/components/CurrentRoundCards';
 
 export default function BridgeHandLayout(props: {
   hand: Hand;
@@ -38,13 +38,13 @@ export default function BridgeHandLayout(props: {
         </div>
 
         {/* Vulnerabilities */}
-        <Vulnerabilities vulnerable={props.hand.vulnerable} />
+        {/*<Vulnerabilities vulnerable={props.hand.vulnerable} />*/}
 
         {/*Played Cards */}
         {props.playedCards && (
-          <PlayedCards
-            declarer={props.hand.declarer}
-            playedCards={props.playedCards}
+          <CurrentRoundCards
+            leadPlayer={props.hand.declarer}
+            roundPlayedCards={props.playedCards}
           />
         )}
       </div>
@@ -61,6 +61,7 @@ const parseBridgeHand = (handString: string): Record<string, PlayerHolding> => {
   const suitOrder = ['♠', '♥', '♦', '♣'];
   const directions = ['N', 'E', 'S', 'W'];
 
+  // Split the hand string into direction and hands
   const [startingDirection, ...hands] = handString.split(':');
   const handsArray = hands.join(':').split(' '); // Split individual hands
   const startIndex = directions.indexOf(startingDirection);
@@ -69,13 +70,28 @@ const parseBridgeHand = (handString: string): Record<string, PlayerHolding> => {
     throw new Error('Invalid bridge hand format');
   }
 
-  // Map hands to their respective directions
+  // Map hands to their respective directions and suit cards
   return directions.reduce(
     (acc, direction, index) => {
       const handData = handsArray[(startIndex + index) % 4].split('.'); // Rotate based on starting position
-      acc[direction] = Object.fromEntries(
-        suitOrder.map((suit, i) => [suit, handData[i]?.split('') ?? []]),
-      );
+
+      // Create an object for the player's hand
+      const playerHand: PlayerHolding = suitOrder.reduce((suitAcc, suit, i) => {
+        const cards = handData[i]?.split('') ?? []; // Split the string into individual cards
+
+        // For each card in the suit, set its value to `false` (not played yet)
+        suitAcc[suit] = cards.reduce(
+          (cardAcc, card) => {
+            cardAcc[card] = false; // Initialize each card as not played
+            return cardAcc;
+          },
+          {} as Record<string, boolean>,
+        );
+
+        return suitAcc;
+      }, {} as PlayerHolding);
+
+      acc[direction] = playerHand;
       return acc;
     },
     {} as Record<string, PlayerHolding>,
