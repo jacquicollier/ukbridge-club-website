@@ -20,7 +20,7 @@ export default function BridgeHandLayout(props: {
   result: boolean;
 }) {
   // TODO: Set this as ref?
-  const trickMap = mapTricksToLeaders(props.hand);
+  const trickMap = props.hand.play ? mapTricksToLeaders(props.hand) : null;
 
   const trumps = determineTrumps(props.hand.contract);
 
@@ -38,7 +38,7 @@ export default function BridgeHandLayout(props: {
   useEffect(() => {
     if (playIndex === null) return;
 
-    const playedCard = trickMap[playIndex];
+    const playedCard = trickMap![playIndex];
     if (!playedCard) return; // No more tricks
 
     // Reset trick if starting a new one
@@ -52,7 +52,7 @@ export default function BridgeHandLayout(props: {
       setCurrentTrickCards({});
     }
 
-    const currentCard: CardAndPlayer = trickMap[playIndex];
+    const currentCard: CardAndPlayer = trickMap![playIndex];
 
     // Avoid unnecessary state updates if nothing has changed
     setPlayerHoldings((prev) => {
@@ -91,7 +91,10 @@ export default function BridgeHandLayout(props: {
   }
 
   function hasNext(): boolean {
-    return playIndex == null || playIndex < trickMap.length - 1;
+    return (
+      trickMap !== null &&
+      (playIndex == null || playIndex < trickMap.length - 1)
+    );
   }
 
   // function handlePreviousCard() {
