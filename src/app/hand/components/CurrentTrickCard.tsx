@@ -1,11 +1,13 @@
-export default function CurrentRoundCard({
+import { SuitMap } from '@/app/model/constants';
+
+export default function CurrentTrickCard({
   player,
   card,
-  leadPlayer,
+  currentLeader,
 }: {
   player: string;
   card: { rank: string; suit: string };
-  leadPlayer: string;
+  currentLeader: string;
 }) {
   // Positions relative to the board (centered in a diamond shape)
   const getCardPosition = (player: string) =>
@@ -23,7 +25,7 @@ export default function CurrentRoundCard({
     W: ['W', 'N', 'E', 'S'],
   };
 
-  const order = playOrder[leadPlayer] || ['N', 'E', 'S', 'W'];
+  const order = playOrder[currentLeader] || playOrder.N;
   const zIndex = order.indexOf(player) + 10; // Higher index = on top
 
   return (
@@ -31,12 +33,12 @@ export default function CurrentRoundCard({
       className='absolute flex items-center justify-center rounded-lg border-2 border-black bg-white p-1 text-xl font-bold shadow-lg sm:border'
       style={{
         ...getCardPosition(player),
-        color: card.suit === '♥' || card.suit === '♦' ? 'red' : 'black',
+        color: card.suit === 'H' || card.suit === 'D' ? 'red' : 'black',
         zIndex, // Ensure correct stacking order
       }}
     >
       {card.rank}
-      {card.suit}
+      {SuitMap[card.suit]}
     </div>
   );
 }

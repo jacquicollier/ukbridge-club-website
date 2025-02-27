@@ -45,7 +45,7 @@ export default function AuctionTable(props: { auction: ValueAndDetails }) {
   return (
     //   <div className='absolute right-2 top-2 rounded-lg border bg-gray-100 shadow-lg'>
     //   <h3 className='font-bold'>Optimal Contract</h3>
-    //   <p>4♠ by West</p>
+    //   <p>4S by West</p>
     // </div>
 
     // <ExpandableDiv>

@@ -1,5 +1,8 @@
-import BridgeHandLayout from '@/app/hand/components/BridgeHandLayout';
+'use client';
+
 import { hands } from '@/app/model/pbn/hands';
+
+import BridgeHandLayout from '@/app/hand/components/BridgeHandLayout';
 
 export default function Hand() {
   return (
