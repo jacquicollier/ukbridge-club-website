@@ -16,7 +16,6 @@ const PoiMarkers = (props: { pois: Poi[] }) => {
   const handleClick = useCallback(
     (ev: google.maps.MapMouseEvent) => {
       if (!map || !ev.latLng) return;
-      console.log('Marker clicked:', ev.latLng.toString());
       map.panTo(ev.latLng);
       setCircleCenter(ev.latLng);
     },

@@ -1,8 +1,5 @@
-import { rankOrder } from '@/app/model/constants';
-
-export type PlayerHolding = {
-  [suit: string]: Record<string, boolean>;
-};
+import { PlayerHolding, SuitMap } from '@/app/model/constants';
+import { rankComparator } from '@/app/hand/components/utils';
 
 export default function PlayerHoldings(props: {
   playerHoldings: Record<string, PlayerHolding>;
@@ -28,8 +25,8 @@ function renderHand(playerHolding: PlayerHolding) {
   return (
     <div className='flex flex-col items-start text-lg'>
       {Object.entries(playerHolding).map(([suit, cards]) => {
-        const sortedCards = Object.keys(cards).sort(
-          (a, b) => rankOrder.indexOf(a) - rankOrder.indexOf(b),
+        const sortedCards = Object.entries(cards).sort((a, b) =>
+          rankComparator(a[0], b[0]),
         );
 
         return (
@@ -37,17 +34,17 @@ function renderHand(playerHolding: PlayerHolding) {
             <span
               className='font-bold'
               style={{
-                color: suit === '♥' || suit === '♦' ? 'red' : 'black',
+                color: suit === 'H' || suit === 'D' ? 'red' : 'black',
               }}
             >
-              {suit}
+              {SuitMap[suit]}
             </span>{' '}
             {/* Display suit (♠, ♥, etc.) */}
             <div className='ml-2 flex max-w-[80px] flex-wrap'>
               {sortedCards.map(([rank, played]) => {
                 // Extract rank and suit
-                const card = `${rank}${suit}`;
-                const cardClass = played ? 'bg-gray-400 opacity-50' : ''; // Grey and faded if played
+                const card = `${rank}${SuitMap[suit]}`;
+                const cardClass = played ? 'opacity-25' : '';
 
                 return (
                   <div key={card} className={`flex items-center ${cardClass}`}>

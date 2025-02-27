@@ -3,6 +3,12 @@ import { scotland } from '@/app/model/scotland';
 import { wales } from '@/app/model/wales';
 import { northernIreland } from '@/app/model/northern-ireland';
 
+export type Player = 'N' | 'E' | 'S' | 'W';
+
+export type PlayerHolding = {
+  [suit: string]: Record<string, boolean>;
+};
+
 export const rankOrder = [
   'A',
   'K',
@@ -18,6 +24,13 @@ export const rankOrder = [
   '3',
   '2',
 ];
+
+export const SuitMap: Record<string, string> = {
+  S: '♠',
+  H: '♥',
+  D: '♦',
+  C: '♣',
+};
 
 type Affiliation = {
   name: string;
