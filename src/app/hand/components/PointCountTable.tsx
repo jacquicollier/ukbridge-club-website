@@ -1,4 +1,4 @@
-import { PlayerHolding } from '@/app/hand/components/PlayerHoldings';
+import { PlayerHolding } from '@/app/model/constants';
 
 export default function PointCountTable(props: {
   playerHoldings: Record<string, PlayerHolding>;
