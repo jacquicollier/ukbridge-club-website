@@ -22,19 +22,21 @@ export function parseBridgeHand(
     throw new Error('Invalid bridge hand format');
   }
 
-  // Map hands to their respective directions and suit cards
+  // **Fix: Use correct order mapping**
+  const orderedHands = directions.map(
+    (_, index) => handsArray[(index - startIndex + 4) % 4], // Ensure correct mapping
+  );
+
   return directions.reduce(
     (acc, direction, index) => {
-      const handData = handsArray[(startIndex + index) % 4].split('.'); // Rotate based on starting position
+      const handData = orderedHands[index].split('.'); // Hands are now correctly rotated
 
-      // Create an object for the player's hand
       acc[direction] = suitOrder.reduce((suitAcc, suit, i) => {
-        const cards = handData[i]?.split('') ?? []; // Split the string into individual cards
+        const cards = handData[i]?.split('') ?? [];
 
-        // For each card in the suit, set its value to `false` (not played yet)
         suitAcc[suit] = cards.reduce(
           (cardAcc, card) => {
-            cardAcc[card] = false; // Initialize each card as not played
+            cardAcc[card] = false;
             return cardAcc;
           },
           {} as Record<string, boolean>,
@@ -122,7 +124,10 @@ export function determineTrickWinner(
   const trick = Object.entries(trickCards); // Convert to array of [player, card]
 
   // ✅ Identify all cards of the leading suit and trump suit
-  const leadingSuit = trickCards[leader].suit;
+  const leaderTrickCards = trickCards[leader];
+  const [, suit] = Object.entries(trickCards)[0];
+
+  const leadingSuit = leaderTrickCards ? leaderTrickCards.suit : suit;
   const trumpCards =
     trumpSuit == null
       ? []
@@ -138,6 +143,7 @@ export function determineTrickWinner(
     winningTrick = trumpCards;
   } else {
     // ✅ Otherwise, highest card in the leading suit wins
+    console.log('LSC: ' + leadingSuitCards);
     winningTrick = leadingSuitCards;
   }
 

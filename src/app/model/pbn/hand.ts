@@ -78,6 +78,8 @@ export const handSchema = yup.object().shape({
 
   score: yup.string(),
 
+  scoreimp: yup.string(),
+
   homeTeam: yup.string(),
 
   round: yup.string(),

@@ -12,20 +12,24 @@ export default function BridgeBoard(props: {
   hand: Hand;
   result: boolean;
   currentTrickCards?: { [key: string]: { suit: string; rank: string } };
-  currenLeader: string;
-  playerHoldings: Record<Player, PlayerHolding>;
+  currenLeader: string | null;
+  playerHoldings: Record<Player, PlayerHolding> | null;
 }) {
   return (
     <>
-      <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center justify-center rounded-lg border-2 border-black p-4'>
+      <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
         {/* Auction Table */}
-        <AuctionTable auction={props.hand.auction} />
+        {props.hand.auction && props.hand.auction.details && (
+          <AuctionTable auction={props.hand.auction} />
+        )}
 
         {/* Dealer & Vulnerability Box */}
         <DealerAndVul hand={props.hand} />
 
         {/* Hands */}
-        <PlayerHoldings playerHoldings={props.playerHoldings} />
+        {props.playerHoldings && (
+          <PlayerHoldings playerHoldings={props.playerHoldings} />
+        )}
 
         {/* Board */}
         <div
@@ -49,7 +53,9 @@ export default function BridgeBoard(props: {
         </div>
 
         {/* Extra Info */}
-        <PointCountTable playerHoldings={props.playerHoldings} />
+        {props.playerHoldings && (
+          <PointCountTable playerHoldings={props.playerHoldings} />
+        )}
         <Result hand={props.hand} />
         {/*<DDSTable />*/}
       </div>
