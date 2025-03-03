@@ -1,7 +1,7 @@
 import CurrentTrickCard from '@/app/hand/components/CurrentTrickCard';
 
 export default function CurrentTrickCards(props: {
-  currentLeader: string;
+  currentLeader: string | null;
   currentTrickCards: { [key: string]: { suit: string; rank: string } }; // Cards played by each player
 }) {
   return (

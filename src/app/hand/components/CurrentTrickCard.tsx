@@ -7,7 +7,7 @@ export default function CurrentTrickCard({
 }: {
   player: string;
   card: { rank: string; suit: string };
-  currentLeader: string;
+  currentLeader: string | null;
 }) {
   // Positions relative to the board (centered in a diamond shape)
   const getCardPosition = (player: string) =>
@@ -25,7 +25,7 @@ export default function CurrentTrickCard({
     W: ['W', 'N', 'E', 'S'],
   };
 
-  const order = playOrder[currentLeader] || playOrder.N;
+  const order = currentLeader ? playOrder[currentLeader] : playOrder.N;
   const zIndex = order.indexOf(player) + 10; // Higher index = on top
 
   return (

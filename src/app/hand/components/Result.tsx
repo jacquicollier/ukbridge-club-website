@@ -15,6 +15,11 @@ export default function Result(props: { hand: Hand }) {
       <p>
         Score: <span className='font-bold'>{props.hand.score}</span>
       </p>
+      {props.hand.scoreimp && (
+        <p>
+          Score IMP: <span className='font-bold'>{props.hand.scoreimp}</span>
+        </p>
+      )}
     </div>
   );
 }

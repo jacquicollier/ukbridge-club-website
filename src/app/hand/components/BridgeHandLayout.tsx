@@ -6,14 +6,12 @@ import BridgeBoard from '@/app/hand/components/BridgeBoard';
 import { useEffect, useState } from 'react';
 import BridgePlay from '@/app/hand/components/BridgePlay';
 import {
-  CardAndPlayer,
   determineTrickWinner,
   determineTrumps,
   mapTricksToLeaders,
   parseBridgeHand,
 } from '@/app/hand/components/utils';
-
-// TODO: Handle pass
+import { Users } from 'lucide-react';
 
 export default function BridgeHandLayout(props: {
   hand: Hand;
@@ -28,63 +26,72 @@ export default function BridgeHandLayout(props: {
   const [currentTrickCards, setCurrentTrickCards] = useState<{
     [key: string]: { suit: string; rank: string };
   }>({});
-  const [playerHoldings, setPlayerHoldings] = useState<
-    Record<Player, PlayerHolding>
-  >(parseBridgeHand(props.hand.deal));
-  const [currentLeader, setCurrentLeader] = useState<Player>(
-    props.hand.declarer as Player,
-  );
+  const [playerHoldings, setPlayerHoldings] = useState<Record<
+    Player,
+    PlayerHolding
+  > | null>(null);
+  const [currentLeader, setCurrentLeader] = useState<Player | null>(null);
 
   useEffect(() => {
-    if (playIndex === null) return;
+    setCurrentTrickCards({});
+    setPlayerHoldings(parseBridgeHand(props.hand.deal));
+    setCurrentLeader(props.hand.declarer as Player);
+  }, [props.hand]);
 
-    const playedCard = trickMap![playIndex];
-    if (!playedCard) return; // No more tricks
-
-    // Reset trick if starting a new one
-    if (playIndex % 4 === 0) {
-      // Only reset trick if it's necessary (no need to reset if it's already empty)
-      setCurrentLeader(
-        Object.keys(currentTrickCards).length == 4
-          ? determineTrickWinner(currentTrickCards, currentLeader, trumps)
-          : (props.hand.play.value as Player),
-      );
+  useEffect(() => {
+    if (playIndex === null) {
       setCurrentTrickCards({});
+      setPlayerHoldings(parseBridgeHand(props.hand.deal)); // Reset to initial state
+      setCurrentLeader(props.hand.declarer as Player);
+      return;
     }
 
-    const currentCard: CardAndPlayer = trickMap![playIndex];
+    // ✅ Get all cards played up to `playIndex`
+    const playedCards = trickMap!.slice(0, playIndex + 1);
 
-    // Avoid unnecessary state updates if nothing has changed
-    setPlayerHoldings((prev) => {
-      return {
-        ...prev,
-        [currentCard.player]: {
-          ...prev[currentCard.player],
-          [currentCard.suit]: {
-            ...prev[currentCard.player as Player][currentCard.suit],
-            [currentCard.rank]: true,
-          },
-        },
-      };
+    // ✅ Rebuild playerHoldings based on playedCards
+    const newPlayerHoldings = parseBridgeHand(props.hand.deal);
+    playedCards.forEach(({ player, suit, rank }) => {
+      newPlayerHoldings[player][suit][rank] = true; // Mark as played
     });
+    setPlayerHoldings(newPlayerHoldings);
 
-    // Avoid unnecessary state updates if no new card has been played
-    setCurrentTrickCards((prev) => {
-      if (
-        prev[currentCard.player]?.rank === currentCard.rank &&
-        prev[currentCard.player]?.suit === currentCard.suit
-      )
-        return prev; // No need to update if card is the same
+    // ✅ Rebuild currentTrickCards (only last 4 moves)
+    const trickStart = Math.floor(playIndex / 4) * 4; // Get start index of current trick
+    const newTrickCards = Object.fromEntries(
+      trickMap!
+        .slice(trickStart, playIndex + 1)
+        .map(({ player, suit, rank }) => [player, { suit, rank }]),
+    );
+    setCurrentTrickCards(newTrickCards);
 
-      return {
-        ...prev,
-        [currentCard.player]: {
-          suit: currentCard.suit,
-          rank: currentCard.rank,
-        },
-      };
-    });
-  }, [playIndex]); // Add trickMap to dependencies to ensure updates when the map changes
+    // ✅ Reset leader at trick start
+    if (playIndex % 4 === 0) {
+      setCurrentLeader(
+        Object.keys(newTrickCards).length === 4
+          ? determineTrickWinner(newTrickCards, currentLeader!, trumps)
+          : (props.hand.play.value as Player),
+      );
+    }
+  }, [playIndex]);
+
+  function handleClear(): void {
+    setPlayIndex(null);
+  }
+
+  function hasPrevious(): boolean {
+    return playIndex !== null;
+  }
+
+  function handlePreviousCard() {
+    if (playIndex !== null) {
+      if (playIndex == 0) {
+        setPlayIndex(null);
+      } else {
+        setPlayIndex(playIndex - 1);
+      }
+    }
+  }
 
   function handleNextCard() {
     setPlayIndex((prev) => (prev == null ? 0 : prev + 1));
@@ -97,18 +104,20 @@ export default function BridgeHandLayout(props: {
     );
   }
 
-  // function handlePreviousCard() {
-  //   if (playIndex !== null) {
-  //     if (playIndex == 0) {
-  //       setPlayIndex(null);
-  //     } else {
-  //       setPlayIndex(playIndex - 1);
-  //     }
-  //   }
-  // }
-
   return (
     <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center'>
+      <div className='flex w-full items-center justify-between rounded-t-md bg-gray-300 p-3 shadow-md'>
+        <div className='flex grow justify-center gap-3'>
+          <span className='font-bold'>Board {props.hand.board}</span>
+        </div>
+        {/* Clear Button on the Right */}
+        <button
+          title='Clear'
+          className='flex size-8 items-center justify-center rounded-full bg-gray-200 shadow-md hover:bg-gray-500'
+        >
+          <Users size={24} />
+        </button>
+      </div>
       <BridgeBoard
         currentTrickCards={currentTrickCards}
         hand={props.hand}
@@ -116,8 +125,14 @@ export default function BridgeHandLayout(props: {
         result={props.result}
         playerHoldings={playerHoldings}
       />
-      {props.hand.contract !== 'Pass' && (
-        <BridgePlay hasNext={hasNext} nextCard={handleNextCard} />
+      {props.hand.play && props.hand.contract !== 'Pass' && (
+        <BridgePlay
+          clearPlay={handleClear}
+          hasNext={hasNext}
+          hasPrevious={hasPrevious}
+          nextCard={handleNextCard}
+          previousCard={handlePreviousCard}
+        />
       )}
     </div>
   );

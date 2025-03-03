@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { ValueAndDetails } from '@/app/model/pbn/hand';
 
 const directions = ['N', 'E', 'S', 'W'];
@@ -42,37 +44,59 @@ export default function AuctionTable(props: { auction: ValueAndDetails }) {
     formattedBids.push(currentRow);
   }
 
-  return (
-    //   <div className='absolute right-2 top-2 rounded-lg border bg-gray-100 shadow-lg'>
-    //   <h3 className='font-bold'>Optimal Contract</h3>
-    //   <p>4S by West</p>
-    // </div>
+  const [isOpen, setIsOpen] = useState(true);
 
-    // <ExpandableDiv>
-    <div className='absolute right-2 top-2 rounded-lg bg-gray-100 shadow-lg'>
-      <table className='border-collapse text-sm'>
-        <thead>
-          <tr>
-            {directions.map((dir) => (
-              <th key={dir} className='py-1 text-center'>
-                {dir} {/* Fixed order: N, E, S, W */}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {formattedBids.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {row.map((bid, colIndex) => (
-                <td key={colIndex} className='px-1 text-center'>
-                  {bid}
-                </td>
+  return (
+    <>
+      {/* Wrapper for title bar and collapsible content */}
+      <div className='absolute right-2 top-2 inline-block transition-all duration-300'>
+        {/* Title Bar with button aligned to the right */}
+        <div
+          className={`flex cursor-pointer items-center rounded-t-lg bg-gray-400 px-4 text-white transition-all duration-300 ${
+            isOpen ? 'justify-between' : 'w-10 justify-end'
+          }`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen && <span>&nbsp;</span>} {/* Show title only when open */}
+          <span className='ml-auto' title='Auction'>
+            {isOpen ? '−' : '+'}
+          </span>{' '}
+          {/* Toggle Icon */}
+        </div>
+
+        {/* Collapsible Content - Positioned to the left of the button */}
+        <div
+          className={`absolute right-0 overflow-hidden transition-all duration-300 ${
+            isOpen
+              ? 'h-auto scale-100 opacity-100'
+              : 'h-0 scale-95 p-0 opacity-0'
+          }`}
+          style={{ width: isOpen ? 'auto' : '40px' }} // Ensure the panel width shrinks
+        >
+          <table className='border-collapse text-sm'>
+            <thead>
+              <tr>
+                {directions.map((dir) => (
+                  <th key={dir} className='py-1 text-center'>
+                    {dir} {/* Fixed order: N, E, S, W */}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {formattedBids.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {row.map((bid, colIndex) => (
+                    <td key={colIndex} className='px-1 text-center'>
+                      {bid}
+                    </td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    // </ExpandableDiv>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </>
   );
 }

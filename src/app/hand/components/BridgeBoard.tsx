@@ -12,32 +12,38 @@ export default function BridgeBoard(props: {
   hand: Hand;
   result: boolean;
   currentTrickCards?: { [key: string]: { suit: string; rank: string } };
-  currenLeader: string;
-  playerHoldings: Record<Player, PlayerHolding>;
+  currenLeader: string | null;
+  playerHoldings: Record<Player, PlayerHolding> | null;
 }) {
+  const vulnerability = {
+    NS: ['NS', 'Both', 'All'].includes(props.hand.vulnerable),
+    EW: ['EW', 'Both', 'All'].includes(props.hand.vulnerable),
+  };
+
   return (
     <>
-      <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center justify-center rounded-lg border-2 border-black p-4'>
+      <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
         {/* Auction Table */}
-        <AuctionTable auction={props.hand.auction} />
+        {props.hand.auction && props.hand.auction.details && (
+          <AuctionTable auction={props.hand.auction} />
+        )}
 
         {/* Dealer & Vulnerability Box */}
         <DealerAndVul hand={props.hand} />
 
         {/* Hands */}
-        <PlayerHoldings playerHoldings={props.playerHoldings} />
+        {props.playerHoldings && (
+          <PlayerHoldings playerHoldings={props.playerHoldings} />
+        )}
 
         {/* Board */}
         <div
-          className='absolute flex aspect-square size-32 flex-col items-center justify-center border-4 border-white bg-gray-800 text-lg font-bold text-white'
+          className={`absolute flex aspect-square size-32 flex-col items-center justify-center border-8 ${vulnerability['NS'] ? 'border-y-red-600' : 'border-y-green-600'} ${vulnerability['EW'] ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
           style={{ position: 'relative' }}
         >
           <div className='absolute text-xl font-extrabold'>
             {props.hand.board}
           </div>
-
-          {/* Vulnerabilities */}
-          {/*<Vulnerabilities vulnerable={props.hand.vulnerable} />*/}
 
           {/*Played Cards */}
           {props.currentTrickCards && (
@@ -49,7 +55,9 @@ export default function BridgeBoard(props: {
         </div>
 
         {/* Extra Info */}
-        <PointCountTable playerHoldings={props.playerHoldings} />
+        {props.playerHoldings && (
+          <PointCountTable playerHoldings={props.playerHoldings} />
+        )}
         <Result hand={props.hand} />
         {/*<DDSTable />*/}
       </div>
