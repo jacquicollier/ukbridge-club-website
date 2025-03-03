@@ -30,7 +30,7 @@ export default function CurrentTrickCard({
 
   return (
     <div
-      className='absolute flex items-center justify-center rounded-lg border-2 border-black bg-white p-1 text-xl font-bold shadow-lg sm:border'
+      className='absolute flex items-center justify-center rounded-lg border-2 border-black bg-white p-1 text-sm font-bold shadow-lg sm:border md:text-lg'
       style={{
         ...getCardPosition(player),
         color: card.suit === 'H' || card.suit === 'D' ? 'red' : 'black',

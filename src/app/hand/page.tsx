@@ -4,10 +4,11 @@ import { useState } from 'react';
 import BridgeHandLayout from '@/app/hand/components/BridgeHandLayout';
 import { Hand } from '@/app/model/pbn/hand';
 import { convertPBNToJSON } from '@/app/hand/pbnConverter';
+import { defaultHands } from '@/app/model/pbn/hands';
 
 export default function Page() {
   const [pbnInput, setPbnInput] = useState('');
-  const [hands, setHands] = useState<Hand[]>([]); // Replace with actual type
+  const [hands, setHands] = useState<Hand[]>(defaultHands); // Replace with actual type
 
   const handleConvertPBN = () => {
     // Logic to convert PBN to hands

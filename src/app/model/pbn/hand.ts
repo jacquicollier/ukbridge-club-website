@@ -89,6 +89,8 @@ export const handSchema = yup.object().shape({
   table: yup.string(),
 
   visitTeam: yup.string(),
+
+  scoretable: valueAndDetailsSchema,
 });
 
 //   "homeTeam": "Sweden",

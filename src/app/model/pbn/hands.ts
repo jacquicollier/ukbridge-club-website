@@ -1,6 +1,6 @@
 import { Hand } from '@/app/model/pbn/hand';
 
-export const hands = [
+export const defaultHands = [
   {
     event: "Generali Euro Team Champs '97",
     site: 'Montecatini ITA',
