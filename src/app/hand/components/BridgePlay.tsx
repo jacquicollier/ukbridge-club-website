@@ -39,7 +39,7 @@ export default function BridgePlay({
       <button
         title='Clear'
         onClick={clearPlay}
-        className='flex size-8 items-center justify-center rounded-full bg-gray-200 text-white shadow-md hover:bg-red-700'
+        className='flex size-8 items-center justify-center rounded-full bg-gray-200 text-white shadow-md hover:bg-gray-500'
       >
         🗑️
       </button>

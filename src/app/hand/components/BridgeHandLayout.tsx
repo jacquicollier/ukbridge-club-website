@@ -11,6 +11,7 @@ import {
   mapTricksToLeaders,
   parseBridgeHand,
 } from '@/app/hand/components/utils';
+import { Users } from 'lucide-react';
 
 export default function BridgeHandLayout(props: {
   hand: Hand;
@@ -105,6 +106,18 @@ export default function BridgeHandLayout(props: {
 
   return (
     <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center'>
+      <div className='flex w-full items-center justify-between rounded-t-md bg-gray-300 p-3 shadow-md'>
+        <div className='flex grow justify-center gap-3'>
+          <span className='font-bold'>Board {props.hand.board}</span>
+        </div>
+        {/* Clear Button on the Right */}
+        <button
+          title='Clear'
+          className='flex size-8 items-center justify-center rounded-full bg-gray-200 shadow-md hover:bg-gray-500'
+        >
+          <Users size={24} />
+        </button>
+      </div>
       <BridgeBoard
         currentTrickCards={currentTrickCards}
         hand={props.hand}
