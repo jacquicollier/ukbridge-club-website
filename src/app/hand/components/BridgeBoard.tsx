@@ -3,7 +3,7 @@ import AuctionTable from '@/app/hand/components/AuctionTable';
 import DealerAndVul from '@/app/hand/components/DealerAndVul';
 import PlayerHoldings from '@/app/hand/components/PlayerHoldings';
 import CurrentTrickCards from '@/app/hand/components/CurrentTrickCards';
-import PointCountTable from '@/app/hand/components/PointCountTable';
+// import PointCountTable from '@/app/hand/components/PointCountTable';
 import Result from '@/app/hand/components/Result';
 import { Player, PlayerHolding } from '@/app/model/constants';
 import DDSTable from '@/app/hand/components/DDSTable';
