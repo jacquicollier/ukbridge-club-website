@@ -143,7 +143,6 @@ export function determineTrickWinner(
     winningTrick = trumpCards;
   } else {
     // ✅ Otherwise, highest card in the leading suit wins
-    console.log('LSC: ' + leadingSuitCards);
     winningTrick = leadingSuitCards;
   }
 

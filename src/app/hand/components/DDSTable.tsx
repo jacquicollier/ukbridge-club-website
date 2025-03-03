@@ -1,3 +1,5 @@
+import { Button } from '@aws-amplify/ui-react';
+
 export default function DDSTable() {
   const getSuitClass = (suit: string) =>
     suit === 'H' || suit === 'D' ? 'text-red-500' : 'text-black';
@@ -16,37 +18,77 @@ export default function DDSTable() {
           </tr>
         </thead>
         <tbody>
-          <tr key={1} className='border-b'>
+          <tr key={'N'} className='border-b'>
             <td className='p-0.5 text-center font-bold'>N</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
           </tr>
-          <tr key={1} className='border-b'>
+          <tr key={'S'} className='border-b'>
             <td className='p-0.5 text-center font-bold'>S</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
           </tr>
-          <tr key={1} className='border-b'>
+          <tr key={'E'} className='border-b'>
             <td className='p-0.5 text-center font-bold'>E</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
           </tr>
-          <tr key={1} className='border-b'>
+          <tr key={'W'} className='border-b'>
             <td className='p-0.5 text-center font-bold'>W</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
-            <td className='p-0.5 text-center'>-</td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
+            <td className='p-0.5 text-center'>
+              <Button className='border-2 px-1'>-</Button>
+            </td>
           </tr>
         </tbody>
       </table>

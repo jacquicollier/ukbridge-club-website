@@ -2,7 +2,7 @@ import { Hand } from '@/app/model/pbn/hand';
 
 export default function Result(props: { hand: Hand }) {
   return (
-    <div className='absolute bottom-2 right-2 rounded-md px-3 py-2 shadow-md'>
+    <div className='absolute bottom-2 right-2 rounded-md px-3 py-2 text-xs shadow-md md:text-base'>
       <p>
         Contract: <span className='font-bold'>{props.hand.contract}</span>
       </p>

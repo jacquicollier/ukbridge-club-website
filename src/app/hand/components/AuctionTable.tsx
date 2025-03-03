@@ -44,12 +44,12 @@ export default function AuctionTable(props: { auction: ValueAndDetails }) {
     formattedBids.push(currentRow);
   }
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       {/* Wrapper for title bar and collapsible content */}
-      <div className='absolute right-2 top-2 inline-block transition-all duration-300'>
+      <div className='absolute right-2 top-2 z-10 inline-block transition-all duration-300'>
         {/* Title Bar with button aligned to the right */}
         <div
           className={`flex cursor-pointer items-center rounded-t-lg bg-gray-400 px-4 text-white transition-all duration-300 ${
@@ -73,7 +73,7 @@ export default function AuctionTable(props: { auction: ValueAndDetails }) {
           }`}
           style={{ width: isOpen ? 'auto' : '40px' }} // Ensure the panel width shrinks
         >
-          <table className='border-collapse text-sm'>
+          <table className='border-collapse bg-gray-100 text-sm'>
             <thead>
               <tr>
                 {directions.map((dir) => (
