@@ -15,8 +15,27 @@ export function middleware(req: NextRequest) {
     subdomain = url.searchParams.get('subdomain') || 'local';
   }
 
+  // Bypass middleware for Next.js static files and assets
+  if (
+    req.nextUrl.pathname.startsWith('/_next') || // Next.js static assets
+    req.nextUrl.pathname.startsWith('/static') || // Custom static assets
+    req.nextUrl.pathname.endsWith('.ico') || // Favicons
+    req.nextUrl.pathname.endsWith('.png') || // Images
+    req.nextUrl.pathname.endsWith('.jpg') || // Images
+    req.nextUrl.pathname.endsWith('.jpeg') || // Images
+    req.nextUrl.pathname.endsWith('.css') || // Stylesheets
+    req.nextUrl.pathname.endsWith('.js') // JavaScript files
+  ) {
+    return NextResponse.next();
+  }
+
   // If no subdomain, continue as normal
-  if (!subdomain || hostname === mainDomain || hostname === 'localhost:3000') {
+  if (
+    !subdomain ||
+    hostname === mainDomain ||
+    subdomain === 'www' ||
+    hostname === 'localhost:3000'
+  ) {
     return NextResponse.next();
   }
 
