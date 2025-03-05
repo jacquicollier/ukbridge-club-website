@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from 'next/server';
 export function middleware(req: NextRequest) {
   const hostname = req.headers.get('host') || '';
 
-  console.log('%s %s %s', hostname, req.url);
-
   const mainDomain = 'ukbridge.club';
 
   let subdomain = null;
