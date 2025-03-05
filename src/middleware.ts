@@ -26,7 +26,12 @@ export function middleware(req: NextRequest) {
   }
 
   // If no subdomain, continue as normal
-  if (!subdomain || hostname === mainDomain || hostname === 'localhost:3000') {
+  if (
+    !subdomain ||
+    hostname === mainDomain ||
+    hostname === 'localhost:3000' ||
+    subdomain === 'www'
+  ) {
     return NextResponse.next();
   }
 
