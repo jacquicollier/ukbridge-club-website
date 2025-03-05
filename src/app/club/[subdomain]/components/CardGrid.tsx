@@ -1,4 +1,6 @@
-import DOMPurify from 'dompurify';
+'use client';
+
+import DOMPurify from 'isomorphic-dompurify';
 
 export default function CardGrid() {
   const cards = [
