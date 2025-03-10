@@ -1,0 +1,4842 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE USEBIO SYSTEM "http://www.ebu.co.uk/usebio/usebio_v1_2.dtd">
+<USEBIO Version="1.2">
+
+   <CLUB>
+      <CLUB_NAME>Test Club</CLUB_NAME>
+      <CLUB_ID_NUMBER>987654</CLUB_ID_NUMBER>
+   </CLUB>
+
+   <EVENT EVENT_TYPE="MP_PAIRS">
+      <PROGRAM_NAME>PairsScorer</PROGRAM_NAME>
+      <PROGRAM_VERSION>7.2.93</PROGRAM_VERSION>
+      <EVENT_DESCRIPTION>Sample Multi-Section Event</EVENT_DESCRIPTION>
+      <DATE>14/12/2015</DATE>
+      <MASTER_POINT_SCALE>Club</MASTER_POINT_SCALE>
+      <SESSION_COUNT>1</SESSION_COUNT>
+      <SECTION_COUNT>2</SECTION_COUNT>
+      <PAIRS>32</PAIRS>
+      <BOARDS_PLAYED>21</BOARDS_PLAYED>
+      <WINNER_TYPE>2</WINNER_TYPE>
+      <P2P_CHARGE_RATE>10</P2P_CHARGE_RATE>
+      <MPS_AWARDED_FLAG>Y</MPS_AWARDED_FLAG>
+      <CONTACT>
+         <FULL_NAME>Michael Clark</FULL_NAME>
+         <TELEPHONE>123</TELEPHONE>
+         <EMAIL>michael@ebu.co.uk</EMAIL>
+      </CONTACT>
+
+      <SESSION SESSION_ID="1">
+         <SECTION SECTION_ID="A">
+
+            <PARTICIPANTS>
+
+               <PAIR>
+                  <PAIR_NUMBER>1</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>45.42</PERCENTAGE>
+                  <PLACE>11</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Marilyn Cabbage</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>271</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000000</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Arthur Goss</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>273</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000001</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>2</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>40.27</PERCENTAGE>
+                  <PLACE>12</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Tony Bonza</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>857</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000002</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Geraldine Baiocchi</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>235</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000003</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>3</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>55.06</PERCENTAGE>
+                  <PLACE>6</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>10</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Astrid Orpheus</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>333</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000004</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Petra Mannheim</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>1449</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000005</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>4</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>33.31</PERCENTAGE>
+                  <PLACE>16</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Anne Jakarta</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>659</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000006</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Peter Priest</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>595</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000007</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>5</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>66.91</PERCENTAGE>
+                  <PLACE>1</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>60</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>David O'Kins</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>307</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000008</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Zebedee Purvis</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>603</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000009</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>6</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>47.31</PERCENTAGE>
+                  <PLACE>9</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Caspar Eagle</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>207</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000010</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Elaine Kilgrave</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>271</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000011</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>7</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>39.12</PERCENTAGE>
+                  <PLACE>14</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Fred Fry</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>530</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000012</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Gavin Kujor</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>170</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000013</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>8</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>48.14</PERCENTAGE>
+                  <PLACE>8</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Anne Duncan</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>201</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000014</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Helen Jewison</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>362</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000015</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>9</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>49.99</PERCENTAGE>
+                  <PLACE>7</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Frederick Diddams</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>189</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000016</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Clem Hawtrey</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>96</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000017</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>10</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>61.2</PERCENTAGE>
+                  <PLACE>3</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>40</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Carey Ellis</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>746</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000018</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Uriah Beadle</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>49</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000019</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>11</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>66.36</PERCENTAGE>
+                  <PLACE>2</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>50</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Sarah Birt</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>69</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000020</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Peter Polka</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>70</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000021</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>12</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>49.42</PERCENTAGE>
+                  <PLACE>8</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Mary Pace</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>552</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000022</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Sadie Pace</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>251</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000023</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>13</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>54.17</PERCENTAGE>
+                  <PLACE>6</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>10</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Christine Paul</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>628</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000024</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Jake Cataract</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>639</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000025</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>14</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>47.92</PERCENTAGE>
+                  <PLACE>9</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Jenson Cowherd</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>89</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000026</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Sue Hogson</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>622</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000027</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>15</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>54.33</PERCENTAGE>
+                  <PLACE>5</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>20</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Isobel Milton</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>524</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000028</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Anne Charles</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>471</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000029</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>16</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>41.1</PERCENTAGE>
+                  <PLACE>14</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Peter Jackson</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>661</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000030</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Henry Geffen</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>259</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000031</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+            </PARTICIPANTS>
+
+            <BOARD>
+               <BOARD_NUMBER>1</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>2</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>5Dx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>800</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>620</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S7</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>4Sx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>790</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S2</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>5</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>3</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>4</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S3</LEAD>
+                  <TRICKS>5</TRICKS>
+                  <SCORE>-400</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>120</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>5</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>6Cx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>SA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>500</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CQ</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>600</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>C3</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>620</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S3</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>7</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>19</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>6</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>1NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S4</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>90</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S4</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>1Sx</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>5</TRICKS>
+                  <SCORE>500</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>DJ</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>7</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>8</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>18</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S6</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>300</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>SA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>8</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>5Dx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-500</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>5Hx</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D7</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-450</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-450</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>6Dx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-800</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-420</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>9</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>10.85</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15.15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>3.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>10.85</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15.15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>3.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D9</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>3.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>3.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>18.38</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>7.62</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>10</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>6NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-1440</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>6NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-1440</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-690</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>6H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-1430</SCORE>
+                  <NS_MATCH_POINTS>8</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>18</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>6NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-1440</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-690</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>6NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-1440</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>11</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H4</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>170</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D6</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>12</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>90</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>13</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>6H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>1430</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>690</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>300</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>14</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-130</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4Sx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>13</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>13</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>5Dx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>420</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>15</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C10</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>25.92</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0.08</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>H2</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-180</SCORE>
+                  <NS_MATCH_POINTS>10.85</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15.15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C10</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>23.77</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2.23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-400</SCORE>
+                  <NS_MATCH_POINTS>6.54</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>19.46</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-420</SCORE>
+                  <NS_MATCH_POINTS>1.15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24.85</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>H2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-400</SCORE>
+                  <NS_MATCH_POINTS>6.54</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>19.46</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>17.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>16</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cx</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>17</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S4</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>460</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>460</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>C8</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>18</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>4Sx</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H4</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>800</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>90</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>620</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>19</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>20</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-680</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C9</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>13</TRICKS>
+                  <SCORE>-260</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-680</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-230</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>21</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>620</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3Cx</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>1070</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>9</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-130</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>22</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>23</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-600</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S6</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-600</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C4</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-630</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S6</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-630</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C8</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S6</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-630</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>24</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>8</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>16</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>13</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>13</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>7</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>14</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>6</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>170</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>5</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>10</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>170</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>4</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>15</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>13</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>13</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>3</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>13</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>2</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>11</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+         </SECTION>
+         <SECTION SECTION_ID="B">
+
+            <PARTICIPANTS>
+
+               <PAIR>
+                  <PAIR_NUMBER>17</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>58.59</PERCENTAGE>
+                  <PLACE>4</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>30</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Pamela Plaice</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>615</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000032</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Babs Hoare</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>554</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000033</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>18</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>38.84</PERCENTAGE>
+                  <PLACE>15</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Max Davis</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>218</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000034</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Frank Hill</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>190</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000035</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>19</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>46.7</PERCENTAGE>
+                  <PLACE>10</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Katherine Marshall-Jones</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>458</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000036</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Marilyn de Winter</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>171</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000037</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>20</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>56.44</PERCENTAGE>
+                  <PLACE>5</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>20</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Hank Pox</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>242</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000038</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Ian Pox</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>353</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000039</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>21</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>40.15</PERCENTAGE>
+                  <PLACE>13</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Jupiter Prentice</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>540</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000040</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Granger Bailey</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>539</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000041</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>22</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>52.01</PERCENTAGE>
+                  <PLACE>7</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Hugh Pym</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>238</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000042</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Freda Hogg-Pym</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>452</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000043</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>23</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>65.47</PERCENTAGE>
+                  <PLACE>3</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>40</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Grant Hogg</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>241</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000044</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Davis Baker</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>240</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000045</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>24</PAIR_NUMBER>
+                  <DIRECTION>NS</DIRECTION>
+                  <PERCENTAGE>66.1</PERCENTAGE>
+                  <PLACE>2</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>50</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Preity Shah</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>502</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000046</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Harry Kirkbride</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>395</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000047</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>25</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>34.66</PERCENTAGE>
+                  <PLACE>15</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Andi Queue</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>192</CLUB_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Sidney Snake</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>176</CLUB_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>26</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>43.87</PERCENTAGE>
+                  <PLACE>12</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Jonty Parker</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>568</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000048</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Barry Mputo</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>722</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000049</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>27</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>73.26</PERCENTAGE>
+                  <PLACE>1</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>60</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Nils Arthur</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>74</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000050</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Bobbi Blythe</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>75</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000051</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>28</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>59.24</PERCENTAGE>
+                  <PLACE>4</PLACE>
+                  <MASTER_POINTS>
+                     <MASTER_POINTS_AWARDED>30</MASTER_POINTS_AWARDED>
+                     <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+                  </MASTER_POINTS>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Quinton Ives</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>92</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000052</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Carol Jakes</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>662</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000053</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>29</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>43.97</PERCENTAGE>
+                  <PLACE>11</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Paddy Boythwaite</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>729</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000054</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Laura Boythwaite</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>728</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000055</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>30</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>31.88</PERCENTAGE>
+                  <PLACE>16</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Day Pill</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>778</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000056</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Walter Bakersfield</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>576</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000057</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>31</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>42.91</PERCENTAGE>
+                  <PLACE>13</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Kenya O'Neill</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>545</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000058</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Gareth John</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>754</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000059</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+
+               <PAIR>
+                  <PAIR_NUMBER>32</PAIR_NUMBER>
+                  <DIRECTION>EW</DIRECTION>
+                  <PERCENTAGE>45</PERCENTAGE>
+                  <PLACE>10</PLACE>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Tyrone Edwards</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>211</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000060</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+                  <PLAYER RATEABLE="Y">
+                     <PLAYER_NAME>Isabel Slothrop</PLAYER_NAME>
+                     <CLUB_ID_NUMBER>245</CLUB_ID_NUMBER>
+                     <NATIONAL_ID_NUMBER>80000061</NATIONAL_ID_NUMBER>
+                  </PLAYER>
+               </PAIR>
+            </PARTICIPANTS>
+
+            <BOARD>
+               <BOARD_NUMBER>1</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H2</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-180</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>1NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>2</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>620</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>170</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>SA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>3</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>H5</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>1H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>4</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>2D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S2</LEAD>
+                  <TRICKS>5</TRICKS>
+                  <SCORE>-300</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H8</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>1NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4Sx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>5</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>600</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cxx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>600</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>6C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>SA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>7</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>19</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>6Cx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>800</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>300</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>6</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>H10</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>DJ</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>1NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-90</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>DJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>7</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>8</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>5Dx</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-300</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-420</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-450</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>9</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D6</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>10.85</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15.15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>23.77</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2.23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>1S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>18.38</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>7.62</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>C10</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>21.62</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4.38</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>15.15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10.85</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <SCORE>A5050</SCORE>
+                  <NS_MATCH_POINTS>13</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>13</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HJ</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>300</SCORE>
+                  <NS_MATCH_POINTS>25.92</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0.08</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>10</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C9</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-680</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>6H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>24</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-690</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-690</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-680</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CJ</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-690</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>11</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D2</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>420</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>120</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>12</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>2D</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>90</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>13</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>6H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>1430</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>C4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D4</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>680</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>14</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>5D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S2</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-400</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>23</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>13</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>13</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>2NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S3</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-120</SCORE>
+                  <NS_MATCH_POINTS>8</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>18</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>S4</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H6</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>15</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>17.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-420</SCORE>
+                  <NS_MATCH_POINTS>1.15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24.85</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>17.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-400</SCORE>
+                  <NS_MATCH_POINTS>6.54</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>19.46</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>17.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>C10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>17.31</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8.69</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>16</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S4</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D10</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>8</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>18</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3Sx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-730</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>5Dx</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-300</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>2D</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>D8</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>17</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>490</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>400</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>430</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SQ</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>460</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>C8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>460</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>18</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>H10</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>170</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>1NTx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>4</TRICKS>
+                  <SCORE>500</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>5H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>S5</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>S9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>11</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>15</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>19</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>19</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>7</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-170</SCORE>
+                  <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>26</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>15</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>11</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>-150</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>100</SCORE>
+                  <NS_MATCH_POINTS>19</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>7</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>20</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>13</TRICKS>
+                  <SCORE>-710</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>12</TRICKS>
+                  <SCORE>-680</SCORE>
+                  <NS_MATCH_POINTS>6</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>26</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C5</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>SJ</LEAD>
+                  <TRICKS>13</TRICKS>
+                  <SCORE>-710</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-620</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>21</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DQ</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>650</SCORE>
+                  <NS_MATCH_POINTS>23</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C7</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-130</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>25</EW_PAIR_NUMBER>
+                  <CONTRACT>4C</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D10</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>DQ</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>140</SCORE>
+                  <NS_MATCH_POINTS>16</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>10</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C9</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-130</SCORE>
+                  <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>24</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>17</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4D</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>CA</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>9</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>17</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>22</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>2C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>130</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>C2</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-140</SCORE>
+                  <NS_MATCH_POINTS>18</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>8</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>5C</CONTRACT>
+                  <PLAYED_BY>S</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>22</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-200</SCORE>
+                  <NS_MATCH_POINTS>12</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>14</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>4H</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S8</LEAD>
+                  <TRICKS>11</TRICKS>
+                  <SCORE>-650</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>23</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-600</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>-110</SCORE>
+                  <NS_MATCH_POINTS>20</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>6</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>S6</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-630</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>H3</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-600</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>5Cx</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>DA</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>200</SCORE>
+                  <NS_MATCH_POINTS>25</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D5</LEAD>
+                  <TRICKS>9</TRICKS>
+                  <SCORE>-600</SCORE>
+                  <NS_MATCH_POINTS>14</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>12</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3NT</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>D3</LEAD>
+                  <TRICKS>10</TRICKS>
+                  <SCORE>-630</SCORE>
+                  <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>22</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+            <BOARD>
+               <BOARD_NUMBER>24</BOARD_NUMBER>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>24</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>32</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>W</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>23</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>30</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>6</TRICKS>
+                  <SCORE>150</SCORE>
+                  <NS_MATCH_POINTS>21</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>5</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>22</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>28</EW_PAIR_NUMBER>
+                  <CONTRACT>1H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>80</SCORE>
+                  <NS_MATCH_POINTS>10</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>16</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>21</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>26</EW_PAIR_NUMBER>
+                  <CONTRACT>3H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>SK</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-100</SCORE>
+                  <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>25</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>20</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>31</EW_PAIR_NUMBER>
+                  <CONTRACT>2H</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>D7</LEAD>
+                  <TRICKS>7</TRICKS>
+                  <SCORE>-50</SCORE>
+                  <NS_MATCH_POINTS>5</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>21</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>19</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>29</EW_PAIR_NUMBER>
+                  <CONTRACT>2S</CONTRACT>
+                  <PLAYED_BY>N</PLAYED_BY>
+                  <LEAD>CK</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>110</SCORE>
+                  <NS_MATCH_POINTS>17</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>9</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+
+               <TRAVELLER_LINE>
+                  <NS_PAIR_NUMBER>18</NS_PAIR_NUMBER>
+                  <EW_PAIR_NUMBER>27</EW_PAIR_NUMBER>
+                  <CONTRACT>3C</CONTRACT>
+                  <PLAYED_BY>E</PLAYED_BY>
+                  <LEAD>HA</LEAD>
+                  <TRICKS>8</TRICKS>
+                  <SCORE>50</SCORE>
+                  <NS_MATCH_POINTS>8</NS_MATCH_POINTS>
+                  <EW_MATCH_POINTS>18</EW_MATCH_POINTS>
+               </TRAVELLER_LINE>
+            </BOARD>
+
+         </SECTION>
+      </SESSION>
+   </EVENT>
+</USEBIO>

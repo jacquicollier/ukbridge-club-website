@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import BridgeHandLayout from '@/app/hand/components/BridgeHandLayout';
-import { Hand } from '@/app/model/pbn/hand';
+import BridgeDealPlay from '@/app/hand/components/BridgeDealPlay';
+import { Hand } from '@/app/model/recordofplay/pbn/hand';
 import { convertPBNToJSON } from '@/app/hand/pbnConverter';
-import { defaultHands } from '@/app/model/pbn/hands';
+import { defaultHands } from '@/app/model/recordofplay/pbn/hands';
+import { PBNRecordOfPlay } from '@/app/model/recordofplay/pbn/PBNRecordOfPlay';
 
 export default function Page() {
   const [pbnInput, setPbnInput] = useState('');
@@ -60,7 +61,11 @@ export default function Page() {
         {hands.length > 0 ? (
           <div className='flex flex-row flex-wrap'>
             {hands.map((hand, index) => (
-              <BridgeHandLayout key={index} hand={hand} result={true} />
+              <BridgeDealPlay
+                key={index}
+                recordOfPlay={new PBNRecordOfPlay(hand)}
+                result={true}
+              />
             ))}
           </div>
         ) : (

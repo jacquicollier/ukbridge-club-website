@@ -1,0 +1,92 @@
+import AuctionTable from '@/app/components/hand/cornerpanels/AuctionTable';
+import DealerAndVul from '@/app/components/hand/cornerpanels/DealerAndVul';
+import Deal from '@/app/components/hand/board/Deal';
+import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
+// import PointCountTable from '@/app/hand/components/PointCountTable';
+import Result from '@/app/components/hand/cornerpanels/Result';
+import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
+import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
+import { Card, Direction } from '@/app/model/types';
+import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
+import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+
+export default function BridgeBoard(props: {
+  recordOfPlay: RecordOfPlay;
+  currentTrickCards: Partial<{ [key in Direction]: Card }>;
+  currentLeader: Direction;
+  playedCards: Card[];
+  validNextCards: Card[];
+  result: boolean;
+  playItAgain: boolean;
+  showScores: boolean;
+}) {
+  return (
+    <>
+      <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
+        {props.showScores && props.recordOfPlay.getScores() && (
+          <BoardScores
+            headings={props.recordOfPlay.getScoreHeadings()}
+            scores={props.recordOfPlay.getScores()}
+          />
+        )}
+
+        {/* Auction Table */}
+        {!props.playItAgain && props.recordOfPlay.getBids() && (
+          <CollapsiblePanel>
+            <AuctionTable
+              opener={props.recordOfPlay.getOpener()}
+              bids={props.recordOfPlay.getBids()!}
+            />
+          </CollapsiblePanel>
+        )}
+
+        <DealerAndVul
+          dealer={props.recordOfPlay.getDealer()}
+          nsVulnerable={props.recordOfPlay.getNsVulnerable()}
+          ewVulnerable={props.recordOfPlay.getEwVulnerable()}
+        />
+
+        {/* Hands */}
+        {props.recordOfPlay.getDeal() && (
+          <Deal
+            deal={props.recordOfPlay.getDeal()}
+            playedCards={props.playedCards}
+            playItAgain={props.playItAgain}
+            validNextCards={props.validNextCards}
+          />
+        )}
+
+        {/* Board */}
+        <div
+          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${props.recordOfPlay.getNsVulnerable() ? 'border-y-red-600' : 'border-y-green-600'} ${props.recordOfPlay.getEwVulnerable() ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
+          style={{ position: 'relative' }}
+        >
+          <div className='absolute text-xl font-extrabold'>
+            {props.recordOfPlay.getBoard()}
+          </div>
+
+          {/*Played Cards */}
+          <CurrentTrickCards
+            currentLeader={props.currentLeader}
+            currentTrickCards={props.currentTrickCards}
+          />
+        </div>
+        {(() => {
+          if (props.playItAgain) {
+            return <DDSTable />;
+          } else {
+            return (
+              <Result
+                contract={props.recordOfPlay.getContract()}
+                declarer={props.recordOfPlay.getDeclarer()}
+                result={props.recordOfPlay.getResult()}
+                score={props.recordOfPlay.getScore()}
+                scoreImp={props.recordOfPlay.getScoreImp()}
+              />
+            );
+          }
+        })()}
+      </div>
+    </>
+  );
+}

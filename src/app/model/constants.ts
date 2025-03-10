@@ -2,14 +2,11 @@ import { england } from '@/app/model/england';
 import { scotland } from '@/app/model/scotland';
 import { wales } from '@/app/model/wales';
 import { northernIreland } from '@/app/model/northern-ireland';
+import { Direction, Rank, Suit } from '@/app/model/types';
 
-export type Player = 'N' | 'E' | 'S' | 'W';
+export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 
-export type PlayerHolding = {
-  [suit: string]: Record<string, boolean>;
-};
-
-export const rankOrder = [
+export const rankOrder: Rank[] = [
   'A',
   'K',
   'Q',
@@ -25,12 +22,14 @@ export const rankOrder = [
   '2',
 ];
 
-export const SuitMap: Record<string, string> = {
+export const SuitMap: Record<Suit, string> = {
   S: '♠',
   H: '♥',
   D: '♦',
   C: '♣',
 };
+
+export const suitOrder = ['S', 'H', 'D', 'C'];
 
 type Affiliation = {
   name: string;

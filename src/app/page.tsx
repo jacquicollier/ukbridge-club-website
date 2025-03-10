@@ -1,11 +1,11 @@
 'use client';
 
-import BridgeClubMap from '@/app/components/BridgeClubMap';
+import BridgeClubMap from '@/app/components/map/BridgeClubMap';
 import { useState } from 'react';
 import TitleBar from '@/app/components/TitleBar';
 import { Country, County, Poi } from '@/app/model/types';
-import Form from '@/app/components/Form';
-import Results from '@/app/components/Results';
+import Form from '@/app/components/map/Form';
+import Results from '@/app/components/map/Results';
 import { pois } from '@/app/model/constants';
 
 export default function Home() {

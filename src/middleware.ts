@@ -6,15 +6,12 @@ export function middleware(req: NextRequest) {
   const mainDomain = 'ukbridge.club';
   let subdomain = null;
 
-  console.log(`🔍 Middleware Processing: ${pathname}`);
-
   // ✅ Allow static assets (CSS, JS, Images) to pass through
   if (
     pathname.startsWith('/_next') || // Next.js assets
     pathname.startsWith('/static') || // Custom static files
     pathname.match(/\.(ico|png|jpg|jpeg|css|js|svg|woff2?)$/) // Static file extensions
   ) {
-    console.log('✅ Allowed static asset:', pathname);
     return NextResponse.next();
   }
 
@@ -34,8 +31,6 @@ export function middleware(req: NextRequest) {
   ) {
     return NextResponse.next();
   }
-
-  console.log(`🔀 Rewriting to: /club/${subdomain}`);
 
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set('x-subdomain', subdomain);
