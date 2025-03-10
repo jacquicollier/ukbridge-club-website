@@ -1,5 +1,6 @@
 import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
 import MPTable from '@/app/club/[subdomain]/results/[gameid]/components/MPTable';
+import Header from '@/app/club/[subdomain]/components/Header';
 
 async function getBridgeData() {
   const res = await fetch('http://localhost:3000/api/usebio/mp-pairs'); // Adjust URL for deployment
@@ -20,6 +21,7 @@ export default async function ResultPage() {
 
   return (
     <div>
+      <Header />
       <div className='flex flex-col gap-y-6 overflow-x-auto p-4 md:px-32'>
         <MPTable pairs={northSouth} title='North/South' />
         <MPTable pairs={eastWest} title='East/West' />
