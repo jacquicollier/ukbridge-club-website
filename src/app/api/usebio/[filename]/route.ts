@@ -8,9 +8,6 @@ export async function GET(
 ) {
   const { filename } = await params;
   try {
-    // Log the filename and check for correctness
-    console.log('Requested filename:', filename);
-
     // Locate the XML file in the public folder
     const filePath = path.join(
       process.cwd(),
@@ -19,12 +16,8 @@ export async function GET(
       `${filename}.xml`,
     );
 
-    // Log the full path for debugging
-    console.log('File path to read:', filePath);
-
     // Check if the file exists before reading
     if (!fs.existsSync(filePath)) {
-      console.log('File not found:', filePath);
       return new Response(JSON.stringify({ error: 'File not found' }), {
         status: 404,
         headers: {
@@ -35,9 +28,6 @@ export async function GET(
 
     // Read the XML file synchronously
     const xmlData = fs.readFileSync(filePath, 'utf-8');
-
-    // Log the raw XML content for debugging
-    console.log('XML Data:', xmlData);
 
     // Convert XML to JSON
     const jsonData = await parseStringPromise(xmlData, {

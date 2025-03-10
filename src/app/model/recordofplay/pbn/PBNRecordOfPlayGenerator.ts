@@ -1,19 +1,23 @@
-import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+import { RecordOfPlayGenerator } from '@/app/model/recordofplay/RecordOfPlayGenerator';
 import { Hand } from '@/app/model/recordofplay/pbn/hand';
 import { Card, Direction, Rank, Suit } from '@/app/model/types';
 import { Directions, suitOrder } from '@/app/model/constants';
-import { determineTrickWinner } from '@/app/model/recordofplay/utils';
+import {
+  determineTrickWinner,
+  determineTrumps,
+} from '@/app/model/recordofplay/utils';
 
-export class PBNRecordOfPlay implements RecordOfPlay {
+export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
   private readonly hand: Hand;
   private readonly deal: { [key in Direction]: Card[] };
   private readonly trumps: string | null;
   private readonly playedCards: Card[];
 
   constructor(hand: Hand) {
+    super();
     this.hand = hand;
     this.deal = this.parseBridgeHand();
-    this.trumps = this.determineTrumps();
+    this.trumps = determineTrumps(hand.contract);
     this.playedCards = this.findPlayedCards();
   }
 
@@ -27,10 +31,6 @@ export class PBNRecordOfPlay implements RecordOfPlay {
 
   getDeclarer(): Direction {
     return this.hand.declarer as Direction;
-  }
-
-  getResult(): string {
-    return this.hand.result;
   }
 
   getDeal(): { [key in Direction]: Card[] } {
@@ -98,12 +98,8 @@ export class PBNRecordOfPlay implements RecordOfPlay {
     return this.playedCards;
   }
 
-  private determineTrumps(): string | null {
-    if (this.getContract() === 'Pass') return null;
-    const cleanedContract = this.getContract().replace(/(X|XX)$/, '');
-    if (cleanedContract.endsWith('NT')) return null;
-    const suit = cleanedContract.slice(-1);
-    return suitOrder.includes(suit) ? suit : null;
+  getResult(): string {
+    return this.hand.result;
   }
 
   private parseBridgeHand(): { [key in Direction]: Card[] } {

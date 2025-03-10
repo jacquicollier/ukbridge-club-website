@@ -29,14 +29,14 @@ interface Session {
 interface Section {
   $: SectionAttributes;
   PARTICIPANTS: Participants;
-  BOARD: Board;
+  BOARD: Board[];
 }
 
 interface SectionAttributes {
   SECTION_ID: string;
 }
 
-interface Participants {
+export interface Participants {
   PAIR: Pair[];
 }
 
@@ -60,12 +60,12 @@ interface Player {
   NATIONAL_ID_NUMBER: string;
 }
 
-interface Board {
-  BOARD_NUMBER: string;
-  TRAVELLER_LINE: TravellerLine;
+export interface Board {
+  BOARD_NUMBER: number;
+  TRAVELLER_LINE: TravellerLine[];
 }
 
-interface TravellerLine {
+export interface TravellerLine {
   NS_PAIR_NUMBER: string;
   EW_PAIR_NUMBER: string;
   CONTRACT: string;
@@ -77,16 +77,16 @@ interface TravellerLine {
   EW_MATCH_POINTS: string;
 }
 
-interface HandSet {
-  BOARD: HandSetBoard | HandSetBoard[];
+export interface HandSet {
+  BOARD: HandSetBoard[];
 }
 
 interface HandSetBoard {
   BOARD_NUMBER: string;
-  HAND: Hand;
+  HAND: Hand[];
 }
 
-interface Hand {
+export interface Hand {
   DIRECTION: Direction;
   SPADES: string;
   HEARTS: string;

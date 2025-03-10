@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import BridgeDealPlay from '@/app/hand/components/BridgeDealPlay';
+import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
 import { Hand } from '@/app/model/recordofplay/pbn/hand';
 import { convertPBNToJSON } from '@/app/hand/pbnConverter';
 import { defaultHands } from '@/app/model/recordofplay/pbn/hands';
-import { PBNRecordOfPlay } from '@/app/model/recordofplay/pbn/PBNRecordOfPlay';
+import { PBNRecordOfPlayGenerator } from '@/app/model/recordofplay/pbn/PBNRecordOfPlayGenerator';
 
 export default function Page() {
   const [pbnInput, setPbnInput] = useState('');
@@ -63,7 +63,7 @@ export default function Page() {
             {hands.map((hand, index) => (
               <BridgeDealPlay
                 key={index}
-                recordOfPlay={new PBNRecordOfPlay(hand)}
+                recordOfPlay={new PBNRecordOfPlayGenerator(hand).recordOfPlay()}
                 result={true}
               />
             ))}
