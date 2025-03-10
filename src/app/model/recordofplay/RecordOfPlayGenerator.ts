@@ -1,13 +1,13 @@
 import { Card, Direction } from '@/app/model/types';
 import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+import { Score } from '@/app/model/recordofplay/score';
 
 export abstract class RecordOfPlayGenerator {
   abstract getContract(): string;
   abstract getDealer(): Direction;
   abstract getDeclarer(): Direction;
   abstract getDeal(): { [key in Direction]: Card[] };
-  abstract getScoreHeadings(): string[];
-  abstract getScores(): string[][];
+  abstract getScores(): Score[];
   abstract getScore(): string;
   abstract getScoreImp(): string;
   abstract getNsVulnerable(): boolean;
@@ -26,7 +26,6 @@ export abstract class RecordOfPlayGenerator {
       dealer: this.getDealer(),
       declarer: this.getDeclarer(),
       deal: this.getDeal(),
-      scoreHeadings: this.getScoreHeadings(),
       scores: this.getScores(),
       score: this.getScore(),
       scoreImp: this.getScoreImp(),

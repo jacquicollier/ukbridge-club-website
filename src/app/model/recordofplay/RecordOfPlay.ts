@@ -1,12 +1,12 @@
 import { Card, Direction } from '@/app/model/types';
+import { Score } from '@/app/model/recordofplay/score';
 
 export type RecordOfPlay = {
   contract: string;
   dealer: Direction;
   declarer: Direction;
   deal: { [key in Direction]: Card[] };
-  scoreHeadings: string[];
-  scores: string[][];
+  scores: Score[];
   score: string;
   scoreImp: string;
   nsVulnerable: boolean;
