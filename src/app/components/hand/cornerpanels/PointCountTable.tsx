@@ -1,21 +1,14 @@
-import { PlayerHolding } from '@/app/model/constants';
+import { Card, Direction } from '@/app/model/types';
 
 export default function PointCountTable(props: {
-  playerHoldings: Record<string, PlayerHolding>;
+  deal: Record<Direction, Card[]>;
 }) {
-  function calculateMiltonPointCount(playerHolding: PlayerHolding): number {
+  function calculateMiltonPointCount(cards: Card[]): number {
     const pointValues: Record<string, number> = { J: 1, Q: 2, K: 3, A: 4 };
 
     // Iterate over suits and their cards
-    return Object.values(playerHolding).reduce((total, suit) => {
-      // Iterate over cards in each suit
-      return (
-        total +
-        Object.keys(suit).reduce((suitTotal, rank) => {
-          // Add points for each card based on its rank
-          return suitTotal + (pointValues[rank] || 0);
-        }, 0)
-      );
+    return cards.reduce((total, card) => {
+      return total + (pointValues[card.rank] || 0);
     }, 0);
   }
 
@@ -24,16 +17,16 @@ export default function PointCountTable(props: {
       {/* Set width & height to prevent absolute children from overflowing */}
       <div className='relative flex size-20 items-center justify-center'>
         <div className='absolute top-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(props.playerHoldings.N)}
+          {calculateMiltonPointCount(props.deal.N)}
         </div>
         <div className='absolute bottom-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(props.playerHoldings.S)}
+          {calculateMiltonPointCount(props.deal.S)}
         </div>
         <div className='absolute left-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(props.playerHoldings.W)}
+          {calculateMiltonPointCount(props.deal.W)}
         </div>
         <div className='absolute right-0 px-2 py-1 text-black'>
-          {calculateMiltonPointCount(props.playerHoldings.E)}
+          {calculateMiltonPointCount(props.deal.E)}
         </div>
       </div>
     </div>

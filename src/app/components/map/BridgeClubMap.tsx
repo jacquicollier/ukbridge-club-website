@@ -1,8 +1,8 @@
 'use client';
 
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
-import Counties from '@/app/components/Counties';
-import PoiMarkers from '@/app/components/PoiMarkers';
+import Counties from '@/app/components/map/Counties';
+import PoiMarkers from '@/app/components/map/PoiMarkers';
 import { Country, County, Poi } from '@/app/model/types';
 import { defaultBounds, pois } from '@/app/model/constants';
 import Polygon = google.maps.Polygon;

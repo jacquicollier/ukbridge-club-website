@@ -6,7 +6,7 @@ interface Props {
   nextCard: () => void;
 }
 
-export default function BridgePlay({
+export default function BridgePlayPanel({
   clearPlay,
   hasPrevious,
   hasNext,

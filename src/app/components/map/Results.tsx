@@ -1,4 +1,4 @@
-import PoiCard from '@/app/components/PoiCard';
+import PoiCard from '@/app/components/map/PoiCard';
 import { Poi } from '@/app/model/types';
 
 const Results = (props: { pois: Poi[] }) => {

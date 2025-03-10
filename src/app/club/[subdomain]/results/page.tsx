@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import EventList from '@/app/club/[subdomain]/calendar/components/EventList';
 import { useRouter } from 'next/navigation';
 import ResultsList from '@/app/club/[subdomain]/results/components/ResultsList';
 

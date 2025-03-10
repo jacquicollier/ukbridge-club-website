@@ -1,0 +1,165 @@
+  // TODO: Design JSON schema
+  // MP Pairs Event
+  // --------------
+  //<USEBIO>
+  // <EVENT EVENT_TYPE="PAIRS"> // or EVENT_TYPE="MP_PAIRS" and no BOARD_SCORING_METHOD
+  //   <BOARD_SCORING_METHOD>MATCH_POINTS</BOARD_SCORING_METHOD> // (optional) for MP scoring this combined with EVENT_TYPE="PAIRS"
+  //
+  // OR FOR CROSS IMP PAIRS:
+  // <EVENT EVENT_TYPE="PAIRS">
+  //     <BOARD_SCORING_METHOD>CROSS_IMPS</BOARD_SCORING_METHOD>
+  //
+  // OR FOR TEAMS..
+  // <EVENT EVENT_TYPE="TEAMS">
+  //   <BOARD_SCORING_METHOD>IMPS</BOARD_SCORING_METHOD>
+  //   <MATCH_SCORING_METHOD>VPS</MATCH_SCORING_METHOD>
+  //   <SCORING_METHOD>VP</SCORING_METHOD>
+  //   <TEAM_PAIRING_AVAILABLE>Y</TEAM_PAIRING_AVAILABLE>???
+  //   <PAIRWISE_SCORING_METHOD>CROSS_IMPS</PAIRWISE_SCORING_METHOD>
+  //
+  // OR FOR POINT-A-BOARD TEAMS...
+  // <EVENT EVENT_TYPE="TEAMS">
+  //   <BOARD_SCORING_METHOD>PAB</BOARD_SCORING_METHOD>
+  //   <MATCH_SCORING_METHOD>PAB</MATCH_SCORING_METHOD>
+  //   <TEAM_PAIRING_AVAILABLE>Y</TEAM_PAIRING_AVAILABLE>???
+  //
+  // <SESSION> // may be multiple if e.g., same board numbers played in two separate sessions
+  // <SECTION SECTION_ID="xxx"> // (optional - PARTICIPANTS may be under SESSION directly).  Events with multiple sections can be divided by SECTION_ID
+  //
+  //  FOR PAIRS...
+  //  <PARTICIPANTS>
+  //    <PAIR> (multiple)
+  //      <PAIR_NUMBER>1</PAIR_NUMBER>
+  //      <DIRECTION>NS</PAIR_NUMBER> (optional)
+  //      <PERCENTAGE>45.45</PERCENTAGE> or <TOTAL_SCORE>-8.86</TOTAL_SCORE> for cross imp pairs
+  //      <PLACE>8</PLACE>
+  //      <MASTER_POINTS> (optionally)
+  //        <MASTER_POINTS_AWARDED>40</MASTER_POINTS_AWARDED>
+  //        <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE>
+  //      </MASTER_POINTS>
+  //      <PLAYER> (2 for MP)
+  //        <PLAYER_NAME>Jack de Leer</PLAYER_NAME>
+  //        <CLUB_ID_NUMBER>196</CLUB_ID_NUMBER>
+  //        <NATIONAL_ID_NUMBER>800044</NATIONAL_ID_NUMBER>
+  //      </PLAYER>
+  //    </PAIR>
+  //  </PARTICIPANTS>
+  //
+  // Each pair’s cross-IMP total is
+  // divided by the number of boards they have played and multiplied by the factor ximpfactor= 6.48 to
+  // give the pair’s equivalent session percentage above or below 50%
+  //  OR FOR TEAMS OR POINT-A-BOARD TEAMS...
+  //  <PARTICIPANTS>
+  //    <TEAM TEAM_ID = "1" TEAM_NAME = "">
+  //      <TOTAL_SCORE>55</TOTAL_SCORE>
+  //      <PLACE>10</PLACE>
+  //      <MASTER_POINTS>
+  //        <MASTER_POINTS_AWARDED>40</MASTER_POINTS_AWARDED>
+  //        <MASTER_POINT_TYPE>BLACK</MASTER_POINT_TYPE> (may also be under <EVENT> directly)
+  //      </MASTER_POINTS>
+  //      <PAIR>
+  //        <PAIR_NUMBER>1-1-2</PAIR_NUMBER>
+  //        <PAIR_IMPS>-20.99</PAIR_IMPS>
+  //        <BOARDS_PLAYED>24</BOARDS_PLAYED> (required for NGS%)
+  //        <PLAYER RATEABLE="Y">
+  //          <PLAYER_NAME>Dexter Jones</PLAYER_NAME>
+  //          <CLUB_ID_NUMBER>132</CLUB_ID_NUMBER>
+  //          <NATIONAL_ID_NUMBER>800001</NATIONAL_ID_NUMBER>
+  //        </PLAYER>
+  //        <PLAYER RATEABLE="Y">
+  //          <PLAYER_NAME>Brian Hollies</PLAYER_NAME>
+  //          <CLUB_ID_NUMBER>124</CLUB_ID_NUMBER>
+  //          <NATIONAL_ID_NUMBER>800002</NATIONAL_ID_NUMBER>
+  //        </PLAYER>
+  //      </PAIR>
+  //      <PAIR>
+  //        <PAIR_NUMBER>1-3-4</PAIR_NUMBER>
+  //        <PAIR_IMPS>-58.15</PAIR_IMPS>
+  //        <BOARDS_PLAYED>24</BOARDS_PLAYED>
+  //        <PLAYER RATEABLE="Y">
+  //          <PLAYER_NAME>Engelbert Foop</PLAYER_NAME>
+  //          <CLUB_ID_NUMBER>35</CLUB_ID_NUMBER>
+  //          <NATIONAL_ID_NUMBER>800003</NATIONAL_ID_NUMBER>
+  //        </PLAYER>
+  //        <PLAYER RATEABLE="Y">
+  //          <PLAYER_NAME>Shania Pillow</PLAYER_NAME>
+  //          <CLUB_ID_NUMBER>126</CLUB_ID_NUMBER>
+  //          <NATIONAL_ID_NUMBER>800004</NATIONAL_ID_NUMBER>
+  //        </PLAYER>
+  //      </PAIR>
+  //    </TEAM>
+  //  </PARTICIPANTS>
+  //
+  //  FOR PAIRS...
+  //  <BOARD> (multiple)
+  //    <BOARD_NUMBER>1</BOARD_NUMBER>
+  //    <TRAVELLER_LINE> (multiple)
+  //      <NS_PAIR_NUMBER>1</NS_PAIR_NUMBER>
+  //      <EW_PAIR_NUMBER>12</EW_PAIR_NUMBER>
+  //      <CONTRACT>3Hx</CONTRACT>
+  //      <PLAYED_BY>N</PLAYED_BY>
+  //      <LEAD>D10</LEAD>
+  //      <TRICKS>6</TRICKS>
+  //      <SCORE>-500</SCORE>
+  //      <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+  //      <EW_MATCH_POINTS>20</EW_MATCH_POINTS>
+  //    </TRAVELLER_LINE>
+  //  </BOARD>
+  //
+  //  FOR TEAMS:
+  //  <MATCH>
+  //    <ROUND_NUMBER>1</ROUND_NUMBER>
+  //    <TEAM>1</TEAM>
+  //    <OPPOSING_TEAM>3</OPPOSING_TEAM>
+  //    <TEAM_SCORE>12</TEAM_SCORE>
+  //    <OPPOSING_TEAM_SCORE>8</OPPOSING_TEAM_SCORE>
+  //    <BOARD> (multiple)
+  //      <BOARD_NUMBER>1</BOARD_NUMBER>
+  //      <IMPS>0</IMPS> (for standard teams or <POINTS>2</POINTS> and <OPPOSING_TEAM_POINTS>0</OPPOSING_TEAM_POINTS> for point a board)
+  //      <TRAVELLER_LINE>
+  //        <DIRECTION>NS</DIRECTION>
+  //        <NS_PAIR_NUMBER>1-1-2</NS_PAIR_NUMBER>
+  //        <EW_PAIR_NUMBER>3-3-4</EW_PAIR_NUMBER>
+  //        <CONTRACT>3NT</CONTRACT>
+  //        <PLAYED_BY>E</PLAYED_BY>
+  //        <TRICKS>11</TRICKS>
+  //        <SCORE>-460</SCORE>
+  //        <NS_CROSS_IMP_POINTS>-1.57</NS_CROSS_IMP_POINTS>
+  //        <EW_CROSS_IMP_POINTS>1.57</EW_CROSS_IMP_POINTS>
+  //      </TRAVELLER_LINE>
+  //      <TRAVELLER_LINE>
+  //        <DIRECTION>EW</DIRECTION>
+  //        <NS_PAIR_NUMBER>3-1-2</NS_PAIR_NUMBER>
+  //        <EW_PAIR_NUMBER>1-3-4</EW_PAIR_NUMBER>
+  //        <CONTRACT>4H</CONTRACT>
+  //        <PLAYED_BY>E</PLAYED_BY>
+  //        <TRICKS>11</TRICKS>
+  //        <SCORE>-450</SCORE>
+  //        <NS_CROSS_IMP_POINTS>-1.57</NS_CROSS_IMP_POINTS>
+  //        <EW_CROSS_IMP_POINTS>1.57</EW_CROSS_IMP_POINTS>
+  //      </TRAVELLER_LINE>
+  //    </BOARD>
+  //  </MATCH>
+  //
+  //  </SECTION>
+  //  </SESSION>
+  //  </EVENT>
+  //  </USEBIO>
+
+  // Extract county data from KML `<Placemark>`
+  // const placemarks = xmlDoc.kml.Document[0].Folder[0].Placemark || []; // Get all Placemark elements from the parsed XML
+  //
+  // return placemarks
+  //   .map((placemark) => {
+  //     // Extract county name from `ctyua_name`
+  //     const nameElement =
+  //       placemark.ExtendedData?.[0]?.SchemaData?.[0]?.SimpleData?.find(
+  //         (el: { $: { name: string }; _: string }) => el.$.name === 'COUNTY',
+  //       );
+  //
+  //     return {
+  //       name: nameElement?._ ?? 'Unknown', // Handle missing county names
+  //       coordinates: extractCoordinatesFromKML(placemark),
+  //     } as County;
+  //   })
+  //   .filter((county): county is County => county !== null); // Filter out null values

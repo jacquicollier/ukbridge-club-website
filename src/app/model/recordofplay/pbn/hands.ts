@@ -1,4 +1,4 @@
-import { Hand } from '@/app/model/pbn/hand';
+import { Hand } from '@/app/model/recordofplay/pbn/hand';
 
 export const defaultHands = [
   {

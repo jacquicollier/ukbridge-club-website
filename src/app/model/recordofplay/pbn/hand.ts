@@ -25,7 +25,7 @@ export const handSchema = yup.object().shape({
   date: yup.string(), // "1997.06.22"
 
   // the board number
-  board: yup.string(),
+  board: yup.string().required(),
 
   // the west player
   west: yup.string(),

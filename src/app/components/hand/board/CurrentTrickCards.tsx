@@ -1,15 +1,16 @@
-import CurrentTrickCard from '@/app/hand/components/CurrentTrickCard';
+import CurrentTrickCard from '@/app/components/hand/board/CurrentTrickCard';
+import { Card, Direction } from '@/app/model/types';
 
 export default function CurrentTrickCards(props: {
-  currentLeader: string | null;
-  currentTrickCards: { [key: string]: { suit: string; rank: string } };
+  currentLeader: Direction;
+  currentTrickCards: Partial<{ [key in Direction]: Card }>;
 }) {
   return (
     <>
       {Object.entries(props.currentTrickCards).map(([player, card]) => (
         <CurrentTrickCard
           key={`${player}-${card}`}
-          player={player}
+          player={player as Direction}
           card={card}
           currentLeader={props.currentLeader}
         />
