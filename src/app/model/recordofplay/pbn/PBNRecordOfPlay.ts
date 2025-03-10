@@ -1,7 +1,7 @@
 import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
 import { Hand } from '@/app/model/recordofplay/pbn/hand';
 import { Card, Direction, Rank, Suit } from '@/app/model/types';
-import { Directions, rankOrder, suitOrder } from '@/app/model/constants';
+import { Directions, suitOrder } from '@/app/model/constants';
 import { determineTrickWinner } from '@/app/model/recordofplay/utils';
 
 export class PBNRecordOfPlay implements RecordOfPlay {
