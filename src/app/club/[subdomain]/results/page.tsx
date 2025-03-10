@@ -2,17 +2,13 @@
 
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import ResultsList from '@/app/club/[subdomain]/results/components/ResultsList';
+import Header from '@/app/club/[subdomain]/components/Header';
 
 export default function ResultsPage() {
   const [filter, setFilter] = useState('today');
   const [customStart, setCustomStart] = useState('');
   const [customEnd, setCustomEnd] = useState('');
-
-  const router = useRouter();
-  const subdomain = 'wgc';
 
   const today = dayjs();
   const startOfLastWeek = today.subtract(1, 'week').startOf('week');
@@ -66,29 +62,7 @@ export default function ResultsPage() {
   return (
     <div>
       <div className='flex w-screen flex-col justify-center'>
-        <div className='flex w-full items-center justify-between bg-gray-100'>
-          <div className='w-1/3 p-4 text-left'>&nbsp;</div>
-          <div className='w-1/3 p-4 text-center'>
-            <Link href={''}>Home</Link>
-            <Link href={`/club/${subdomain}/calendar`}>Calendar</Link>
-            <Link href={`/club/${subdomain}/results`}>Results</Link>
-            <Link href={`/club/${subdomain}/info`}>Info</Link>
-            <Link href={`/club/${subdomain}/docs`}>Docs</Link>
-          </div>
-          <div className='w-1/3 p-4 text-right'>
-            <button
-              className='border-2 p-2'
-              onClick={() => router.push(`/club/${subdomain}/edit`)}
-            >
-              Sign In
-            </button>
-          </div>
-        </div>
-        <div className='flex w-screen justify-center bg-blue-100 p-4'>
-          <div className='w-full max-w-3xl text-center text-2xl font-bold'>
-            Welwyn Garden City Bridge Club
-          </div>
-        </div>
+        <Header />
         <div className='p-4'>
           <div className='mx-auto max-w-4xl p-4'>
             <h2 className='mb-4 text-center text-2xl font-semibold'>Results</h2>

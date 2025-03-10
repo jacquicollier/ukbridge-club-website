@@ -1,15 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import EventList from '@/app/club/[subdomain]/calendar/components/EventList';
 import { useState } from 'react';
 import dayjs from 'dayjs';
+import Header from '@/app/club/[subdomain]/components/Header';
 
 export default function CalendarPage() {
-  const router = useRouter();
-  const subdomain = 'wgc';
-
   const [filter, setFilter] = useState('today');
   const [customStart, setCustomStart] = useState('');
   const [customEnd, setCustomEnd] = useState('');
@@ -70,72 +66,48 @@ export default function CalendarPage() {
   });
 
   return (
-    <div>
-      <div className='flex w-screen flex-col justify-center'>
-        <div className='flex w-full items-center justify-between bg-gray-100'>
-          <div className='w-1/3 p-4 text-left'>&nbsp;</div>
-          <div className='w-1/3 p-4 text-center'>
-            <Link href={''}>Home</Link>
-            <Link href={`/club/${subdomain}/calendar`}>Calendar</Link>
-            <Link href={`/club/${subdomain}/results`}>Results</Link>
-            <Link href={`/club/${subdomain}/info`}>Info</Link>
-            <Link href={`/club/${subdomain}/docs`}>Docs</Link>
-          </div>
-          <div className='w-1/3 p-4 text-right'>
-            <button
-              className='border-2 p-2'
-              onClick={() => router.push(`/club/${subdomain}/edit`)}
+    <div className='flex w-screen flex-col justify-center'>
+      <Header />
+      <div className='p-4'>
+        <div className='mx-auto max-w-4xl p-4'>
+          <h2 className='mb-4 text-center text-2xl font-semibold'>
+            Upcoming Events
+          </h2>
+
+          {/* Dropdown Filter */}
+          <div className='mb-4'>
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className='w-full rounded-md border p-2 sm:w-auto'
             >
-              Sign In
-            </button>
+              <option value='today'>Today</option>
+              <option value='this-week'>This Week</option>
+              <option value='next-week'>Next Week</option>
+              <option value='this-month'>This Month</option>
+              <option value='next-month'>Next Month</option>
+              <option value='custom'>Custom</option>
+            </select>
           </div>
-        </div>
-        <div className='flex w-screen justify-center bg-blue-100 p-4'>
-          <div className='w-full max-w-3xl text-center text-2xl font-bold'>
-            Welwyn Garden City Bridge Club
-          </div>
-        </div>
-        <div className='p-4'>
-          <div className='mx-auto max-w-4xl p-4'>
-            <h2 className='mb-4 text-center text-2xl font-semibold'>
-              Upcoming Events
-            </h2>
 
-            {/* Dropdown Filter */}
-            <div className='mb-4'>
-              <select
-                value={filter}
-                onChange={(e) => setFilter(e.target.value)}
-                className='w-full rounded-md border p-2 sm:w-auto'
-              >
-                <option value='today'>Today</option>
-                <option value='this-week'>This Week</option>
-                <option value='next-week'>Next Week</option>
-                <option value='this-month'>This Month</option>
-                <option value='next-month'>Next Month</option>
-                <option value='custom'>Custom</option>
-              </select>
+          {/* Custom Date Inputs */}
+          {filter === 'custom' && (
+            <div className='mb-4 flex gap-2'>
+              <input
+                type='date'
+                value={customStart}
+                onChange={(e) => setCustomStart(e.target.value)}
+                className='w-full rounded-md border p-2'
+              />
+              <input
+                type='date'
+                value={customEnd}
+                onChange={(e) => setCustomEnd(e.target.value)}
+                className='w-full rounded-md border p-2'
+              />
             </div>
-
-            {/* Custom Date Inputs */}
-            {filter === 'custom' && (
-              <div className='mb-4 flex gap-2'>
-                <input
-                  type='date'
-                  value={customStart}
-                  onChange={(e) => setCustomStart(e.target.value)}
-                  className='w-full rounded-md border p-2'
-                />
-                <input
-                  type='date'
-                  value={customEnd}
-                  onChange={(e) => setCustomEnd(e.target.value)}
-                  className='w-full rounded-md border p-2'
-                />
-              </div>
-            )}
-            <EventList events={filteredEvents} />
-          </div>
+          )}
+          <EventList events={filteredEvents} />
         </div>
       </div>
     </div>
