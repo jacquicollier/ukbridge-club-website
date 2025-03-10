@@ -1,5 +1,5 @@
 import { Card } from '@/app/model/types';
-import { rankOrder } from '@/app/model/constants';
+import { rankOrder, suitOrder } from '@/app/model/constants';
 
 export function determineTrickWinner(
   trick: Card[],
@@ -44,4 +44,12 @@ export function determineTrickWinner(
 
   // Convert trick-relative index to the actual player's index in `directions`
   return (leaderIndex + winningIndex) % 4;
+}
+
+export function determineTrumps(contract: string): string | null {
+  if (contract === 'Pass') return null;
+  const cleanedContract = contract.replace(/(X|XX)$/, '');
+  if (cleanedContract.endsWith('NT')) return null;
+  const suit = cleanedContract.slice(-1);
+  return suitOrder.includes(suit) ? suit : null;
 }

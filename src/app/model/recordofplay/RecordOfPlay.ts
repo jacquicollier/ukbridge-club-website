@@ -1,21 +1,21 @@
 import { Card, Direction } from '@/app/model/types';
 
-export interface RecordOfPlay {
-  getContract(): string;
-  getDealer(): Direction;
-  getDeclarer(): Direction;
-  getResult(): string;
-  getDeal(): { [key in Direction]: Card[] };
-  getScoreHeadings(): string[];
-  getScores(): string[][];
-  getScore(): string;
-  getScoreImp(): string;
-  getNsVulnerable(): boolean;
-  getEwVulnerable(): boolean;
-  getBoard(): number;
-  getBids(): string[] | null;
-  getOpener(): Direction;
-  getTrumps(): string | null;
-  getPlayers(): { [key in Direction]: string };
-  getPlayedCards(): Card[];
-}
+export type RecordOfPlay = {
+  contract: string;
+  dealer: Direction;
+  declarer: Direction;
+  deal: { [key in Direction]: Card[] };
+  scoreHeadings: string[];
+  scores: string[][];
+  score: string;
+  scoreImp: string;
+  nsVulnerable: boolean;
+  ewVulnerable: boolean;
+  board: number;
+  bids: string[] | null;
+  opener: Direction;
+  trumps: string | null;
+  players: { [key in Direction]: string };
+  playedCards: Card[];
+  result: string;
+};

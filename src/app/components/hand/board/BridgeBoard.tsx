@@ -23,33 +23,35 @@ export default function BridgeBoard(props: {
   return (
     <>
       <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
-        {props.showScores && props.recordOfPlay.getScores() && (
+        {props.showScores && props.recordOfPlay.scores && (
           <BoardScores
-            headings={props.recordOfPlay.getScoreHeadings()}
-            scores={props.recordOfPlay.getScores()}
+            headings={props.recordOfPlay.scoreHeadings}
+            scores={props.recordOfPlay.scores}
           />
         )}
 
         {/* Auction Table */}
-        {!props.playItAgain && props.recordOfPlay.getBids() && (
-          <CollapsiblePanel>
-            <AuctionTable
-              opener={props.recordOfPlay.getOpener()}
-              bids={props.recordOfPlay.getBids()!}
-            />
-          </CollapsiblePanel>
-        )}
+        {!props.playItAgain &&
+          props.recordOfPlay.bids &&
+          props.recordOfPlay.bids.length > 0 && (
+            <CollapsiblePanel>
+              <AuctionTable
+                opener={props.recordOfPlay.opener}
+                bids={props.recordOfPlay.bids!}
+              />
+            </CollapsiblePanel>
+          )}
 
         <DealerAndVul
-          dealer={props.recordOfPlay.getDealer()}
-          nsVulnerable={props.recordOfPlay.getNsVulnerable()}
-          ewVulnerable={props.recordOfPlay.getEwVulnerable()}
+          dealer={props.recordOfPlay.dealer}
+          nsVulnerable={props.recordOfPlay.nsVulnerable}
+          ewVulnerable={props.recordOfPlay.ewVulnerable}
         />
 
         {/* Hands */}
-        {props.recordOfPlay.getDeal() && (
+        {props.recordOfPlay.deal && (
           <Deal
-            deal={props.recordOfPlay.getDeal()}
+            deal={props.recordOfPlay.deal}
             playedCards={props.playedCards}
             playItAgain={props.playItAgain}
             validNextCards={props.validNextCards}
@@ -58,11 +60,11 @@ export default function BridgeBoard(props: {
 
         {/* Board */}
         <div
-          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${props.recordOfPlay.getNsVulnerable() ? 'border-y-red-600' : 'border-y-green-600'} ${props.recordOfPlay.getEwVulnerable() ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
+          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${props.recordOfPlay.nsVulnerable ? 'border-y-red-600' : 'border-y-green-600'} ${props.recordOfPlay.ewVulnerable ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
           style={{ position: 'relative' }}
         >
           <div className='absolute text-xl font-extrabold'>
-            {props.recordOfPlay.getBoard()}
+            {props.recordOfPlay.board}
           </div>
 
           {/*Played Cards */}
@@ -77,11 +79,11 @@ export default function BridgeBoard(props: {
           } else {
             return (
               <Result
-                contract={props.recordOfPlay.getContract()}
-                declarer={props.recordOfPlay.getDeclarer()}
-                result={props.recordOfPlay.getResult()}
-                score={props.recordOfPlay.getScore()}
-                scoreImp={props.recordOfPlay.getScoreImp()}
+                contract={props.recordOfPlay.contract}
+                declarer={props.recordOfPlay.declarer}
+                result={props.recordOfPlay.result}
+                score={props.recordOfPlay.score}
+                scoreImp={props.recordOfPlay.scoreImp}
               />
             );
           }
