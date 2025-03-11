@@ -1,9 +1,6 @@
-import { Card, Direction } from '@/app/model/types';
-import { HandContestants, Player, Result } from '@/app/model/constants';
+import { Board, Contestant } from '@/app/model/constants';
 
 export type RecordOfPlay = {
-  board: number;
-  deal: { [key in Direction]: Card[] };
-  play: Map<HandContestants, Result>;
-  players: Map<Player, string>;
+  boards: Board[];
+  players: Map<Contestant, string[]>;
 };

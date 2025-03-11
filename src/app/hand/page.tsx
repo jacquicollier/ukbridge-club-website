@@ -6,15 +6,20 @@ import { Hand } from '@/app/model/recordofplay/pbn/hand';
 import { convertPBNToJSON } from '@/app/hand/pbnConverter';
 import { defaultHands } from '@/app/model/recordofplay/pbn/hands';
 import { PBNRecordOfPlayGenerator } from '@/app/model/recordofplay/pbn/PBNRecordOfPlayGenerator';
+import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+import { ContestantDirection } from '@/app/model/types';
+import { Board, BoardResult } from '@/app/model/constants';
 
 export default function Page() {
   const [pbnInput, setPbnInput] = useState('');
-  const [hands, setHands] = useState<Hand[]>(defaultHands); // Replace with actual type
+  const [recordOfPlay, setRecordOfPlay] = useState<RecordOfPlay>(
+    new PBNRecordOfPlayGenerator(defaultHands).recordOfPlay,
+  );
 
   const handleConvertPBN = () => {
     // Logic to convert PBN to hands
     const parsedHands = parsePBN(pbnInput); // Implement parsePBN function
-    setHands(parsedHands);
+    setRecordOfPlay(new PBNRecordOfPlayGenerator(parsedHands).recordOfPlay);
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,6 +32,19 @@ export default function Page() {
     };
     reader.readAsText(file); // Read file as text
   };
+
+  function findBoardResult(board: Board): BoardResult {
+    return board.results.find((it) => {
+      return it.boardScore.ns == '1';
+    })!;
+  }
+
+  function findPlayers(): Map<ContestantDirection, string[]> {
+    return new Map<ContestantDirection, string[]>([
+      ['NS', ['Peter Collier', 'Joshua Odawade']],
+      ['EW', ['Jacqui Collier', 'David Collier']],
+    ]);
+  }
 
   return (
     <div className='flex h-screen'>
@@ -58,13 +76,14 @@ export default function Page() {
 
       {/* Right Column - Hands Layout */}
       <div className='overflow-auto p-4 md:w-1/2'>
-        {hands.length > 0 ? (
+        {recordOfPlay.boards.length > 0 ? (
           <div className='flex flex-row flex-wrap'>
-            {hands.map((hand, index) => (
+            {recordOfPlay.boards.map((board, index) => (
               <BridgeDealPlay
                 key={index}
-                recordOfPlay={new PBNRecordOfPlayGenerator(hand).recordOfPlay()}
-                result={true}
+                board={board}
+                boardResult={findBoardResult(board)}
+                players={findPlayers()}
               />
             ))}
           </div>

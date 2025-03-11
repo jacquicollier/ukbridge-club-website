@@ -55,11 +55,6 @@ export const Dealer: Direction[] = [
 export const NSVulnerableBoards: number[] = [2, 5, 12, 15, 4, 7, 10, 13];
 export const EWVulnerableBoards: number[] = [3, 6, 9, 16, 4, 7, 10, 13];
 
-export interface Player {
-  id: number;
-  direction?: Direction;
-}
-
 export interface Contestant {
   id: number;
   direction: ContestantDirection | null;
@@ -76,7 +71,13 @@ export interface Auction {
   bids: string[];
 }
 
-export interface Result {
+export interface Board {
+  boardNumber: number;
+  deal: { [key in Direction]: Card[] };
+  results: BoardResult[];
+}
+
+export interface BoardResult {
   boardScore: BoardScore;
   auction: Auction | null;
   playedCards: Card[] | null;

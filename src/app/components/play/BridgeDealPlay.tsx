@@ -4,13 +4,14 @@ import BridgeBoard from '@/app/components/hand/board/BridgeBoard';
 import { useEffect, useState } from 'react';
 import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
 import Players from '@/app/components/play/Players';
-import { Card, Direction } from '@/app/model/types';
+import { Card, ContestantDirection, Direction } from '@/app/model/types';
 import Header from '@/app/components/play/Header';
-import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+import { Board, BoardResult, Dealer } from '@/app/model/constants';
 
 export default function BridgeDealPlay(props: {
-  recordOfPlay: RecordOfPlay;
-  result: boolean;
+  board: Board;
+  boardResult: BoardResult;
+  players: Map<ContestantDirection, string[]>;
 }) {
   const [playIndex, setPlayIndex] = useState<number | null>(null);
   const [playedCards, setPlayedCards] = useState<Card[]>([]);
@@ -19,7 +20,7 @@ export default function BridgeDealPlay(props: {
     Partial<{ [key in Direction]: Card }>
   >({});
   const [currentLeader, setCurrentLeader] = useState<Direction>(
-    props.recordOfPlay.declarer as Direction,
+    Dealer[(props.board.boardNumber - 1) % 16],
   );
 
   const [playItAgain, setPlayItAgain] = useState<boolean>(false);
@@ -42,59 +43,66 @@ export default function BridgeDealPlay(props: {
   }
 
   useEffect(() => {
-    console.log(playIndex);
-
-    if (playIndex === null) {
-      if (playedCards.length !== 0) {
-        setPlayedCards([]);
+    if (props.boardResult.playedCards) {
+      if (playIndex === null) {
+        if (playedCards.length !== 0) {
+          setPlayedCards([]);
+        }
+        setCurrentTrickCards({});
+        return;
       }
-      setCurrentTrickCards({});
-      return;
-    }
 
-    if (playedCards.length !== playIndex + 1) {
-      setPlayedCards(props.recordOfPlay.playedCards.slice(0, playIndex + 1));
-    }
+      if (playedCards.length !== playIndex + 1) {
+        setPlayedCards(props.boardResult.playedCards.slice(0, playIndex + 1));
+      }
 
-    const cardsRemainingInCurrentTrick = playIndex % 4;
-    const lastPlayedCard = props.recordOfPlay.playedCards[playIndex];
+      const cardsRemainingInCurrentTrick = playIndex % 4;
+      const lastPlayedCard = props.boardResult.playedCards[playIndex];
 
-    if (cardsRemainingInCurrentTrick === 0) {
-      setCurrentTrickCards({
-        [getDirectionForCard(lastPlayedCard, props.recordOfPlay.deal)!]:
+      if (cardsRemainingInCurrentTrick === 0) {
+        setCurrentTrickCards({
+          [getDirectionForCard(lastPlayedCard, props.board.deal)!]:
+            lastPlayedCard,
+        });
+
+        const newLeader = getDirectionForCard(
           lastPlayedCard,
-      });
+          props.board.deal,
+        )!;
+        setCurrentLeader(newLeader);
+        setValidNextCards(props.board.deal[newLeader]);
+      } else {
+        setCurrentTrickCards((prev) => ({
+          ...prev,
+          ...Object.fromEntries(
+            playedCards
+              .slice(-cardsRemainingInCurrentTrick)
+              .map((card) => [
+                getDirectionForCard(card, props.board.deal)!,
+                card,
+              ]),
+          ),
+        }));
 
-      const newLeader = getDirectionForCard(
-        lastPlayedCard,
-        props.recordOfPlay.deal,
-      )!;
-      setCurrentLeader(newLeader);
-      setValidNextCards(props.recordOfPlay.deal[newLeader]);
-    } else {
-      setCurrentTrickCards((prev) => ({
-        ...prev,
-        ...Object.fromEntries(
-          playedCards
-            .slice(-cardsRemainingInCurrentTrick)
-            .map((card) => [
-              getDirectionForCard(card, props.recordOfPlay.deal)!,
-              card,
-            ]),
-        ),
-      }));
-
-      setValidNextCards(
-        props.recordOfPlay.deal[currentLeader].filter(
-          (card) =>
-            !playedCards.some(
-              (playedCard) =>
-                playedCard.rank === card.rank && playedCard.suit === card.suit,
-            ),
-        ),
-      );
+        setValidNextCards(
+          props.board.deal[currentLeader].filter(
+            (card) =>
+              !playedCards.some(
+                (playedCard) =>
+                  playedCard.rank === card.rank &&
+                  playedCard.suit === card.suit,
+              ),
+          ),
+        );
+      }
     }
-  }, [currentLeader, playIndex, playedCards, props.recordOfPlay]);
+  }, [
+    currentLeader,
+    playIndex,
+    playedCards,
+    props.board.deal,
+    props.boardResult.playedCards,
+  ]);
 
   function handleClear(): void {
     setPlayIndex(null);
@@ -120,34 +128,35 @@ export default function BridgeDealPlay(props: {
 
   function hasNext(): boolean {
     return (
-      props.recordOfPlay.playedCards.length !== 0 &&
+      props.boardResult.playedCards !== null &&
+      props.boardResult.playedCards.length !== 0 &&
       (playIndex == null ||
-        playIndex < props.recordOfPlay.playedCards.length - 1)
+        playIndex < props.boardResult.playedCards.length - 1)
     );
   }
 
   return (
     <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center'>
       <Header
-        board={props.recordOfPlay.board}
+        board={props.board.boardNumber}
         playItAgain={playItAgain}
-        hasScores={props.recordOfPlay.scores.length > 0}
+        hasScores={props.board.results.length > 0}
         showScores={showScores}
         setPlayItAgain={setPlayItAgain}
         setShowScores={setShowScores}
       />
-      <Players players={props.recordOfPlay.players} />
+      <Players players={props.players} />
       <BridgeBoard
-        recordOfPlay={props.recordOfPlay}
+        board={props.board}
+        boardResult={props.boardResult}
         currentTrickCards={currentTrickCards}
         currentLeader={currentLeader}
         playedCards={playedCards}
         validNextCards={validNextCards}
-        result={props.result}
         playItAgain={playItAgain}
         showScores={showScores}
       />
-      {props.recordOfPlay.playedCards.length > 0 && (
+      {props.boardResult.playedCards !== null && (
         <BridgePlayPanel
           clearPlay={handleClear}
           hasNext={hasNext}

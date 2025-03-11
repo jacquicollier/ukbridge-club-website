@@ -2,7 +2,7 @@ export interface UsebioFile {
   USEBIO: Usebio;
 }
 
-interface Usebio {
+export interface Usebio {
   EVENT: Event;
   HANDSET: HandSet;
 }
@@ -30,7 +30,7 @@ interface Session {
 interface Section {
   $: SectionAttributes;
   PARTICIPANTS: Participants;
-  BOARD: Board[];
+  BOARD: UsebioBoard[];
 }
 
 interface SectionAttributes {
@@ -61,7 +61,7 @@ interface Player {
   NATIONAL_ID_NUMBER: string;
 }
 
-export interface Board {
+export interface UsebioBoard {
   BOARD_NUMBER: number;
   TRAVELLER_LINE: TravellerLine[];
 }

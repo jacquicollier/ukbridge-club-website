@@ -1,7 +1,7 @@
 import { Card, Direction } from '@/app/model/types';
 
 export default function PointCountTable(props: {
-  deal: Record<Direction, Card[]>;
+  deal: { [key in Direction]: Card[] };
 }) {
   function calculateMiltonPointCount(cards: Card[]): number {
     const pointValues: Record<string, number> = { J: 1, Q: 2, K: 3, A: 4 };
