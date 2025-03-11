@@ -7,13 +7,14 @@ interface Usebio {
   HANDSET: HandSet;
 }
 
-interface Event {
+export interface Event {
   $: EventAttributes;
   BOARD_SCORING_METHOD: BoardScoringMethod;
   MATCH_SCORING_METHOD?: MatchScoringMethod;
   SCORING_METHOD?: ScoringMethod;
   PAIRWISE_SCORING_METHOD?: PairwiseScoringMethod;
   SESSION: Session;
+  WINNER_TYPE: number | null;
   // SESSION: Session | Session[]
 }
 

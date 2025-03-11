@@ -6,6 +6,7 @@ import {
   determineTrickWinner,
   determineTrumps,
 } from '@/app/model/recordofplay/utils';
+import { BoardScore } from '@/app/model/recordofplay/score/board/boardscore';
 
 export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
   private readonly hand: Hand;
@@ -25,10 +26,6 @@ export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
     return this.hand.contract;
   }
 
-  getDealer(): Direction {
-    return this.hand.dealer as Direction;
-  }
-
   getDeclarer(): Direction {
     return this.hand.declarer as Direction;
   }
@@ -37,16 +34,7 @@ export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
     return this.deal;
   }
 
-  getScoreHeadings(): string[] {
-    if (this.hand.scoretable) {
-      const keyValuePairs = this.hand.scoretable!.value.split(';');
-      return keyValuePairs.map((pair) => pair.split('\\')[0]);
-    } else {
-      return [];
-    }
-  }
-
-  getScores(): string[][] {
+  getScores(): BoardScore[] {
     if (this.hand.scoretable) {
       return this.hand.scoretable!.details.map((it) => it.trim().split(/\s+/));
     }
@@ -61,14 +49,6 @@ export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
     return this.hand.scoreimp ?? '';
   }
 
-  getNsVulnerable(): boolean {
-    return ['NS', 'Both', 'All'].includes(this.hand.vulnerable);
-  }
-
-  getEwVulnerable(): boolean {
-    return ['EW', 'Both', 'All'].includes(this.hand.vulnerable);
-  }
-
   getBoard(): number {
     return Number(this.hand.board);
   }
@@ -79,10 +59,6 @@ export class PBNRecordOfPlayGenerator extends RecordOfPlayGenerator {
 
   getOpener(): Direction {
     return this.hand.auction.value as Direction;
-  }
-
-  getTrumps(): string | null {
-    return this.trumps;
   }
 
   getPlayers(): { [key in Direction]: string } {

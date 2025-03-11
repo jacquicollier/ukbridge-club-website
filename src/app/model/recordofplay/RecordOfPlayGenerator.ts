@@ -1,43 +1,19 @@
 import { Card, Direction } from '@/app/model/types';
 import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
-import { Score } from '@/app/model/recordofplay/score';
+import { HandContestants, Player, Result } from '@/app/model/constants';
 
 export abstract class RecordOfPlayGenerator {
-  abstract getContract(): string;
-  abstract getDealer(): Direction;
-  abstract getDeclarer(): Direction;
-  abstract getDeal(): { [key in Direction]: Card[] };
-  abstract getScores(): Score[];
-  abstract getScore(): string;
-  abstract getScoreImp(): string;
-  abstract getNsVulnerable(): boolean;
-  abstract getEwVulnerable(): boolean;
   abstract getBoard(): number;
-  abstract getBids(): string[] | null;
-  abstract getOpener(): Direction;
-  abstract getTrumps(): string | null;
-  abstract getPlayers(): { [key in Direction]: string };
-  abstract getPlayedCards(): Card[];
-  abstract getResult(): string;
+  abstract getDeal(): { [key in Direction]: Card[] };
+  abstract getPlay(): Map<HandContestants, Result>;
+  abstract getPlayers(): Map<Player, string>;
 
   public recordOfPlay(): RecordOfPlay {
     return {
-      contract: this.getContract(),
-      dealer: this.getDealer(),
-      declarer: this.getDeclarer(),
-      deal: this.getDeal(),
-      scores: this.getScores(),
-      score: this.getScore(),
-      scoreImp: this.getScoreImp(),
-      nsVulnerable: this.getNsVulnerable(),
-      ewVulnerable: this.getEwVulnerable(),
       board: this.getBoard(),
-      bids: this.getBids(),
-      opener: this.getOpener(),
-      trumps: this.getTrumps(),
+      deal: this.getDeal(),
+      play: this.getPlay(),
       players: this.getPlayers(),
-      playedCards: this.getPlayedCards(),
-      result: this.getResult(),
     };
   }
 }

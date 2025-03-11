@@ -5,82 +5,42 @@ import {
   HandSet,
   Participants,
   TravellerLine,
+  Event,
 } from '@/app/model/recordofplay/usebio/model';
-import { Direction, Card } from '../../types';
+import { Direction, Card, ContestantDirection } from '../../types';
 import { determineTrumps } from '@/app/model/recordofplay/utils';
+import {
+  BoardScore,
+  PairMPBoardScore,
+} from '@/app/model/recordofplay/score/board/boardscore';
+import {
+  Auction,
+  HandContestants,
+  Player,
+  Result,
+} from '@/app/model/constants';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
+  private event: Event;
   private board: Board;
-  private pairNumber: string;
-  private pairDirection: string;
   private participants: Participants;
   private handSet: HandSet;
 
-  private travellerLine?: TravellerLine;
-
   constructor(
+    event: Event,
     board: Board,
-    pairNumber: string,
-    pairDirection: string,
     participants: Participants,
     handSet: HandSet,
   ) {
     super();
+    this.event = event;
     this.board = board;
-    this.pairNumber = pairNumber;
-    this.pairDirection = pairDirection;
     this.participants = participants;
     this.handSet = handSet;
-
-    this.travellerLine = this.findTravellerLine();
   }
 
-  getScoreImp(): string {
-    return '';
-  }
-
-  getTrumps(): string | null {
-    const travellerLine = this.travellerLine;
-    return travellerLine ? determineTrumps(travellerLine.CONTRACT) : null;
-  }
-
-  getPlayers(): { [key in Direction]: string } {
-    const travellerLine = this.travellerLine;
-
-    const nsPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.NS_PAIR_NUMBER &&
-        it.DIRECTION === 'NS',
-    );
-    const ewPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.EW_PAIR_NUMBER &&
-        it.DIRECTION === 'EW',
-    );
-
-    return {
-      N: nsPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      S: nsPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-      E: ewPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      W: ewPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-    };
-  }
-
-  getPlayedCards(): Card[] {
-    return [];
-  }
-
-  getContract(): string {
-    return this.travellerLine?.CONTRACT ?? '';
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getDealer(): Direction {
-    return 'N';
-  }
-
-  getDeclarer(): Direction {
-    return this.travellerLine?.PLAYED_BY as Direction;
+  getBoard(): number {
+    return this.board.BOARD_NUMBER;
   }
 
   getDeal(): { [key in Direction]: Card[] } {
@@ -101,6 +61,53 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     };
   }
 
+  getPlay(): Map<HandContestants, Result> {
+    return this.board.TRAVELLER_LINE.reduce((map, travellerLine) => {
+      const contestants: HandContestants = {
+        nsContestant: {
+          id: Number(travellerLine.NS_PAIR_NUMBER),
+          direction:
+            this.event.WINNER_TYPE == 2 ? ('NS' as ContestantDirection) : null,
+        },
+        ewContestant: {
+          id: Number(travellerLine.EW_PAIR_NUMBER),
+          direction:
+            this.event.WINNER_TYPE == 2 ? ('EW' as ContestantDirection) : null,
+        },
+      };
+
+      const result: Result = {
+        boardScore: {
+          type: 'PAIR_MP',
+          players: this.getPlayers(travellerLine),
+          contract: travellerLine.CONTRACT ?? '',
+          declarer: travellerLine.PLAYED_BY
+            ? (travellerLine.PLAYED_BY as Direction)
+            : null,
+          score: travellerLine.SCORE ?? '',
+          tricks: travellerLine.TRICKS ? Number(travellerLine.TRICKS) : 0,
+          nsPairNumber: Number(travellerLine.NS_PAIR_NUMBER ?? 0),
+          ewPairNumber: Number(travellerLine.EW_PAIR_NUMBER ?? 0),
+          nsMatchPoints: Number(travellerLine.NS_MATCH_POINTS ?? 0),
+          ewMatchPoints: Number(travellerLine.EW_MATCH_POINTS ?? 0),
+        },
+        auction: null,
+        playedCards: null,
+      };
+
+      map.set(contestants, result);
+      return map;
+    }, new Map<HandContestants, Result>());
+  }
+
+  getPlayers(): Map<Player, string> {
+    return new Map();
+  }
+
+  getPlayedCards(): Card[] {
+    return [];
+  }
+
   private createHand(hand: Hand): Card[] {
     const spades: Card[] = hand.SPADES.split('').map(
       (it) => ({ suit: 'S', rank: it }) as Card,
@@ -118,52 +125,27 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     return [...spades, ...hearts, ...diamonds, ...clubs];
   }
 
-  getScoreHeadings(): string[] {
-    return [
-      'NS',
-      'EW',
-      'Contract',
-      'Declarer',
-      'Lead',
-      'Tricks',
-      'Score',
-      'NS MP',
-      'EW MP',
-    ];
-  }
+  getBoardScores(): BoardScore[] {
+    const scores: PairMPBoardScore[] = this.board.TRAVELLER_LINE.map(
+      (travellerLine) => {
+        return {
+          type: 'PAIR_MP',
+          players: this.getPlayers(travellerLine),
+          contract: travellerLine.CONTRACT ?? '',
+          declarer: travellerLine.PLAYED_BY
+            ? (travellerLine.PLAYED_BY as Direction)
+            : null,
+          score: travellerLine.SCORE ?? '',
+          tricks: travellerLine.TRICKS ? Number(travellerLine.TRICKS) : 0,
+          nsPairNumber: Number(travellerLine.NS_PAIR_NUMBER ?? 0),
+          ewPairNumber: Number(travellerLine.EW_PAIR_NUMBER ?? 0),
+          nsMatchPoints: Number(travellerLine.NS_MATCH_POINTS ?? 0),
+          ewMatchPoints: Number(travellerLine.EW_MATCH_POINTS ?? 0),
+        };
+      },
+    );
 
-  getScores(): string[][] {
-    return this.board.TRAVELLER_LINE.map((it) => {
-      return [
-        it.NS_PAIR_NUMBER,
-        it.EW_PAIR_NUMBER,
-        it.CONTRACT,
-        it.PLAYED_BY,
-        it.LEAD,
-        it.TRICKS,
-        it.SCORE,
-        it.NS_MATCH_POINTS,
-        it.EW_MATCH_POINTS,
-      ];
-    });
-  }
-
-  getScore(): string {
-    return 'NS ' + (this.travellerLine?.SCORE ?? '');
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getNsVulnerable(): boolean {
-    return true;
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getEwVulnerable(): boolean {
-    return false;
-  }
-
-  getBoard(): number {
-    return this.board.BOARD_NUMBER;
+    return scores;
   }
 
   // Not in USEBIO file
@@ -176,8 +158,26 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     return 'N';
   }
 
-  getResult(): string {
-    return this.travellerLine?.TRICKS ?? '';
+  private getPlayers(travellerLine: TravellerLine): {
+    [key in Direction]: string;
+  } {
+    const nsPair = this.participants.PAIR.find(
+      (it) =>
+        it.PAIR_NUMBER === travellerLine?.NS_PAIR_NUMBER &&
+        it.DIRECTION === 'NS',
+    );
+    const ewPair = this.participants.PAIR.find(
+      (it) =>
+        it.PAIR_NUMBER === travellerLine?.EW_PAIR_NUMBER &&
+        it.DIRECTION === 'EW',
+    );
+
+    return {
+      N: nsPair?.PLAYER[0]?.PLAYER_NAME ?? '',
+      S: nsPair?.PLAYER[1]?.PLAYER_NAME ?? '',
+      E: ewPair?.PLAYER[0]?.PLAYER_NAME ?? '',
+      W: ewPair?.PLAYER[1]?.PLAYER_NAME ?? '',
+    };
   }
 
   private findTravellerLine() {

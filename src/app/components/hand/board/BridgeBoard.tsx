@@ -9,6 +9,7 @@ import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
 import { Card, Direction } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import { RecordOfPlay } from '@/app/model/recordofplay/RecordOfPlay';
+import { EWVulnerableBoards, NSVulnerableBoards } from '@/app/model/constants';
 
 export default function BridgeBoard(props: {
   recordOfPlay: RecordOfPlay;
@@ -42,11 +43,7 @@ export default function BridgeBoard(props: {
             </CollapsiblePanel>
           )}
 
-        <DealerAndVul
-          dealer={props.recordOfPlay.dealer}
-          nsVulnerable={props.recordOfPlay.nsVulnerable}
-          ewVulnerable={props.recordOfPlay.ewVulnerable}
-        />
+        <DealerAndVul board={props.recordOfPlay.board} />
 
         {/* Hands */}
         {props.recordOfPlay.deal && (
@@ -60,7 +57,7 @@ export default function BridgeBoard(props: {
 
         {/* Board */}
         <div
-          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${props.recordOfPlay.nsVulnerable ? 'border-y-red-600' : 'border-y-green-600'} ${props.recordOfPlay.ewVulnerable ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
+          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${NSVulnerableBoards.includes(props.recordOfPlay.board) ? 'border-y-red-600' : 'border-y-green-600'} ${EWVulnerableBoards.includes(props.recordOfPlay.board) ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
           style={{ position: 'relative' }}
         >
           <div className='absolute text-xl font-extrabold'>

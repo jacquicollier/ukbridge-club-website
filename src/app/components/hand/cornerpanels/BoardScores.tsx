@@ -2,6 +2,20 @@ export default function BoardScores(props: {
   headings: string[];
   scores: string[][];
 }) {
+  // getScoreHeadings(): string[] {
+  //   return [
+  //     'NS',
+  //     'EW',
+  //     'Contract',
+  //     'Declarer',
+  //     'Lead',
+  //     'Tricks',
+  //     'Score',
+  //     'NS MP',
+  //     'EW MP',
+  //   ];
+  // }
+
   return (
     <div className='absolute inset-4 z-20 size-[calc(100%-2rem)] overflow-scroll border border-black bg-white text-sm'>
       <table>
