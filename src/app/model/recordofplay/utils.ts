@@ -54,6 +54,11 @@ export function determineTrumps(contract: string): string | null {
   return suitOrder.includes(suit) ? suit : null;
 }
 
+export function determineDealer(boardNumber: number): Direction {
+  const directions: Direction[] = ['N', 'E', 'S', 'W'];
+  return directions[boardNumber % 4];
+}
+
 export function generatePbnString(deal: {
   [key in Direction]: Card[];
 }): string {

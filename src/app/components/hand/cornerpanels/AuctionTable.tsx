@@ -1,12 +1,8 @@
-import { Direction } from '@/app/model/types';
-import { Directions } from '@/app/model/constants';
+import { Auction, Directions } from '@/app/model/constants';
 
-export default function AuctionTable(props: {
-  opener: Direction;
-  bids: string[];
-}) {
+export default function AuctionTable(props: { auction: Auction }) {
   // Determine the starting index based on the first bid position
-  const startIndex = Directions.indexOf(props.opener);
+  const startIndex = Directions.indexOf(props.auction.opener);
 
   // Initialize a list to store formatted rows
   const formattedBids: string[][] = [];
@@ -14,7 +10,7 @@ export default function AuctionTable(props: {
 
   let position = startIndex; // Set position to dealer's column
 
-  props.bids.forEach((bid, index) => {
+  props.auction.bids.forEach((bid, index) => {
     // If we're at the start of the auction, we need to insert blank cells before the dealer
     if (index === 0) {
       for (let i = 0; i < startIndex; i++) {

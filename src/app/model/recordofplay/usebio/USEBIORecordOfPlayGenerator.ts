@@ -1,91 +1,56 @@
 import { RecordOfPlayGenerator } from '@/app/model/recordofplay/RecordOfPlayGenerator';
 import {
-  Board,
   Hand,
-  HandSet,
-  Participants,
-  TravellerLine,
+  Usebio,
+  UsebioBoard,
 } from '@/app/model/recordofplay/usebio/model';
-import { Direction, Card } from '../../types';
-import { determineTrumps } from '@/app/model/recordofplay/utils';
+import { Card, Direction } from '../../types';
+import { Board, BoardResult, Contestant } from '@/app/model/constants';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
-  private board: Board;
-  private pairNumber: string;
-  private pairDirection: string;
-  private participants: Participants;
-  private handSet: HandSet;
+  private usebio: Usebio;
 
-  private travellerLine?: TravellerLine;
-
-  constructor(
-    board: Board,
-    pairNumber: string,
-    pairDirection: string,
-    participants: Participants,
-    handSet: HandSet,
-  ) {
+  constructor(usebio: Usebio) {
     super();
-    this.board = board;
-    this.pairNumber = pairNumber;
-    this.pairDirection = pairDirection;
-    this.participants = participants;
-    this.handSet = handSet;
-
-    this.travellerLine = this.findTravellerLine();
+    this.usebio = usebio;
   }
 
-  getScoreImp(): string {
-    return '';
-  }
-
-  getTrumps(): string | null {
-    const travellerLine = this.travellerLine;
-    return travellerLine ? determineTrumps(travellerLine.CONTRACT) : null;
-  }
-
-  getPlayers(): { [key in Direction]: string } {
-    const travellerLine = this.travellerLine;
-
-    const nsPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.NS_PAIR_NUMBER &&
-        it.DIRECTION === 'NS',
+  getBoards(): Board[] {
+    return this.usebio.EVENT.SESSION.SECTION.BOARD.reduce<Board[]>(
+      (acc, board) => {
+        acc.push({
+          boardNumber: Number(board.BOARD_NUMBER),
+          deal: this.createDeal(board),
+          results: this.createResults(board),
+        });
+        return acc;
+      },
+      [],
     );
-    const ewPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.EW_PAIR_NUMBER &&
-        it.DIRECTION === 'EW',
+  }
+
+  getPlayers(): Map<Contestant, string[]> {
+    return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR.reduce(
+      (map, pair) => {
+        const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
+        const contestant: Contestant = {
+          id: Number(pair.PAIR_NUMBER),
+          direction:
+            this.usebio.EVENT.WINNER_TYPE == 2
+              ? (pair.DIRECTION as Direction)
+              : null,
+        };
+
+        map.set(contestant, names);
+        return map;
+      },
+      new Map<Contestant, string[]>(),
     );
-
-    return {
-      N: nsPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      S: nsPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-      E: ewPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      W: ewPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-    };
   }
 
-  getPlayedCards(): Card[] {
-    return [];
-  }
-
-  getContract(): string {
-    return this.travellerLine?.CONTRACT ?? '';
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getDealer(): Direction {
-    return 'N';
-  }
-
-  getDeclarer(): Direction {
-    return this.travellerLine?.PLAYED_BY as Direction;
-  }
-
-  getDeal(): { [key in Direction]: Card[] } {
-    const handSetBoard = this.handSet.BOARD.find(
-      (it) => Number(it.BOARD_NUMBER) == this.board.BOARD_NUMBER,
+  private createDeal(board: UsebioBoard): { [key in Direction]: Card[] } {
+    const handSetBoard = this.usebio.HANDSET.BOARD.find(
+      (it) => Number(it.BOARD_NUMBER) == board.BOARD_NUMBER,
     );
 
     const north = handSetBoard?.HAND.find((it) => it.DIRECTION === 'North');
@@ -99,6 +64,30 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
       E: this.createHand(east!),
       W: this.createHand(west!),
     };
+  }
+
+  private createResults(board: UsebioBoard): BoardResult[] {
+    return board.TRAVELLER_LINE.reduce<BoardResult[]>((acc, travellerLine) => {
+      acc.push({
+        boardScore: {
+          ns: travellerLine.NS_PAIR_NUMBER,
+          ew: travellerLine.EW_PAIR_NUMBER,
+          lead: travellerLine.LEAD,
+          type: 'PAIR_MP',
+          contract: travellerLine.CONTRACT ?? '',
+          declarer: travellerLine.PLAYED_BY
+            ? (travellerLine.PLAYED_BY as Direction)
+            : null,
+          score: travellerLine.SCORE ?? '',
+          tricks: travellerLine.TRICKS ? Number(travellerLine.TRICKS) : 0,
+          nsMatchPoints: Number(travellerLine.NS_MATCH_POINTS ?? 0),
+          ewMatchPoints: Number(travellerLine.EW_MATCH_POINTS ?? 0),
+        },
+        auction: null,
+        playedCards: null,
+      });
+      return acc;
+    }, []);
   }
 
   private createHand(hand: Hand): Card[] {
@@ -116,78 +105,5 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     );
 
     return [...spades, ...hearts, ...diamonds, ...clubs];
-  }
-
-  getScoreHeadings(): string[] {
-    return [
-      'NS',
-      'EW',
-      'Contract',
-      'Declarer',
-      'Lead',
-      'Tricks',
-      'Score',
-      'NS MP',
-      'EW MP',
-    ];
-  }
-
-  getScores(): string[][] {
-    return this.board.TRAVELLER_LINE.map((it) => {
-      return [
-        it.NS_PAIR_NUMBER,
-        it.EW_PAIR_NUMBER,
-        it.CONTRACT,
-        it.PLAYED_BY,
-        it.LEAD,
-        it.TRICKS,
-        it.SCORE,
-        it.NS_MATCH_POINTS,
-        it.EW_MATCH_POINTS,
-      ];
-    });
-  }
-
-  getScore(): string {
-    return 'NS ' + (this.travellerLine?.SCORE ?? '');
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getNsVulnerable(): boolean {
-    return true;
-  }
-
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getEwVulnerable(): boolean {
-    return false;
-  }
-
-  getBoard(): number {
-    return this.board.BOARD_NUMBER;
-  }
-
-  // Not in USEBIO file
-  getBids(): string[] | null {
-    return [];
-  }
-
-  // Not in USEBIO - prob same as Dealer but not necessarily
-  getOpener(): Direction {
-    return 'N';
-  }
-
-  getResult(): string {
-    return this.travellerLine?.TRICKS ?? '';
-  }
-
-  private findTravellerLine() {
-    return this.board.TRAVELLER_LINE.find(
-      (it) =>
-        (this.pairDirection == 'NS' && it.NS_PAIR_NUMBER == this.pairNumber) ||
-        (this.pairDirection == 'EW' && it.EW_PAIR_NUMBER == this.pairNumber) ||
-        (this.pairDirection === null &&
-          (it.EW_PAIR_NUMBER == this.pairNumber ||
-            it.NS_PAIR_NUMBER == this.pairNumber)),
-    );
   }
 }

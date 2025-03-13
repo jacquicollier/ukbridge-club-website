@@ -25,6 +25,7 @@ export type Poi = {
 };
 
 export type Direction = 'N' | 'E' | 'S' | 'W';
+export type ContestantDirection = Direction | 'NS' | 'EW';
 
 export type Rank =
   | 'A'
