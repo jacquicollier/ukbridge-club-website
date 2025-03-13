@@ -1,3 +1,4 @@
+/* eslint-disable */
 var createDDSModule = (() => {
   var _scriptName = import.meta.url;
 

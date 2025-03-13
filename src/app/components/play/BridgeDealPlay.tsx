@@ -42,8 +42,6 @@ export default function BridgeDealPlay(props: {
   }
 
   useEffect(() => {
-    console.log(playIndex);
-
     if (playIndex === null) {
       if (playedCards.length !== 0) {
         setPlayedCards([]);

@@ -10,9 +10,6 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  {
-    ignores: ['src/app/dds/dds.js'],
-  },
   ...compat.extends(
     'next/core-web-vitals',
     'next/typescript',

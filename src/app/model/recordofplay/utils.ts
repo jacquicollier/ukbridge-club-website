@@ -1,5 +1,5 @@
-import { Card } from '@/app/model/types';
-import { rankOrder, suitOrder } from '@/app/model/constants';
+import { Card, Direction } from '@/app/model/types';
+import { Directions, rankOrder, suitOrder } from '@/app/model/constants';
 
 export function determineTrickWinner(
   trick: Card[],
@@ -52,4 +52,28 @@ export function determineTrumps(contract: string): string | null {
   if (cleanedContract.endsWith('NT')) return null;
   const suit = cleanedContract.slice(-1);
   return suitOrder.includes(suit) ? suit : null;
+}
+
+export function generatePbnString(deal: {
+  [key in Direction]: Card[];
+}): string {
+  return (
+    'N:' +
+    Directions.map((direction) => {
+      return convertHandToPbn(deal[direction]);
+    }).join(' ')
+  );
+}
+
+function convertHandToPbn(cards: Card[]): string {
+  return suitOrder
+    .map((suit) =>
+      cards
+        .filter((card) => card.suit === suit)
+        .sort((a, b) => rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank))
+        .map((card) => card.rank)
+        .join(''),
+    )
+    .filter(Boolean)
+    .join('.');
 }
