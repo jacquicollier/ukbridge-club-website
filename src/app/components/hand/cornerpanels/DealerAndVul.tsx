@@ -1,8 +1,5 @@
-import {
-  Dealer,
-  EWVulnerableBoards,
-  NSVulnerableBoards,
-} from '@/app/model/constants';
+import { EWVulnerableBoards, NSVulnerableBoards } from '@/app/model/constants';
+import { determineDealer } from '@/app/model/recordofplay/utils';
 
 export default function DealerAndVul(props: { board: number }) {
   function findVulnerability() {
@@ -23,7 +20,7 @@ export default function DealerAndVul(props: { board: number }) {
     <div className='absolute left-1 top-1 rounded-md px-3 py-2 shadow-md'>
       <p>
         Dealer:{' '}
-        <span className='font-bold'>{Dealer[(props.board - 1) % 16]}</span>
+        <span className='font-bold'>{determineDealer(props.board - 1)}</span>
       </p>
       <p>
         Vul: <span className='font-bold'>{findVulnerability()}</span>

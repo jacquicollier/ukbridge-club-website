@@ -6,7 +6,8 @@ import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
 import Players from '@/app/components/play/Players';
 import { Card, ContestantDirection, Direction } from '@/app/model/types';
 import Header from '@/app/components/play/Header';
-import { Board, BoardResult, Dealer } from '@/app/model/constants';
+import { Board, BoardResult } from '@/app/model/constants';
+import { determineDealer } from '@/app/model/recordofplay/utils';
 
 export default function BridgeDealPlay(props: {
   board: Board;
@@ -20,7 +21,7 @@ export default function BridgeDealPlay(props: {
     Partial<{ [key in Direction]: Card }>
   >({});
   const [currentLeader, setCurrentLeader] = useState<Direction>(
-    Dealer[(props.board.boardNumber - 1) % 16],
+    determineDealer(props.board.boardNumber - 1),
   );
 
   const [playItAgain, setPlayItAgain] = useState<boolean>(false);

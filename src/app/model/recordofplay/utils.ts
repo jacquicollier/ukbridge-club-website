@@ -1,4 +1,4 @@
-import { Card } from '@/app/model/types';
+import { Card, Direction } from '@/app/model/types';
 import { rankOrder, suitOrder } from '@/app/model/constants';
 
 export function determineTrickWinner(
@@ -52,4 +52,9 @@ export function determineTrumps(contract: string): string | null {
   if (cleanedContract.endsWith('NT')) return null;
   const suit = cleanedContract.slice(-1);
   return suitOrder.includes(suit) ? suit : null;
+}
+
+export function determineDealer(boardNumber: number): Direction {
+  const directions: Direction[] = ['N', 'E', 'S', 'W'];
+  return directions[boardNumber % 4];
 }
