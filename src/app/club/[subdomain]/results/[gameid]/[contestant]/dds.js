@@ -1,3 +1,4 @@
+/* eslint-disable */
 var createDDSModule = (() => {
   var _scriptName = import.meta.url;
 
@@ -4543,6 +4544,8 @@ var createDDSModule = (() => {
     var _dds_init = (Module['_dds_init'] = createExportWrapper('dds_init', 0));
     var _do_dds_solve_board = (Module['_do_dds_solve_board'] =
       createExportWrapper('do_dds_solve_board', 7));
+    var _do_dds_calc_dd_table = (Module['_do_dds_calc_dd_table'] =
+      createExportWrapper('do_dds_calc_dd_table', 2));
     var _fflush = createExportWrapper('fflush', 1);
     var _strerror = createExportWrapper('strerror', 1);
     var _emscripten_stack_init = wasmExports['emscripten_stack_init'];
