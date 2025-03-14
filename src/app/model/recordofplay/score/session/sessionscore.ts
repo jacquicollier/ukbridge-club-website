@@ -1,15 +1,16 @@
-import { Direction } from '@/app/model/types';
+import { MasterPointType } from '@/app/model/types';
 
 export type SessionScoreType = 'PAIR_MP' | 'PAIR_IMP';
 
 interface BaseSessionScore {
-  players: { [key in Direction]: string };
-  position: number;
   masterPoints?: number;
+  masterPointType?: MasterPointType;
+  contestant: string;
+  names: string[];
+  position: number;
 }
 
 interface PairScore extends BaseSessionScore {
-  pairNumber: string;
   direction: string;
 }
 
@@ -17,7 +18,6 @@ export interface PairMPSessionScore extends PairScore {
   type: 'PAIR_MP';
   matchPoints: number;
   tops: number;
-  percentage: number;
 }
 
 export interface PairIMPSessionScore extends PairScore {

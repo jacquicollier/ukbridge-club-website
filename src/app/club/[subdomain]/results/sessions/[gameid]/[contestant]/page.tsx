@@ -1,7 +1,6 @@
 import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
 import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
 import { USEBIORecordOfPlayGenerator } from '@/app/model/recordofplay/usebio/USEBIORecordOfPlayGenerator';
-import Header from '@/app/club/[subdomain]/components/Header';
 import { Board, BoardResult } from '@/app/model/constants';
 import { ContestantDirection } from '@/app/model/types';
 
@@ -40,24 +39,21 @@ export default async function ContestantResultPage() {
   }
 
   return (
-    <div>
-      <Header />
-      <div className='overflow-auto p-4'>
-        {recordOfPlay.boards.length > 0 ? (
-          <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
-            {recordOfPlay.boards.map((board, index) => (
-              <BridgeDealPlay
-                key={index}
-                board={board}
-                boardResult={findBoardResult(board)}
-                players={findPlayers()}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className='text-gray-500'>No hands generated yet.</p>
-        )}
-      </div>
+    <div className='overflow-auto p-4'>
+      {recordOfPlay.boards.length > 0 ? (
+        <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
+          {recordOfPlay.boards.map((board, index) => (
+            <BridgeDealPlay
+              key={index}
+              board={board}
+              boardResult={findBoardResult(board)}
+              players={findPlayers()}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className='text-gray-500'>No hands generated yet.</p>
+      )}
     </div>
   );
 }

@@ -47,3 +47,6 @@ export type Card = {
   rank: Rank;
   suit: Suit;
 };
+
+export type SessionScoreType = 'TWO_WINNER_PAIRS' | 'ONE_WINNER_PAIRS';
+export type MasterPointType = 'BLACK' | 'GREEN' | 'BLUE';

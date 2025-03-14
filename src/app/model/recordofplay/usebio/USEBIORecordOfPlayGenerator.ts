@@ -1,11 +1,17 @@
 import { RecordOfPlayGenerator } from '@/app/model/recordofplay/RecordOfPlayGenerator';
 import {
   Hand,
+  Pair,
   Usebio,
   UsebioBoard,
 } from '@/app/model/recordofplay/usebio/model';
-import { Card, Direction } from '../../types';
+import { Card, Direction, SessionScoreType } from '../../types';
 import { Board, BoardResult, Contestant } from '@/app/model/constants';
+import {
+  PairMPSessionScore,
+  SessionScore,
+} from '@/app/model/recordofplay/score/session/sessionscore';
+import { PairMPBoardScore } from '@/app/model/recordofplay/score/board/boardscore';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private usebio: Usebio;
@@ -13,6 +19,13 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   constructor(usebio: Usebio) {
     super();
     this.usebio = usebio;
+  }
+
+  getSessionScoreType(): SessionScoreType {
+    if (this.usebio.EVENT.WINNER_TYPE == 2) {
+      return 'TWO_WINNER_PAIRS';
+    }
+    return 'ONE_WINNER_PAIRS';
   }
 
   getBoards(): Board[] {
@@ -45,6 +58,71 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
         return map;
       },
       new Map<Contestant, string[]>(),
+    );
+  }
+
+  getSessionScores(): SessionScore[] {
+    return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR.reduce<
+      SessionScore[]
+    >((acc, pair) => {
+      acc.push({
+        type: 'PAIR_MP',
+        position: Number(pair.PLACE),
+        masterPoints: pair.MASTER_POINTS?.MASTER_POINTS_AWARDED,
+        masterPointType: pair.MASTER_POINTS?.MASTER_POINT_TYPE,
+        contestant: pair.PAIR_NUMBER,
+        direction: pair.DIRECTION as Direction,
+        names: pair.PLAYER.map((it) => it.PLAYER_NAME),
+        matchPoints: this.calculateContestantMP(pair),
+        tops: this.calculateTops(pair),
+      } as PairMPSessionScore);
+      return acc;
+    }, []);
+  }
+
+  private calculateTops(pair: Pair): number {
+    return this.getBoards().reduce(
+      (acc, board) =>
+        acc + this.getTotalMatchPoints(this.findBoardResult(pair, board)),
+      0,
+    );
+  }
+
+  private calculateContestantMP(pair: Pair): number {
+    return this.getBoards().reduce(
+      (acc, board) =>
+        acc +
+        this.getMatchPointsForPair(pair, this.findBoardResult(pair, board)),
+      0,
+    );
+  }
+
+  private getTotalMatchPoints(boardResult?: BoardResult): number {
+    if (!boardResult) return 0;
+    const { nsMatchPoints, ewMatchPoints } =
+      boardResult.boardScore as PairMPBoardScore;
+    return nsMatchPoints + ewMatchPoints;
+  }
+
+  private getMatchPointsForPair(pair: Pair, boardResult?: BoardResult): number {
+    if (!boardResult) return 0;
+    const { nsMatchPoints, ewMatchPoints, ns } =
+      boardResult.boardScore as PairMPBoardScore;
+
+    if (pair.DIRECTION) {
+      return pair.DIRECTION === 'NS' ? nsMatchPoints : ewMatchPoints;
+    }
+
+    return pair.PAIR_NUMBER === ns ? nsMatchPoints : ewMatchPoints;
+  }
+
+  private findBoardResult(pair: Pair, board: Board): BoardResult | undefined {
+    return board.results.find((it) =>
+      pair.DIRECTION
+        ? pair.PAIR_NUMBER ===
+          (pair.DIRECTION === 'NS' ? it.boardScore.ns : it.boardScore.ew)
+        : pair.PAIR_NUMBER === it.boardScore.ns ||
+          pair.PAIR_NUMBER === it.boardScore.ew,
     );
   }
 
