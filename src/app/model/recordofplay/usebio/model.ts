@@ -4,7 +4,7 @@ export interface UsebioFile {
 
 export interface Usebio {
   EVENT: Event;
-  HANDSET: HandSet;
+  HANDSET?: HandSet;
 }
 
 export interface Event {
@@ -15,6 +15,8 @@ export interface Event {
   PAIRWISE_SCORING_METHOD?: PairwiseScoringMethod;
   SESSION: Session;
   WINNER_TYPE: number | null;
+  PARTICIPANTS?: Participants;
+  BOARD?: UsebioBoard[];
   // SESSION: Session | Session[]
 }
 
@@ -23,7 +25,7 @@ interface EventAttributes {
 }
 
 interface Session {
-  SECTION: Section[];
+  SECTION: Section[] | Section;
 }
 
 interface Section {

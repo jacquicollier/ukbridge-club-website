@@ -29,42 +29,34 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   }
 
   getBoards(): Board[] {
-    return this.usebio.EVENT.SESSION.SECTION.BOARD.reduce<Board[]>(
-      (acc, board) => {
-        acc.push({
-          boardNumber: Number(board.BOARD_NUMBER),
-          deal: this.createDeal(board),
-          results: this.createResults(board),
-        });
-        return acc;
-      },
-      [],
-    );
+    return this.findBoards().reduce<Board[]>((acc, board) => {
+      acc.push({
+        boardNumber: Number(board.BOARD_NUMBER),
+        deal: this.createDeal(board),
+        results: this.createResults(board),
+      });
+      return acc;
+    }, []);
   }
 
   getPlayers(): Map<Contestant, string[]> {
-    return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR.reduce(
-      (map, pair) => {
-        const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
-        const contestant: Contestant = {
-          id: Number(pair.PAIR_NUMBER),
-          direction:
-            this.usebio.EVENT.WINNER_TYPE == 2
-              ? (pair.DIRECTION as Direction)
-              : null,
-        };
+    return this.findPairs().reduce((map, pair) => {
+      const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
+      const contestant: Contestant = {
+        id: Number(pair.PAIR_NUMBER),
+        direction:
+          this.usebio.EVENT.WINNER_TYPE == 2
+            ? (pair.DIRECTION as Direction)
+            : null,
+      };
 
-        map.set(contestant, names);
-        return map;
-      },
-      new Map<Contestant, string[]>(),
-    );
+      map.set(contestant, names);
+      return map;
+    }, new Map<Contestant, string[]>());
   }
 
   getSessionScores(): SessionScore[] {
-    return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR.reduce<
-      SessionScore[]
-    >((acc, pair) => {
+    return this.findPairs().reduce<SessionScore[]>((acc, pair) => {
       acc.push({
         type: 'PAIR_MP',
         position: Number(pair.PLACE),
@@ -127,21 +119,24 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   }
 
   private createDeal(board: UsebioBoard): { [key in Direction]: Card[] } {
-    const handSetBoard = this.usebio.HANDSET.BOARD.find(
-      (it) => Number(it.BOARD_NUMBER) == board.BOARD_NUMBER,
-    );
+    if (this.usebio.HANDSET) {
+      const handSetBoard = this.usebio.HANDSET.BOARD.find(
+        (it) => Number(it.BOARD_NUMBER) == board.BOARD_NUMBER,
+      );
 
-    const north = handSetBoard?.HAND.find((it) => it.DIRECTION === 'North');
-    const south = handSetBoard?.HAND.find((it) => it.DIRECTION === 'South');
-    const east = handSetBoard?.HAND.find((it) => it.DIRECTION === 'East');
-    const west = handSetBoard?.HAND.find((it) => it.DIRECTION === 'West');
+      const north = handSetBoard?.HAND.find((it) => it.DIRECTION === 'North');
+      const south = handSetBoard?.HAND.find((it) => it.DIRECTION === 'South');
+      const east = handSetBoard?.HAND.find((it) => it.DIRECTION === 'East');
+      const west = handSetBoard?.HAND.find((it) => it.DIRECTION === 'West');
 
-    return {
-      N: this.createHand(north!),
-      S: this.createHand(south!),
-      E: this.createHand(east!),
-      W: this.createHand(west!),
-    };
+      return {
+        N: this.createHand(north!),
+        S: this.createHand(south!),
+        E: this.createHand(east!),
+        W: this.createHand(west!),
+      };
+    }
+    return { N: [], W: [], S: [], E: [] };
   }
 
   private createResults(board: UsebioBoard): BoardResult[] {
@@ -183,5 +178,27 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     );
 
     return [...spades, ...hearts, ...diamonds, ...clubs];
+  }
+
+  private findBoards(): UsebioBoard[] {
+    if (this.usebio.EVENT.BOARD) {
+      return this.usebio.EVENT.BOARD;
+    }
+    if (Array.isArray(this.usebio.EVENT.SESSION.SECTION)) {
+      return this.usebio.EVENT.SESSION.SECTION[0].BOARD;
+    } else {
+      return this.usebio.EVENT.SESSION.SECTION.BOARD;
+    }
+  }
+
+  private findPairs(): Pair[] {
+    if (this.usebio.EVENT.PARTICIPANTS) {
+      return this.usebio.EVENT.PARTICIPANTS.PAIR;
+    }
+    if (Array.isArray(this.usebio.EVENT.SESSION.SECTION)) {
+      return this.usebio.EVENT.SESSION.SECTION[0].PARTICIPANTS.PAIR;
+    } else {
+      return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR;
+    }
   }
 }
