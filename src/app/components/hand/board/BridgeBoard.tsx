@@ -56,7 +56,7 @@ export default function BridgeBoard(props: {
 
         {/* Board */}
         <div
-          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${NSVulnerableBoards.includes(props.board.boardNumber) ? 'border-y-red-600' : 'border-y-green-600'} ${EWVulnerableBoards.includes(props.board.boardNumber) ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
+          className={`absolute flex aspect-square size-24 flex-col items-center justify-center border-8 md:size-32 ${NSVulnerableBoards.includes(props.board.boardNumber % 16) ? 'border-y-red-600' : 'border-y-green-600'} ${EWVulnerableBoards.includes(props.board.boardNumber % 16) ? 'border-x-red-600' : 'border-x-green-600'} bg-gray-800 text-lg font-bold text-white`}
           style={{ position: 'relative' }}
         >
           <div className='absolute text-xl font-extrabold'>

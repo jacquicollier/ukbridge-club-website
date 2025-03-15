@@ -2,14 +2,18 @@ import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
 import MPTable from '@/app/club/[subdomain]/results/sessions/[gameid]/components/MPTable';
 import { USEBIORecordOfPlayGenerator } from '@/app/model/recordofplay/usebio/USEBIORecordOfPlayGenerator';
 
-async function getBridgeData() {
-  const res = await fetch('http://localhost:3000/api/usebio/mp-pairs'); // Adjust URL for deployment
+async function getBridgeData(gameid: string) {
+  const res = await fetch(`http://localhost:3000/api/usebio/${gameid}`); // Adjust URL for deployment
   if (!res.ok) throw new Error('Failed to fetch data');
   return res.json();
 }
 
-export default async function ResultPage() {
-  const data: UsebioFile = await getBridgeData();
+export default async function ResultPage({
+  params,
+}: {
+  params: { gameid: string };
+}) {
+  const data: UsebioFile = await getBridgeData(params.gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
     data.USEBIO,
   ).recordOfPlay();

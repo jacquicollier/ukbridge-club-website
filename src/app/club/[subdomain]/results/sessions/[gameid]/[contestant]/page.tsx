@@ -1,35 +1,63 @@
 import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
 import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
 import { USEBIORecordOfPlayGenerator } from '@/app/model/recordofplay/usebio/USEBIORecordOfPlayGenerator';
-import { Board, BoardResult } from '@/app/model/constants';
+import { Board, BoardResult, Contestant } from '@/app/model/constants';
 import { ContestantDirection } from '@/app/model/types';
 
-async function getBridgeData() {
-  const res = await fetch('http://localhost:3000/api/usebio/mp-pairs'); // Adjust URL for deployment
+async function getBridgeData(gameid: string): Promise<UsebioFile> {
+  const res = await fetch(`http://localhost:3000/api/usebio/${gameid}`); // Adjust URL for deployment
   if (!res.ok) throw new Error('Failed to fetch data');
   return res.json();
 }
 
-export default async function ContestantResultPage() {
-  const data: UsebioFile = await getBridgeData();
+export default async function ContestantResultPage({
+  params,
+}: {
+  params: { gameid: string; contestant: string };
+}) {
+  const data: UsebioFile = await getBridgeData(params.gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
     data.USEBIO,
   ).recordOfPlay();
 
-  // const contestant = {
-  //   id: 1,
-  //   direction: 'NS'
-  // } as Contestant;
+  function parseContestant(input: string): Contestant | null {
+    const match = input.match(/^(NS|EW)?(\d+)$/);
 
-  function findBoardResult(board: Board): BoardResult {
-    return board.results.find((it) => {
-      return it.boardScore.ns == '1';
-    })!;
+    if (!match) return null;
+
+    const [, prefix, num] = match;
+    return {
+      direction: prefix as 'NS' | 'EW' | null,
+      id: Number(num),
+    };
   }
 
-  // const boardResult = findBoardResult(board);
-  // 'NS': recordOfPlay.players[boardResult.boardScore.ns],
-  // 'EW': recordOfPlay.players[boardResult.boardScore.ew],
+  function findBoardResult(board: Board): BoardResult {
+    const contestant = parseContestant(params.contestant);
+
+    return board.results.find((it) => {
+      if (!contestant) {
+        return false;
+      }
+
+      if (recordOfPlay.sessionScoreType == 'TWO_WINNER_PAIRS') {
+        if (contestant?.direction === 'NS') {
+          return it.boardScore.ns == String(contestant?.id);
+        }
+
+        return it.boardScore.ew == String(contestant?.id);
+      } else {
+        if (!contestant?.direction) {
+          return (
+            it.boardScore.ns == String(contestant?.id) ||
+            it.boardScore.ew == String(contestant?.id)
+          );
+        }
+      }
+
+      return false;
+    })!;
+  }
 
   function findPlayers(): Map<ContestantDirection, string[]> {
     return new Map<ContestantDirection, string[]>([

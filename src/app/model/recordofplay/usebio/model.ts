@@ -23,8 +23,7 @@ interface EventAttributes {
 }
 
 interface Session {
-  SECTION: Section;
-  // SECTION: Section | Section[]
+  SECTION: Section[];
 }
 
 interface Section {
