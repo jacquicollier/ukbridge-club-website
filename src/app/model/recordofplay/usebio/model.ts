@@ -77,6 +77,7 @@ export interface TravellerLine {
   SCORE: string;
   NS_MATCH_POINTS: string;
   EW_MATCH_POINTS: string;
+  LIN_DATA?: string;
 }
 
 export interface HandSet {

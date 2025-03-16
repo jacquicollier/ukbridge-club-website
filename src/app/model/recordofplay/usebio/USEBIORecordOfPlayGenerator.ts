@@ -5,8 +5,14 @@ import {
   Usebio,
   UsebioBoard,
 } from '@/app/model/recordofplay/usebio/model';
-import { Card, Direction, SessionScoreType } from '../../types';
-import { Board, BoardResult, Contestant } from '@/app/model/constants';
+import { Card, Direction, Rank, SessionScoreType, Suit } from '../../types';
+import {
+  Board,
+  BoardResult,
+  Contestant,
+  rankOrder,
+  suitOrder,
+} from '@/app/model/constants';
 import {
   PairMPSessionScore,
   SessionScore,
@@ -135,8 +141,68 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
         E: this.createHand(east!),
         W: this.createHand(west!),
       };
+    } else if (board.TRAVELLER_LINE[0].LIN_DATA) {
+      const linData = this.extractLINValues(board.TRAVELLER_LINE[0].LIN_DATA);
+      if (linData.md.length > 0) {
+        const directions: Direction[] = ['S', 'W', 'N', 'E'];
+        const hands: { [key in Direction]: Card[] } = {
+          N: [],
+          E: [],
+          S: [],
+          W: [],
+        };
+
+        // Decode percent-encoded characters
+        const decodedMd = decodeURIComponent(linData.md[0]);
+
+        // Extract the hands data
+        const cardData = decodedMd.split(',');
+
+        if (cardData.length !== 3 && cardData.length !== 4) {
+          throw new Error('Invalid md format - Expected 3 or 4 hands');
+        }
+
+        cardData.forEach((hand, index) => {
+          const direction = directions[index]; // Map to "S", "W", "N", "E"
+          if (!hand) return; // Handle empty hands
+
+          let currentSuit: Suit | null = null;
+
+          for (const char of hand) {
+            if ('SHDC'.includes(char)) {
+              currentSuit = char as Suit;
+            } else if (currentSuit) {
+              hands[direction].push({ suit: currentSuit, rank: char as Rank });
+            }
+          }
+        });
+
+        hands.E = this.findMissingCards(hands);
+
+        return hands;
+      }
     }
     return { N: [], W: [], S: [], E: [] };
+  }
+
+  // Function to get all missing cards and assign them to East
+  private findMissingCards(hands: { [key in Direction]: Card[] }): Card[] {
+    // Generate all possible 52 cards
+    const allCards: Card[] = suitOrder.flatMap((suit) =>
+      rankOrder.map((rank) => ({ suit, rank }) as Card),
+    );
+
+    // Get all assigned cards from S, W, N
+    const assignedCards = new Set(
+      hands.S.concat(hands.W, hands.N).map(
+        (card) => `${card.suit}${card.rank}`,
+      ),
+    );
+
+    // Find unassigned cards
+    return allCards.filter(
+      (card) => !assignedCards.has(`${card.suit}${card.rank}`),
+    ); // Assign missing cards to East
   }
 
   private createResults(board: UsebioBoard): BoardResult[] {
@@ -200,5 +266,27 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     } else {
       return this.usebio.EVENT.SESSION.SECTION.PARTICIPANTS.PAIR;
     }
+  }
+
+  private extractLINValues(linString: string) {
+    const linParts = linString.split('|');
+    const result: { md: string[]; mb: string[]; pc: string[] } = {
+      md: [],
+      mb: [],
+      pc: [],
+    };
+
+    for (let i = 0; i < linParts.length; i += 2) {
+      const key = linParts[i];
+      const value = linParts[i + 1];
+
+      if (key && value) {
+        if (key === 'md') result.md.push(value);
+        else if (key === 'mb') result.mb.push(value);
+        else if (key === 'pc') result.pc.push(value);
+      }
+    }
+
+    return result;
   }
 }
