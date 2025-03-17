@@ -13,7 +13,7 @@ async function getBridgeData(gameid: string): Promise<UsebioFile> {
 export default async function ContestantResultPage({
   params,
 }: {
-  params: { gameid: string; contestant: string };
+  params: Promise<{ gameid: string; contestant: string }>;
 }) {
   const { gameid, contestant } = await params;
 
