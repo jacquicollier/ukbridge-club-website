@@ -11,7 +11,7 @@ async function getBridgeData(gameid: string) {
 export default async function ResultPage({
   params,
 }: {
-  params: { gameid: string };
+  params: Promise<{ gameid: string }>;
 }) {
   const { gameid } = await params;
 

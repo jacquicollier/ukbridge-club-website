@@ -29,7 +29,18 @@ export async function POST(request: Request) {
     await s3.send(command);
 
     return Response.json({ message: 'File uploaded successfully' });
-  } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Error occurred while uploading file:', error);
+
+      return Response.json({ error: error.message }, { status: 500 });
+    } else {
+      // Handle the case where the error is not an instance of Error (like a network issue)
+      console.error('Unknown error occurred:', error);
+      return Response.json(
+        { error: 'An unexpected error occurred' },
+        { status: 500 },
+      );
+    }
   }
 }
