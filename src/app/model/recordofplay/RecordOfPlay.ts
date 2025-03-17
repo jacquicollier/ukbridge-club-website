@@ -1,21 +1,32 @@
-import { Card, Direction } from '@/app/model/types';
+import { Board, Contestant } from '@/app/model/constants';
+import { SessionScore } from '@/app/model/recordofplay/score/session/sessionscore';
+import { SessionScoreType } from '@/app/model/types';
 
-export type RecordOfPlay = {
-  contract: string;
-  dealer: Direction;
-  declarer: Direction;
-  deal: { [key in Direction]: Card[] };
-  scoreHeadings: string[];
-  scores: string[][];
-  score: string;
-  scoreImp: string;
-  nsVulnerable: boolean;
-  ewVulnerable: boolean;
-  board: number;
-  bids: string[] | null;
-  opener: Direction;
-  trumps: string | null;
-  players: { [key in Direction]: string };
-  playedCards: Card[];
-  result: string;
-};
+export class Section {
+  name: string;
+  boards: Board[];
+  sessionScores: SessionScore[];
+  players: Map<Contestant, string[]>;
+
+  constructor(
+    name: string,
+    boards: Board[],
+    sessionScores: SessionScore[],
+    players: Map<Contestant, string[]>,
+  ) {
+    this.name = name;
+    this.boards = boards;
+    this.sessionScores = sessionScores;
+    this.players = players;
+  }
+}
+
+export class RecordOfPlay {
+  sessionScoreType: SessionScoreType;
+  sections: Section[];
+
+  constructor(sessionScoreType: SessionScoreType, sections: Section[]) {
+    this.sessionScoreType = sessionScoreType;
+    this.sections = sections;
+  }
+}

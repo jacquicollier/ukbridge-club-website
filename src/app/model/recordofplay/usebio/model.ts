@@ -2,18 +2,21 @@ export interface UsebioFile {
   USEBIO: Usebio;
 }
 
-interface Usebio {
+export interface Usebio {
   EVENT: Event;
-  HANDSET: HandSet;
+  HANDSET?: HandSet;
 }
 
-interface Event {
+export interface Event {
   $: EventAttributes;
   BOARD_SCORING_METHOD: BoardScoringMethod;
   MATCH_SCORING_METHOD?: MatchScoringMethod;
   SCORING_METHOD?: ScoringMethod;
   PAIRWISE_SCORING_METHOD?: PairwiseScoringMethod;
   SESSION: Session;
+  WINNER_TYPE: number | null;
+  PARTICIPANTS?: Participants;
+  BOARD?: UsebioBoard[];
   // SESSION: Session | Session[]
 }
 
@@ -22,14 +25,14 @@ interface EventAttributes {
 }
 
 interface Session {
-  SECTION: Section;
-  // SECTION: Section | Section[]
+  SECTION: UsebioSection[] | UsebioSection;
+  HANDSET?: HandSet;
 }
 
-interface Section {
+export interface UsebioSection {
   $: SectionAttributes;
   PARTICIPANTS: Participants;
-  BOARD: Board[];
+  BOARD: UsebioBoard[];
 }
 
 interface SectionAttributes {
@@ -60,7 +63,7 @@ interface Player {
   NATIONAL_ID_NUMBER: string;
 }
 
-export interface Board {
+export interface UsebioBoard {
   BOARD_NUMBER: number;
   TRAVELLER_LINE: TravellerLine[];
 }
@@ -75,6 +78,7 @@ export interface TravellerLine {
   SCORE: string;
   NS_MATCH_POINTS: string;
   EW_MATCH_POINTS: string;
+  LIN_DATA?: string;
 }
 
 export interface HandSet {

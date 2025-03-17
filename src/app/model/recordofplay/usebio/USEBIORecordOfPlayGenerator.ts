@@ -1,91 +1,287 @@
 import { RecordOfPlayGenerator } from '@/app/model/recordofplay/RecordOfPlayGenerator';
 import {
-  Board,
   Hand,
   HandSet,
-  Participants,
-  TravellerLine,
+  Pair,
+  Usebio,
+  UsebioBoard,
+  UsebioSection,
 } from '@/app/model/recordofplay/usebio/model';
-import { Direction, Card } from '../../types';
-import { determineTrumps } from '@/app/model/recordofplay/utils';
+import { Card, Direction, Rank, SessionScoreType, Suit } from '../../types';
+import {
+  Board,
+  BoardResult,
+  Contestant,
+  rankOrder,
+  suitOrder,
+} from '@/app/model/constants';
+import {
+  PairMPSessionScore,
+  SessionScore,
+} from '@/app/model/recordofplay/score/session/sessionscore';
+import { PairMPBoardScore } from '@/app/model/recordofplay/score/board/boardscore';
+import { Section } from '@/app/model/recordofplay/RecordOfPlay';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
-  private board: Board;
-  private pairNumber: string;
-  private pairDirection: string;
-  private participants: Participants;
-  private handSet: HandSet;
+  private usebio: Usebio;
 
-  private travellerLine?: TravellerLine;
-
-  constructor(
-    board: Board,
-    pairNumber: string,
-    pairDirection: string,
-    participants: Participants,
-    handSet: HandSet,
-  ) {
+  constructor(usebio: Usebio) {
     super();
-    this.board = board;
-    this.pairNumber = pairNumber;
-    this.pairDirection = pairDirection;
-    this.participants = participants;
-    this.handSet = handSet;
-
-    this.travellerLine = this.findTravellerLine();
+    this.usebio = usebio;
   }
 
-  getScoreImp(): string {
-    return '';
+  getSessionScoreType(): SessionScoreType {
+    if (this.usebio.EVENT.WINNER_TYPE == 2) {
+      return 'TWO_WINNER_PAIRS';
+    }
+    return 'ONE_WINNER_PAIRS';
   }
 
-  getTrumps(): string | null {
-    const travellerLine = this.travellerLine;
-    return travellerLine ? determineTrumps(travellerLine.CONTRACT) : null;
+  getSections(): Section[] {
+    if (!this.usebio.EVENT.SESSION) {
+      const boards = this.getBoards(this.usebio.EVENT.BOARD!);
+      const pairs = this.usebio.EVENT.PARTICIPANTS?.PAIR ?? [];
+
+      return [
+        {
+          name: '',
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(pairs),
+        },
+      ];
+    }
+    if (Array.isArray(this.usebio.EVENT.SESSION.SECTION)) {
+      const sections = this.usebio.EVENT.SESSION.SECTION.map((section) => {
+        const boards = this.getBoards(this.findBoards(section));
+        const pairs = this.findPairs(section);
+
+        return {
+          name: section.$.SECTION_ID,
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(this.findPairs(section)),
+        };
+      });
+
+      if (this.usebio.EVENT.WINNER_TYPE == 1) {
+        const playersMap = sections.reduce<Map<Contestant, string[]>>(
+          (acc, section) => {
+            section.players.entries().forEach((contestant) => {
+              acc.set(contestant[0], contestant[1]);
+            });
+            return acc;
+          },
+          new Map(),
+        );
+
+        return [
+          {
+            name: '',
+            boards: this.combineBoards(
+              sections.flatMap((section) => section.boards),
+            ),
+            sessionScores: sections.reduce<SessionScore[]>(
+              (acc, section) => acc.concat(section.sessionScores),
+              [],
+            ),
+            players: playersMap,
+          },
+        ];
+      }
+      return sections;
+    } else {
+      const boards = this.getBoards(
+        this.findBoards(this.usebio.EVENT.SESSION.SECTION),
+      );
+      const pairs = this.findPairs(this.usebio.EVENT.SESSION.SECTION);
+
+      return [
+        {
+          name: '',
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(pairs),
+        },
+      ];
+    }
   }
 
-  getPlayers(): { [key in Direction]: string } {
-    const travellerLine = this.travellerLine;
+  private combineBoards(boards: Board[]): Board[] {
+    // Create a map to store the combined results by boardNumber
+    const boardMap = new Map<number, Board>();
 
-    const nsPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.NS_PAIR_NUMBER &&
-        it.DIRECTION === 'NS',
+    boards.forEach((board) => {
+      // If the board number doesn't exist in the map, add it
+      if (!boardMap.has(board.boardNumber)) {
+        boardMap.set(board.boardNumber, {
+          boardNumber: board.boardNumber,
+          deal: board.deal,
+          results: board.results,
+        });
+      } else {
+        // If the board number exists, merge the results
+        const existingBoard = boardMap.get(board.boardNumber);
+        if (existingBoard) {
+          existingBoard.results = [...existingBoard.results, ...board.results];
+        }
+      }
+    });
+
+    // Return an array of boards with combined results
+    return Array.from(boardMap.values());
+  }
+
+  private getBoards(boards: UsebioBoard[]): Board[] {
+    return boards.reduce<Board[]>((acc, board) => {
+      acc.push({
+        boardNumber: Number(board.BOARD_NUMBER),
+        deal: this.createDeal(board),
+        results: this.createResults(board),
+      });
+      return acc;
+    }, []);
+  }
+
+  private getPlayers(pairs: Pair[]): Map<Contestant, string[]> {
+    return pairs.reduce((map, pair) => {
+      const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
+      const contestant: Contestant = {
+        id: Number(pair.PAIR_NUMBER),
+        direction:
+          this.usebio.EVENT.WINNER_TYPE == 2
+            ? (pair.DIRECTION as Direction)
+            : null,
+      };
+
+      map.set(contestant, names);
+      return map;
+    }, new Map<Contestant, string[]>());
+  }
+
+  private getSessionScores(boards: Board[], pairs: Pair[]): SessionScore[] {
+    return pairs.reduce<SessionScore[]>((acc, pair) => {
+      acc.push({
+        type: 'PAIR_MP',
+        position: pair.PLACE,
+        masterPoints: pair.MASTER_POINTS?.MASTER_POINTS_AWARDED,
+        masterPointType: pair.MASTER_POINTS?.MASTER_POINT_TYPE,
+        contestant: pair.PAIR_NUMBER,
+        direction: pair.DIRECTION as Direction,
+        names: pair.PLAYER.map((it) => it.PLAYER_NAME),
+        matchPoints: Number(
+          this.calculateContestantMP(boards, pair).toFixed(2),
+        ),
+        tops: Number(this.calculateTops(boards, pair).toFixed(0)),
+      } as PairMPSessionScore);
+      return acc;
+    }, []);
+  }
+
+  private calculateTops(boards: Board[], pair: Pair): number {
+    return boards.reduce(
+      (acc, board) =>
+        acc + this.getTotalMatchPoints(this.findBoardResult(pair, board)),
+      0,
     );
-    const ewPair = this.participants.PAIR.find(
-      (it) =>
-        it.PAIR_NUMBER === travellerLine?.EW_PAIR_NUMBER &&
-        it.DIRECTION === 'EW',
+  }
+
+  private calculateContestantMP(boards: Board[], pair: Pair): number {
+    return boards.reduce(
+      (acc, board) =>
+        acc +
+        this.getMatchPointsForPair(pair, this.findBoardResult(pair, board)),
+      0,
     );
-
-    return {
-      N: nsPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      S: nsPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-      E: ewPair?.PLAYER[0]?.PLAYER_NAME ?? '',
-      W: ewPair?.PLAYER[1]?.PLAYER_NAME ?? '',
-    };
   }
 
-  getPlayedCards(): Card[] {
-    return [];
+  private getTotalMatchPoints(boardResult?: BoardResult): number {
+    if (!boardResult) return 0;
+    const { nsMatchPoints, ewMatchPoints } =
+      boardResult.boardScore as PairMPBoardScore;
+    return nsMatchPoints + ewMatchPoints;
   }
 
-  getContract(): string {
-    return this.travellerLine?.CONTRACT ?? '';
+  private getMatchPointsForPair(pair: Pair, boardResult?: BoardResult): number {
+    if (!boardResult) return 0;
+    const { nsMatchPoints, ewMatchPoints, ns } =
+      boardResult.boardScore as PairMPBoardScore;
+
+    if (pair.DIRECTION) {
+      return pair.DIRECTION === 'NS' ? nsMatchPoints : ewMatchPoints;
+    }
+
+    return pair.PAIR_NUMBER === ns ? nsMatchPoints : ewMatchPoints;
   }
 
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getDealer(): Direction {
-    return 'N';
+  private findBoardResult(pair: Pair, board: Board): BoardResult | undefined {
+    return board.results.find((it) =>
+      pair.DIRECTION
+        ? pair.PAIR_NUMBER ===
+          (pair.DIRECTION === 'NS' ? it.boardScore.ns : it.boardScore.ew)
+        : pair.PAIR_NUMBER === it.boardScore.ns ||
+          pair.PAIR_NUMBER === it.boardScore.ew,
+    );
   }
 
-  getDeclarer(): Direction {
-    return this.travellerLine?.PLAYED_BY as Direction;
+  private createDeal(board: UsebioBoard): { [key in Direction]: Card[] } {
+    if (this.usebio.HANDSET) {
+      return this.createDealFromHandset(this.usebio.HANDSET, board);
+    } else if (this.usebio.EVENT.SESSION?.HANDSET) {
+      return this.createDealFromHandset(
+        this.usebio.EVENT.SESSION.HANDSET,
+        board,
+      );
+    } else if (board.TRAVELLER_LINE[0].LIN_DATA) {
+      const linData = this.extractLINValues(board.TRAVELLER_LINE[0].LIN_DATA);
+      if (linData.md.length > 0) {
+        const directions: Direction[] = ['S', 'W', 'N', 'E'];
+        const hands: { [key in Direction]: Card[] } = {
+          N: [],
+          E: [],
+          S: [],
+          W: [],
+        };
+
+        // Decode percent-encoded characters
+        const decodedMd = decodeURIComponent(linData.md[0]);
+
+        // Extract the hands data
+        const cardData = decodedMd.split(',');
+
+        if (cardData.length !== 3 && cardData.length !== 4) {
+          throw new Error('Invalid md format - Expected 3 or 4 hands');
+        }
+
+        cardData.forEach((hand, index) => {
+          const direction = directions[index]; // Map to "S", "W", "N", "E"
+          if (!hand) return; // Handle empty hands
+
+          let currentSuit: Suit | null = null;
+
+          for (const char of hand) {
+            if ('SHDC'.includes(char)) {
+              currentSuit = char as Suit;
+            } else if (currentSuit) {
+              hands[direction].push({ suit: currentSuit, rank: char as Rank });
+            }
+          }
+        });
+
+        hands.E = this.findMissingCards(hands);
+
+        return hands;
+      }
+    }
+    return { N: [], W: [], S: [], E: [] };
   }
 
-  getDeal(): { [key in Direction]: Card[] } {
-    const handSetBoard = this.handSet.BOARD.find(
-      (it) => Number(it.BOARD_NUMBER) == this.board.BOARD_NUMBER,
+  private createDealFromHandset(
+    handset: HandSet,
+    board: UsebioBoard,
+  ): { [key in Direction]: Card[] } {
+    const handSetBoard = handset.BOARD.find(
+      (it) => Number(it.BOARD_NUMBER) == board.BOARD_NUMBER,
     );
 
     const north = handSetBoard?.HAND.find((it) => it.DIRECTION === 'North');
@@ -99,6 +295,50 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
       E: this.createHand(east!),
       W: this.createHand(west!),
     };
+  }
+
+  // Function to get all missing cards and assign them to East
+  private findMissingCards(hands: { [key in Direction]: Card[] }): Card[] {
+    // Generate all possible 52 cards
+    const allCards: Card[] = suitOrder.flatMap((suit) =>
+      rankOrder.map((rank) => ({ suit, rank }) as Card),
+    );
+
+    // Get all assigned cards from S, W, N
+    const assignedCards = new Set(
+      hands.S.concat(hands.W, hands.N).map(
+        (card) => `${card.suit}${card.rank}`,
+      ),
+    );
+
+    // Find unassigned cards
+    return allCards.filter(
+      (card) => !assignedCards.has(`${card.suit}${card.rank}`),
+    ); // Assign missing cards to East
+  }
+
+  private createResults(board: UsebioBoard): BoardResult[] {
+    return board.TRAVELLER_LINE.reduce<BoardResult[]>((acc, travellerLine) => {
+      acc.push({
+        boardScore: {
+          ns: travellerLine.NS_PAIR_NUMBER,
+          ew: travellerLine.EW_PAIR_NUMBER,
+          lead: travellerLine.LEAD,
+          type: 'PAIR_MP',
+          contract: travellerLine.CONTRACT ?? '',
+          declarer: travellerLine.PLAYED_BY
+            ? (travellerLine.PLAYED_BY as Direction)
+            : null,
+          score: travellerLine.SCORE ?? '',
+          tricks: travellerLine.TRICKS ? Number(travellerLine.TRICKS) : 0,
+          nsMatchPoints: Number(travellerLine.NS_MATCH_POINTS ?? 0),
+          ewMatchPoints: Number(travellerLine.EW_MATCH_POINTS ?? 0),
+        },
+        auction: null,
+        playedCards: null,
+      });
+      return acc;
+    }, []);
   }
 
   private createHand(hand: Hand): Card[] {
@@ -118,76 +358,39 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     return [...spades, ...hearts, ...diamonds, ...clubs];
   }
 
-  getScoreHeadings(): string[] {
-    return [
-      'NS',
-      'EW',
-      'Contract',
-      'Declarer',
-      'Lead',
-      'Tricks',
-      'Score',
-      'NS MP',
-      'EW MP',
-    ];
+  private findBoards(section: UsebioSection): UsebioBoard[] {
+    if (this.usebio.EVENT.BOARD) {
+      return this.usebio.EVENT.BOARD;
+    }
+    return section.BOARD;
   }
 
-  getScores(): string[][] {
-    return this.board.TRAVELLER_LINE.map((it) => {
-      return [
-        it.NS_PAIR_NUMBER,
-        it.EW_PAIR_NUMBER,
-        it.CONTRACT,
-        it.PLAYED_BY,
-        it.LEAD,
-        it.TRICKS,
-        it.SCORE,
-        it.NS_MATCH_POINTS,
-        it.EW_MATCH_POINTS,
-      ];
-    });
+  private findPairs(section: UsebioSection): Pair[] {
+    if (this.usebio.EVENT.PARTICIPANTS) {
+      return this.usebio.EVENT.PARTICIPANTS.PAIR;
+    }
+    return section.PARTICIPANTS.PAIR;
   }
 
-  getScore(): string {
-    return 'NS ' + (this.travellerLine?.SCORE ?? '');
-  }
+  private extractLINValues(linString: string) {
+    const linParts = linString.split('|');
+    const result: { md: string[]; mb: string[]; pc: string[] } = {
+      md: [],
+      mb: [],
+      pc: [],
+    };
 
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getNsVulnerable(): boolean {
-    return true;
-  }
+    for (let i = 0; i < linParts.length; i += 2) {
+      const key = linParts[i];
+      const value = linParts[i + 1];
 
-  // Note: USEBIO file doesn't contain this - should be able to calculate from the board number though.
-  getEwVulnerable(): boolean {
-    return false;
-  }
+      if (key && value) {
+        if (key === 'md') result.md.push(value);
+        else if (key === 'mb') result.mb.push(value);
+        else if (key === 'pc') result.pc.push(value);
+      }
+    }
 
-  getBoard(): number {
-    return this.board.BOARD_NUMBER;
-  }
-
-  // Not in USEBIO file
-  getBids(): string[] | null {
-    return [];
-  }
-
-  // Not in USEBIO - prob same as Dealer but not necessarily
-  getOpener(): Direction {
-    return 'N';
-  }
-
-  getResult(): string {
-    return this.travellerLine?.TRICKS ?? '';
-  }
-
-  private findTravellerLine() {
-    return this.board.TRAVELLER_LINE.find(
-      (it) =>
-        (this.pairDirection == 'NS' && it.NS_PAIR_NUMBER == this.pairNumber) ||
-        (this.pairDirection == 'EW' && it.EW_PAIR_NUMBER == this.pairNumber) ||
-        (this.pairDirection === null &&
-          (it.EW_PAIR_NUMBER == this.pairNumber ||
-            it.NS_PAIR_NUMBER == this.pairNumber)),
-    );
+    return result;
   }
 }

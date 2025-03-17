@@ -25,6 +25,7 @@ export type Poi = {
 };
 
 export type Direction = 'N' | 'E' | 'S' | 'W';
+export type ContestantDirection = Direction | 'NS' | 'EW';
 
 export type Rank =
   | 'A'
@@ -46,3 +47,6 @@ export type Card = {
   rank: Rank;
   suit: Suit;
 };
+
+export type SessionScoreType = 'TWO_WINNER_PAIRS' | 'ONE_WINNER_PAIRS';
+export type MasterPointType = 'BLACK' | 'GREEN' | 'BLUE';
