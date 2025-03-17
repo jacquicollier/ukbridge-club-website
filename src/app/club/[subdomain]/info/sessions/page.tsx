@@ -9,7 +9,7 @@ export default function SessionsPage() {
       visitorCost: '£5.00',
       boards: '20',
       mpAndNgs: true,
-      additionalInfo: '',
+      additionalInfo: 'For all levels',
     },
     {
       title: 'Tranquil Tuesday Club Duplicate',
@@ -20,7 +20,8 @@ export default function SessionsPage() {
       visitorCost: '£5.00',
       boards: '18',
       mpAndNgs: true,
-      additionalInfo: '',
+      additionalInfo:
+        'Aimed at those wanting a more relaxed game and suitable for newcomers to duplicate',
     },
     {
       title: 'Wednesday Morning Club Duplicate',
@@ -31,7 +32,7 @@ export default function SessionsPage() {
       visitorCost: '£5.00',
       boards: '24',
       mpAndNgs: true,
-      additionalInfo: '',
+      additionalInfo: 'For all levels',
     },
     {
       title: 'Wednesday Evening Club Duplicate',
@@ -42,7 +43,8 @@ export default function SessionsPage() {
       visitorCost: '£5.00',
       boards: '21/22',
       mpAndNgs: true,
-      additionalInfo: '',
+      additionalInfo:
+        'Aimed at more experienced players looking for a challenging game',
     },
     {
       title: 'Thursday Morning Club Duplicate',
@@ -53,7 +55,7 @@ export default function SessionsPage() {
       visitorCost: '£5.00',
       boards: '24',
       mpAndNgs: true,
-      additionalInfo: '',
+      additionalInfo: 'For all levels',
     },
     {
       title: 'Thursday Afternoon Gentle Duplicate',
@@ -61,7 +63,7 @@ export default function SessionsPage() {
       when: 'Thursdays @4.30pm',
       level: 2,
       cost: '£2.50',
-      visitorCost: '£5.00',
+      visitorCost: '£3.50',
       boards: '16',
       mpAndNgs: false,
       additionalInfo: '',
