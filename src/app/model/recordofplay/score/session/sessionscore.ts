@@ -7,7 +7,7 @@ interface BaseSessionScore {
   masterPointType?: MasterPointType;
   contestant: string;
   names: string[];
-  position: number;
+  position: string;
 }
 
 interface PairScore extends BaseSessionScore {

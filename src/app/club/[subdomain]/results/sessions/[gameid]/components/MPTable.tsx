@@ -11,9 +11,15 @@ export default async function MPTable({
     return <>No results available.</>;
   }
 
-  const sortedScores = scores.sort(
-    (a, b) => Number(a.position) - Number(b.position),
-  );
+  const sortedScores = scores.sort((a, b) => {
+    if (a.type == 'PAIR_MP' && b.type == 'PAIR_MP') {
+      return (
+        Number(((b.matchPoints / b.tops) * 100).toFixed(2)) -
+        Number(((a.matchPoints / a.tops) * 100).toFixed(2))
+      );
+    }
+    return 0;
+  });
 
   const score = scores[0];
 

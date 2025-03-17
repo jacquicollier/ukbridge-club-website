@@ -163,14 +163,16 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     return pairs.reduce<SessionScore[]>((acc, pair) => {
       acc.push({
         type: 'PAIR_MP',
-        position: Number(pair.PLACE),
+        position: pair.PLACE,
         masterPoints: pair.MASTER_POINTS?.MASTER_POINTS_AWARDED,
         masterPointType: pair.MASTER_POINTS?.MASTER_POINT_TYPE,
         contestant: pair.PAIR_NUMBER,
         direction: pair.DIRECTION as Direction,
         names: pair.PLAYER.map((it) => it.PLAYER_NAME),
-        matchPoints: this.calculateContestantMP(boards, pair),
-        tops: this.calculateTops(boards, pair),
+        matchPoints: Number(
+          this.calculateContestantMP(boards, pair).toFixed(2),
+        ),
+        tops: Number(this.calculateTops(boards, pair).toFixed(0)),
       } as PairMPSessionScore);
       return acc;
     }, []);
