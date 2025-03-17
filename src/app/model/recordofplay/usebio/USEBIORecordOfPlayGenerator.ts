@@ -39,7 +39,7 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
 
   getSections(): Section[] {
     if (Array.isArray(this.usebio.EVENT.SESSION.SECTION)) {
-      return this.usebio.EVENT.SESSION.SECTION.map((section) => {
+      const sections = this.usebio.EVENT.SESSION.SECTION.map((section) => {
         return {
           name: section.$.SECTION_ID,
           boards: this.getBoards(section),
@@ -47,6 +47,33 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
           players: this.getPlayers(section),
         };
       });
+
+      if (this.usebio.EVENT.WINNER_TYPE == 1) {
+        const playersMap = sections.reduce<Map<Contestant, string[]>>(
+          (acc, section) => {
+            section.players.entries().forEach((contestant) => {
+              acc.set(contestant[0], contestant[1]);
+            });
+            return acc;
+          },
+          new Map(),
+        );
+
+        return [
+          {
+            name: '',
+            boards: this.combineBoards(
+              sections.flatMap((section) => section.boards),
+            ),
+            sessionScores: sections.reduce<SessionScore[]>(
+              (acc, section) => acc.concat(section.sessionScores),
+              [],
+            ),
+            players: playersMap,
+          },
+        ];
+      }
+      return sections;
     } else {
       return [
         {
@@ -59,6 +86,31 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
         },
       ];
     }
+  }
+
+  private combineBoards(boards: Board[]): Board[] {
+    // Create a map to store the combined results by boardNumber
+    const boardMap = new Map<number, Board>();
+
+    boards.forEach((board) => {
+      // If the board number doesn't exist in the map, add it
+      if (!boardMap.has(board.boardNumber)) {
+        boardMap.set(board.boardNumber, {
+          boardNumber: board.boardNumber,
+          deal: board.deal,
+          results: board.results,
+        });
+      } else {
+        // If the board number exists, merge the results
+        const existingBoard = boardMap.get(board.boardNumber);
+        if (existingBoard) {
+          existingBoard.results = [...existingBoard.results, ...board.results];
+        }
+      }
+    });
+
+    // Return an array of boards with combined results
+    return Array.from(boardMap.values());
   }
 
   private getBoards(section: UsebioSection): Board[] {

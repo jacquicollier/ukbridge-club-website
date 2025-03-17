@@ -13,7 +13,8 @@ export default async function ResultPage({
 }: {
   params: { gameid: string };
 }) {
-  const gameid = await params.gameid;
+  const { gameid } = await params;
+
   const data: UsebioFile = await getBridgeData(gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
     data.USEBIO,

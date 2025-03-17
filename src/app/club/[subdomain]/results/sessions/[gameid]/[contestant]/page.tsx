@@ -15,8 +15,7 @@ export default async function ContestantResultPage({
 }: {
   params: { gameid: string; contestant: string };
 }) {
-  const gameid = await params.gameid;
-  const contestant = await params.contestant;
+  const { gameid, contestant } = await params;
 
   const data: UsebioFile = await getBridgeData(gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
@@ -71,9 +70,9 @@ export default async function ContestantResultPage({
 
   return (
     <div className='overflow-auto p-4'>
-      {recordOfPlay.boards.length > 0 ? (
+      {recordOfPlay.sections[0].boards.length > 0 ? (
         <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
-          {recordOfPlay.boards.map((board, index) => {
+          {recordOfPlay.sections[0].boards.map((board, index) => {
             const boardResult = findBoardResult(board, contestant);
             return boardResult ? (
               <BridgeDealPlay
