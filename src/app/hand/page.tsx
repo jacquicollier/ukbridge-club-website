@@ -78,14 +78,17 @@ export default function Page() {
       <div className='overflow-auto p-4 md:w-1/2'>
         {recordOfPlay.boards.length > 0 ? (
           <div className='flex flex-row flex-wrap'>
-            {recordOfPlay.boards.map((board, index) => (
-              <BridgeDealPlay
-                key={index}
-                board={board}
-                boardResult={findBoardResult(board)}
-                players={findPlayers()}
-              />
-            ))}
+            {recordOfPlay.boards.map((board, index) => {
+              const boardResult = findBoardResult(board);
+              return boardResult ? (
+                <BridgeDealPlay
+                  key={index}
+                  board={board}
+                  boardResult={boardResult}
+                  players={findPlayers()}
+                />
+              ) : null;
+            })}
           </div>
         ) : (
           <p className='text-gray-500'>No hands generated yet.</p>

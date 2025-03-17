@@ -25,10 +25,11 @@ interface EventAttributes {
 }
 
 interface Session {
-  SECTION: Section[] | Section;
+  SECTION: UsebioSection[] | UsebioSection;
+  HANDSET?: HandSet;
 }
 
-interface Section {
+export interface UsebioSection {
   $: SectionAttributes;
   PARTICIPANTS: Participants;
   BOARD: UsebioBoard[];

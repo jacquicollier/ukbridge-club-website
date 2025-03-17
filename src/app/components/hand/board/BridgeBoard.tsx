@@ -36,7 +36,7 @@ export default function BridgeBoard(props: {
         )}
 
         {/* Auction Table */}
-        {!props.playItAgain && props.boardResult.auction && (
+        {!props.playItAgain && props.boardResult?.auction && (
           <CollapsiblePanel>
             <AuctionTable auction={props.boardResult.auction} />
           </CollapsiblePanel>
@@ -72,7 +72,7 @@ export default function BridgeBoard(props: {
         {(() => {
           if (props.playItAgain) {
             return <DDSTable deal={props.board.deal} />;
-          } else {
+          } else if (props.boardResult) {
             return <Result boardResult={props.boardResult} />;
           }
         })()}

@@ -20,14 +20,16 @@ export default async function MPTable({
   return (
     <table className='min-w-full table-fixed border-collapse border border-gray-300 shadow-lg'>
       <thead className='w-full text-sm text-white md:text-base'>
-        <tr>
-          <th
-            colSpan={7}
-            className='border border-gray-400 bg-gray-600 p-2 text-center'
-          >
-            {title}
-          </th>
-        </tr>
+        {title && (
+          <tr>
+            <th
+              colSpan={7}
+              className='border border-gray-400 bg-gray-600 p-2 text-center'
+            >
+              {title}
+            </th>
+          </tr>
+        )}
         <tr className='bg-gray-200 text-gray-800'>
           <th className='w-[5%] border border-gray-400 p-1 text-center'>Pos</th>
           <th className='w-[5%] border border-gray-400 p-1 text-center'>No</th>

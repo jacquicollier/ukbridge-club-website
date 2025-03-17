@@ -44,7 +44,7 @@ export default function BridgeDealPlay(props: {
   }
 
   useEffect(() => {
-    if (props.boardResult.playedCards) {
+    if (props.boardResult?.playedCards) {
       if (playIndex === null) {
         if (playedCards.length !== 0) {
           setPlayedCards([]);
@@ -102,7 +102,7 @@ export default function BridgeDealPlay(props: {
     playIndex,
     playedCards,
     props.board.deal,
-    props.boardResult.playedCards,
+    props.boardResult?.playedCards,
   ]);
 
   function handleClear(): void {
@@ -129,8 +129,8 @@ export default function BridgeDealPlay(props: {
 
   function hasNext(): boolean {
     return (
-      props.boardResult.playedCards !== null &&
-      props.boardResult.playedCards.length !== 0 &&
+      props.boardResult?.playedCards !== null &&
+      props.boardResult?.playedCards.length !== 0 &&
       (playIndex == null ||
         playIndex < props.boardResult.playedCards.length - 1)
     );
@@ -157,7 +157,7 @@ export default function BridgeDealPlay(props: {
         playItAgain={playItAgain}
         showScores={showScores}
       />
-      {props.boardResult.playedCards !== null && (
+      {props.boardResult?.playedCards !== null && (
         <BridgePlayPanel
           clearPlay={handleClear}
           hasNext={hasNext}

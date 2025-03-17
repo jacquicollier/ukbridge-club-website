@@ -73,14 +73,17 @@ export default async function ContestantResultPage({
     <div className='overflow-auto p-4'>
       {recordOfPlay.boards.length > 0 ? (
         <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
-          {recordOfPlay.boards.map((board, index) => (
-            <BridgeDealPlay
-              key={index}
-              board={board}
-              boardResult={findBoardResult(board, contestant)}
-              players={findPlayers()}
-            />
-          ))}
+          {recordOfPlay.boards.map((board, index) => {
+            const boardResult = findBoardResult(board, contestant);
+            return boardResult ? (
+              <BridgeDealPlay
+                key={index}
+                board={board}
+                boardResult={boardResult}
+                players={findPlayers()}
+              />
+            ) : null;
+          })}
         </div>
       ) : (
         <p className='text-gray-500'>No hands generated yet.</p>

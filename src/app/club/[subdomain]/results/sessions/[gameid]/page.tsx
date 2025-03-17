@@ -13,27 +13,53 @@ export default async function ResultPage({
 }: {
   params: { gameid: string };
 }) {
-  const data: UsebioFile = await getBridgeData(params.gameid);
+  const gameid = await params.gameid;
+  const data: UsebioFile = await getBridgeData(gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
     data.USEBIO,
   ).recordOfPlay();
 
-  if (recordOfPlay.sessionScoreType === 'ONE_WINNER_PAIRS') {
-    return (
-      <div className='flex flex-col gap-y-6 overflow-x-auto p-4 md:px-32'>
-        <MPTable scores={recordOfPlay.sessionScores} title='' />
-      </div>
-    );
-  }
-
-  const sessionScores = recordOfPlay.sessionScores;
-  const northSouth = sessionScores.filter((a) => a.direction === 'NS');
-  const eastWest = sessionScores.filter((a) => a.direction === 'EW');
-
   return (
     <div className='flex flex-col gap-y-6 overflow-x-auto p-4 md:px-32'>
-      <MPTable scores={northSouth} title='North/South' />
-      <MPTable scores={eastWest} title='East/West' />
+      {recordOfPlay.sections.map((section, sectionIndex) => {
+        if (recordOfPlay.sessionScoreType === 'ONE_WINNER_PAIRS') {
+          return (
+            <MPTable
+              key={sectionIndex}
+              scores={section.sessionScores}
+              title={section.name ? `Section ${section.name}` : ''}
+            />
+          );
+        }
+
+        const northSouth = section.sessionScores.filter(
+          (score) => score.direction === 'NS',
+        );
+        const eastWest = section.sessionScores.filter(
+          (score) => score.direction === 'EW',
+        );
+
+        return (
+          <div key={sectionIndex} className='flex flex-col gap-y-6'>
+            <MPTable
+              scores={northSouth}
+              title={
+                section.name
+                  ? `Section ${section.name} - North/South`
+                  : 'North/South'
+              }
+            />
+            <MPTable
+              scores={eastWest}
+              title={
+                section.name
+                  ? `Section ${section.name} - East/West`
+                  : 'East/West'
+              }
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
