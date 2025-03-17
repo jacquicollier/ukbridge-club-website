@@ -5,16 +5,36 @@ import { useRouter } from 'next/navigation';
 import { Menu, Transition } from '@headlessui/react';
 import { Menu as MenuIcon, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@aws-amplify/ui-react';
 
 export default function ClubLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
   const subdomain = 'wgc';
+
+  /** Common navigation items */
+  const navItems = [
+    { label: 'Home', href: `/club/${subdomain}` },
+    { label: 'Calendar', href: `/club/${subdomain}/calendar` },
+    {
+      label: 'Results',
+      dropdown: [
+        { label: 'Sessions', href: `/club/${subdomain}/results/sessions` },
+        { label: 'Ladders', href: `/club/${subdomain}/results/ladders` },
+      ],
+    },
+    {
+      label: 'Info',
+      dropdown: [
+        { label: 'Sessions', href: `/club/${subdomain}/info/sessions` },
+        { label: 'Club', href: `/club/${subdomain}/info/club` },
+        { label: 'Committee', href: `/club/${subdomain}/info/committee` },
+      ],
+    },
+    { label: 'Docs', href: `/club/${subdomain}/docs` },
+  ];
 
   return (
     <div className='flex w-screen flex-col justify-center'>
@@ -29,83 +49,111 @@ export default function ClubLayout({
         </button>
       </div>
 
-      <div>
-        {/* Mobile Navbar (Hamburger) */}
-        <div className='flex w-full items-center justify-between bg-blue-700 p-4 text-white md:hidden'>
-          <div className='text-xl font-bold'>Menu</div>
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? (
-              <X className='size-6' />
-            ) : (
-              <MenuIcon className='size-6' />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu Items */}
-        {isOpen && (
-          <div className='flex flex-col bg-blue-700 p-2 text-white md:hidden'>
-            <Link href={`/club/${subdomain}`}>Home</Link>
-            <Link href={`/club/${subdomain}/calendar`}>Calendar</Link>
-            <Dropdown title='Results'>
-              <Link href={`/club/${subdomain}/results/sessions`}>Sessions</Link>
-              <Link href={`/club/${subdomain}/results/ladders`}>Ladders</Link>
-            </Dropdown>
-            <Dropdown title='Info'>
-              <Link href={`/club/${subdomain}/info/club`}>Club</Link>
-              <Link href={`/club/${subdomain}/info/committee`}>Committee</Link>
-            </Dropdown>
-            <Link href={`/club/${subdomain}/docs`}>Docs</Link>
-          </div>
-        )}
-
-        {/* Desktop Navbar */}
-        <div className='hidden w-full items-center justify-center gap-4 bg-blue-700 p-2 text-white md:flex'>
-          <Link href={`/club/${subdomain}`}>Home</Link>
-          <Link href={`/club/${subdomain}/calendar`}>Calendar</Link>
-          <Dropdown title='Results'>
-            <Link href={`/club/${subdomain}/results/sessions`}>Sessions</Link>
-            <Link href={`/club/${subdomain}/results/ladders`}>Ladders</Link>
-          </Dropdown>
-          <Dropdown title='Info'>
-            <Link href={`/club/${subdomain}/info/club`}>Club</Link>
-            <Link href={`/club/${subdomain}/info/committee`}>Committee</Link>
-          </Dropdown>
-          <Link href={`/club/${subdomain}/docs`}>Docs</Link>
-        </div>
+      {/* Mobile Navbar */}
+      <div className='flex w-full items-center justify-between bg-blue-700 p-4 text-white md:hidden'>
+        <div className='text-xl font-bold'>Menu</div>
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className='size-6' /> : <MenuIcon className='size-6' />}
+        </button>
       </div>
+
+      {/* Mobile Menu Items */}
+      {isOpen && (
+        <div className='flex flex-col bg-blue-700 p-2 text-white md:hidden'>
+          {navItems.map((item, idx) =>
+            item.dropdown ? (
+              <Dropdown key={idx} title={item.label}>
+                <div className='flex flex-col space-y-2'>
+                  {item.dropdown.map((subItem) => (
+                    <Link key={subItem.href} href={subItem.href}>
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              </Dropdown>
+            ) : (
+              <Link key={idx} href={item.href}>
+                {item.label}
+              </Link>
+            ),
+          )}
+        </div>
+      )}
+
+      {/* Desktop Navbar */}
+      <div className='hidden w-full items-center justify-center gap-4 bg-blue-700 p-2 text-white md:flex'>
+        {navItems.map((item, idx) =>
+          item.dropdown ? (
+            <Dropdown key={idx} title={item.label}>
+              <div className='flex flex-col space-y-2 bg-blue-600'>
+                {item.dropdown.map((subItem) => (
+                  <Link
+                    key={subItem.href}
+                    href={subItem.href}
+                    className='p-2 hover:bg-blue-400'
+                  >
+                    {subItem.label}
+                  </Link>
+                ))}
+              </div>
+            </Dropdown>
+          ) : (
+            <NavButton key={idx} href={item.href}>
+              {item.label}
+            </NavButton>
+          ),
+        )}
+      </div>
+
       {children}
     </div>
   );
+}
 
-  /* Dropdown Menu Component */
-  function Dropdown({
-    title,
-    children,
-  }: {
-    title: string;
-    children: React.ReactNode;
-  }) {
-    return (
-      <Menu as='div' className='relative mx-2 inline-block text-left'>
-        <Menu.Button className='inline-flex w-full justify-center rounded-md px-4 py-2 text-white hover:bg-blue-600'>
-          {title}
-          <ChevronDown className='ml-2 size-5' />
-        </Menu.Button>
+/** Button Component for Navigation */
+function NavButton({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Button className='inline-flex h-full w-auto items-center justify-center rounded-md px-4 py-2 text-white hover:bg-blue-600'>
+      <Link href={href} className='flex size-full items-center justify-center'>
+        {children}
+      </Link>
+    </Button>
+  );
+}
 
-        <Transition
-          enter='transition duration-100 ease-out'
-          enterFrom='transform scale-95 opacity-0'
-          enterTo='transform scale-100 opacity-100'
-          leave='transition duration-75 ease-in'
-          leaveFrom='transform scale-100 opacity-100'
-          leaveTo='transform scale-95 opacity-0'
-        >
-          <Menu.Items className='absolute left-0 mt-2 w-48 rounded-md bg-white text-black shadow-lg'>
-            <div className='py-1'>{children}</div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
-    );
-  }
+/** Dropdown Menu Component */
+function Dropdown({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Menu as='div' className='relative mx-2 inline-block text-left'>
+      <Menu.Button className='inline-flex w-full justify-center rounded-md px-4 py-2 text-white hover:bg-blue-600'>
+        {title}
+        <ChevronDown className='ml-2 size-5' />
+      </Menu.Button>
+
+      <Transition
+        enter='transition duration-100 ease-out'
+        enterFrom='transform scale-95 opacity-0'
+        enterTo='transform scale-100 opacity-100'
+        leave='transition duration-75 ease-in'
+        leaveFrom='transform scale-100 opacity-100'
+        leaveTo='transform scale-95 opacity-0'
+      >
+        <Menu.Items className='absolute left-0 w-48 rounded-md bg-blue-600 p-4 text-white shadow-lg'>
+          <div className='py-1'>{children}</div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+  );
 }

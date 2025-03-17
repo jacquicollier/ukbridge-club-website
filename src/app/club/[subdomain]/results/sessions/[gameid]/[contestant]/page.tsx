@@ -15,7 +15,10 @@ export default async function ContestantResultPage({
 }: {
   params: { gameid: string; contestant: string };
 }) {
-  const data: UsebioFile = await getBridgeData(params.gameid);
+  const gameid = await params.gameid;
+  const contestant = await params.contestant;
+
+  const data: UsebioFile = await getBridgeData(gameid);
   const recordOfPlay = new USEBIORecordOfPlayGenerator(
     data.USEBIO,
   ).recordOfPlay();
@@ -32,8 +35,8 @@ export default async function ContestantResultPage({
     };
   }
 
-  function findBoardResult(board: Board): BoardResult {
-    const contestant = parseContestant(params.contestant);
+  function findBoardResult(board: Board, contestantId: string): BoardResult {
+    const contestant = parseContestant(contestantId);
 
     return board.results.find((it) => {
       if (!contestant) {
@@ -74,7 +77,7 @@ export default async function ContestantResultPage({
             <BridgeDealPlay
               key={index}
               board={board}
-              boardResult={findBoardResult(board)}
+              boardResult={findBoardResult(board, contestant)}
               players={findPlayers()}
             />
           ))}
