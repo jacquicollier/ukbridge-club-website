@@ -38,13 +38,29 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   }
 
   getSections(): Section[] {
+    if (!this.usebio.EVENT.SESSION) {
+      const boards = this.getBoards(this.usebio.EVENT.BOARD!);
+      const pairs = this.usebio.EVENT.PARTICIPANTS?.PAIR ?? [];
+
+      return [
+        {
+          name: '',
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(pairs),
+        },
+      ];
+    }
     if (Array.isArray(this.usebio.EVENT.SESSION.SECTION)) {
       const sections = this.usebio.EVENT.SESSION.SECTION.map((section) => {
+        const boards = this.getBoards(this.findBoards(section));
+        const pairs = this.findPairs(section);
+
         return {
           name: section.$.SECTION_ID,
-          boards: this.getBoards(section),
-          sessionScores: this.getSessionScores(section),
-          players: this.getPlayers(section),
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(this.findPairs(section)),
         };
       });
 
@@ -75,14 +91,17 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
       }
       return sections;
     } else {
+      const boards = this.getBoards(
+        this.findBoards(this.usebio.EVENT.SESSION.SECTION),
+      );
+      const pairs = this.findPairs(this.usebio.EVENT.SESSION.SECTION);
+
       return [
         {
           name: '',
-          boards: this.getBoards(this.usebio.EVENT.SESSION.SECTION),
-          sessionScores: this.getSessionScores(
-            this.usebio.EVENT.SESSION.SECTION,
-          ),
-          players: this.getPlayers(this.usebio.EVENT.SESSION.SECTION),
+          boards: boards,
+          sessionScores: this.getSessionScores(boards, pairs),
+          players: this.getPlayers(pairs),
         },
       ];
     }
@@ -113,8 +132,8 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     return Array.from(boardMap.values());
   }
 
-  private getBoards(section: UsebioSection): Board[] {
-    return this.findBoards(section).reduce<Board[]>((acc, board) => {
+  private getBoards(boards: UsebioBoard[]): Board[] {
+    return boards.reduce<Board[]>((acc, board) => {
       acc.push({
         boardNumber: Number(board.BOARD_NUMBER),
         deal: this.createDeal(board),
@@ -124,8 +143,8 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     }, []);
   }
 
-  private getPlayers(section: UsebioSection): Map<Contestant, string[]> {
-    return this.findPairs(section).reduce((map, pair) => {
+  private getPlayers(pairs: Pair[]): Map<Contestant, string[]> {
+    return pairs.reduce((map, pair) => {
       const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
       const contestant: Contestant = {
         id: Number(pair.PAIR_NUMBER),
@@ -140,8 +159,8 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     }, new Map<Contestant, string[]>());
   }
 
-  private getSessionScores(section: UsebioSection): SessionScore[] {
-    return this.findPairs(section).reduce<SessionScore[]>((acc, pair) => {
+  private getSessionScores(boards: Board[], pairs: Pair[]): SessionScore[] {
+    return pairs.reduce<SessionScore[]>((acc, pair) => {
       acc.push({
         type: 'PAIR_MP',
         position: Number(pair.PLACE),
@@ -150,23 +169,23 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
         contestant: pair.PAIR_NUMBER,
         direction: pair.DIRECTION as Direction,
         names: pair.PLAYER.map((it) => it.PLAYER_NAME),
-        matchPoints: this.calculateContestantMP(section, pair),
-        tops: this.calculateTops(section, pair),
+        matchPoints: this.calculateContestantMP(boards, pair),
+        tops: this.calculateTops(boards, pair),
       } as PairMPSessionScore);
       return acc;
     }, []);
   }
 
-  private calculateTops(section: UsebioSection, pair: Pair): number {
-    return this.getBoards(section).reduce(
+  private calculateTops(boards: Board[], pair: Pair): number {
+    return boards.reduce(
       (acc, board) =>
         acc + this.getTotalMatchPoints(this.findBoardResult(pair, board)),
       0,
     );
   }
 
-  private calculateContestantMP(section: UsebioSection, pair: Pair): number {
-    return this.getBoards(section).reduce(
+  private calculateContestantMP(boards: Board[], pair: Pair): number {
+    return boards.reduce(
       (acc, board) =>
         acc +
         this.getMatchPointsForPair(pair, this.findBoardResult(pair, board)),
@@ -206,7 +225,7 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private createDeal(board: UsebioBoard): { [key in Direction]: Card[] } {
     if (this.usebio.HANDSET) {
       return this.createDealFromHandset(this.usebio.HANDSET, board);
-    } else if (this.usebio.EVENT.SESSION.HANDSET) {
+    } else if (this.usebio.EVENT.SESSION?.HANDSET) {
       return this.createDealFromHandset(
         this.usebio.EVENT.SESSION.HANDSET,
         board,
