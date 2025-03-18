@@ -1,5 +1,5 @@
 import { EWVulnerableBoards, NSVulnerableBoards } from '@/app/model/constants';
-import { determineDealer } from '@/app/model/recordofplay/utils';
+import { determineDealer } from '@/app/api/results/[club]/[game]/recordofplay/utils';
 
 export default function DealerAndVul(props: { board: number }) {
   function findVulnerability() {

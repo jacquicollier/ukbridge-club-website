@@ -1,26 +1,19 @@
-import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
 import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
-import { USEBIORecordOfPlayGenerator } from '@/app/model/recordofplay/usebio/USEBIORecordOfPlayGenerator';
 import { Board, BoardResult, Contestant } from '@/app/model/constants';
 import { ContestantDirection } from '@/app/model/types';
+import { RecordOfPlay } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
 
-async function getBridgeData(gameid: string): Promise<UsebioFile> {
-  const res = await fetch(`http://localhost:3000/api/usebio/${gameid}`); // Adjust URL for deployment
-  if (!res.ok) throw new Error('Failed to fetch data');
-  return res.json();
-}
-
-export default async function ContestantResultPage({
+export default async function ResultPage({
   params,
 }: {
-  params: Promise<{ gameid: string; contestant: string }>;
+  params: Promise<{ club: string; game: string; contestant: string }>;
 }) {
-  const { gameid, contestant } = await params;
+  const { club, game, contestant } = await params;
 
-  const data: UsebioFile = await getBridgeData(gameid);
-  const recordOfPlay = new USEBIORecordOfPlayGenerator(
-    data.USEBIO,
-  ).recordOfPlay();
+  const apiResponse = await fetch(
+    `${process.env.API_URL}/results/${club}/${game}`,
+  );
+  const recordOfPlay: RecordOfPlay = await apiResponse.json();
 
   function parseContestant(input: string): Contestant | null {
     const match = input.match(/^(NS|EW)?(\d+)$/);

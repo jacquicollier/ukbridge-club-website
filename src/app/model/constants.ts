@@ -9,7 +9,7 @@ import {
   Rank,
   Suit,
 } from '@/app/model/types';
-import { BoardScore } from '@/app/model/recordofplay/score/board/boardscore';
+import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
 
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 

@@ -5,7 +5,7 @@ import { useDDS } from '@/app/context/DDSContext';
 import { Card, Direction, Suit } from '@/app/model/types';
 import { useEffect, useState } from 'react';
 import { SuitMap } from '@/app/model/constants';
-import { generatePbnString } from '@/app/model/recordofplay/utils';
+import { generatePbnString } from '@/app/api/results/[club]/[game]/recordofplay/utils';
 
 export default function DDSTable(props: {
   deal: { [key in Direction]: Card[] };

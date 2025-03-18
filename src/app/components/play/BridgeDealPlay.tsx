@@ -7,7 +7,7 @@ import Players from '@/app/components/play/Players';
 import { Card, ContestantDirection, Direction } from '@/app/model/types';
 import Header from '@/app/components/play/Header';
 import { Board, BoardResult } from '@/app/model/constants';
-import { determineDealer } from '@/app/model/recordofplay/utils';
+import { determineDealer } from '@/app/api/results/[club]/[game]/recordofplay/utils';
 
 export default function BridgeDealPlay(props: {
   board: Board;

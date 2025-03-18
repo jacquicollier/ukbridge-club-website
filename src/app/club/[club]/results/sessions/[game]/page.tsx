@@ -1,24 +1,17 @@
-import { UsebioFile } from '@/app/model/recordofplay/usebio/model';
-import MPTable from '@/app/club/[subdomain]/results/sessions/[gameid]/components/MPTable';
-import { USEBIORecordOfPlayGenerator } from '@/app/model/recordofplay/usebio/USEBIORecordOfPlayGenerator';
-
-async function getBridgeData(gameid: string) {
-  const res = await fetch(`http://localhost:3000/api/usebio/${gameid}`); // Adjust URL for deployment
-  if (!res.ok) throw new Error('Failed to fetch data');
-  return res.json();
-}
+import MPTable from '@/app/club/[club]/results/sessions/[game]/components/MPTable';
+import { RecordOfPlay } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
 
 export default async function ResultPage({
   params,
 }: {
-  params: Promise<{ gameid: string }>;
+  params: Promise<{ club: string; game: string }>;
 }) {
-  const { gameid } = await params;
+  const { club, game } = await params;
 
-  const data: UsebioFile = await getBridgeData(gameid);
-  const recordOfPlay = new USEBIORecordOfPlayGenerator(
-    data.USEBIO,
-  ).recordOfPlay();
+  const apiResponse = await fetch(
+    `${process.env.API_URL}/results/${club}/${game}`,
+  );
+  const recordOfPlay: RecordOfPlay = await apiResponse.json();
 
   return (
     <div className='flex flex-col gap-y-6 overflow-x-auto p-4 md:px-32'>
