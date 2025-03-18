@@ -11,7 +11,9 @@ async function fetchCounty(
   county: string,
 ): Promise<Coordinate[][]> {
   try {
-    const response = await fetch(`/county-borders/${country}/${county}.json`);
+    const response = await fetch(
+      `https://boundaries.ukbridge.club/${country}/${county}.json`,
+    );
 
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
