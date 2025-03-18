@@ -102,7 +102,10 @@ export default function CommitteeMemberGrid() {
           className='flex flex-col items-center overflow-hidden rounded-2xl bg-white p-4 text-center shadow-lg'
         >
           <img
-            src={committeeMember.image || '/images/149071.png'}
+            src={
+              committeeMember.image ||
+              'https://images.ukbridge.club/profile-shadow.png'
+            }
             alt={committeeMember.name}
             className='size-24 rounded-full border-2 border-gray-300 object-cover'
           />

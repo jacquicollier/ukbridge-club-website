@@ -44,7 +44,7 @@ const PoiCard = (props: { poi: Poi }) => {
                     rel='noopener noreferrer'
                   >
                     <Image
-                      src={`/affiliation-logos/${affiliation.name}/${affiliation.subdivision}.png`}
+                      src={`https://images.ukbridge.club/${affiliation.name}/${affiliation.subdivision}.png`}
                       alt={`${affiliation.subdivision} Logo`}
                       width={32}
                       height={32}
@@ -59,7 +59,7 @@ const PoiCard = (props: { poi: Poi }) => {
                 rel='noopener noreferrer'
               >
                 <Image
-                  src={`/affiliation-logos/${affiliation.name}.png`}
+                  src={`https://images.ukbridge.club/${affiliation.name}.png`}
                   alt={`${affiliation.name} Logo`}
                   width={32}
                   height={32}
