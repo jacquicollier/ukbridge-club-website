@@ -1,4 +1,7 @@
-import { RecordOfPlay, Section } from '@/app/model/recordofplay/RecordOfPlay';
+import {
+  RecordOfPlay,
+  Section,
+} from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
 import { SessionScoreType } from '@/app/model/types';
 
 export abstract class RecordOfPlayGenerator {

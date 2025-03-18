@@ -1,4 +1,4 @@
-import { SessionScore } from '@/app/model/recordofplay/score/session/sessionscore';
+import { SessionScore } from '@/app/api/results/[club]/[game]/recordofplay/score/session/sessionscore';
 
 export default async function MPTable({
   scores,

@@ -32,6 +32,10 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  if (subdomain === 'api') {
+    return NextResponse.rewrite(new URL(`/api/${pathname}`, req.url));
+  }
+
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set('x-subdomain', subdomain);
 

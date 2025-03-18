@@ -1,4 +1,4 @@
-import { Hand } from '@/app/model/recordofplay/pbn/hand';
+import { Hand } from '@/app/api/results/[club]/[game]/recordofplay/pbn/hand';
 
 export const defaultHands = [
   {
