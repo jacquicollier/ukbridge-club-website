@@ -35,7 +35,10 @@ export function middleware(req: NextRequest) {
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set('x-subdomain', subdomain);
 
-  return NextResponse.rewrite(new URL(`/club/${subdomain}`, req.url), {
-    headers: requestHeaders,
-  });
+  return NextResponse.rewrite(
+    new URL(`/club/${subdomain}${pathname}`, req.url),
+    {
+      headers: requestHeaders,
+    },
+  );
 }
