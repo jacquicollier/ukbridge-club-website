@@ -12,28 +12,27 @@ export default function ClubLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const subdomain = 'wgc';
 
   /** Common navigation items */
   const navItems = [
-    { label: 'Home', href: `/club/${subdomain}` },
-    { label: 'Calendar', href: `/club/${subdomain}/calendar` },
+    { label: 'Home', href: `/` },
+    { label: 'Calendar', href: `/calendar` },
     {
       label: 'Results',
       dropdown: [
-        { label: 'Sessions', href: `/club/${subdomain}/results/sessions` },
-        { label: 'Ladders', href: `/club/${subdomain}/results/ladders` },
+        { label: 'Sessions', href: `/results/sessions` },
+        { label: 'Ladders', href: `/results/ladders` },
       ],
     },
     {
       label: 'Info',
       dropdown: [
-        { label: 'Sessions', href: `/club/${subdomain}/info/sessions` },
-        { label: 'Club', href: `/club/${subdomain}/info/club` },
-        { label: 'Committee', href: `/club/${subdomain}/info/committee` },
+        { label: 'Sessions', href: `/info/sessions` },
+        { label: 'Club', href: `/info/club` },
+        { label: 'Committee', href: `/info/committee` },
       ],
     },
-    { label: 'Docs', href: `/club/${subdomain}/docs` },
+    { label: 'Docs', href: `/docs` },
   ];
 
   return (
@@ -43,7 +42,7 @@ export default function ClubLayout({
         <div className='text-2xl font-bold'>Welwyn Garden City Bridge Club</div>
         <button
           className='absolute right-4 rounded-lg border-2 bg-blue-700 p-2 text-white hover:bg-blue-800'
-          onClick={() => router.push(`/club/${subdomain}/edit`)}
+          onClick={() => router.push(`/edit`)}
         >
           Sign In
         </button>
