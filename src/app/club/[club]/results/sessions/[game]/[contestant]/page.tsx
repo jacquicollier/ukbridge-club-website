@@ -11,7 +11,7 @@ export default async function ResultPage({
   const { club, game, contestant } = await params;
 
   const apiResponse = await fetch(
-    `${process.env.API_URL}/results/${club}/${game}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/results/${club}/${game}`,
   );
   const recordOfPlay: RecordOfPlay = await apiResponse.json();
 

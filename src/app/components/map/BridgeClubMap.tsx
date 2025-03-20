@@ -3,9 +3,8 @@
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import Counties from '@/app/components/map/Counties';
 import PoiMarkers from '@/app/components/map/PoiMarkers';
-import { Country, County, Poi } from '@/app/model/types';
-import { defaultBounds, pois } from '@/app/model/constants';
-import Polygon = google.maps.Polygon;
+import { Country, County, Poi } from '@/app/model/map/types';
+import { defaultBounds } from '@/app/model/map/constants';
 
 const containerStyle = {
   width: '100%',
@@ -16,28 +15,8 @@ const BridgeClubMap = (props: {
   pois: Poi[];
   selectedCountry: Country | null;
   selectedCounty: County | null;
-  onPoisFiltered: (pois: Poi[]) => void;
 }) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API!;
-
-  function onPolygonsSet(polygons: Polygon[]) {
-    function getMarkersInsidePolygon(markers: Poi[], polygons: Polygon[]) {
-      return markers.filter((marker) =>
-        polygons.some((polygon) =>
-          google.maps.geometry.poly.containsLocation(
-            new google.maps.LatLng(marker.location.lat, marker.location.lng),
-            polygon,
-          ),
-        ),
-      );
-    }
-
-    if (!polygons || polygons.length === 0) {
-      props.onPoisFiltered(pois);
-    } else {
-      props.onPoisFiltered(getMarkersInsidePolygon(pois, polygons));
-    }
-  }
 
   return (
     <APIProvider apiKey={apiKey}>
@@ -48,12 +27,11 @@ const BridgeClubMap = (props: {
         fullscreenControl={false}
         streetViewControl={false}
         mapTypeControl={false}
-        // restriction={{ latLngBounds: defaultBounds }}
+        restriction={{ latLngBounds: defaultBounds }}
       >
         <Counties
-          selectedCountry={props.selectedCountry}
-          selectedCounty={props.selectedCounty}
-          onPolygonsSet={onPolygonsSet}
+          country={props.selectedCountry}
+          county={props.selectedCounty}
         />
         <PoiMarkers pois={props.pois} />
       </Map>

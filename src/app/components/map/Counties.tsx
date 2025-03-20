@@ -1,90 +1,86 @@
 'use client';
 
-import { Coordinate, Country, County } from '@/app/model/types';
 import { useMap } from '@vis.gl/react-google-maps';
-import { useEffect, useState } from 'react';
-import { defaultBounds } from '@/app/model/constants';
-import Polygon = google.maps.Polygon;
+import { useEffect, useRef, useState } from 'react';
+import { Coordinate, Country, County } from '@/app/model/map/types';
+import { defaultBounds } from '@/app/model/map/constants';
 
-async function fetchCounty(
-  country: string,
-  county: string,
-): Promise<Coordinate[][]> {
-  try {
-    const response = await fetch(
-      `https://boundaries.ukbridge.club/${country}/${county}.json`,
-    );
-
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-
-    return await response.json();
-  } catch (err) {
-    console.error('Error fetching county:', err);
-    throw err;
-  }
-}
-
-const Counties = (props: {
-  selectedCountry: Country | null;
-  selectedCounty: County | null;
-  onPolygonsSet: (polygons: Polygon[]) => void;
+const Counties = ({
+  country,
+  county,
+}: {
+  country: Country | null;
+  county: County | null;
 }) => {
   const map = useMap();
+  const polygonsRef = useRef<google.maps.Polygon[]>([]);
+  const [coordinates, setCoordinates] = useState<Coordinate[][]>([]);
 
-  const [polygons, setPolygons] = useState<google.maps.Polygon[]>([]);
+  useEffect(() => {
+    const fetchCounty = async () => {
+      try {
+        const response = await fetch(
+          `https://boundaries.ukbridge.club/${country!.id}/${county!.id}.json`,
+        );
+
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+
+        setCoordinates(await response.json());
+      } catch (err) {
+        console.error('Error fetching county:', err);
+        throw err;
+      }
+    };
+
+    if (country && county) {
+      fetchCounty();
+    }
+  }, [country, county]);
 
   useEffect(() => {
     if (!map) return;
 
-    polygons.forEach((polygon) => polygon.setMap(null));
+    // Clear previous polygons
+    polygonsRef.current.forEach((polygon) => polygon.setMap(null));
+    polygonsRef.current = [];
 
-    if (!props.selectedCountry || !props.selectedCounty) {
-      setPolygons([]);
-      props.onPolygonsSet([]);
+    if (coordinates.length === 0) {
       map.fitBounds(defaultBounds);
       return;
     }
 
-    const loadCounty = async () => {
-      try {
-        const coordinates = await fetchCounty(
-          props.selectedCountry!.id,
-          props.selectedCounty!.id,
-        );
+    polygonsRef.current = coordinates.map(
+      (path) =>
+        new google.maps.Polygon({
+          paths: path,
+          strokeColor: '#000000',
+          strokeOpacity: 0.8,
+          strokeWeight: 1,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+          map,
+        }),
+    );
 
-        const polygons = [
-          new google.maps.Polygon({
-            paths: coordinates,
-            strokeColor: '#000000',
-            strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillColor: '#FF0000',
-            fillOpacity: 0.35,
-            map: map,
-          }),
-        ];
+    // Fit bounds to the new polygons
+    const bounds = new google.maps.LatLngBounds();
+    coordinates.forEach((polygon) =>
+      polygon.forEach(({ lat, lng }) =>
+        bounds.extend(new google.maps.LatLng(lat, lng)),
+      ),
+    );
 
-        setPolygons(polygons);
-        props.onPolygonsSet(polygons);
+    map.fitBounds(bounds);
 
-        const bounds = new google.maps.LatLngBounds();
-
-        coordinates.forEach((polygon) => {
-          polygon.forEach((coord) => {
-            bounds.extend(new google.maps.LatLng(coord.lat, coord.lng));
-          });
-        });
-
-        map.fitBounds(bounds);
-      } catch (err) {
-        console.error(err);
-      }
+    return () => {
+      // Cleanup on unmount
+      polygonsRef.current.forEach((polygon) => polygon.setMap(null));
+      polygonsRef.current = [];
     };
+  }, [map, coordinates]);
 
-    loadCounty();
-  }, [map, props.selectedCountry, props.selectedCounty]);
   return null;
 };
 
