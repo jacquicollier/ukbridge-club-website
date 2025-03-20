@@ -1,7 +1,7 @@
 'use client';
 
-import { countries } from '@/app/model/countries';
-import { Country, County } from '@/app/model/types';
+import { Country, County } from '@/app/model/map/types';
+import { useEffect, useState } from 'react';
 
 const Form = (props: {
   selectedCountry: Country | null;
@@ -9,6 +9,23 @@ const Form = (props: {
   onSelectCountry: (country: Country | null) => void;
   onSelectCounty: (county: County | null) => void;
 }) => {
+  const [countries, setCountries] = useState<Country[]>([]);
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/clubs/countries`,
+        {
+          cache: 'force-cache',
+        },
+      );
+      if (!response.ok) throw new Error('Failed to fetch countries');
+      setCountries((await response.json()) as Country[]);
+    };
+
+    fetchCountries();
+  }, []);
+
   return (
     <div className='rounded-lg border border-gray-300 bg-white p-4 shadow-md'>
       <h3 className='mb-3 border-b pb-2 text-lg font-semibold'>

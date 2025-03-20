@@ -1,32 +1,33 @@
 'use client';
 
 import BridgeClubMap from '@/app/components/map/BridgeClubMap';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TitleBar from '@/app/components/TitleBar';
-import { Country, County, Poi } from '@/app/model/types';
+import { Country, County, Poi } from '@/app/model/map/types';
 import Form from '@/app/components/map/Form';
 import Results from '@/app/components/map/Results';
-import { pois } from '@/app/model/constants';
 
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [selectedCounty, setSelectedCounty] = useState<County | null>(null);
-  const [filteredPois, setFilteredPois] = useState<Poi[]>(pois);
+  const [pois, setPois] = useState<Poi[]>([]);
 
-  // const claimClub = async (clubName: string) => {
-  //   try {
-  //     const user = await Auth.currentAuthenticatedUser();
-  //     const response = await fetch('/api/claim-club', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify({ clubName, userId: user.username }),
-  //     });
-  //     const data = await response.json();
-  //     alert(data.message);
-  //   } catch (error) {
-  //     console.error('Error claiming club', error);
-  //   }
-  // };
+  useEffect(() => {
+    const fetchPois = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/clubs?country=${selectedCountry!.id}&county=${selectedCounty!.id}`,
+        {
+          cache: 'force-cache',
+        },
+      );
+      if (!response.ok) throw new Error('Failed to fetch countries');
+      setPois((await response.json()) as Poi[]);
+    };
+
+    if (selectedCountry && selectedCounty) {
+      fetchPois();
+    }
+  }, [selectedCountry, selectedCounty]);
 
   return (
     <>
@@ -42,7 +43,6 @@ export default function Home() {
               pois={pois}
               selectedCountry={selectedCountry}
               selectedCounty={selectedCounty}
-              onPoisFiltered={setFilteredPois}
             />
           </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
 
               {/* Second Row: Results (Takes up remaining space) */}
               <div className='grow flex-row overflow-auto bg-white p-4'>
-                <Results pois={filteredPois} />
+                <Results pois={pois} />
               </div>
             </div>
           </div>

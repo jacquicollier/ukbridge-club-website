@@ -1,35 +1,52 @@
-import { Card } from '@aws-amplify/ui-react';
-import { Poi } from '@/app/model/types';
-import Image from 'next/image';
-import { affiliations } from '@/app/model/constants';
+'use client';
 
-const PoiCard = (props: { poi: Poi }) => {
+import { Card } from '@aws-amplify/ui-react';
+import Image from 'next/image';
+import { Poi } from '@/app/model/map/types';
+import { useEffect, useState } from 'react';
+import { Affiliation } from '@/app/model/map/constants';
+
+const PoiCard = ({ poi }: { poi: Poi }) => {
+  const [affiliations, setAffiliations] = useState<Record<string, Affiliation>>(
+    {},
+  );
+
+  useEffect(() => {
+    const fetchAffiliations = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/clubs/affiliations`,
+        {
+          cache: 'force-cache',
+        },
+      );
+      if (!response.ok) throw new Error('Failed to fetch affiliations');
+      setAffiliations(await response.json());
+    };
+
+    fetchAffiliations();
+  }, []);
+
   const getAffiliationInfo = (
     affiliationKey: string,
     subdivisionKey?: string,
-  ): { name: string; website: string } | null => {
+  ) => {
     const affiliation = affiliations[affiliationKey];
-
     if (!affiliation) return null;
 
     if (subdivisionKey) {
-      const subdivision = affiliation.subdivisions?.[subdivisionKey];
-      if (subdivision) {
-        return { name: subdivision.name, website: subdivision.website };
-      }
-      return null;
+      return affiliation.subdivisions?.[subdivisionKey] || null;
     }
 
-    return { name: affiliation.name, website: affiliation.website };
+    return affiliation;
   };
 
   return (
     <Card className='relative flex w-64 cursor-pointer flex-col overflow-hidden rounded-lg border shadow-lg'>
       {/* Heading with Image */}
       <div className='flex items-center justify-between bg-gray-100 p-2'>
-        <h3 className='text-lg font-semibold'>{props.poi.key}</h3>
+        <h3 className='text-lg font-semibold'>{poi.key}</h3>
         <div>
-          {props.poi.affiliations.map((affiliation) => (
+          {poi.affiliations.map((affiliation) => (
             <div key={affiliation.name} className='flex items-center'>
               {affiliation.type === 'uk-federation' &&
                 affiliation.subdivision && (
@@ -73,7 +90,7 @@ const PoiCard = (props: { poi: Poi }) => {
       </div>
 
       {/* Card Content */}
-      <div className='p-2'>{props.poi.key}</div>
+      <div className='p-2'>{poi.key}</div>
     </Card>
   );
 };

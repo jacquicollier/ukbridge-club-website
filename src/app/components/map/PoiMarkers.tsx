@@ -1,9 +1,9 @@
-import { Poi } from '@/app/model/types';
 import { AdvancedMarker, Pin, useMap } from '@vis.gl/react-google-maps';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Marker } from '@googlemaps/markerclusterer';
 import { MarkerClusterer } from '@googlemaps/markerclusterer';
 import { Circle } from '@/app/components/map/Circle';
+import { Poi } from '@/app/model/map/types';
 
 const PoiMarkers = (props: { pois: Poi[] }) => {
   const map = useMap();
