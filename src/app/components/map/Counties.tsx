@@ -34,6 +34,11 @@ const Counties = ({
       }
     };
 
+    if (!county) {
+      polygonsRef.current.forEach((polygon) => polygon.setMap(null));
+      polygonsRef.current = [];
+    }
+
     if (country && county) {
       fetchCounty();
     }
@@ -64,15 +69,15 @@ const Counties = ({
         }),
     );
 
-    // Fit bounds to the new polygons
-    const bounds = new google.maps.LatLngBounds();
-    coordinates.forEach((polygon) =>
-      polygon.forEach(({ lat, lng }) =>
-        bounds.extend(new google.maps.LatLng(lat, lng)),
-      ),
-    );
-
-    map.fitBounds(bounds);
+    // // Fit bounds to the new polygons
+    // const bounds = new google.maps.LatLngBounds();
+    // coordinates.forEach((polygon) =>
+    //   polygon.forEach(({ lat, lng }) =>
+    //     bounds.extend(new google.maps.LatLng(lat, lng)),
+    //   ),
+    // );
+    //
+    // map.fitBounds(bounds);
 
     return () => {
       // Cleanup on unmount

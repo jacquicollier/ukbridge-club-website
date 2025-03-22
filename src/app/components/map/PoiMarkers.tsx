@@ -13,6 +13,20 @@ const PoiMarkers = (props: { pois: Poi[] }) => {
     null,
   );
 
+  useEffect(() => {
+    // Fit bounds to the new polygons
+    if (map) {
+      const bounds = new google.maps.LatLngBounds();
+      props.pois.forEach((poi) =>
+        bounds.extend(
+          new google.maps.LatLng(poi.location.lat, poi.location.lng),
+        ),
+      );
+
+      map.fitBounds(bounds);
+    }
+  }, [map, props.pois]);
+
   const handleClick = useCallback(
     (ev: google.maps.MapMouseEvent) => {
       if (!map || !ev.latLng) return;
