@@ -4,12 +4,15 @@ import { Country, County } from '@/app/model/map/types';
 import { useEffect, useState } from 'react';
 
 const Form = (props: {
+  postcode: string;
   selectedCountry: Country | null;
   selectedCounty: County | null;
   onSelectCountry: (country: Country | null) => void;
   onSelectCounty: (county: County | null) => void;
+  onPostcodeChange: (postcode: string) => void;
 }) => {
   const [countries, setCountries] = useState<Country[]>([]);
+  const [postcode, setPostcode] = useState<string>(props.postcode);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -32,7 +35,31 @@ const Form = (props: {
         Find a Bridge Club
       </h3>
 
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-3'>
+        {/* Postcode Input */}
+        <div className='flex items-center gap-2'>
+          <label className='w-20 font-medium'>Postcode:</label>
+          <input
+            type='text'
+            className='grow rounded border border-gray-300 p-2'
+            placeholder='Enter postcode'
+            value={postcode || ''}
+            onChange={(e) => setPostcode(e.target.value)}
+          />
+          <button
+            className='rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600'
+            onClick={() => props.onPostcodeChange(postcode)}
+            disabled={postcode.length < 3}
+          >
+            Search
+          </button>
+        </div>
+
+        <div className='flex items-center gap-2'>
+          <div className='w-20 font-medium'>Or</div>
+          <hr className='grow border-gray-300' />
+        </div>
+
         {/* Country Dropdown */}
         <div className='flex items-center gap-2'>
           <label className='w-20 font-medium'>Country:</label>

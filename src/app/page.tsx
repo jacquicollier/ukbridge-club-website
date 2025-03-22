@@ -10,6 +10,7 @@ import Results from '@/app/components/map/Results';
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [selectedCounty, setSelectedCounty] = useState<County | null>(null);
+  const [postcode, setPostcode] = useState<string>('');
   const [pois, setPois] = useState<Poi[]>([]);
 
   useEffect(() => {
@@ -24,10 +25,33 @@ export default function Home() {
       setPois((await response.json()) as Poi[]);
     };
 
+    if (selectedCountry || selectedCounty) {
+      setPostcode('');
+    }
+
     if (selectedCountry && selectedCounty) {
       fetchPois();
     }
   }, [selectedCountry, selectedCounty]);
+
+  useEffect(() => {
+    const fetchPoisForPostcode = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/clubs?postcode=${encodeURIComponent(postcode!)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}`,
+        {
+          cache: 'force-cache',
+        },
+      );
+      if (!response.ok) throw new Error('Failed to fetch countries');
+      setPois((await response.json()) as Poi[]);
+    };
+
+    if (postcode) {
+      setSelectedCountry(null);
+      setSelectedCounty(null);
+      fetchPoisForPostcode();
+    }
+  }, [postcode]);
 
   return (
     <>
@@ -52,10 +76,12 @@ export default function Home() {
               {/* First Row: Form */}
               <div className='bg-gray-200 pb-2'>
                 <Form
+                  postcode={postcode}
                   selectedCountry={selectedCountry}
                   onSelectCountry={setSelectedCountry}
                   selectedCounty={selectedCounty}
                   onSelectCounty={setSelectedCounty}
+                  onPostcodeChange={setPostcode}
                 />
               </div>
 
