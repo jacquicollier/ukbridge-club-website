@@ -29,7 +29,7 @@ export default function BoardScores(props: {
             <th className='py-1 text-center'>Contract</th>
             <th className='py-1 text-center'>Declarer</th>
             {props.boardScores[0].lead && (
-              <th className='border py-1 text-center'>Lead</th>
+              <th className='py-1 text-center'>Lead</th>
             )}
             <th className='py-1 text-center'>Tricks</th>
             <th className='py-1 text-center'>Score</th>

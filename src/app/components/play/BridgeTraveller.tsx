@@ -1,6 +1,6 @@
 import { Board, Contestant } from '@/app/model/constants';
 import TravellerHeader from '@/app/components/play/TravellerHeader';
-import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
+import BoardScores from '@/app/components/hand/board/BoardScores';
 
 export default function BridgeTraveller(props: {
   board: Board;

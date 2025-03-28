@@ -5,7 +5,7 @@ import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
 // import PointCountTable from '@/app/hand/components/PointCountTable';
 import Result from '@/app/components/hand/cornerpanels/Result';
 import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
-import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
+import BoardScores from '@/app/components/hand/board/BoardScores';
 import { Card } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
