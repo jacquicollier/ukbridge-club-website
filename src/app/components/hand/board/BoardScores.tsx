@@ -58,14 +58,17 @@ function renderTravellerLine(
   boardScore: BoardScore,
   contestant: Contestant | null,
 ) {
-  const highlightLine: boolean =
-    contestant !== null &&
+  console.log('Contestant: ', contestant);
+
+  const highlightLine: boolean = !!(
+    contestant &&
     ((contestant.direction == null &&
       (contestant.id == Number(boardScore.ns) ||
         contestant.id == Number(boardScore.ew))) ||
       (contestant.direction == 'EW' &&
         contestant.id == Number(boardScore.ew)) ||
-      (contestant.direction == 'NS' && contestant.id == Number(boardScore.ns)));
+      (contestant.direction == 'NS' && contestant.id == Number(boardScore.ns)))
+  );
 
   return (
     <tr key={index} className={highlightLine ? 'border bg-gray-200' : 'border'}>

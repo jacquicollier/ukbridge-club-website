@@ -6,15 +6,19 @@ import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
 import Players from '@/app/components/play/Players';
 import { ContestantDirection } from '@/app/model/types';
 import BridgeDealHeader from '@/app/components/play/BridgeDealHeader';
-import { Board, BoardResult } from '@/app/model/constants';
+import { Board, BoardResult, Contestant } from '@/app/model/constants';
 import { CardSource } from '@/app/components/hand/board/CardSource';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
+import BoardScores from '@/app/components/hand/board/BoardScores';
 
 export default function BridgeDealPlay(props: {
   board: Board;
   boardResult: BoardResult;
   players: Map<ContestantDirection, string[]>;
+  contestant: Contestant | null;
 }) {
+  const boardScores = props.board.results.map((it) => it.boardScore);
+
   const [source] = useState(
     props.boardResult.playedCards
       ? new CardSource(props.boardResult.playedCards)
@@ -70,7 +74,10 @@ export default function BridgeDealPlay(props: {
         setPlayItAgain={setPlayItAgain}
         setShowScores={setShowScores}
       />
-      <Players players={props.players} />
+      {showScores && boardScores && (
+        <BoardScores boardScores={boardScores} contestant={props.contestant} />
+      )}
+      {/*<Players players={props.players} />*/}
       <BridgeBoard
         board={props.board}
         auction={props.boardResult.auction}
@@ -78,7 +85,7 @@ export default function BridgeDealPlay(props: {
         boardScore={props.boardResult.boardScore}
         validNextCards={[]}
         playItAgain={playItAgain}
-        showScores={showScores}
+        contestant={props.contestant}
       />
       {props.boardResult?.playedCards !== null && (
         <BridgePlayPanel

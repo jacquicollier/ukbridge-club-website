@@ -43,20 +43,19 @@ export async function GET(
         explicitArray: false,
       });
 
-      // Return JSON response
-      return new Response(
-        JSON.stringify(
-          new USEBIORecordOfPlayGenerator(
-            (jsonData as UsebioFile).USEBIO,
-          ).recordOfPlay(),
-        ),
-        {
-          status: 200,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
+      const recordOfPlay = JSON.stringify(
+        new USEBIORecordOfPlayGenerator(
+          (jsonData as UsebioFile).USEBIO,
+        ).recordOfPlay(),
       );
+
+      // Return JSON response
+      return new Response(recordOfPlay, {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     } else {
       throw new Error('The body is not a stream.');
     }

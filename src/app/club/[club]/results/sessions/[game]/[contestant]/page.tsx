@@ -57,7 +57,7 @@ export default async function ResultPage({
   return (
     <div className='overflow-auto p-4'>
       {recordOfPlay.sections[0].boards.length > 0 ? (
-        <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
+        <div className='flex flex-row flex-wrap items-start justify-center gap-4'>
           {recordOfPlay.sections[0].boards.map((board, index) => {
             return renderBoard(
               index,
@@ -84,18 +84,19 @@ function renderBoard(
     return null;
   }
 
-  if (boardResult.playedCards) {
+  if (board.deal) {
     return (
       <BridgeDealPlay
         key={index}
         board={board}
         boardResult={boardResult}
         players={findPlayers()}
+        contestant={contestant}
       />
     );
   }
 
-  return <BridgeTraveller board={board} contestant={contestant} />;
+  return <BridgeTraveller key={index} board={board} contestant={contestant} />;
 }
 
 function findPlayers(): Map<ContestantDirection, string[]> {

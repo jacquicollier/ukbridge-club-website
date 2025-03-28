@@ -11,6 +11,7 @@ import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
   Auction,
   Board,
+  Contestant,
   EWVulnerableBoards,
   NSVulnerableBoards,
 } from '@/app/model/constants';
@@ -24,18 +25,12 @@ export default function BridgeBoard(props: {
   boardScore: BoardScore;
   validNextCards: Card[];
   playItAgain: boolean;
-  showScores: boolean;
+  contestant: Contestant | null;
 }) {
-  const boardScores = props.board.results.map((it) => it.boardScore);
-
   return (
     <>
       {/* Board Scores */}
       <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
-        {props.showScores && boardScores && (
-          <BoardScores boardScores={boardScores} />
-        )}
-
         {/* Auction Table */}
         {!props.playItAgain && props.auction && (
           <CollapsiblePanel>
