@@ -3,7 +3,6 @@
 import BridgeBoard from '@/app/components/hand/board/BridgeBoard';
 import { useState } from 'react';
 import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
-import Players from '@/app/components/play/Players';
 import { ContestantDirection } from '@/app/model/types';
 import BridgeDealHeader from '@/app/components/play/BridgeDealHeader';
 import { Board, BoardResult, Contestant } from '@/app/model/constants';
@@ -77,7 +76,6 @@ export default function BridgeDealPlay(props: {
       {showScores && boardScores && (
         <BoardScores boardScores={boardScores} contestant={props.contestant} />
       )}
-      {/*<Players players={props.players} />*/}
       <BridgeBoard
         board={props.board}
         auction={props.boardResult.auction}

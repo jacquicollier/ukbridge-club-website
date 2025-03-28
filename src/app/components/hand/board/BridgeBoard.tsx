@@ -71,8 +71,13 @@ export default function BridgeBoard(props: {
         {(() => {
           if (props.playItAgain) {
             return <DDSTable deal={props.board.deal} />;
-          } else if (props.boardScore) {
-            return <Result boardScore={props.boardScore} />;
+          } else if (props.boardScore && props.contestant) {
+            return (
+              <Result
+                boardScore={props.boardScore}
+                contestant={props.contestant}
+              />
+            );
           }
         })()}
       </div>

@@ -1,5 +1,6 @@
 export type Direction = 'N' | 'E' | 'S' | 'W';
-export type ContestantDirection = Direction | 'NS' | 'EW';
+export type PairDirection = 'NS' | 'EW';
+export type ContestantDirection = Direction | PairDirection;
 
 export type Rank =
   | 'A'
