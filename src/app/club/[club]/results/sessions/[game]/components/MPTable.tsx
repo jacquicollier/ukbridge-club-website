@@ -1,12 +1,17 @@
-import { SessionScore } from '@/app/api/results/[club]/[game]/recordofplay/score/session/sessionscore';
+'use client';
 
-export default async function MPTable({
+import { SessionScore } from '@/app/api/results/[club]/[game]/recordofplay/score/session/sessionscore';
+import { useRouter } from 'next/navigation';
+
+export default function MPTable({
   scores,
   title,
 }: {
   scores: SessionScore[];
   title: string;
 }) {
+  const router = useRouter();
+
   if (scores.length === 0) {
     return <>No results available.</>;
   }
@@ -66,8 +71,11 @@ export default async function MPTable({
       <tbody className='text-xs md:text-base'>
         {sortedScores.map((score, rowIndex) => (
           <tr
+            onClick={() =>
+              router.push(`${window.location.pathname}/${score.contestant}`)
+            }
             key={rowIndex}
-            className={`border border-gray-300 ${
+            className={`cursor-pointer border border-gray-300 ${
               rowIndex % 2 === 0 ? 'bg-gray-100' : 'bg-white'
             }`}
           >

@@ -2,10 +2,8 @@ import AuctionTable from '@/app/components/hand/cornerpanels/AuctionTable';
 import DealerAndVul from '@/app/components/hand/cornerpanels/DealerAndVul';
 import Deal from '@/app/components/hand/board/Deal';
 import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
-// import PointCountTable from '@/app/hand/components/PointCountTable';
 import Result from '@/app/components/hand/cornerpanels/Result';
 import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
-import BoardScores from '@/app/components/hand/board/BoardScores';
 import { Card } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
@@ -17,6 +15,7 @@ import {
 } from '@/app/model/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
 import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 
 export default function BridgeBoard(props: {
   board: Board;
@@ -77,6 +76,7 @@ export default function BridgeBoard(props: {
           }
         })()}
       </div>
+      <PointCountTable deal={props.board.deal} />
     </>
   );
 }
