@@ -15,24 +15,72 @@ export default function ClubLayout({
 
   /** Common navigation items */
   const navItems = [
-    { label: 'Home', href: `/` },
-    { label: 'Calendar', href: `/calendar` },
+    {
+      label: 'Home',
+      href:
+        window && window.location.href.startsWith('http://localhost')
+          ? '/club/wgc'
+          : '/',
+    },
+    {
+      label: 'Calendar',
+      href:
+        window && window.location.href.startsWith('http://localhost')
+          ? '/club/wgc/calendar'
+          : `/calendar`,
+    },
     {
       label: 'Results',
       dropdown: [
-        { label: 'Sessions', href: `/results/sessions` },
-        { label: 'Ladders', href: `/results/ladders` },
+        {
+          label: 'Sessions',
+          href:
+            window && window.location.href.startsWith('http://localhost')
+              ? '/club/wgc/results/sessions'
+              : `/results/sessions`,
+        },
+        {
+          label: 'Ladders',
+          href:
+            window && window.location.href.startsWith('http://localhost')
+              ? '/club/wgc/results/ladders'
+              : `/results/ladders`,
+        },
       ],
     },
     {
       label: 'Info',
       dropdown: [
-        { label: 'Sessions', href: `/info/sessions` },
-        { label: 'Club', href: `/info/club` },
-        { label: 'Committee', href: `/info/committee` },
+        {
+          label: 'Sessions',
+          href:
+            window && window.location.href.startsWith('http://localhost')
+              ? '/club/wgc/info/sessions'
+              : `/info/sessions`,
+        },
+        {
+          label: 'Club',
+          href:
+            window && window.location.href.startsWith('http://localhost')
+              ? '/club/wgc/info/club'
+              : `/info/club`,
+        },
+        {
+          label: 'Committee',
+          href:
+            window && window.location.href.startsWith('http://localhost')
+              ? '/club/wgc/info/committee'
+              : `/info/committee`,
+        },
       ],
     },
-    { label: 'Docs', href: `/docs` },
+    {
+      label: 'Docs',
+      href:
+        window && window.location.href.startsWith('http://localhost')
+          ? '/club/wgc/docs'
+          : `/docs`,
+    },
   ];
 
   return (

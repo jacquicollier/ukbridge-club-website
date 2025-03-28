@@ -3,14 +3,20 @@ import Hand from '@/app/components/hand/board/Hand';
 
 export default function Deal(props: {
   deal: { [key in Direction]: Card[] };
-  playedCards: Card[];
+  playHistory: { direction: Direction; card: Card }[];
   playItAgain: boolean;
   validNextCards: Card[];
 }) {
+  function getPlayHistory(direction: Direction): Card[] {
+    return props.playHistory
+      .filter((play) => play.direction === direction)
+      .map((play) => play.card);
+  }
+
   const renderHand = (direction: Direction) => (
     <Hand
       cards={props.deal[direction]}
-      playedCards={props.playedCards}
+      playedCards={getPlayHistory(direction)}
       playItAgain={props.playItAgain}
       validNextCards={props.validNextCards}
     />

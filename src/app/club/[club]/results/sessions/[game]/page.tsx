@@ -1,7 +1,7 @@
 import MPTable from '@/app/club/[club]/results/sessions/[game]/components/MPTable';
 import { RecordOfPlay } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
 
-export default async function ResultPage({
+export default async function ResultPage2({
   params,
 }: {
   params: Promise<{ club: string; game: string }>;

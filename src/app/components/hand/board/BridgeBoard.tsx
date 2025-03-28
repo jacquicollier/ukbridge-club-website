@@ -6,21 +6,22 @@ import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
 import Result from '@/app/components/hand/cornerpanels/Result';
 import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
 import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
-import { Card, Direction } from '@/app/model/types';
+import { Card } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
+  Auction,
   Board,
-  BoardResult,
   EWVulnerableBoards,
   NSVulnerableBoards,
 } from '@/app/model/constants';
+import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
+import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
 
 export default function BridgeBoard(props: {
   board: Board;
-  boardResult: BoardResult;
-  currentTrickCards: Partial<{ [key in Direction]: Card }>;
-  currentLeader: Direction;
-  playedCards: Card[];
+  auction: Auction | null;
+  bridgePlay: BridgePlay | null;
+  boardScore: BoardScore;
   validNextCards: Card[];
   playItAgain: boolean;
   showScores: boolean;
@@ -36,9 +37,9 @@ export default function BridgeBoard(props: {
         )}
 
         {/* Auction Table */}
-        {!props.playItAgain && props.boardResult?.auction && (
+        {!props.playItAgain && props.auction && (
           <CollapsiblePanel>
-            <AuctionTable auction={props.boardResult.auction} />
+            <AuctionTable auction={props.auction} />
           </CollapsiblePanel>
         )}
 
@@ -48,7 +49,9 @@ export default function BridgeBoard(props: {
         {props.board.deal && (
           <Deal
             deal={props.board.deal}
-            playedCards={props.playedCards}
+            playHistory={
+              props.bridgePlay ? props.bridgePlay.getPlayHistory() : []
+            }
             playItAgain={props.playItAgain}
             validNextCards={props.validNextCards}
           />
@@ -64,16 +67,18 @@ export default function BridgeBoard(props: {
           </div>
 
           {/*Played Cards */}
-          <CurrentTrickCards
-            currentLeader={props.currentLeader}
-            currentTrickCards={props.currentTrickCards}
-          />
+          {props.bridgePlay && (
+            <CurrentTrickCards
+              currentLeader={props.bridgePlay.getCurrentDirection()}
+              currentTrickCards={props.bridgePlay.getSlots()}
+            />
+          )}
         </div>
         {(() => {
           if (props.playItAgain) {
             return <DDSTable deal={props.board.deal} />;
-          } else if (props.boardResult) {
-            return <Result boardResult={props.boardResult} />;
+          } else if (props.boardScore) {
+            return <Result boardScore={props.boardScore} />;
           }
         })()}
       </div>
