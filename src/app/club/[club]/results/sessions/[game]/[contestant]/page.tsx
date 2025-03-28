@@ -2,6 +2,7 @@ import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
 import { Board, BoardResult, Contestant } from '@/app/model/constants';
 import { ContestantDirection } from '@/app/model/types';
 import { RecordOfPlay } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
+import BridgeTraveller from '@/app/components/play/BridgeTraveller';
 
 export default async function ResultPage({
   params,
@@ -9,6 +10,7 @@ export default async function ResultPage({
   params: Promise<{ club: string; game: string; contestant: string }>;
 }) {
   const { club, game, contestant } = await params;
+  const contestantObj = parseContestant(contestant);
 
   const apiResponse = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/results/${club}/${game}`,
@@ -27,25 +29,23 @@ export default async function ResultPage({
     };
   }
 
-  function findBoardResult(board: Board, contestantId: string): BoardResult {
-    const contestant = parseContestant(contestantId);
-
+  function findBoardResult(board: Board): BoardResult {
     return board.results.find((it) => {
-      if (!contestant) {
+      if (!contestantObj) {
         return false;
       }
 
       if (recordOfPlay.sessionScoreType == 'TWO_WINNER_PAIRS') {
-        if (contestant?.direction === 'NS') {
-          return it.boardScore.ns == String(contestant?.id);
+        if (contestantObj.direction === 'NS') {
+          return it.boardScore.ns == String(contestantObj.id);
         }
 
-        return it.boardScore.ew == String(contestant?.id);
+        return it.boardScore.ew == String(contestantObj.id);
       } else {
-        if (!contestant?.direction) {
+        if (!contestantObj.direction) {
           return (
-            it.boardScore.ns == String(contestant?.id) ||
-            it.boardScore.ew == String(contestant?.id)
+            it.boardScore.ns == String(contestantObj.id) ||
+            it.boardScore.ew == String(contestantObj.id)
           );
         }
       }
@@ -54,27 +54,17 @@ export default async function ResultPage({
     })!;
   }
 
-  function findPlayers(): Map<ContestantDirection, string[]> {
-    return new Map<ContestantDirection, string[]>([
-      ['NS', ['Peter Collier', 'Joshua Odawade']],
-      ['EW', ['Jacqui Collier', 'David Collier']],
-    ]);
-  }
-
   return (
     <div className='overflow-auto p-4'>
       {recordOfPlay.sections[0].boards.length > 0 ? (
         <div className='flex flex-row flex-wrap items-center justify-center gap-4'>
           {recordOfPlay.sections[0].boards.map((board, index) => {
-            const boardResult = findBoardResult(board, contestant);
-            return boardResult ? (
-              <BridgeDealPlay
-                key={index}
-                board={board}
-                boardResult={boardResult}
-                players={findPlayers()}
-              />
-            ) : null;
+            return renderBoard(
+              index,
+              board,
+              findBoardResult(board),
+              contestantObj,
+            );
           })}
         </div>
       ) : (
@@ -82,4 +72,35 @@ export default async function ResultPage({
       )}
     </div>
   );
+}
+
+function renderBoard(
+  index: number,
+  board: Board,
+  boardResult: BoardResult,
+  contestant: Contestant | null,
+) {
+  if (!boardResult) {
+    return null;
+  }
+
+  if (boardResult.playedCards) {
+    return (
+      <BridgeDealPlay
+        key={index}
+        board={board}
+        boardResult={boardResult}
+        players={findPlayers()}
+      />
+    );
+  }
+
+  return <BridgeTraveller board={board} contestant={contestant} />;
+}
+
+function findPlayers(): Map<ContestantDirection, string[]> {
+  return new Map<ContestantDirection, string[]>([
+    ['NS', ['Peter Collier', 'Joshua Odawade']],
+    ['EW', ['Jacqui Collier', 'David Collier']],
+  ]);
 }

@@ -1,7 +1,7 @@
 import Switch from 'react-switch';
 import { BarChart } from 'lucide-react';
 
-export default function Header(props: {
+export default function BridgeDealHeader(props: {
   board: number;
   playItAgain: boolean;
   hasScores: boolean;
