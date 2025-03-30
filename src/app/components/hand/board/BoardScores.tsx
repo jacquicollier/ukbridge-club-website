@@ -57,8 +57,6 @@ function renderTravellerLine(
   boardScore: BoardScore,
   contestant: Contestant | null,
 ) {
-  console.log('Contestant: ', contestant);
-
   const highlightLine: boolean = !!(
     contestant &&
     ((contestant.direction == null &&

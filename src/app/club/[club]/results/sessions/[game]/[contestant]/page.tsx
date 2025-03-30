@@ -84,7 +84,38 @@ function renderBoard(
     return null;
   }
 
-  if (board.deal) {
+  let backgroundColor = 'rgb(209, 213, 219)';
+
+  const isNS = contestant?.id !== Number(boardResult.boardScore.ew);
+
+  if (boardResult.boardScore.type == 'PAIR_MP') {
+    const matchPoints = isNS
+      ? boardResult.boardScore.nsMatchPoints
+      : boardResult.boardScore.ewMatchPoints;
+    const totalPoints =
+      boardResult.boardScore.nsMatchPoints +
+      boardResult.boardScore.ewMatchPoints;
+    const percentage = Number(((matchPoints / totalPoints) * 100).toFixed(2));
+
+    if (percentage <= 20) {
+      // Red for 0% -> 20%
+      backgroundColor = 'rgb(255, 0, 0)';
+    } else if (percentage <= 40) {
+      // Orange for 20% -> 40%
+      backgroundColor = 'rgb(255, 165, 0)';
+    } else if (percentage <= 60) {
+      // Yellow for 40% -> 60%
+      backgroundColor = 'rgb(255, 255, 0)';
+    } else if (percentage <= 80) {
+      // Light Green for 60% -> 80%
+      backgroundColor = 'rgb(144, 238, 144)';
+    } else {
+      // Green for 80% -> 100%
+      backgroundColor = 'rgb(0, 255, 0)';
+    }
+  }
+
+  if (board.deal.E.length > 0) {
     return (
       <BridgeDealPlay
         key={index}
@@ -92,11 +123,19 @@ function renderBoard(
         boardResult={boardResult}
         players={findPlayers()}
         contestant={contestant}
+        backgroundColor={backgroundColor}
       />
     );
   }
 
-  return <BridgeTraveller key={index} board={board} contestant={contestant} />;
+  return (
+    <BridgeTraveller
+      key={index}
+      board={board}
+      contestant={contestant}
+      backgroundColor={backgroundColor}
+    />
+  );
 }
 
 function findPlayers(): Map<ContestantDirection, string[]> {

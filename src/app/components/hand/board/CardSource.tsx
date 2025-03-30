@@ -8,7 +8,7 @@ export class CardSource {
   }
 
   getNextCard(): Card | null {
-    return this.cards.length > 0 ? this.cards.pop()! : null;
+    return this.cards.length > 0 ? this.cards.shift()! : null;
   }
 
   returnCard(card: Card): void {

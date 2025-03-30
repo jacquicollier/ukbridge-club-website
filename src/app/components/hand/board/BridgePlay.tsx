@@ -1,6 +1,6 @@
 import { Card, Direction, Suit } from '@/app/model/types';
 import { CardSource } from '@/app/components/hand/board/CardSource';
-import { rankOrder } from '@/app/model/constants';
+import { Directions, rankOrder } from '@/app/model/constants';
 
 export class BridgePlay {
   private slots: Partial<Record<Direction, Card>> = {};
@@ -23,17 +23,14 @@ export class BridgePlay {
 
   playCard(): void {
     if (this.playHistory.length > 0 && this.playHistory.length % 4 === 0) {
+      this.currentDirection = this.determineTrickWinner();
       this.slots = {};
     }
     const card = this.source.getNextCard();
     if (!card) return;
     this.slots[this.currentDirection] = card;
     this.playHistory.push({ direction: this.currentDirection, card });
-    if (this.playHistory.length % 4 === 0) {
-      this.currentDirection = this.determineTrickWinner();
-    } else {
-      this.currentDirection = this.nextDirection(this.currentDirection);
-    }
+    this.currentDirection = this.nextDirection(this.currentDirection);
   }
 
   hasPlayedCards(): boolean {
@@ -62,23 +59,30 @@ export class BridgePlay {
   private determineTrickWinner(): Direction {
     const trick = this.playHistory.slice(-4);
     const leadSuit = trick[0].card.suit;
-    const trump = this.trumpSuit;
+    const isNoTrump = this.trumpSuit === null || this.trumpSuit === undefined;
+
     trick.sort((a, b) => {
-      const aTrump = a.card.suit === trump;
-      const bTrump = b.card.suit === trump;
+      // Check for NT contract
+      if (!isNoTrump) {
+        const aTrump = a.card.suit === this.trumpSuit;
+        const bTrump = b.card.suit === this.trumpSuit;
+        if (aTrump !== bTrump) return aTrump ? -1 : 1;
+      }
+
+      // Check for lead suit if no trump or both have the same suit
       const aLead = a.card.suit === leadSuit;
       const bLead = b.card.suit === leadSuit;
-
-      if (aTrump !== bTrump) return aTrump ? -1 : 1;
       if (aLead !== bLead) return aLead ? -1 : 1;
-      return rankOrder.indexOf(b.card.rank) - rankOrder.indexOf(a.card.rank);
+
+      // Compare ranks within the same suit
+      return rankOrder.indexOf(a.card.rank) - rankOrder.indexOf(b.card.rank);
     });
+
     return trick[0].direction;
   }
 
   private nextDirection(direction: Direction): Direction {
-    const order: Direction[] = ['N', 'E', 'S', 'W'];
-    return order[(order.indexOf(direction) + 1) % 4];
+    return Directions[(Directions.indexOf(direction) + 1) % 4];
   }
 
   getCurrentDirection(): Direction {

@@ -38,6 +38,7 @@ export default function BridgeBoard(props: {
         )}
 
         <DealerAndVul board={props.board.boardNumber} />
+        <PointCountTable deal={props.board.deal} />
 
         {/* Hands */}
         {props.board.deal && (
@@ -81,7 +82,6 @@ export default function BridgeBoard(props: {
           }
         })()}
       </div>
-      <PointCountTable deal={props.board.deal} />
     </>
   );
 }

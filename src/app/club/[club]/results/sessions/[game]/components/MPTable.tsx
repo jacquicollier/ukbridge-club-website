@@ -72,7 +72,9 @@ export default function MPTable({
         {sortedScores.map((score, rowIndex) => (
           <tr
             onClick={() =>
-              router.push(`${window.location.pathname}/${score.contestant}`)
+              router.push(
+                `${window.location.pathname}/${score.direction ? score.direction + score.contestant : score.contestant}`,
+              )
             }
             key={rowIndex}
             className={`cursor-pointer border border-gray-300 ${

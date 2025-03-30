@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { Menu, Transition } from '@headlessui/react';
 import { Menu as MenuIcon, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
@@ -16,6 +16,9 @@ type NavItem = {
 export default function ClubLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const params = useParams();
+  const club = params.club;
+
   const [isWindowDefined, setIsWindowDefined] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [navItems, setNavItems] = useState<NavItem[]>([]);
@@ -32,14 +35,14 @@ export default function ClubLayout({
         label: 'Home',
         href:
           isWindowDefined && window.location.href.startsWith('http://localhost')
-            ? '/club/wgc'
+            ? `/club/${club}`
             : '/',
       },
       {
         label: 'Calendar',
         href:
           isWindowDefined && window.location.href.startsWith('http://localhost')
-            ? '/club/wgc/calendar'
+            ? `/club/${club}/calendar`
             : `/calendar`,
       },
       {
@@ -50,7 +53,7 @@ export default function ClubLayout({
             href:
               isWindowDefined &&
               window.location.href.startsWith('http://localhost')
-                ? '/club/wgc/results/sessions'
+                ? `/club/${club}/results/sessions`
                 : `/results/sessions`,
           },
           {
@@ -58,7 +61,7 @@ export default function ClubLayout({
             href:
               isWindowDefined &&
               window.location.href.startsWith('http://localhost')
-                ? '/club/wgc/results/ladders'
+                ? `/club/${club}/results/ladders`
                 : `/results/ladders`,
           },
         ],
@@ -71,7 +74,7 @@ export default function ClubLayout({
             href:
               isWindowDefined &&
               window.location.href.startsWith('http://localhost')
-                ? '/club/wgc/info/sessions'
+                ? `/club/${club}/info/sessions`
                 : `/info/sessions`,
           },
           {
@@ -79,7 +82,7 @@ export default function ClubLayout({
             href:
               isWindowDefined &&
               window.location.href.startsWith('http://localhost')
-                ? '/club/wgc/info/club'
+                ? `/club/${club}/info/club`
                 : `/info/club`,
           },
           {
@@ -87,7 +90,7 @@ export default function ClubLayout({
             href:
               isWindowDefined &&
               window.location.href.startsWith('http://localhost')
-                ? '/club/wgc/info/committee'
+                ? `/club/${club}/info/committee`
                 : `/info/committee`,
           },
         ],
@@ -96,7 +99,7 @@ export default function ClubLayout({
         label: 'Docs',
         href:
           isWindowDefined && window.location.href.startsWith('http://localhost')
-            ? '/club/wgc/docs'
+            ? `/club/${club}/docs`
             : `/docs`,
       },
     ]);

@@ -325,6 +325,16 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
 
   private createResults(board: UsebioBoard): BoardResult[] {
     return board.TRAVELLER_LINE.reduce<BoardResult[]>((acc, travellerLine) => {
+      const playedCards = travellerLine.LIN_DATA
+        ? this.extractLINValues(travellerLine.LIN_DATA).pc.map(
+            (it) =>
+              ({
+                rank: it.charAt(1),
+                suit: it.charAt(0),
+              }) as Card,
+          )
+        : null;
+
       acc.push({
         boardScore: {
           ns: travellerLine.NS_PAIR_NUMBER,
@@ -341,7 +351,7 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
           ewMatchPoints: Number(travellerLine.EW_MATCH_POINTS ?? 0),
         },
         auction: null,
-        playedCards: null,
+        playedCards: playedCards,
       });
       return acc;
     }, []);
