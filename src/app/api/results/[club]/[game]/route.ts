@@ -28,7 +28,7 @@ export async function GET(
     const { club, game } = await params;
 
     const command = new GetObjectCommand({
-      Bucket: process.env.AWS_S3_RESULTS_BUCKET_NAME,
+      Bucket: process.env.S3_AWS_RESULTS_BUCKET_NAME,
       Key: `${club}/${game}/usebio.xml`,
     });
 
