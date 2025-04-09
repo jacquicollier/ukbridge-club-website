@@ -1,36 +1,51 @@
-import { BoardResult } from '@/app/model/constants';
+import {
+  BoardScore,
+  PairMPBoardScore,
+} from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+import { Contestant } from '@/app/model/constants';
+import { getResult } from '@/app/api/results/[club]/[game]/recordofplay/utils';
 
-export default function Result(props: { boardResult: BoardResult }) {
-  const boardScore = props.boardResult.boardScore;
+export default function Result(props: {
+  boardScore: BoardScore;
+  contestant: Contestant;
+}) {
+  const isNS = props.contestant.id !== Number(props.boardScore.ew);
 
   return (
     <div className='absolute bottom-2 right-2 rounded-md px-3 py-2 text-xs shadow-md md:text-base'>
       <p>
-        Contract: <span className='font-bold'>{boardScore.contract}</span>
+        Result: <span className='font-bold'>{getResult(props.boardScore)}</span>
       </p>
       <p>
-        Declarer: <span className='font-bold'>{boardScore.declarer}</span>
+        {isNS ? 'NS' : 'EW'} Score:{' '}
+        <span className='font-bold'>
+          {isNS ? props.boardScore.score : -Number(props.boardScore.score)}
+        </span>
       </p>
-      <p>
-        Result: <span className='font-bold'>{boardScore.tricks}</span>
-      </p>
-      <p>
-        Score: <span className='font-bold'>{boardScore.score}</span>
-      </p>
-      {boardScore.type === 'PAIR_MP' ? (
-        <>
-          <p>
-            NS MP: <span className='font-bold'>{boardScore.nsMatchPoints}</span>
-          </p>
-          <p>
-            EW MP: <span className='font-bold'>{boardScore.ewMatchPoints}</span>
-          </p>
-        </>
+      {props.boardScore.type === 'PAIR_MP' ? (
+        renderMPResult(isNS, props.boardScore)
       ) : (
         <p>
-          NS IMPs: <span className='font-bold'>{boardScore.imps}</span>
+          NS IMPs: <span className='font-bold'>{props.boardScore.imps}</span>
         </p>
       )}
+    </div>
+  );
+}
+
+function renderMPResult(isNS: boolean, boardScore: PairMPBoardScore) {
+  const direction = isNS ? 'NS' : 'EW';
+  const matchPoints = isNS
+    ? boardScore.nsMatchPoints
+    : boardScore.ewMatchPoints;
+  const totalPoints = boardScore.nsMatchPoints + boardScore.ewMatchPoints;
+  const percentage = ((matchPoints / totalPoints) * 100).toFixed(2);
+
+  return (
+    <div>
+      <p>
+        {direction} %: <span className='font-bold'>{percentage}%</span>
+      </p>
     </div>
   );
 }

@@ -1,8 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useParams } from 'next/navigation';
 
 export default function FileUploader() {
+  const params = useParams();
+  const club = params.club;
+
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -29,7 +33,7 @@ export default function FileUploader() {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('/api/results/wgc/1234', {
+      const response = await fetch(`/api/results/${club}/1234`, {
         method: 'POST',
         body: formData,
       });

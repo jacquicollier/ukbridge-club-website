@@ -28,7 +28,7 @@ export async function GET(
     const { club, game } = await params;
 
     const command = new GetObjectCommand({
-      Bucket: process.env.AWS_S3_BUCKET_NAME,
+      Bucket: process.env.AWS_S3_RESULTS_BUCKET_NAME,
       Key: `${club}/${game}/usebio.xml`,
     });
 
@@ -43,20 +43,19 @@ export async function GET(
         explicitArray: false,
       });
 
-      // Return JSON response
-      return new Response(
-        JSON.stringify(
-          new USEBIORecordOfPlayGenerator(
-            (jsonData as UsebioFile).USEBIO,
-          ).recordOfPlay(),
-        ),
-        {
-          status: 200,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
+      const recordOfPlay = JSON.stringify(
+        new USEBIORecordOfPlayGenerator(
+          (jsonData as UsebioFile).USEBIO,
+        ).recordOfPlay(),
       );
+
+      // Return JSON response
+      return new Response(recordOfPlay, {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     } else {
       throw new Error('The body is not a stream.');
     }

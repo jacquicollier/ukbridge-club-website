@@ -2,53 +2,51 @@ import AuctionTable from '@/app/components/hand/cornerpanels/AuctionTable';
 import DealerAndVul from '@/app/components/hand/cornerpanels/DealerAndVul';
 import Deal from '@/app/components/hand/board/Deal';
 import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
-// import PointCountTable from '@/app/hand/components/PointCountTable';
 import Result from '@/app/components/hand/cornerpanels/Result';
 import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
-import BoardScores from '@/app/components/hand/cornerpanels/BoardScores';
-import { Card, Direction } from '@/app/model/types';
+import { Card } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
+  Auction,
   Board,
-  BoardResult,
+  Contestant,
   EWVulnerableBoards,
   NSVulnerableBoards,
 } from '@/app/model/constants';
+import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
+import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 
 export default function BridgeBoard(props: {
   board: Board;
-  boardResult: BoardResult;
-  currentTrickCards: Partial<{ [key in Direction]: Card }>;
-  currentLeader: Direction;
-  playedCards: Card[];
+  auction: Auction | null;
+  bridgePlay: BridgePlay | null;
+  boardScore: BoardScore;
   validNextCards: Card[];
   playItAgain: boolean;
-  showScores: boolean;
+  contestant: Contestant | null;
 }) {
-  const boardScores = props.board.results.map((it) => it.boardScore);
-
   return (
     <>
       {/* Board Scores */}
       <div className='relative flex aspect-square w-full max-w-[450px] flex-col items-center justify-center border-2 border-black p-4'>
-        {props.showScores && boardScores && (
-          <BoardScores boardScores={boardScores} />
-        )}
-
         {/* Auction Table */}
-        {!props.playItAgain && props.boardResult?.auction && (
+        {!props.playItAgain && props.auction && (
           <CollapsiblePanel>
-            <AuctionTable auction={props.boardResult.auction} />
+            <AuctionTable auction={props.auction} />
           </CollapsiblePanel>
         )}
 
         <DealerAndVul board={props.board.boardNumber} />
+        <PointCountTable deal={props.board.deal} />
 
         {/* Hands */}
         {props.board.deal && (
           <Deal
             deal={props.board.deal}
-            playedCards={props.playedCards}
+            playHistory={
+              props.bridgePlay ? props.bridgePlay.getPlayHistory() : []
+            }
             playItAgain={props.playItAgain}
             validNextCards={props.validNextCards}
           />
@@ -64,16 +62,23 @@ export default function BridgeBoard(props: {
           </div>
 
           {/*Played Cards */}
-          <CurrentTrickCards
-            currentLeader={props.currentLeader}
-            currentTrickCards={props.currentTrickCards}
-          />
+          {props.bridgePlay && (
+            <CurrentTrickCards
+              currentLeader={props.bridgePlay.getCurrentDirection()}
+              currentTrickCards={props.bridgePlay.getSlots()}
+            />
+          )}
         </div>
         {(() => {
           if (props.playItAgain) {
             return <DDSTable deal={props.board.deal} />;
-          } else if (props.boardResult) {
-            return <Result boardResult={props.boardResult} />;
+          } else if (props.boardScore && props.contestant) {
+            return (
+              <Result
+                boardScore={props.boardScore}
+                contestant={props.contestant}
+              />
+            );
           }
         })()}
       </div>

@@ -1,40 +1,111 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 import { Menu, Transition } from '@headlessui/react';
 import { Menu as MenuIcon, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@aws-amplify/ui-react';
 
+type NavItem = {
+  label: string;
+  href?: string;
+  dropdown?: NavItem[];
+};
+
 export default function ClubLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const params = useParams();
+  const club = params.club;
+
+  const [isWindowDefined, setIsWindowDefined] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [navItems, setNavItems] = useState<NavItem[]>([]);
   const router = useRouter();
 
-  /** Common navigation items */
-  const navItems = [
-    { label: 'Home', href: `/` },
-    { label: 'Calendar', href: `/calendar` },
-    {
-      label: 'Results',
-      dropdown: [
-        { label: 'Sessions', href: `/results/sessions` },
-        { label: 'Ladders', href: `/results/ladders` },
-      ],
-    },
-    {
-      label: 'Info',
-      dropdown: [
-        { label: 'Sessions', href: `/info/sessions` },
-        { label: 'Club', href: `/info/club` },
-        { label: 'Committee', href: `/info/committee` },
-      ],
-    },
-    { label: 'Docs', href: `/docs` },
-  ];
+  useEffect(() => {
+    // This will run only in the browser
+    setIsWindowDefined(typeof window !== 'undefined');
+  }, []);
 
+  useEffect(() => {
+    setNavItems([
+      {
+        label: 'Home',
+        href:
+          isWindowDefined && window.location.href.startsWith('http://localhost')
+            ? `/club/${club}`
+            : '/',
+      },
+      {
+        label: 'Calendar',
+        href:
+          isWindowDefined && window.location.href.startsWith('http://localhost')
+            ? `/club/${club}/calendar`
+            : `/calendar`,
+      },
+      {
+        label: 'Results',
+        dropdown: [
+          {
+            label: 'Sessions',
+            href:
+              isWindowDefined &&
+              window.location.href.startsWith('http://localhost')
+                ? `/club/${club}/results/sessions`
+                : `/results/sessions`,
+          },
+          {
+            label: 'Ladders',
+            href:
+              isWindowDefined &&
+              window.location.href.startsWith('http://localhost')
+                ? `/club/${club}/results/ladders`
+                : `/results/ladders`,
+          },
+        ],
+      },
+      {
+        label: 'Info',
+        dropdown: [
+          {
+            label: 'Sessions',
+            href:
+              isWindowDefined &&
+              window.location.href.startsWith('http://localhost')
+                ? `/club/${club}/info/sessions`
+                : `/info/sessions`,
+          },
+          {
+            label: 'Club',
+            href:
+              isWindowDefined &&
+              window.location.href.startsWith('http://localhost')
+                ? `/club/${club}/info/club`
+                : `/info/club`,
+          },
+          {
+            label: 'Committee',
+            href:
+              isWindowDefined &&
+              window.location.href.startsWith('http://localhost')
+                ? `/club/${club}/info/committee`
+                : `/info/committee`,
+          },
+        ],
+      },
+      {
+        label: 'Docs',
+        href:
+          isWindowDefined && window.location.href.startsWith('http://localhost')
+            ? `/club/${club}/docs`
+            : `/docs`,
+      },
+    ]);
+  }, [isWindowDefined]);
+
+  /** Common navigation items */
   return (
     <div className='flex w-screen flex-col justify-center'>
       {/* Full-width banner with centered club name */}
@@ -64,14 +135,14 @@ export default function ClubLayout({
               <Dropdown key={idx} title={item.label}>
                 <div className='flex flex-col space-y-2'>
                   {item.dropdown.map((subItem) => (
-                    <Link key={subItem.href} href={subItem.href}>
+                    <Link key={subItem.href} href={subItem.href!}>
                       {subItem.label}
                     </Link>
                   ))}
                 </div>
               </Dropdown>
             ) : (
-              <Link key={idx} href={item.href}>
+              <Link key={idx} href={item.href!}>
                 {item.label}
               </Link>
             ),
@@ -88,7 +159,7 @@ export default function ClubLayout({
                 {item.dropdown.map((subItem) => (
                   <Link
                     key={subItem.href}
-                    href={subItem.href}
+                    href={subItem.href!}
                     className='p-2 hover:bg-blue-400'
                   >
                     {subItem.label}
@@ -97,7 +168,7 @@ export default function ClubLayout({
               </div>
             </Dropdown>
           ) : (
-            <NavButton key={idx} href={item.href}>
+            <NavButton key={idx} href={item.href!}>
               {item.label}
             </NavButton>
           ),

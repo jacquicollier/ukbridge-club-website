@@ -1,57 +1,12 @@
 import { Card, Direction } from '@/app/model/types';
 import { Directions, rankOrder, suitOrder } from '@/app/model/constants';
+import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
 
-export function determineTrickWinner(
-  trick: Card[],
-  leaderIndex: number,
-  trumpSuit: string | null,
-): number {
-  const leadSuit = trick[0].suit;
-  let winningIndex = 0;
-
-  // If there's a trump suit, we need to consider it
-  if (trumpSuit) {
-    let highestTrumpCardIndex = -1;
-    let highestTrumpRankValue = -1;
-
-    // Find the highest trump card played in this trick
-    for (let i = 0; i < trick.length; i++) {
-      if (trick[i].suit === trumpSuit) {
-        const currentTrumpRankValue = rankOrder.indexOf(trick[i].rank);
-        if (currentTrumpRankValue > highestTrumpRankValue) {
-          highestTrumpRankValue = currentTrumpRankValue;
-          highestTrumpCardIndex = i;
-        }
-      }
-    }
-
-    // If a trump card was played, the highest one wins
-    if (highestTrumpCardIndex !== -1) {
-      return (leaderIndex + highestTrumpCardIndex) % 4;
-    }
+export function getResult(boardScore: BoardScore) {
+  if (!boardScore.tricks) {
+    return 'Pass';
   }
-
-  // If no trump suit or no trump card is played, we compare by the lead suit
-  for (let i = 1; i < trick.length; i++) {
-    if (
-      trick[i].suit === leadSuit &&
-      rankOrder.indexOf(trick[i].rank) >
-        rankOrder.indexOf(trick[winningIndex].rank)
-    ) {
-      winningIndex = i;
-    }
-  }
-
-  // Convert trick-relative index to the actual player's index in `directions`
-  return (leaderIndex + winningIndex) % 4;
-}
-
-export function determineTrumps(contract: string): string | null {
-  if (contract === 'Pass') return null;
-  const cleanedContract = contract.replace(/(X|XX)$/, '');
-  if (cleanedContract.endsWith('NT')) return null;
-  const suit = cleanedContract.slice(-1);
-  return suitOrder.includes(suit) ? suit : null;
+  return `${boardScore.contract}${calculateDifference(boardScore.contract, Number(boardScore.tricks))} ${boardScore.declarer}`;
 }
 
 export function determineDealer(boardNumber: number): Direction {
@@ -81,4 +36,25 @@ function convertHandToPbn(cards: Card[]): string {
     )
     .filter(Boolean)
     .join('.');
+}
+
+function calculateDifference(contract: string, tricksMade: number): string {
+  // Remove doubling/redoubling indicators (x or xx) from the contract
+  contract = contract.replace(/x{1,2}$/i, '');
+
+  // Extract the numeric part from the contract
+  const match = contract.match(/(\d+)/);
+  if (match) {
+    const contractLevel = parseInt(match[1], 10);
+    const requiredTricks = contractLevel + 6;
+    const difference = tricksMade - requiredTricks;
+    if (difference < 0) {
+      return `${difference}`;
+    } else if (difference > 0) {
+      return `+${difference}`;
+    }
+    return '=';
+  } else {
+    throw new Error('Invalid contract format');
+  }
 }

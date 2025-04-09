@@ -7,14 +7,17 @@ export default function CurrentTrickCards(props: {
 }) {
   return (
     <>
-      {Object.entries(props.currentTrickCards).map(([player, card]) => (
-        <CurrentTrickCard
-          key={`${player}-${card}`}
-          player={player as Direction}
-          card={card}
-          currentLeader={props.currentLeader}
-        />
-      ))}
+      {Object.entries(props.currentTrickCards).map(
+        ([player, card]) =>
+          card && (
+            <CurrentTrickCard
+              key={`${player}-${card}`}
+              player={player as Direction}
+              card={card}
+              currentLeader={props.currentLeader}
+            />
+          ),
+      )}
     </>
   );
 }
