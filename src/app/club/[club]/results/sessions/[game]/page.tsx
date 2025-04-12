@@ -1,5 +1,5 @@
 import MPTable from '@/app/club/[club]/results/sessions/[game]/components/MPTable';
-import { RecordOfPlay } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
+import { RecordOfPlay } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
 
 export default async function ResultPage({
   params,
@@ -9,7 +9,7 @@ export default async function ResultPage({
   const { club, game } = await params;
 
   const apiResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/results/${club}/${game}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/${club}/results/20250106/${game}`,
   );
   const recordOfPlay: RecordOfPlay = await apiResponse.json();
 

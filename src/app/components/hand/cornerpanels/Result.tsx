@@ -1,9 +1,9 @@
 import {
   BoardScore,
   PairMPBoardScore,
-} from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+} from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
 import { Contestant } from '@/app/model/constants';
-import { getResult } from '@/app/api/results/[club]/[game]/recordofplay/utils';
+import { getResult } from '@/app/api/[club]/results/[date]/[game]/recordofplay/utils';
 
 export default function Result(props: {
   boardScore: BoardScore;

@@ -5,8 +5,8 @@ import {
 } from '@aws-sdk/client-s3';
 import { Readable } from 'node:stream';
 import { parseStringPromise } from 'xml2js';
-import { USEBIORecordOfPlayGenerator } from '@/app/api/results/[club]/[game]/recordofplay/usebio/USEBIORecordOfPlayGenerator';
-import { UsebioFile } from '@/app/api/results/[club]/[game]/recordofplay/usebio/model';
+import { USEBIORecordOfPlayGenerator } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/USEBIORecordOfPlayGenerator';
+import { UsebioFile } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/model';
 
 const s3 = new S3Client({
   region: process.env.S3_AWS_REGION!,
@@ -21,15 +21,15 @@ export async function GET(
   {
     params,
   }: {
-    params: Promise<{ club: string; game: string }>;
+    params: Promise<{ club: string; date: string; game: string }>;
   },
 ) {
   try {
-    const { club, game } = await params;
+    const { club, date, game } = await params;
 
     const command = new GetObjectCommand({
-      Bucket: process.env.S3_AWS_RESULTS_BUCKET_NAME,
-      Key: `${club}/${game}/usebio.xml`,
+      Bucket: `${club}.ukbridge.club`,
+      Key: `results/${date}/${game}/usebio.xml`,
     });
 
     const { Body } = await s3.send(command);

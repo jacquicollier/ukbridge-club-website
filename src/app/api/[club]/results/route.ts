@@ -1,4 +1,9 @@
-import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
+import {
+  ListObjectsV2Command,
+  PutObjectCommand,
+  S3Client,
+} from '@aws-sdk/client-s3';
+import { NextResponse } from 'next/server';
 
 const s3 = new S3Client({
   region: process.env.S3_AWS_REGION!,
@@ -7,6 +12,41 @@ const s3 = new S3Client({
     secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
   },
 });
+
+export async function GET(
+  req: Request,
+  {
+    params,
+  }: {
+    params: Promise<{ club: string }>;
+  },
+) {
+  try {
+    const p = await params;
+    const Bucket = `${p.club}.ukbridge.club`;
+    const command = new ListObjectsV2Command({
+      Bucket,
+      Delimiter: '/', // <- important for simulating folders
+      Prefix: 'results/', // or use a path like 'somefolder/' to scope it
+    });
+
+    const result = await s3.send(command);
+
+    // result.CommonPrefixes contains the "directories"
+    const folders =
+      result.CommonPrefixes?.map(
+        (prefix) => prefix.Prefix!.split('/')[1],
+      ).reverse() || [];
+
+    return NextResponse.json(folders);
+  } catch (error: unknown) {
+    console.error('Error listing S3 directories:', error);
+    return NextResponse.json(
+      { error: 'Failed to list directories' },
+      { status: 500 },
+    );
+  }
+}
 
 export async function POST(request: Request) {
   try {

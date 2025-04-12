@@ -1,45 +1,59 @@
-export type Result = {
-  title: string;
-  date: Date;
-  realBridgeLink: string | null;
-  resultsLink: string;
-};
+'use client';
 
-const options: Intl.DateTimeFormatOptions = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  hour: '2-digit',
-  minute: '2-digit',
-};
+import { useEffect, useState } from 'react';
+import { Result } from '@/app/model/types';
 
-export default function ResultsList({ results }: { results: Result[] }) {
+export default function ResultsList({
+  club,
+  date,
+}: {
+  club: string;
+  date: string;
+}) {
+  const [results, setResults] = useState<Result[]>([]);
+
+  useEffect(() => {
+    const fetchResults = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/${club}/results/${date}`,
+        );
+
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+
+        setResults(await response.json());
+      } catch (err) {
+        console.error('Error fetching results:', err);
+        throw err;
+      }
+    };
+
+    fetchResults();
+  }, [club, date]);
+
   return (
     <div className='space-y-4'>
       {results.length > 0 ? (
         results.map((result, index) => (
           <div key={index} className='rounded-lg border bg-white p-4 shadow-md'>
             <h3 className='text-lg font-semibold'>{result.title}</h3>
-            <p className='text-gray-600'>
-              {result.date.toLocaleString('en-GB', options)}
-            </p>
-
             <div className='mt-3 flex gap-2'>
-              {result.realBridgeLink && (
-                <a
-                  href={result.realBridgeLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='rounded-md bg-blue-500 px-4 py-2 text-sm text-white hover:bg-blue-600'
-                >
-                  Real Bridge
-                </a>
-              )}
+              {/*{result.realBridgeLink && (*/}
+              {/*  <a*/}
+              {/*    href={result.realBridgeLink}*/}
+              {/*    target='_blank'*/}
+              {/*    rel='noopener noreferrer'*/}
+              {/*    className='rounded-md bg-blue-500 px-4 py-2 text-sm text-white hover:bg-blue-600'*/}
+              {/*  >*/}
+              {/*    Real Bridge*/}
+              {/*  </a>*/}
+              {/*)}*/}
               {result.resultsLink && (
                 <a
-                  href={result.resultsLink}
-                  target='_blank'
+                  href={`sessions/${result.resultsLink}`}
+                  // target='_blank'
                   rel='noopener noreferrer'
                   className='rounded-md bg-green-500 px-4 py-2 text-sm text-white hover:bg-green-600'
                 >
