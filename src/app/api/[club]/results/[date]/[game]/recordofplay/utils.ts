@@ -1,6 +1,6 @@
 import { Card, Direction } from '@/app/model/types';
 import { Directions, rankOrder, suitOrder } from '@/app/model/constants';
-import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+import { BoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
 
 export function getResult(boardScore: BoardScore) {
   if (!boardScore.tricks) {

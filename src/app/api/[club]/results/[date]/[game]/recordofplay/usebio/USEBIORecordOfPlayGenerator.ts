@@ -1,4 +1,4 @@
-import { RecordOfPlayGenerator } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlayGenerator';
+import { RecordOfPlayGenerator } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlayGenerator';
 import {
   Hand,
   HandSet,
@@ -6,7 +6,7 @@ import {
   Usebio,
   UsebioBoard,
   UsebioSection,
-} from '@/app/api/results/[club]/[game]/recordofplay/usebio/model';
+} from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/model';
 import {
   Card,
   Direction,
@@ -24,9 +24,9 @@ import {
 import {
   PairMPSessionScore,
   SessionScore,
-} from '@/app/api/results/[club]/[game]/recordofplay/score/session/sessionscore';
-import { PairMPBoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
-import { Section } from '@/app/api/results/[club]/[game]/recordofplay/RecordOfPlay';
+} from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/session/sessionscore';
+import { PairMPBoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
+import { Section } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private usebio: Usebio;

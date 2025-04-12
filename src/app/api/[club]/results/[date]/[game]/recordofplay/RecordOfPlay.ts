@@ -1,5 +1,5 @@
 import { Board, Contestant } from '@/app/model/constants';
-import { SessionScore } from '@/app/api/results/[club]/[game]/recordofplay/score/session/sessionscore';
+import { SessionScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/session/sessionscore';
 import { SessionScoreType } from '@/app/model/types';
 
 export class Section {

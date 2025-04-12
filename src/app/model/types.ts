@@ -25,3 +25,10 @@ export type Card = {
 
 export type SessionScoreType = 'TWO_WINNER_PAIRS' | 'ONE_WINNER_PAIRS';
 export type MasterPointType = 'BLACK' | 'GREEN' | 'BLUE';
+
+export type Result = {
+  title: string;
+  date: string;
+  // realBridgeLink: string | null;
+  resultsLink: string;
+};

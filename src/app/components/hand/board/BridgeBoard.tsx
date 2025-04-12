@@ -14,7 +14,7 @@ import {
   NSVulnerableBoards,
 } from '@/app/model/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
-import { BoardScore } from '@/app/api/results/[club]/[game]/recordofplay/score/board/boardscore';
+import { BoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 
 export default function BridgeBoard(props: {
