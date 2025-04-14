@@ -7,7 +7,7 @@ import { NextResponse } from 'next/server';
 
 console.log({
   region: process.env.S3_AWS_REGION,
-  accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID,
+  accessKeyId: process.env.S3_AWS_ACCESS_KEY,
   secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY,
 });
 
@@ -23,7 +23,7 @@ export async function GET(
     const s3 = new S3Client({
       region: process.env.S3_AWS_REGION!,
       credentials: {
-        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+        accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
         secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
       },
     });
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
     const s3 = new S3Client({
       region: process.env.S3_AWS_REGION!,
       credentials: {
-        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+        accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
         secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
       },
     });
