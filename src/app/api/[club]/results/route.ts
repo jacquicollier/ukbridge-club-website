@@ -5,12 +5,10 @@ import {
 } from '@aws-sdk/client-s3';
 import { NextResponse } from 'next/server';
 
-const s3 = new S3Client({
-  region: process.env.S3_AWS_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-  },
+console.log({
+  region: process.env.S3_AWS_REGION,
+  accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY,
 });
 
 export async function GET(
@@ -21,6 +19,14 @@ export async function GET(
     params: Promise<{ club: string }>;
   },
 ) {
+  const s3 = new S3Client({
+    region: process.env.S3_AWS_REGION!,
+    credentials: {
+      accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+      secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
+    },
+  });
+
   try {
     const p = await params;
     const Bucket = `${p.club}.ukbridge.club`;
