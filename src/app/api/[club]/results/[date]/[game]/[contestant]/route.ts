@@ -6,15 +6,20 @@ export async function GET(
   {
     params,
   }: {
-    params: Promise<{ club: string; game: string; contestant: string }>;
+    params: Promise<{
+      club: string;
+      date: string;
+      game: string;
+      contestant: string;
+    }>;
   },
 ) {
   try {
-    const { club, game, contestant } = await params;
+    const { club, date, game, contestant } = await params;
 
     const command = new GetObjectCommand({
-      Bucket: process.env.AWS_S3_BUCKET_NAME,
-      Key: `${club}/${game}/${contestant}`,
+      Bucket: `${club}.ukbridge.club`,
+      Key: `results/${date}/${game}/usebio.xml`,
     });
 
     const { Body, ContentType } = await s3.send(command);
