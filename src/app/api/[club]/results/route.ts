@@ -19,15 +19,15 @@ export async function GET(
     params: Promise<{ club: string }>;
   },
 ) {
-  const s3 = new S3Client({
-    region: process.env.S3_AWS_REGION!,
-    credentials: {
-      accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
-      secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-    },
-  });
-
   try {
+    const s3 = new S3Client({
+      region: process.env.S3_AWS_REGION!,
+      credentials: {
+        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+        secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
+      },
+    });
+
     const p = await params;
     const Bucket = `${p.club}.ukbridge.club`;
     const command = new ListObjectsV2Command({
@@ -56,6 +56,14 @@ export async function GET(
 
 export async function POST(request: Request) {
   try {
+    const s3 = new S3Client({
+      region: process.env.S3_AWS_REGION!,
+      credentials: {
+        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+        secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
+      },
+    });
+
     const formData = await request.formData();
     const file = formData.get('file') as File | null;
 
