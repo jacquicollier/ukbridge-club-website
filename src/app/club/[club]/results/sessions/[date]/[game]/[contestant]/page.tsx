@@ -7,13 +7,18 @@ import BridgeTraveller from '@/app/components/play/BridgeTraveller';
 export default async function ResultPage({
   params,
 }: {
-  params: Promise<{ club: string; game: string; contestant: string }>;
+  params: Promise<{
+    club: string;
+    date: string;
+    game: string;
+    contestant: string;
+  }>;
 }) {
-  const { club, game, contestant } = await params;
+  const { club, date, game, contestant } = await params;
   const contestantObj = parseContestant(contestant);
 
   const apiResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/results/${club}/${game}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/${club}/results/${date}/${game}`,
   );
   const recordOfPlay: RecordOfPlay = await apiResponse.json();
 
