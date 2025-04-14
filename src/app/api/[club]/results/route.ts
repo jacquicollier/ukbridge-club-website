@@ -5,10 +5,12 @@ import {
 } from '@aws-sdk/client-s3';
 import { NextResponse } from 'next/server';
 
-console.log({
-  region: process.env.S3_AWS_REGION,
-  accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY,
+const s3 = new S3Client({
+  region: process.env.S3_AWS_REGION!,
+  credentials: {
+    accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
+    secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
+  },
 });
 
 export async function GET(
@@ -20,14 +22,6 @@ export async function GET(
   },
 ) {
   try {
-    const s3 = new S3Client({
-      region: process.env.S3_AWS_REGION!,
-      credentials: {
-        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
-        secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-      },
-    });
-
     const p = await params;
     const Bucket = `${p.club}.ukbridge.club`;
     const command = new ListObjectsV2Command({
@@ -56,14 +50,6 @@ export async function GET(
 
 export async function POST(request: Request) {
   try {
-    const s3 = new S3Client({
-      region: process.env.S3_AWS_REGION!,
-      credentials: {
-        accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
-        secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-      },
-    });
-
     const formData = await request.formData();
     const file = formData.get('file') as File | null;
 

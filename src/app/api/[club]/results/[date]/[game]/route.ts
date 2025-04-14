@@ -11,7 +11,7 @@ import { UsebioFile } from '@/app/api/[club]/results/[date]/[game]/recordofplay/
 const s3 = new S3Client({
   region: process.env.S3_AWS_REGION!,
   credentials: {
-    accessKeyId: process.env.S3_AWS_ACCESS_KEY_ID!,
+    accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
     secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
   },
 });
