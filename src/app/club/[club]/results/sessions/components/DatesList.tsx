@@ -28,7 +28,7 @@ function DatesList({ club, dates }: { club: string; dates: string[] }) {
 
             {openIndex === index && (
               <div className='border-t bg-gray-50 px-4 py-2 text-sm text-gray-700'>
-                {openIndex && (
+                {openIndex !== null && (
                   <ResultsList club={club} date={dates[openIndex]} />
                 )}
               </div>

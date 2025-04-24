@@ -29,7 +29,6 @@ export async function GET(
 
     const result = await s3.send(command);
 
-    console.log(result);
     // result.CommonPrefixes contains the "directories"
     const folders =
       result.CommonPrefixes?.map((prefix) => prefix.Prefix!.split('/')[2]).map(
