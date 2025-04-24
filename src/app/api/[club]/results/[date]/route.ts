@@ -1,17 +1,9 @@
-import { ListObjectsV2Command, S3Client } from '@aws-sdk/client-s3';
 import { NextResponse } from 'next/server';
 import { Result } from '@/app/model/types';
-
-const s3 = new S3Client({
-  region: process.env.S3_AWS_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-  },
-});
+import { listFolders } from '@/app/api/clubs/utils/s3';
 
 export async function GET(
-  req: Request,
+  _req: Request,
   {
     params,
   }: {
@@ -19,29 +11,22 @@ export async function GET(
   },
 ) {
   try {
-    const p = await params;
-    const Bucket = `${p.club}.ukbridge.club`;
-    const command = new ListObjectsV2Command({
-      Bucket,
-      Delimiter: '/', // <- important for simulating folders
-      Prefix: `results/${p.date}/`, // or use a path like 'somefolder/' to scope it
-    });
+    const { club, date } = await params;
 
-    const result = await s3.send(command);
-
-    // result.CommonPrefixes contains the "directories"
-    const folders =
-      result.CommonPrefixes?.map((prefix) => prefix.Prefix!.split('/')[2]).map(
-        (x) => {
-          return {
-            title: x.replaceAll('-', ' '),
-            date: p.date,
-            resultsLink: x,
-          } as Result;
-        },
-      ) || [];
-
-    return NextResponse.json(folders);
+    return NextResponse.json(
+      (
+        await listFolders(`${club}.ukbridge.club`, `results/${date}/`, {
+          mapFn: (prefix: string) => prefix.split('/')[2],
+          reverse: false,
+        })
+      ).map((x) => {
+        return {
+          title: x.replaceAll('-', ' '),
+          date,
+          resultsLink: x,
+        } as Result;
+      }),
+    );
   } catch (error: unknown) {
     console.error('Error listing S3 directories:', error);
     return NextResponse.json(

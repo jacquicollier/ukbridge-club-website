@@ -1,8 +1,7 @@
-import { GetObjectCommand } from '@aws-sdk/client-s3';
-import { s3 } from '@/app/s3';
+import { getObject } from '@/app/api/clubs/utils/s3';
 
 export async function GET(
-  req: Request,
+  _req: Request,
   {
     params,
   }: {
@@ -16,13 +15,10 @@ export async function GET(
 ) {
   try {
     const { club, date, game, contestant } = await params;
-
-    const command = new GetObjectCommand({
-      Bucket: `${club}.ukbridge.club`,
-      Key: `results/${date}/${game}/usebio.xml`,
-    });
-
-    const { Body, ContentType } = await s3.send(command);
+    const { Body, ContentType } = await getObject(
+      `${club}.ukbridge.club`,
+      `results/${date}/${game}/usebio.xml`,
+    );
 
     return new Response(Body as ReadableStream, {
       headers: {
