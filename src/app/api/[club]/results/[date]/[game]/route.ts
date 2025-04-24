@@ -1,23 +1,10 @@
-import {
-  GetObjectCommand,
-  PutObjectCommand,
-  S3Client,
-} from '@aws-sdk/client-s3';
-import { Readable } from 'node:stream';
 import { parseStringPromise } from 'xml2js';
 import { USEBIORecordOfPlayGenerator } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/USEBIORecordOfPlayGenerator';
 import { UsebioFile } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/model';
-
-const s3 = new S3Client({
-  region: process.env.S3_AWS_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_AWS_ACCESS_KEY!,
-    secretAccessKey: process.env.S3_AWS_SECRET_ACCESS_KEY!,
-  },
-});
+import { getAndParseObject, putObject } from '@/app/api/clubs/utils/s3';
 
 export async function GET(
-  req: Request,
+  _req: Request,
   {
     params,
   }: {
@@ -27,38 +14,29 @@ export async function GET(
   try {
     const { club, date, game } = await params;
 
-    const command = new GetObjectCommand({
-      Bucket: `${club}.ukbridge.club`,
-      Key: `results/${date}/${game}/usebio.xml`,
-    });
-
-    const { Body } = await s3.send(command);
-
-    // Convert the Body (stream) to a string if it exists
-    if (Body instanceof Readable) {
-      const fileContent = await streamToString(Body);
-
-      // Convert XML to JSON
-      const jsonData = await parseStringPromise(fileContent, {
-        explicitArray: false,
-      });
-
-      const recordOfPlay = JSON.stringify(
-        new USEBIORecordOfPlayGenerator(
-          (jsonData as UsebioFile).USEBIO,
-        ).recordOfPlay(),
-      );
-
-      // Return JSON response
-      return new Response(recordOfPlay, {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/json',
+    const usebioFile = await getAndParseObject<UsebioFile>(
+      `${club}.ukbridge.club`,
+      `results/${date}/${game}/usebio.xml`,
+      {
+        parser: async (fileContent: string) => {
+          return (await parseStringPromise(fileContent, {
+            explicitArray: false,
+          })) as UsebioFile;
         },
-      });
-    } else {
-      throw new Error('The body is not a stream.');
-    }
+      },
+    );
+
+    const recordOfPlay = JSON.stringify(
+      new USEBIORecordOfPlayGenerator(usebioFile.USEBIO).recordOfPlay(),
+    );
+
+    // Return JSON response
+    return new Response(recordOfPlay, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   } catch (error: unknown) {
     if (error instanceof Error) {
       if (error.name === 'NoSuchKey') {
@@ -102,22 +80,16 @@ export async function POST(
       return Response.json({ error: 'No file uploaded' }, { status: 400 });
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-
-    const command = new PutObjectCommand({
-      Bucket: process.env.AWS_S3_BUCKET_NAME!,
-      Key: `${club}/${game}/${file.name.endsWith('.xml') ? 'usebio.xml' : 'hands.pbn'}`,
-      Body: buffer,
-      ContentType: file.type,
-    });
-
-    await s3.send(command);
-
+    await putObject(
+      process.env.AWS_S3_BUCKET_NAME!,
+      `${club}/${game}/${file.name.endsWith('.xml') ? 'usebio.xml' : 'hands.pbn'}`,
+      file,
+      Buffer.from(await file.arrayBuffer()),
+    );
     return Response.json({ message: 'File uploaded successfully' });
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error('Error occurred while uploading file:', error);
-
       return Response.json({ error: error.message }, { status: 500 });
     } else {
       // Handle the case where the error is not an instance of Error (like a network issue)
@@ -128,21 +100,4 @@ export async function POST(
       );
     }
   }
-}
-
-// Helper function to convert stream to string
-async function streamToString(stream: Readable): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const chunks: Buffer[] = [];
-
-    stream.on('data', (chunk: Buffer) => {
-      chunks.push(chunk);
-    });
-
-    stream.on('end', () => {
-      resolve(Buffer.concat(chunks).toString('utf-8')); // Convert the buffer to a string
-    });
-
-    stream.on('error', reject);
-  });
 }
