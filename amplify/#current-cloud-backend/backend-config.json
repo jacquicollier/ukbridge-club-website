@@ -59,5 +59,30 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
     }
+  },
+  "function": {
+    "ukbridgeclubprocessresults": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_ukbridgeclubprocessresults_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ukbridgeclubprocessresults"
+        }
+      ]
+    },
+    "AMPLIFY_function_ukbridgeclubprocessresults_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ukbridgeclubprocessresults"
+        }
+      ]
+    }
   }
 }

@@ -1,7 +1,12 @@
 {
   "permissions": {
     "s3": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
-    "sqs": ["sqs:SendMessage", "sqs:ReceiveMessage"]
+    "sqs": [
+      "sqs:SendMessage",
+      "sqs:ReceiveMessage",
+      "sqs:DeleteMessage",
+      "sqs:GetQueueAttributes"
+    ]
   },
   "lambdaLayers": []
 }

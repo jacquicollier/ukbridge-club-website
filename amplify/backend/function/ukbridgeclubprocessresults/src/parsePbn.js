@@ -1,1 +1,3 @@
-export function parsePbn() {}
+export function parsePbn() {
+  console.log('Parsing pbn');
+}

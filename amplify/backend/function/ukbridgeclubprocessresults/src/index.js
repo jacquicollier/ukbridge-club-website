@@ -1,22 +1,30 @@
-import AWS from 'aws-sdk';
+import {
+  S3Client,
+  GetObjectCommand,
+  HeadObjectCommand,
+  PutObjectCommand,
+} from '@aws-sdk/client-s3';
+import { parseUsebio } from './parseUsebio.js';
+import { parsePbn } from './parsePbn.js';
 
-import { parseUsebio } from './parseUsebio';
-import { parsePbn } from './parsePbn';
+const s3 = new S3Client({});
 
-const s3 = new AWS.S3();
-// const sqs = new AWS.SQS();
-
-exports.handler = async (event) => {
+export const handler = async (event) => {
   console.log('Received SQS event:', JSON.stringify(event, null, 2));
 
-  // Loop through SQS records
   for (const record of event.Records) {
-    const s3Event = JSON.parse(record.body);
-    const bucketName = s3Event.Records[0].s3.bucket.name;
-    const key = s3Event.Records[0].s3.object.key;
+    try {
+      const s3Event = JSON.parse(record.body);
 
-    if (key.endsWith('usebio.xml')) {
-      try {
+      if (!s3Event.Records || !s3Event.Records[0]) {
+        console.warn('Skipping non-S3 event message:', record.body);
+        continue; // skip this message
+      }
+
+      const bucketName = s3Event.Records[0].s3.bucket.name;
+      const key = s3Event.Records[0].s3.object.key;
+
+      if (key.endsWith('usebio.xml')) {
         const usebioData = await processUsebio(bucketName, key);
         let pbnData = null;
 
@@ -25,7 +33,6 @@ exports.handler = async (event) => {
           pbnData = await processPbn(bucketName, pbnKey);
         }
 
-        // Combine the data (usebio + pbn) and create JSON
         const resultJson = {
           usebio: usebioData,
           pbn: pbnData || null,
@@ -33,9 +40,9 @@ exports.handler = async (event) => {
 
         const jsonKey = key.replace('usebio.xml', 'results.json');
         await saveJsonToS3(bucketName, jsonKey, resultJson);
-      } catch (error) {
-        console.error('Error processing files:', error);
       }
+    } catch (err) {
+      console.error('Error processing record:', err);
     }
   }
 
@@ -46,32 +53,53 @@ exports.handler = async (event) => {
 };
 
 async function processUsebio(bucketName, key) {
-  const data = await s3.getObject({ Bucket: bucketName, Key: key }).promise();
-  // Parse the usebio.xml content and return the parsed data
-  return parseUsebio(data.Body.toString());
+  const command = new GetObjectCommand({ Bucket: bucketName, Key: key });
+  const data = await s3.send(command);
+
+  const bodyString = await streamToString(data.Body);
+  return parseUsebio(bodyString);
 }
 
 async function processPbn(bucketName, key) {
-  const data = await s3.getObject({ Bucket: bucketName, Key: key }).promise();
-  // Parse the hands.pbn content and return the parsed data
-  return parsePbn(data.Body.toString());
+  const command = new GetObjectCommand({ Bucket: bucketName, Key: key });
+  const data = await s3.send(command);
+
+  const bodyString = await streamToString(data.Body);
+  return parsePbn(bodyString);
 }
 
 async function checkIfFileExists(bucketName, key) {
   try {
-    await s3.headObject({ Bucket: bucketName, Key: key }).promise();
+    const command = new HeadObjectCommand({ Bucket: bucketName, Key: key });
+    await s3.send(command);
     return true; // File exists
   } catch (error) {
-    return false; // File does not exist
+    if (error.name === 'NotFound') {
+      return false;
+    }
+    console.error('Error checking if file exists:', error);
+    throw error; // unexpected error
   }
 }
 
 async function saveJsonToS3(bucketName, key, jsonData) {
-  const params = {
+  const command = new PutObjectCommand({
     Bucket: bucketName,
     Key: key,
     Body: JSON.stringify(jsonData),
     ContentType: 'application/json',
-  };
-  await s3.putObject(params).promise();
+  });
+  await s3.send(command);
+}
+
+// Helper to read stream to string
+async function streamToString(stream) {
+  if (typeof stream === 'string') return stream;
+
+  return await new Promise((resolve, reject) => {
+    const chunks = [];
+    stream.on('data', (chunk) => chunks.push(chunk));
+    stream.on('error', reject);
+    stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
+  });
 }

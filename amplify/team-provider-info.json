@@ -19,7 +19,10 @@
         "ukbridgeclubamplify": {}
       },
       "function": {
-        "ukbridgeclubprocessresults": {}
+        "ukbridgeclubprocessresults": {
+          "deploymentBucketName": "amplify-ukbridgeclubamplify-dev-0c489-deployment",
+          "s3Key": "amplify-builds/ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip"
+        }
       }
     }
   }

@@ -1,1 +1,3 @@
-export function parseUsebio() {}
+export function parseUsebio() {
+  console.log('Parsing usebio');
+}

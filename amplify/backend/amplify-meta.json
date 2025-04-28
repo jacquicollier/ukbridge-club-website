@@ -12,96 +12,32 @@
       "AmplifyAppId": "d2milbgcllk9dz"
     }
   },
-  "api": {
-    "ukbridgeclubamplify": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "ukbridgeclubamplifyb1a78a80",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authukbridgeclubamplifyb1a78a80"
-              }
-            }
-          ]
-        },
-        "GraphQLAPIIdOutput": "36hq4s5pcfdl3dvugzawn6cipu",
-        "GraphQLAPIEndpointOutput": "https://gue2wkmzc5fmnljlaabbdbla5m.appsync-api.eu-west-2.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-lub5egadcfdeve5w4r6plhdcfe"
-      },
-      "lastPushTimeStamp": "2025-02-16T14:33:01.825Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apiukbridgeclubamplify"
-      },
-      "lastPushDirHash": "IySf39c03ZEYhR4Cvjl9DWpguec="
-    }
-  },
-  "auth": {
-    "ukbridgeclubamplifyb1a78a80": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/auth/ukbridgeclubamplifyb1a78a80-cloudformation-template.json",
-        "logicalId": "authukbridgeclubamplifyb1a78a80"
-      },
-      "lastPushTimeStamp": "2025-02-16T14:33:01.827Z",
-      "output": {
-        "UserPoolId": "eu-west-2_HtanvtmuD",
-        "AppClientIDWeb": "23vc6p9ikchfnbtb6a1vcau28m",
-        "AppClientID": "13fgn69dn3sqi5vavh3rgujruc",
-        "IdentityPoolId": "eu-west-2:7036d3cb-efed-4905-a54e-e72fb7458f43",
-        "UserPoolArn": "arn:aws:cognito-idp:eu-west-2:124355663536:userpool/eu-west-2_HtanvtmuD",
-        "IdentityPoolName": "ukbridgeclubamplifyb1a78a80_identitypool_b1a78a80__dev",
-        "UserPoolName": "ukbridgeclubamplifyb1a78a80_userpool_b1a78a80"
-      },
-      "lastPushDirHash": "DVTaZqJWenipVyoNUq6MxooP5IM="
-    }
-  },
   "function": {
     "ukbridgeclubprocessresults": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2025-04-28T21:53:51.871Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2025-04-28T21:53:55.001Z",
+      "distZipFilename": "ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-ukbridgeclubamplify-dev-0c489-deployment",
+        "s3Key": "amplify-builds/ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/function/ukbridgeclubprocessresults-cloudformation-template.json",
+        "logicalId": "functionukbridgeclubprocessresults"
+      },
+      "lastPushTimeStamp": "2025-04-28T22:05:35.561Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::124355663536:role/ukbridgeclubamplifyLambdaRole9b2ee59e-dev",
+        "Region": "eu-west-2",
+        "Arn": "arn:aws:lambda:eu-west-2:124355663536:function:ukbridgeclubprocessresults-dev",
+        "Name": "ukbridgeclubprocessresults-dev",
+        "LambdaExecutionRole": "ukbridgeclubamplifyLambdaRole9b2ee59e-dev"
+      },
+      "lastPushDirHash": "8vW3sSm2tfIdIcTRiVYCJaozY8I="
     }
   }
 }
