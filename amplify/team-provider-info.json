@@ -17,6 +17,9 @@
       },
       "api": {
         "ukbridgeclubamplify": {}
+      },
+      "function": {
+        "ukbridgeclubprocessresults": {}
       }
     }
   }

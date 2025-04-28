@@ -96,5 +96,12 @@
       },
       "lastPushDirHash": "DVTaZqJWenipVyoNUq6MxooP5IM="
     }
+  },
+  "function": {
+    "ukbridgeclubprocessresults": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
   }
 }
