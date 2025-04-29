@@ -1,4 +1,4 @@
-import { MasterPointType } from '@/app/model/types';
+import { MasterPointType } from '../types';
 
 export type SessionScoreType = 'PAIR_MP' | 'PAIR_IMP';
 

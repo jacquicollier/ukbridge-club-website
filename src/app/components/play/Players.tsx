@@ -1,4 +1,4 @@
-import { ContestantDirection } from '@/app/model/types';
+import { ContestantDirection } from '../../../../shared/types';
 
 export default function Players(props: {
   players: Map<ContestantDirection, string[]>;

@@ -3,14 +3,9 @@
 import BridgeBoard from '@/app/components/hand/board/BridgeBoard';
 import { useState } from 'react';
 import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
-import { ContestantDirection, Suit } from '@/app/model/types';
+import { ContestantDirection, Suit } from 'shared/types';
 import BridgeDealHeader from '@/app/components/play/BridgeDealHeader';
-import {
-  Board,
-  BoardResult,
-  Contestant,
-  Directions,
-} from '@/app/model/constants';
+import { Board, BoardResult, Contestant, Directions } from 'shared/constants';
 import { CardSource } from '@/app/components/hand/board/CardSource';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
 import BoardScores from '@/app/components/hand/board/BoardScores';

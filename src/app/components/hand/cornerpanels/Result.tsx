@@ -1,9 +1,6 @@
-import {
-  BoardScore,
-  PairMPBoardScore,
-} from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
-import { Contestant } from '@/app/model/constants';
-import { getResult } from '@/app/api/[club]/results/[date]/[game]/recordofplay/utils';
+import { BoardScore, PairMPBoardScore } from 'shared/board/boardscore';
+import { Contestant } from 'shared/constants';
+import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
 
 export default function Result(props: {
   boardScore: BoardScore;

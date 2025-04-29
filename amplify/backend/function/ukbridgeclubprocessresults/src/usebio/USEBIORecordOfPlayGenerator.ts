@@ -1,4 +1,5 @@
-import { RecordOfPlayGenerator } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlayGenerator';
+import { Section } from 'shared/Section';
+import { RecordOfPlayGenerator } from '../RecordOfPlayGenerator';
 import {
   Hand,
   HandSet,
@@ -6,27 +7,17 @@ import {
   Usebio,
   UsebioBoard,
   UsebioSection,
-} from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/model';
-import {
-  Card,
-  Direction,
-  Rank,
-  SessionScoreType,
-  Suit,
-} from '@/app/model/types';
+} from './model';
+import { Card, Direction, Rank, SessionScoreType, Suit } from 'shared/types';
 import {
   Board,
   BoardResult,
   Contestant,
   rankOrder,
   suitOrder,
-} from '@/app/model/constants';
-import {
-  PairMPSessionScore,
-  SessionScore,
-} from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/session/sessionscore';
-import { PairMPBoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
-import { Section } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
+} from 'shared/constants';
+import { PairMPSessionScore, SessionScore } from 'shared/session/sessionscore';
+import { PairMPBoardScore } from 'shared/board/boardscore';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private usebio: Usebio;
@@ -73,9 +64,10 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
       if (this.usebio.EVENT.WINNER_TYPE == 1) {
         const playersMap = sections.reduce<Map<Contestant, string[]>>(
           (acc, section) => {
-            section.players.entries().forEach((contestant) => {
-              acc.set(contestant[0], contestant[1]);
-            });
+            const iterator = section.players.entries();
+            for (const [key, value] of iterator) {
+              acc.set(key, value);
+            }
             return acc;
           },
           new Map(),

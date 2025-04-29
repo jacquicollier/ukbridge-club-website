@@ -1,6 +1,6 @@
 'use client';
 
-import { SessionScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/session/sessionscore';
+import { SessionScore } from '../../../../../../../../../shared/session/sessionscore';
 import { useRouter } from 'next/navigation';
 
 export default function MPTable({

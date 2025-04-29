@@ -1,7 +1,7 @@
 import Switch from 'react-switch';
 import { BarChart } from 'lucide-react';
-import { BoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
-import { Contestant } from '@/app/model/constants';
+import { BoardScore } from 'shared/board/boardscore';
+import { Contestant } from 'shared/constants';
 
 export default function BridgeDealHeader(props: {
   board: number;

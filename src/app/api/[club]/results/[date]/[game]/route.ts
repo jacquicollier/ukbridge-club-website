@@ -1,6 +1,6 @@
 import { parseStringPromise } from 'xml2js';
-import { USEBIORecordOfPlayGenerator } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/USEBIORecordOfPlayGenerator';
-import { UsebioFile } from '@/app/api/[club]/results/[date]/[game]/recordofplay/usebio/model';
+import { USEBIORecordOfPlayGenerator } from '../../../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/usebio/USEBIORecordOfPlayGenerator';
+import { UsebioFile } from '../../../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/usebio/model';
 import { getAndParseObject, putObject } from '@/app/api/clubs/utils/s3';
 
 export async function GET(

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { Result } from '@/app/model/types';
+import { Result } from '../../../../../../shared/types';
 import { listFolders } from '@/app/api/clubs/utils/s3';
 
 export async function GET(

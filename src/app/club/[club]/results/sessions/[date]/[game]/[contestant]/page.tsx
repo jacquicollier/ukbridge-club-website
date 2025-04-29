@@ -1,7 +1,7 @@
 import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
-import { Board, BoardResult, Contestant } from '@/app/model/constants';
-import { ContestantDirection } from '@/app/model/types';
-import { RecordOfPlay } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
+import { Board, BoardResult, Contestant } from 'shared/constants';
+import { ContestantDirection } from 'shared/types';
+import { RecordOfPlay } from 'shared/RecordOfPlay';
 import BridgeTraveller from '@/app/components/play/BridgeTraveller';
 
 export default async function ResultPage({

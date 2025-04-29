@@ -4,7 +4,6 @@ import Deal from '@/app/components/hand/board/Deal';
 import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
 import Result from '@/app/components/hand/cornerpanels/Result';
 import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
-import { Card } from '@/app/model/types';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
   Auction,
@@ -12,10 +11,11 @@ import {
   Contestant,
   EWVulnerableBoards,
   NSVulnerableBoards,
-} from '@/app/model/constants';
+} from 'shared/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
-import { BoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
+import { BoardScore } from 'shared/board/boardscore';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
+import { Card } from 'shared/types';
 
 export default function BridgeBoard(props: {
   board: Board;

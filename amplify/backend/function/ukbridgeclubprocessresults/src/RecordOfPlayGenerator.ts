@@ -1,8 +1,6 @@
-import {
-  RecordOfPlay,
-  Section,
-} from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
-import { SessionScoreType } from '@/app/model/types';
+import { SessionScoreType } from 'shared/types';
+import { Section } from 'shared/Section';
+import { RecordOfPlay } from 'shared/RecordOfPlay';
 
 export abstract class RecordOfPlayGenerator {
   abstract getSessionScoreType(): SessionScoreType;

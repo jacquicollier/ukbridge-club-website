@@ -1,5 +1,5 @@
 import MPTable from '@/app/club/[club]/results/sessions/[date]/[game]/components/MPTable';
-import { RecordOfPlay } from '@/app/api/[club]/results/[date]/[game]/recordofplay/RecordOfPlay';
+import { RecordOfPlay } from '../../../../../../../../shared/RecordOfPlay';
 
 export default async function ResultPage({
   params,

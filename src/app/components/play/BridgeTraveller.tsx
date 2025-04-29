@@ -1,4 +1,4 @@
-import { Board, Contestant } from '@/app/model/constants';
+import { Board, Contestant } from 'shared/constants';
 import TravellerHeader from '@/app/components/play/TravellerHeader';
 import BoardScores from '@/app/components/hand/board/BoardScores';
 
