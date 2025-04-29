@@ -17,7 +17,7 @@ import {
   suitOrder,
 } from 'shared/constants';
 import { PairMPSessionScore, SessionScore } from 'shared/session/sessionscore';
-import { PairMPTravellerLine } from 'shared/board/travellerLine';
+import { PairMPTravellerLine } from 'shared/traveller/travellerLine';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private usebio: Usebio;

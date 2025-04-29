@@ -1,4 +1,4 @@
-import { TravellerLine } from 'shared/board/travellerLine';
+import { TravellerLine } from 'shared/traveller/travellerLine';
 import { ContestantId } from 'shared/constants';
 import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
 

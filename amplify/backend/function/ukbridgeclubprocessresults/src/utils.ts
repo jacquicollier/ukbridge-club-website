@@ -1,4 +1,4 @@
-import { TravellerLine } from 'shared/board/travellerLine';
+import { TravellerLine } from 'shared/traveller/travellerLine';
 import { Card, Direction } from 'shared/types';
 import { Directions, rankOrder, suitOrder } from 'shared/constants';
 

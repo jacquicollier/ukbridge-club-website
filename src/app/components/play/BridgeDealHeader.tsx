@@ -1,6 +1,6 @@
 import Switch from 'react-switch';
 import { BarChart } from 'lucide-react';
-import { TravellerLine } from 'shared/board/travellerLine';
+import { TravellerLine } from 'shared/traveller/travellerLine';
 import { ContestantId } from 'shared/constants';
 
 export default function BridgeDealHeader(props: {

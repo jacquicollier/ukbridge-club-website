@@ -13,7 +13,7 @@ import {
   NSVulnerableBoards,
 } from 'shared/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
-import { TravellerLine } from 'shared/board/travellerLine';
+import { TravellerLine } from 'shared/traveller/travellerLine';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 import { Card } from 'shared/types';
 
