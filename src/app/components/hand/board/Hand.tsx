@@ -1,5 +1,5 @@
-import { Card, Suit } from '@/app/model/types';
-import { rankOrder, SuitMap } from '@/app/model/constants';
+import { Card, Suit } from 'shared/types';
+import { rankOrder, SuitMap } from 'shared/constants';
 import { Button } from '@aws-amplify/ui-react';
 
 export default function Hand(props: {

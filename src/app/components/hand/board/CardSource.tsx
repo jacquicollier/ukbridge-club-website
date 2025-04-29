@@ -1,4 +1,4 @@
-import { Card } from '@/app/model/types';
+import { Card } from '../../../../../shared/types';
 
 export class CardSource {
   private cards: Card[];

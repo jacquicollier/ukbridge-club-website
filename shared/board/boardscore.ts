@@ -1,4 +1,4 @@
-import { Direction } from '@/app/model/types';
+import { Direction } from '../types';
 
 export type BoardScoreType = 'PAIR_MP' | 'PAIR_IMP';
 

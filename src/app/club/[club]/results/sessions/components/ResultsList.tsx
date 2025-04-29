@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Result } from '@/app/model/types';
+import { Result } from '../../../../../../../shared/types';
 
 export default function ResultsList({
   club,

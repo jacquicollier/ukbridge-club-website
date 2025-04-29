@@ -16,6 +16,7 @@
     "typescript": "^5.3.0"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.798.0"
+    "@aws-sdk/client-s3": "^3.798.0",
+    "shared": "file:../../../../shared"
   }
 }

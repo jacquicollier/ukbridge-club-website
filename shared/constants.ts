@@ -1,11 +1,5 @@
-import {
-  Card,
-  ContestantDirection,
-  Direction,
-  Rank,
-  Suit,
-} from '@/app/model/types';
-import { BoardScore } from '@/app/api/[club]/results/[date]/[game]/recordofplay/score/board/boardscore';
+import { Card, ContestantDirection, Direction, Rank, Suit } from './types';
+import { BoardScore } from './board/boardscore';
 
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Direction } from '@/app/model/types';
+import { Card, Direction } from '../../../../../../../../../shared/types';
 import { useState } from 'react';
 import { CardSource } from '@/app/components/hand/board/CardSource';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';

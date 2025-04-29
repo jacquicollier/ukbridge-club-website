@@ -29,6 +29,7 @@
     "react-dom": "^19.0.0",
     "react-switch": "^7.1.0",
     "rrule": "^2.8.1",
+    "shared": "file:shared",
     "xml2js": "^0.6.2",
     "yup": "^1.6.1"
   },

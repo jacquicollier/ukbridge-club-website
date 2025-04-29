@@ -1,6 +1,6 @@
-import { Card, Direction, Suit } from '@/app/model/types';
+import { Card, Direction, Suit } from 'shared/types';
 import { CardSource } from '@/app/components/hand/board/CardSource';
-import { Directions, rankOrder } from '@/app/model/constants';
+import { Directions, rankOrder } from 'shared/constants';
 
 export class BridgePlay {
   private slots: Partial<Record<Direction, Card>> = {};
