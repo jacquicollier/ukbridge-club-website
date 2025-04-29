@@ -21,7 +21,7 @@
       "function": {
         "ukbridgeclubprocessresults": {
           "deploymentBucketName": "amplify-ukbridgeclubamplify-dev-0c489-deployment",
-          "s3Key": "amplify-builds/ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip"
+          "s3Key": "amplify-builds/ukbridgeclubprocessresults-53783842634441454736-build.zip"
         }
       }
     }

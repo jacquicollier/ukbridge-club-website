@@ -4,12 +4,14 @@ import {
   HeadObjectCommand,
   PutObjectCommand,
 } from '@aws-sdk/client-s3';
-import { parseUsebio } from './parseUsebio.js';
-import { parsePbn } from './parsePbn.js';
+import { SQSEvent } from 'aws-lambda';
+import { parseUsebio } from './parseUsebio';
+import { parsePbn } from './parsePbn';
+import { Readable } from 'node:stream';
 
 const s3 = new S3Client({});
 
-export const handler = async (event) => {
+export const handler = async (event: SQSEvent) => {
   console.log('Received SQS event:', JSON.stringify(event, null, 2));
 
   for (const record of event.Records) {
@@ -52,37 +54,48 @@ export const handler = async (event) => {
   };
 };
 
-async function processUsebio(bucketName, key) {
-  const command = new GetObjectCommand({ Bucket: bucketName, Key: key });
-  const data = await s3.send(command);
+async function processUsebio(bucketName: string, key: string) {
+  const { Body } = await s3.send(
+    new GetObjectCommand({ Bucket: bucketName, Key: key }),
+  );
 
-  const bodyString = await streamToString(data.Body);
-  return parseUsebio(bodyString);
-}
+  if (!Body) return [];
 
-async function processPbn(bucketName, key) {
-  const command = new GetObjectCommand({ Bucket: bucketName, Key: key });
-  const data = await s3.send(command);
-
-  const bodyString = await streamToString(data.Body);
-  return parsePbn(bodyString);
-}
-
-async function checkIfFileExists(bucketName, key) {
-  try {
-    const command = new HeadObjectCommand({ Bucket: bucketName, Key: key });
-    await s3.send(command);
-    return true; // File exists
-  } catch (error) {
-    if (error.name === 'NotFound') {
-      return false;
-    }
-    console.error('Error checking if file exists:', error);
-    throw error; // unexpected error
+  if (Body instanceof Readable) {
+    const bodyString = await streamToString(Body);
+    return parseUsebio(bodyString);
   }
 }
 
-async function saveJsonToS3(bucketName, key, jsonData) {
+async function processPbn(bucketName: string, key: string) {
+  const { Body } = await s3.send(
+    new GetObjectCommand({ Bucket: bucketName, Key: key }),
+  );
+
+  if (!Body) return [];
+
+  if (Body instanceof Readable) {
+    const bodyString = await streamToString(Body);
+    return parsePbn(bodyString);
+  }
+}
+
+async function checkIfFileExists(bucketName: string, key: string) {
+  try {
+    const command = new HeadObjectCommand({ Bucket: bucketName, Key: key });
+    await s3.send(command);
+    return true;
+  } catch (error) {
+    if (error instanceof Error && error.name === 'NotFound') {
+      return false;
+    } else {
+      console.error('Error checking if file exists:', error);
+      throw error;
+    }
+  }
+}
+
+async function saveJsonToS3(bucketName: string, key: string, jsonData: object) {
   const command = new PutObjectCommand({
     Bucket: bucketName,
     Key: key,
@@ -92,14 +105,18 @@ async function saveJsonToS3(bucketName, key, jsonData) {
   await s3.send(command);
 }
 
-// Helper to read stream to string
-async function streamToString(stream) {
-  if (typeof stream === 'string') return stream;
+async function streamToString(stream: Readable): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const chunks: Buffer[] = [];
 
-  return await new Promise((resolve, reject) => {
-    const chunks = [];
-    stream.on('data', (chunk) => chunks.push(chunk));
+    stream.on('data', (chunk: Buffer) => {
+      chunks.push(chunk);
+    });
+
+    stream.on('end', () => {
+      resolve(Buffer.concat(chunks).toString('utf-8')); // Convert the buffer to a string
+    });
+
     stream.on('error', reject);
-    stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
   });
 }

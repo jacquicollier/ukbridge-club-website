@@ -17,19 +17,19 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2025-04-28T21:53:51.871Z",
+      "lastBuildTimeStamp": "2025-04-29T09:06:28.066Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2025-04-28T21:53:55.001Z",
-      "distZipFilename": "ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip",
+      "lastPackageTimeStamp": "2025-04-29T09:06:28.110Z",
+      "distZipFilename": "ukbridgeclubprocessresults-53783842634441454736-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-ukbridgeclubamplify-dev-0c489-deployment",
-        "s3Key": "amplify-builds/ukbridgeclubprocessresults-4e6b6a32357273476c47-build.zip"
+        "s3Key": "amplify-builds/ukbridgeclubprocessresults-53783842634441454736-build.zip"
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-ukbridgeclubamplify-dev-0c489-deployment/amplify-cfn-templates/function/ukbridgeclubprocessresults-cloudformation-template.json",
         "logicalId": "functionukbridgeclubprocessresults"
       },
-      "lastPushTimeStamp": "2025-04-28T21:54:59.744Z",
+      "lastPushTimeStamp": "2025-04-29T09:07:30.962Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::124355663536:role/ukbridgeclubamplifyLambdaRole9b2ee59e-dev",
         "Region": "eu-west-2",
@@ -37,7 +37,8 @@
         "Name": "ukbridgeclubprocessresults-dev",
         "LambdaExecutionRole": "ukbridgeclubamplifyLambdaRole9b2ee59e-dev"
       },
-      "lastPushDirHash": "8vW3sSm2tfIdIcTRiVYCJaozY8I="
+      "lastPushDirHash": "xLxT3B3mF3tt6TdFtO/U2+cVJvk=",
+      "lastDevBuildTimeStamp": "2025-04-29T09:06:10.643Z"
     }
   }
 }
