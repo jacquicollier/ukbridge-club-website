@@ -1,10 +1,13 @@
-import { BoardScore, PairMPBoardScore } from 'shared/board/boardscore';
-import { Contestant } from 'shared/constants';
+import {
+  TravellerLine,
+  PairMPTravellerLine,
+} from 'shared/traveller/travellerLine';
+import { ContestantId } from 'shared/constants';
 import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
 
 export default function Result(props: {
-  boardScore: BoardScore;
-  contestant: Contestant;
+  boardScore: TravellerLine;
+  contestant: ContestantId;
 }) {
   const isNS = props.contestant.id !== Number(props.boardScore.ew);
 
@@ -30,7 +33,7 @@ export default function Result(props: {
   );
 }
 
-function renderMPResult(isNS: boolean, boardScore: PairMPBoardScore) {
+function renderMPResult(isNS: boolean, boardScore: PairMPTravellerLine) {
   const direction = isNS ? 'NS' : 'EW';
   const matchPoints = isNS
     ? boardScore.nsMatchPoints

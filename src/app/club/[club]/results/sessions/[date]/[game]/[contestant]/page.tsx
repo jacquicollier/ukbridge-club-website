@@ -1,5 +1,5 @@
 import BridgeDealPlay from '@/app/components/play/BridgeDealPlay';
-import { Board, BoardResult, Contestant } from 'shared/constants';
+import { Board, BoardResult, ContestantId } from 'shared/constants';
 import { ContestantDirection } from 'shared/types';
 import { RecordOfPlay } from 'shared/RecordOfPlay';
 import BridgeTraveller from '@/app/components/play/BridgeTraveller';
@@ -22,7 +22,7 @@ export default async function ResultPage({
   );
   const recordOfPlay: RecordOfPlay = await apiResponse.json();
 
-  function parseContestant(input: string): Contestant | null {
+  function parseContestant(input: string): ContestantId | null {
     const match = input.match(/^(NS|EW)?(\d+)$/);
 
     if (!match) return null;
@@ -83,7 +83,7 @@ function renderBoard(
   index: number,
   board: Board,
   boardResult: BoardResult,
-  contestant: Contestant | null,
+  contestant: ContestantId | null,
 ) {
   if (!boardResult) {
     return null;

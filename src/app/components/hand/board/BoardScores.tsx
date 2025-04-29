@@ -1,10 +1,10 @@
-import { BoardScore } from 'shared/board/boardscore';
-import { Contestant } from 'shared/constants';
+import { TravellerLine } from 'shared/traveller/travellerLine';
+import { ContestantId } from 'shared/constants';
 import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
 
 export default function BoardScores(props: {
-  boardScores: BoardScore[];
-  contestant: Contestant | null;
+  boardScores: TravellerLine[];
+  contestant: ContestantId | null;
 }) {
   if (props.boardScores.length === 0) return <p>No scores available.</p>;
 
@@ -54,8 +54,8 @@ export default function BoardScores(props: {
 
 function renderTravellerLine(
   index: number,
-  boardScore: BoardScore,
-  contestant: Contestant | null,
+  boardScore: TravellerLine,
+  contestant: ContestantId | null,
 ) {
   const highlightLine: boolean = !!(
     contestant &&

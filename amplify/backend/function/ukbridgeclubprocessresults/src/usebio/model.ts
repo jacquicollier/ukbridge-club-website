@@ -45,7 +45,7 @@ export interface Participants {
 
 export interface Pair {
   PAIR_NUMBER: string;
-  DIRECTION: string;
+  DIRECTION?: string;
   PERCENTAGE: string;
   PLACE: string;
   PLAYER: Player[];

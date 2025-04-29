@@ -1,5 +1,5 @@
 import { Card, ContestantDirection, Direction, Rank, Suit } from './types';
-import { BoardScore } from './board/boardscore';
+import { TravellerLine } from './traveller/travellerLine';
 
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 
@@ -31,15 +31,15 @@ export const suitOrder = ['S', 'H', 'D', 'C'];
 export const NSVulnerableBoards: number[] = [2, 5, 12, 15, 4, 7, 10, 13];
 export const EWVulnerableBoards: number[] = [0, 3, 6, 9, 4, 7, 10, 13];
 
-export interface Contestant {
+export interface ContestantId {
   id: number;
   direction: ContestantDirection | null;
 }
 
 // Note: Doesn't currently handle individual events
 export interface HandContestants {
-  nsContestant: Contestant;
-  ewContestant: Contestant;
+  nsContestant: ContestantId;
+  ewContestant: ContestantId;
 }
 
 export interface Auction {
@@ -54,7 +54,7 @@ export interface Board {
 }
 
 export interface BoardResult {
-  boardScore: BoardScore;
+  boardScore: TravellerLine;
   auction: Auction | null;
   playedCards: Card[] | null;
 }

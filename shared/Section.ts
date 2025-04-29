@@ -1,17 +1,17 @@
 import { SessionScore } from './session/sessionscore';
-import { Board, Contestant } from './constants';
+import { Board, ContestantId } from './constants';
 
 export class Section {
   name: string;
   boards: Board[];
   sessionScores: SessionScore[];
-  players: Map<Contestant, string[]>;
+  players: Map<ContestantId, string[]>;
 
   constructor(
     name: string,
     boards: Board[],
     sessionScores: SessionScore[],
-    players: Map<Contestant, string[]>,
+    players: Map<ContestantId, string[]>,
   ) {
     this.name = name;
     this.boards = boards;
