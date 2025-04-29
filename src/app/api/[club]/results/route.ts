@@ -52,6 +52,7 @@ export async function POST(
 
     await putObject(
       `${club}.ukbridge.club`,
+      file.name,
       file,
       Buffer.from(await file.arrayBuffer()),
     );
