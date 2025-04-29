@@ -8,12 +8,12 @@ import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
   Auction,
   Board,
-  Contestant,
+  ContestantId,
   EWVulnerableBoards,
   NSVulnerableBoards,
 } from 'shared/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
-import { BoardScore } from 'shared/board/boardscore';
+import { TravellerLine } from 'shared/board/travellerLine';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 import { Card } from 'shared/types';
 
@@ -21,10 +21,10 @@ export default function BridgeBoard(props: {
   board: Board;
   auction: Auction | null;
   bridgePlay: BridgePlay | null;
-  boardScore: BoardScore;
+  boardScore: TravellerLine;
   validNextCards: Card[];
   playItAgain: boolean;
-  contestant: Contestant | null;
+  contestant: ContestantId | null;
 }) {
   return (
     <>

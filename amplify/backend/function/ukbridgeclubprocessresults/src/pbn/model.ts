@@ -10,9 +10,7 @@ export const valueAndDetailsSchema = yup.object().shape({
     .min(1, 'At least one detail is required'),
 });
 
-export type ValueAndDetails = yup.InferType<typeof valueAndDetailsSchema>;
-
-export const handSchema = yup.object().shape({
+const handSchema = yup.object().shape({
   // Fields mandatory for export
 
   // the name of the tournament or match
@@ -93,14 +91,8 @@ export const handSchema = yup.object().shape({
   scoretable: valueAndDetailsSchema,
 });
 
-//   "homeTeam": "Sweden",
-//   "room": "Open",
-//   "round": "18",
-//   "score": "NS 420",
-//   "section": "Open",
-//   "table": "14",
-//   "visitTeam": "Iceland",
-//   "auction": "N",
-//   "play": "W"
+export const pbnSchema = yup.object().shape({
+  hands: yup.array().of(handSchema.required()),
+});
 
-export type Hand = yup.InferType<typeof handSchema>;
+export type PBNFile = yup.InferType<typeof pbnSchema>;

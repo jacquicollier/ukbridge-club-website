@@ -1,4 +1,4 @@
-import { Hand } from './hand';
+import { Model } from './model';
 
 export const defaultHands = [
   {
@@ -1700,4 +1700,4 @@ export const defaultHands = [
       ],
     },
   },
-] as Hand[];
+] as Model[];

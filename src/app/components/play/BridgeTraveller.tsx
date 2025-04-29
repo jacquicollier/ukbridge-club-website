@@ -1,10 +1,10 @@
-import { Board, Contestant } from 'shared/constants';
+import { Board, ContestantId } from 'shared/constants';
 import TravellerHeader from '@/app/components/play/TravellerHeader';
 import BoardScores from '@/app/components/hand/board/BoardScores';
 
 export default function BridgeTraveller(props: {
   board: Board;
-  contestant: Contestant | null;
+  contestant: ContestantId | null;
   backgroundColor: string;
 }) {
   const boardScores = props.board.results.map((it) => it.boardScore);

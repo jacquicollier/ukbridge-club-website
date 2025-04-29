@@ -5,7 +5,7 @@ import { useState } from 'react';
 import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
 import { ContestantDirection, Suit } from 'shared/types';
 import BridgeDealHeader from '@/app/components/play/BridgeDealHeader';
-import { Board, BoardResult, Contestant, Directions } from 'shared/constants';
+import { Board, BoardResult, ContestantId, Directions } from 'shared/constants';
 import { CardSource } from '@/app/components/hand/board/CardSource';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
 import BoardScores from '@/app/components/hand/board/BoardScores';
@@ -14,7 +14,7 @@ export default function BridgeDealPlay(props: {
   board: Board;
   boardResult: BoardResult;
   players: Map<ContestantDirection, string[]>;
-  contestant: Contestant | null;
+  contestant: ContestantId | null;
   backgroundColor: string;
 }) {
   const boardScores = props.board.results.map((it) => it.boardScore);

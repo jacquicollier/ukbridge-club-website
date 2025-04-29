@@ -1,8 +1,8 @@
-import { BoardScore } from 'shared/board/boardscore';
+import { TravellerLine } from 'shared/board/travellerLine';
 import { Card, Direction } from 'shared/types';
 import { Directions, rankOrder, suitOrder } from 'shared/constants';
 
-export function getResult(boardScore: BoardScore) {
+export function getResult(boardScore: TravellerLine) {
   if (!boardScore.tricks) {
     return 'Pass';
   }

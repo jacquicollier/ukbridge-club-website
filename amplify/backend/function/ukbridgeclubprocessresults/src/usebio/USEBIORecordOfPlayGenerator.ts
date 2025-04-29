@@ -12,12 +12,12 @@ import { Card, Direction, Rank, SessionScoreType, Suit } from 'shared/types';
 import {
   Board,
   BoardResult,
-  Contestant,
+  ContestantId,
   rankOrder,
   suitOrder,
 } from 'shared/constants';
 import { PairMPSessionScore, SessionScore } from 'shared/session/sessionscore';
-import { PairMPBoardScore } from 'shared/board/boardscore';
+import { PairMPTravellerLine } from 'shared/board/travellerLine';
 
 export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private usebio: Usebio;
@@ -62,7 +62,7 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
       });
 
       if (this.usebio.EVENT.WINNER_TYPE == 1) {
-        const playersMap = sections.reduce<Map<Contestant, string[]>>(
+        const playersMap = sections.reduce<Map<ContestantId, string[]>>(
           (acc, section) => {
             const iterator = section.players.entries();
             for (const [key, value] of iterator) {
@@ -141,10 +141,10 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
     }, []);
   }
 
-  private getPlayers(pairs: Pair[]): Map<Contestant, string[]> {
+  private getPlayers(pairs: Pair[]): Map<ContestantId, string[]> {
     return pairs.reduce((map, pair) => {
       const names = pair.PLAYER.map((it) => it.PLAYER_NAME);
-      const contestant: Contestant = {
+      const contestant: ContestantId = {
         id: Number(pair.PAIR_NUMBER),
         direction:
           this.usebio.EVENT.WINNER_TYPE == 2
@@ -154,7 +154,7 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
 
       map.set(contestant, names);
       return map;
-    }, new Map<Contestant, string[]>());
+    }, new Map<ContestantId, string[]>());
   }
 
   private getSessionScores(boards: Board[], pairs: Pair[]): SessionScore[] {
@@ -196,14 +196,14 @@ export class USEBIORecordOfPlayGenerator extends RecordOfPlayGenerator {
   private getTotalMatchPoints(boardResult?: BoardResult): number {
     if (!boardResult) return 0;
     const { nsMatchPoints, ewMatchPoints } =
-      boardResult.boardScore as PairMPBoardScore;
+      boardResult.boardScore as PairMPTravellerLine;
     return nsMatchPoints + ewMatchPoints;
   }
 
   private getMatchPointsForPair(pair: Pair, boardResult?: BoardResult): number {
     if (!boardResult) return 0;
     const { nsMatchPoints, ewMatchPoints, ns } =
-      boardResult.boardScore as PairMPBoardScore;
+      boardResult.boardScore as PairMPTravellerLine;
 
     if (pair.DIRECTION) {
       return pair.DIRECTION === 'NS' ? nsMatchPoints : ewMatchPoints;
