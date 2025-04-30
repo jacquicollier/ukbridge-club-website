@@ -5,7 +5,7 @@ import { useDDS } from '@/app/context/DDSContext';
 import { Card, Direction, Suit } from 'shared/types';
 import { useEffect, useState } from 'react';
 import { SuitMap } from 'shared/constants';
-import { generatePbnString } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
+import { generatePbnString } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/utils';
 
 export default function DDSTable(props: {
   deal: { [key in Direction]: Card[] };

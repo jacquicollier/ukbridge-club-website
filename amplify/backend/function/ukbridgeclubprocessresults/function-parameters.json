@@ -1,5 +1,5 @@
 {
-  "handler": "dist/index.handler",
+  "handler": "src/index.handler",
   "permissions": {
     "s3": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
     "sqs": [

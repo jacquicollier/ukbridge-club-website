@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS", // 👈 Required for AWS Lambda compatibility
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "src",
+    "rootDir": "lib",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,

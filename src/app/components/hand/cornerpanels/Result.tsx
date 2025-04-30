@@ -3,7 +3,7 @@ import {
   PairMPTravellerLine,
 } from 'shared/traveller/travellerLine';
 import { ContestantId } from 'shared/constants';
-import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/src/utils';
+import { getResult } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/utils';
 
 export default function Result(props: {
   boardScore: TravellerLine;

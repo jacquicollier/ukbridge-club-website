@@ -1,4 +1,4 @@
-import { handler } from '../src';
+import { handler } from '../lib';
 
 describe('Lambda handler', () => {
   it('should process a basic SQS event without throwing', async () => {
