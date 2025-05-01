@@ -1,6 +1,12 @@
+import { PBNHand } from './model';
+
 type Field = { value: string; details?: string[] };
 
-export function convertPBNToJSON(inputString: string): string {
+export function loadPBN(fileContents: string): PBNHand[] {
+  return JSON.parse(convertPBNToJSON(fileContents));
+}
+
+function convertPBNToJSON(inputString: string): string {
   const dataMap: Record<string, Field>[] = [];
   let currentDataMap: Record<string, Field> = {};
   let currentHeading: string | null = null;

@@ -50,7 +50,7 @@ export interface Auction {
 export interface Board {
   boardNumber: number;
   deal: { [key in Direction]: Card[] };
-  results: BoardResult[];
+  // results: BoardResult[];
 }
 
 export interface BoardResult {

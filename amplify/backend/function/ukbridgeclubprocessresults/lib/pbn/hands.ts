@@ -1,4 +1,4 @@
-import { Hand } from './model';
+import { PBNHand } from './model';
 
 export const defaultHands = [
   {
@@ -1700,4 +1700,4 @@ export const defaultHands = [
       ],
     },
   },
-] as Hand[];
+] as PBNHand[];
