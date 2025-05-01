@@ -93,10 +93,4 @@ export const handSchema = yup.object().shape({
   scoretable: valueAndDetailsSchema,
 });
 
-export type Hand = yup.InferType<typeof handSchema>;
-
-export const pbnSchema = yup.object().shape({
-  hands: yup.array().of(handSchema.required()),
-});
-
-export type PBNFile = yup.InferType<typeof pbnSchema>;
+export type PBNHand = yup.InferType<typeof handSchema>;

@@ -6,12 +6,12 @@ import {
   UsebioSection,
 } from './usebio/model';
 import { Contestant } from 'shared/contestants/contestant';
-import { PBNFile } from './pbn/model';
+import { PBNHand } from './pbn/model';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function generateContestants(
   usebioFile: UsebioFile | null,
-  pbnFile: PBNFile | null,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  pbnFile: PBNHand[] | null,
 ): Contestant[] {
   if (usebioFile) {
     const usebio: Usebio = usebioFile.USEBIO;
@@ -44,12 +44,19 @@ function generateContestantsForParticipants(
   section: UsebioSection | null,
 ): Contestant[] {
   return participants.PAIR.map((pair) => {
+    if (section) {
+      return {
+        section: section.$?.SECTION_ID ?? null,
+        id: pair.DIRECTION
+          ? `${pair.DIRECTION}${pair.PAIR_NUMBER}`
+          : pair.PAIR_NUMBER,
+        names: pair.PLAYER.map((player) => player.PLAYER_NAME),
+      } as Contestant;
+    }
     return {
-      section: section?.$?.SECTION_ID ?? null,
-      id: {
-        id: Number(pair.PAIR_NUMBER),
-        direction: pair.DIRECTION,
-      },
+      id: pair.DIRECTION
+        ? `${pair.DIRECTION}${pair.PAIR_NUMBER}`
+        : pair.PAIR_NUMBER,
       names: pair.PLAYER.map((player) => player.PLAYER_NAME),
     } as Contestant;
   });

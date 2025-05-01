@@ -6,10 +6,12 @@ import {
 } from '@aws-sdk/client-s3';
 import { SQSEvent } from 'aws-lambda';
 import { Readable } from 'node:stream';
-import { parseStringPromise } from 'xml2js';
 import { UsebioFile } from './usebio/model';
-import { PBNFile } from './pbn/model';
 import { generateContestants } from './contestant-generator';
+import { generateBoards } from './boards/boards-generator';
+import { PBNHand } from './pbn/model';
+import { loadPBN } from './pbn/pbnConverter';
+import { loadUsebio } from './usebio/usebioConverter';
 
 const s3 = new S3Client({});
 
@@ -29,35 +31,57 @@ export const handler = async (event: SQSEvent) => {
       const key = s3Event.Records[0].s3.object.key;
 
       let usebioFile: UsebioFile | null = null;
-      let pbnFile: PBNFile | null = null;
+      let pbnFile: PBNHand[] | null = null;
 
       if (key.endsWith('usebio.xml')) {
         const pbnKey = key.replace('usebio.xml', 'hands.pbn');
         if (await checkIfFileExists(bucketName, pbnKey)) {
-          pbnFile = await loadObject<PBNFile>(bucketName, key);
+          const pbnString = await loadObject(bucketName, pbnKey);
+          if (pbnString) {
+            pbnFile = loadPBN(pbnString);
+          }
+        }
+
+        const usebioString = await loadObject(bucketName, key);
+        if (usebioString) {
+          usebioFile = await loadUsebio(usebioString);
         }
 
         await saveJsonToS3(
           bucketName,
           key.replace('usebio.xml', 'contestants.json'),
-          generateContestants(
-            await loadObject<UsebioFile>(bucketName, key),
-            pbnFile,
-          ),
+          generateContestants(usebioFile, pbnFile),
+        );
+
+        await saveJsonToS3(
+          bucketName,
+          key.replace('usebio.xml', 'boards.json'),
+          generateBoards(usebioFile, pbnFile),
         );
       } else if (key.endsWith('hands.pbn')) {
         const usebioKey = key.replace('hands.pbn', 'usebio.xml');
         if (await checkIfFileExists(bucketName, usebioKey)) {
-          usebioFile = await loadObject<UsebioFile>(bucketName, key);
+          const usebioString = await loadObject(bucketName, usebioKey);
+          if (usebioString) {
+            usebioFile = await loadUsebio(usebioString);
+          }
+
+          const pbnString = await loadObject(bucketName, key);
+          if (pbnString) {
+            pbnFile = loadPBN(pbnString);
+          }
         }
 
         await saveJsonToS3(
           bucketName,
           key.replace('hands.pbn', 'contestants.json'),
-          generateContestants(
-            usebioFile,
-            await loadObject<PBNFile>(bucketName, key),
-          ),
+          generateContestants(usebioFile, pbnFile),
+        );
+
+        await saveJsonToS3(
+          bucketName,
+          key.replace('hands.pbn', 'boards.json'),
+          generateBoards(usebioFile, pbnFile),
         );
       } else {
         console.log('Skipping key:', key);
@@ -73,10 +97,10 @@ export const handler = async (event: SQSEvent) => {
   };
 };
 
-async function loadObject<T>(
+async function loadObject(
   bucketName: string,
   key: string,
-): Promise<T | null> {
+): Promise<string | null> {
   const { Body } = await s3.send(
     new GetObjectCommand({ Bucket: bucketName, Key: key }),
   );
@@ -84,9 +108,7 @@ async function loadObject<T>(
   if (!Body) return null;
 
   if (Body instanceof Readable) {
-    return (await parseStringPromise(await streamToString(Body), {
-      explicitArray: false,
-    })) as T;
+    return streamToString(Body);
   }
 
   return null;

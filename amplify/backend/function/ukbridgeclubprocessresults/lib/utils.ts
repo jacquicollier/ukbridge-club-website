@@ -1,6 +1,6 @@
 import { TravellerLine } from 'shared/traveller/travellerLine';
 import { Card, Direction } from 'shared/types';
-import { Directions, rankOrder, suitOrder } from 'shared/constants';
+import { Directions, rankOrder, suitOrder } from './boards/model';
 
 export function getResult(boardScore: TravellerLine) {
   if (!boardScore.tricks) {
