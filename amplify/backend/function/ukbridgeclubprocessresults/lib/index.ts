@@ -7,11 +7,12 @@ import {
 import { SQSEvent } from 'aws-lambda';
 import { Readable } from 'node:stream';
 import { UsebioFile } from './usebio/model';
-import { generateContestants } from './contestant-generator';
 import { generateBoards } from './boards/boards-generator';
 import { PBNHand } from './pbn/model';
 import { loadPBN } from './pbn/pbnConverter';
 import { loadUsebio } from './usebio/usebioConverter';
+import { generateSessionScores } from './session-score/session-scores-generator';
+import { generateContestants } from './contestants/contestants-generator';
 
 const s3 = new S3Client({});
 
@@ -58,6 +59,12 @@ export const handler = async (event: SQSEvent) => {
           key.replace('usebio.xml', 'boards.json'),
           generateBoards(usebioFile, pbnFile),
         );
+
+        await saveJsonToS3(
+          bucketName,
+          key.replace('usebio.xml', 'session-scores.json'),
+          generateSessionScores(usebioFile, pbnFile),
+        );
       } else if (key.endsWith('hands.pbn')) {
         const usebioKey = key.replace('hands.pbn', 'usebio.xml');
         if (await checkIfFileExists(bucketName, usebioKey)) {
@@ -82,6 +89,12 @@ export const handler = async (event: SQSEvent) => {
           bucketName,
           key.replace('hands.pbn', 'boards.json'),
           generateBoards(usebioFile, pbnFile),
+        );
+
+        await saveJsonToS3(
+          bucketName,
+          key.replace('hands.pbn', 'session-scores.json'),
+          generateSessionScores(usebioFile, pbnFile),
         );
       } else {
         console.log('Skipping key:', key);

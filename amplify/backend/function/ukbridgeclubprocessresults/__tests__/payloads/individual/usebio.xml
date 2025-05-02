@@ -1,0 +1,1555 @@
+<?xml version="1.0"?>
+<!DOCTYPE USEBIO SYSTEM "http://www.ebu.co.uk/usebio/usebio_v1_1.dtd">
+
+<!-- An example individual file. -->
+
+<USEBIO Version="1.1">
+
+    <CLUB>
+        <CLUB_NAME>The P2P Club</CLUB_NAME>
+        <CLUB_ID_NUMBER>509990</CLUB_ID_NUMBER>
+    </CLUB>
+
+    <EVENT EVENT_TYPE="INDIVIDUAL">
+        <DATE>13/05/2009</DATE>
+        <EVENT_DESCRIPTION>Individual</EVENT_DESCRIPTION>
+        <MASTER_POINT_SCALE>Club</MASTER_POINT_SCALE>
+        <SESSION_COUNT>1</SESSION_COUNT>
+        <P2P_CHARGE_RATE>1</P2P_CHARGE_RATE>
+        <MPS_AWARDED_FLAG>Y</MPS_AWARDED_FLAG>
+
+        <PARTICIPANTS EVENT_TYPE="INDIVIDUAL">
+            <PLAYER>
+                <PLAYER_NUMBER>1</PLAYER_NUMBER>
+                <MASTER_POINTS>
+                    <MASTER_POINTS_AWARDED>12</MASTER_POINTS_AWARDED>
+                    <MASTER_POINT_TYPE>Black</MASTER_POINT_TYPE>
+                </MASTER_POINTS>
+                <PLACE>1</PLACE>
+                <PERCENTAGE>63.64</PERCENTAGE>
+                <PLAYER_NAME>June Howard</PLAYER_NAME>
+                <CLUB_ID_NUMBER>212</CLUB_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>7</PLAYER_NUMBER>
+                <MASTER_POINTS>
+                    <MASTER_POINTS_AWARDED>9</MASTER_POINTS_AWARDED>
+                    <MASTER_POINT_TYPE>Black</MASTER_POINT_TYPE>
+                </MASTER_POINTS>
+                <PLACE>2</PLACE>
+                <PERCENTAGE>61.36</PERCENTAGE>
+                <PLAYER_NAME>Jack Howard</PLAYER_NAME>
+                <CLUB_ID_NUMBER>114</CLUB_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>8</PLAYER_NUMBER>
+                <MASTER_POINTS>
+                    <MASTER_POINTS_AWARDED>6</MASTER_POINTS_AWARDED>
+                    <MASTER_POINT_TYPE>Black</MASTER_POINT_TYPE>
+                </MASTER_POINTS>
+                <PLACE>3=</PLACE>
+                <PERCENTAGE>57.95</PERCENTAGE>
+                <PLAYER_NAME>Barbara Anne</PLAYER_NAME>
+                <CLUB_ID_NUMBER>187</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>956840</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>9</PLAYER_NUMBER>
+                <MASTER_POINTS>
+                    <MASTER_POINTS_AWARDED>6</MASTER_POINTS_AWARDED>
+                    <MASTER_POINT_TYPE>Black</MASTER_POINT_TYPE>
+                </MASTER_POINTS>
+                <PLACE>3=</PLACE>
+                <PERCENTAGE>57.95</PERCENTAGE>
+                <PLAYER_NAME>Cathy Ice</PLAYER_NAME>
+                <CLUB_ID_NUMBER>160</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>901738</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>4</PLAYER_NUMBER>
+                <PLACE>5</PLACE>
+                <PERCENTAGE>54.55</PERCENTAGE>
+                <PLAYER_NAME>John Oberson</PLAYER_NAME>
+                <CLUB_ID_NUMBER>202</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>902990</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>3</PLAYER_NUMBER>
+                <PLACE>6=</PLACE>
+                <PERCENTAGE>50.00</PERCENTAGE>
+                <PLAYER_NAME>Hugh Carlsen</PLAYER_NAME>
+                <CLUB_ID_NUMBER>27</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>926625</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>6</PLAYER_NUMBER>
+                <PLACE>6=</PLACE>
+                <PERCENTAGE>50.00</PERCENTAGE>
+                <PLAYER_NAME>Bob Jones</PLAYER_NAME>
+                <CLUB_ID_NUMBER>259</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>927691</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>11</PLAYER_NUMBER>
+                <PLACE>8</PLACE>
+                <PERCENTAGE>46.59</PERCENTAGE>
+                <PLAYER_NAME>Toby Blundre</PLAYER_NAME>
+                <CLUB_ID_NUMBER>240</CLUB_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>10</PLAYER_NUMBER>
+                <PLACE>9</PLACE>
+                <PERCENTAGE>45.45</PERCENTAGE>
+                <PLAYER_NAME>Pete Barnes</PLAYER_NAME>
+                <CLUB_ID_NUMBER>275</CLUB_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>2</PLAYER_NUMBER>
+                <PLACE>10</PLACE>
+                <PERCENTAGE>39.77</PERCENTAGE>
+                <PLAYER_NAME>Christopher Barnwright</PLAYER_NAME>
+                <CLUB_ID_NUMBER>273</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>992228</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>5</PLAYER_NUMBER>
+                <PLACE>11=</PLACE>
+                <PERCENTAGE>36.36</PERCENTAGE>
+                <PLAYER_NAME>Harry Pole</PLAYER_NAME>
+                <CLUB_ID_NUMBER>178</CLUB_ID_NUMBER>
+                <NATIONAL_ID_NUMBER>901436</NATIONAL_ID_NUMBER>
+            </PLAYER>
+
+            <PLAYER>
+                <PLAYER_NUMBER>12</PLAYER_NUMBER>
+                <PLACE>11=</PLACE>
+                <PERCENTAGE>36.36</PERCENTAGE>
+                <PLAYER_NAME>Diana Barnes</PLAYER_NAME>
+                <CLUB_ID_NUMBER>48</CLUB_ID_NUMBER>
+            </PLAYER>
+
+        </PARTICIPANTS>
+
+        <!-- Note: player numbers below are examples only and don't actually
+             represent a realistic movement. -->
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>1</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>-90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>-90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>2</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>600</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>600</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>3</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>780</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>780</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>-500</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>-500</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>4</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>-80</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>-80</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>5</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>-90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>-90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>6</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>7</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>8</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>600</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>600</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>9</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>10</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>-300</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>-300</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>11</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>12</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>13</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>14</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>15</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>16</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>8</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>82</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>5</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>51</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>500</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>17</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>110</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>110</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>130</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>130</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>18</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>2</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>21</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>9</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>92</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>6</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>61</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>130</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>130</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>1</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>3</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>19</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>400</SCORE>
+                <NS_MATCH_POINTS>3</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>1</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>20</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>3</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>31</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>10</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>102</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>7</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>71</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>1</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>12</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>70</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>11</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>111</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>4</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>42</W_PLAYER_NUMBER>
+                <SCORE>80</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>21</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>90</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>0</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>120</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+        <BOARD EVENT_TYPE="INDIVIDUAL">
+            <BOARD_NUMBER>22</BOARD_NUMBER>
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>4</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>41</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>11</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>112</W_PLAYER_NUMBER>
+                <SCORE>300</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>8</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>81</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>6</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>62</W_PLAYER_NUMBER>
+                <SCORE>300</SCORE>
+                <NS_MATCH_POINTS>4</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>0</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>12</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>121</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>2</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>22</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>10</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>101</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>3</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>32</W_PLAYER_NUMBER>
+                <SCORE>200</SCORE>
+                <NS_MATCH_POINTS>2</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>2</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>9</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>91</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>7</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>72</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+            <TRAVELLER_LINE>
+                <N_PLAYER_NUMBER>1</N_PLAYER_NUMBER>
+                <S_PLAYER_NUMBER>11</S_PLAYER_NUMBER>
+                <E_PLAYER_NUMBER>5</E_PLAYER_NUMBER>
+                <W_PLAYER_NUMBER>52</W_PLAYER_NUMBER>
+                <SCORE>100</SCORE>
+                <NS_MATCH_POINTS>0</NS_MATCH_POINTS>
+                <EW_MATCH_POINTS>4</EW_MATCH_POINTS>
+            </TRAVELLER_LINE>
+
+        </BOARD>
+
+    </EVENT>
+</USEBIO>

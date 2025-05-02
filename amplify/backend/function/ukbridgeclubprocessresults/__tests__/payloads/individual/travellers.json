@@ -1,0 +1,1454 @@
+[
+  {
+    "type": "INDIVIDUAL",
+    "board": "1",
+    "lines": [
+      {
+        "n": "10",
+        "s": "101",
+        "e": "8",
+        "w": "82",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "6",
+        "w": "62",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "1",
+        "w": "12",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "7",
+        "w": "72",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "3",
+        "w": "32",
+        "score": "-90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "4",
+        "w": "42",
+        "score": "-90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "2",
+    "lines": [
+      {
+        "n": "10",
+        "s": "101",
+        "e": "8",
+        "w": "82",
+        "score": "600",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "6",
+        "w": "62",
+        "score": "600",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "1",
+        "w": "12",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "7",
+        "w": "72",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "3",
+        "w": "32",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "4",
+        "w": "42",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "3",
+    "lines": [
+      {
+        "n": "12",
+        "s": "121",
+        "e": "4",
+        "w": "42",
+        "score": "780",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "5",
+        "w": "52",
+        "score": "780",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "9",
+        "w": "92",
+        "score": "-500",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "7",
+        "w": "72",
+        "score": "-500",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "2",
+        "w": "22",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "8",
+        "w": "82",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "4",
+    "lines": [
+      {
+        "n": "12",
+        "s": "121",
+        "e": "4",
+        "w": "42",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "5",
+        "w": "52",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "9",
+        "w": "92",
+        "score": "-80",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "7",
+        "w": "72",
+        "score": "-80",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "2",
+        "w": "22",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "8",
+        "w": "82",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "5",
+    "lines": [
+      {
+        "n": "7",
+        "s": "71",
+        "e": "3",
+        "w": "32",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "9",
+        "w": "92",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "5",
+        "w": "52",
+        "score": "-90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "6",
+        "w": "62",
+        "score": "-90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "10",
+        "w": "102",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "8",
+        "w": "82",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "6",
+    "lines": [
+      {
+        "n": "7",
+        "s": "71",
+        "e": "3",
+        "w": "32",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "9",
+        "w": "92",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "5",
+        "w": "52",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "6",
+        "w": "62",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "10",
+        "w": "102",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "8",
+        "w": "82",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "7",
+    "lines": [
+      {
+        "n": "8",
+        "s": "81",
+        "e": "4",
+        "w": "42",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "10",
+        "w": "102",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "6",
+        "w": "62",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "7",
+        "w": "72",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "11",
+        "w": "112",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "9",
+        "w": "92",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "8",
+    "lines": [
+      {
+        "n": "8",
+        "s": "81",
+        "e": "4",
+        "w": "42",
+        "score": "600",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "10",
+        "w": "102",
+        "score": "600",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "6",
+        "w": "62",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "7",
+        "w": "72",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "11",
+        "w": "112",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "9",
+        "w": "92",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "9",
+    "lines": [
+      {
+        "n": "9",
+        "s": "91",
+        "e": "5",
+        "w": "52",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "11",
+        "w": "112",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "7",
+        "w": "72",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "8",
+        "w": "82",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "1",
+        "w": "12",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "10",
+        "w": "102",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "10",
+    "lines": [
+      {
+        "n": "9",
+        "s": "91",
+        "e": "5",
+        "w": "52",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "2",
+        "s": "21",
+        "e": "11",
+        "w": "112",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "7",
+        "w": "72",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "8",
+        "w": "82",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "1",
+        "w": "12",
+        "score": "-300",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "10",
+        "w": "102",
+        "score": "-300",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "11",
+    "lines": [
+      {
+        "n": "10",
+        "s": "101",
+        "e": "6",
+        "w": "62",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "1",
+        "w": "12",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "8",
+        "w": "82",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "9",
+        "w": "92",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "2",
+        "w": "22",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "11",
+        "w": "112",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "12",
+    "lines": [
+      {
+        "n": "10",
+        "s": "101",
+        "e": "6",
+        "w": "62",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "3",
+        "s": "31",
+        "e": "1",
+        "w": "12",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "8",
+        "w": "82",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "9",
+        "w": "92",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "2",
+        "w": "22",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "11",
+        "w": "112",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "13",
+    "lines": [
+      {
+        "n": "11",
+        "s": "111",
+        "e": "7",
+        "w": "72",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "2",
+        "w": "22",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "9",
+        "w": "92",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "10",
+        "w": "102",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "3",
+        "w": "32",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "1",
+        "w": "12",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "14",
+    "lines": [
+      {
+        "n": "11",
+        "s": "111",
+        "e": "7",
+        "w": "72",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "4",
+        "s": "41",
+        "e": "2",
+        "w": "22",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "9",
+        "w": "92",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "10",
+        "w": "102",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "3",
+        "w": "32",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "1",
+        "w": "12",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "15",
+    "lines": [
+      {
+        "n": "1",
+        "s": "11",
+        "e": "8",
+        "w": "82",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "3",
+        "w": "32",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "10",
+        "w": "102",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "11",
+        "w": "112",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "4",
+        "w": "42",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "2",
+        "w": "22",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "16",
+    "lines": [
+      {
+        "n": "1",
+        "s": "11",
+        "e": "8",
+        "w": "82",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "5",
+        "s": "51",
+        "e": "3",
+        "w": "32",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "10",
+        "w": "102",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "11",
+        "w": "112",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "4",
+        "w": "42",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "2",
+        "w": "22",
+        "score": "500",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "17",
+    "lines": [
+      {
+        "n": "2",
+        "s": "21",
+        "e": "9",
+        "w": "92",
+        "score": "110",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "4",
+        "w": "42",
+        "score": "110",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "11",
+        "w": "112",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "1",
+        "w": "12",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "5",
+        "w": "52",
+        "score": "130",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "3",
+        "w": "32",
+        "score": "130",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "18",
+    "lines": [
+      {
+        "n": "2",
+        "s": "21",
+        "e": "9",
+        "w": "92",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 3
+      },
+      {
+        "n": "6",
+        "s": "61",
+        "e": "4",
+        "w": "42",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 3
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "11",
+        "w": "112",
+        "score": "130",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "1",
+        "w": "12",
+        "score": "130",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "5",
+        "w": "52",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 3
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "3",
+        "w": "32",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 3
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "19",
+    "lines": [
+      {
+        "n": "3",
+        "s": "31",
+        "e": "10",
+        "w": "102",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 1
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "5",
+        "w": "52",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 1
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "1",
+        "w": "12",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "2",
+        "w": "22",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "6",
+        "w": "62",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 1
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "4",
+        "w": "42",
+        "score": "400",
+        "tricks": null,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 1
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "20",
+    "lines": [
+      {
+        "n": "3",
+        "s": "31",
+        "e": "10",
+        "w": "102",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "7",
+        "s": "71",
+        "e": "5",
+        "w": "52",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "1",
+        "w": "12",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "2",
+        "w": "22",
+        "score": "70",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "6",
+        "w": "62",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "11",
+        "s": "111",
+        "e": "4",
+        "w": "42",
+        "score": "80",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "21",
+    "lines": [
+      {
+        "n": "4",
+        "s": "41",
+        "e": "11",
+        "w": "112",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "6",
+        "w": "62",
+        "score": "90",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "2",
+        "w": "22",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "3",
+        "w": "32",
+        "score": "0",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "7",
+        "w": "72",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "5",
+        "w": "52",
+        "score": "120",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "INDIVIDUAL",
+    "board": "22",
+    "lines": [
+      {
+        "n": "4",
+        "s": "41",
+        "e": "11",
+        "w": "112",
+        "score": "300",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "8",
+        "s": "81",
+        "e": "6",
+        "w": "62",
+        "score": "300",
+        "tricks": null,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 0
+      },
+      {
+        "n": "12",
+        "s": "121",
+        "e": "2",
+        "w": "22",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "10",
+        "s": "101",
+        "e": "3",
+        "w": "32",
+        "score": "200",
+        "tricks": null,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 2
+      },
+      {
+        "n": "9",
+        "s": "91",
+        "e": "7",
+        "w": "72",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      },
+      {
+        "n": "1",
+        "s": "11",
+        "e": "5",
+        "w": "52",
+        "score": "100",
+        "tricks": null,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 4
+      }
+    ]
+  }
+]

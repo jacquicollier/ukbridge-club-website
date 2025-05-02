@@ -1,5 +1,4 @@
 import { Card, ContestantDirection, Direction, Rank, Suit } from './types';
-import { TravellerLine } from './traveller/travellerLine';
 
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 
