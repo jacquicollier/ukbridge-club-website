@@ -1,6 +1,6 @@
 'use client';
 
-import { Country, County } from '@/app/model/map/types';
+import { Country, County } from '@/app/clubs/model/types';
 import { useEffect, useState } from 'react';
 
 const Form = (props: {

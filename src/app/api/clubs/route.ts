@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { findPois } from '@/app/api/clubs/utils/pois';
-import { Coordinate, Poi } from '@/app/model/map/types';
+import { Coordinate, Poi } from '@/app/clubs/model/types';
 import { booleanPointInPolygon, point, polygon } from '@turf/turf';
 
 export async function GET(request: NextRequest) {

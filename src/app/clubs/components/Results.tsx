@@ -1,5 +1,5 @@
-import PoiCard from '@/app/components/map/PoiCard';
-import { Poi } from '@/app/model/map/types';
+import PoiCard from '@/app/clubs/components/PoiCard';
+import { Poi } from '@/app/clubs/model/types';
 
 const Results = (props: { pois: Poi[] }) => {
   return (

@@ -2,9 +2,9 @@
 
 import { Card } from '@aws-amplify/ui-react';
 import Image from 'next/image';
-import { Poi } from '@/app/model/map/types';
+import { Poi } from '@/app/clubs/model/types';
 import { useEffect, useState } from 'react';
-import { Affiliation } from '@/app/model/map/constants';
+import { Affiliation } from '@/app/clubs/model/constants';
 
 const PoiCard = ({ poi }: { poi: Poi }) => {
   const [affiliations, setAffiliations] = useState<Record<string, Affiliation>>(
