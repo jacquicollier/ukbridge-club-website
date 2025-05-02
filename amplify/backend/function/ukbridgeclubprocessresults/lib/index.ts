@@ -11,8 +11,8 @@ import { generateBoards } from './boards/boards-generator';
 import { PBNHand } from './pbn/model';
 import { loadPBN } from './pbn/pbnConverter';
 import { loadUsebio } from './usebio/usebioConverter';
-import { generateSessionScores } from './session-score/session-scores-generator';
 import { generateContestants } from './contestants/contestants-generator';
+import { generateTravellers } from './travellers/travellers-generator';
 
 const s3 = new S3Client({});
 
@@ -62,8 +62,8 @@ export const handler = async (event: SQSEvent) => {
 
         await saveJsonToS3(
           bucketName,
-          key.replace('usebio.xml', 'session-scores.json'),
-          generateSessionScores(usebioFile, pbnFile),
+          key.replace('usebio.xml', 'travellers.json'),
+          generateTravellers(usebioFile, pbnFile),
         );
       } else if (key.endsWith('hands.pbn')) {
         const usebioKey = key.replace('hands.pbn', 'usebio.xml');
@@ -93,8 +93,8 @@ export const handler = async (event: SQSEvent) => {
 
         await saveJsonToS3(
           bucketName,
-          key.replace('hands.pbn', 'session-scores.json'),
-          generateSessionScores(usebioFile, pbnFile),
+          key.replace('hands.pbn', 'travellers.json'),
+          generateTravellers(usebioFile, pbnFile),
         );
       } else {
         console.log('Skipping key:', key);
