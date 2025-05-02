@@ -1,5 +1,5 @@
 import MPTable from '@/app/club/[club]/results/sessions/[date]/[game]/components/MPTable';
-import { RecordOfPlay } from '../../../../../../../../shared/RecordOfPlay';
+import { RecordOfPlay } from 'shared/RecordOfPlay';
 
 export default async function ResultPage({
   params,
@@ -26,31 +26,31 @@ export default async function ResultPage({
           );
         }
 
-        const northSouth = section.sessionScores.filter(
-          (score) => score.direction === 'NS',
-        );
-        const eastWest = section.sessionScores.filter(
-          (score) => score.direction === 'EW',
-        );
+        // const northSouth = section.sessionScores.filter(
+        //   (score) => score.direction === 'NS',
+        // );
+        // const eastWest = section.sessionScores.filter(
+        //   (score) => score.direction === 'EW',
+        // );
 
         return (
           <div key={sectionIndex} className='flex flex-col gap-y-6'>
-            <MPTable
-              scores={northSouth}
-              title={
-                section.name
-                  ? `Section ${section.name} - North/South`
-                  : 'North/South'
-              }
-            />
-            <MPTable
-              scores={eastWest}
-              title={
-                section.name
-                  ? `Section ${section.name} - East/West`
-                  : 'East/West'
-              }
-            />
+            {/*<MPTable*/}
+            {/*  scores={northSouth}*/}
+            {/*  title={*/}
+            {/*    section.name*/}
+            {/*      ? `Section ${section.name} - North/South`*/}
+            {/*      : 'North/South'*/}
+            {/*  }*/}
+            {/*/>*/}
+            {/*<MPTable*/}
+            {/*  scores={eastWest}*/}
+            {/*  title={*/}
+            {/*    section.name*/}
+            {/*      ? `Section ${section.name} - East/West`*/}
+            {/*      : 'East/West'*/}
+            {/*  }*/}
+            {/*/>*/}
           </div>
         );
       })}

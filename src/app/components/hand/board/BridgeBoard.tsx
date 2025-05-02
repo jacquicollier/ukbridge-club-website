@@ -2,8 +2,6 @@ import AuctionTable from '@/app/components/hand/cornerpanels/AuctionTable';
 import DealerAndVul from '@/app/components/hand/cornerpanels/DealerAndVul';
 import Deal from '@/app/components/hand/board/Deal';
 import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
-import Result from '@/app/components/hand/cornerpanels/Result';
-import DDSTable from '@/app/components/hand/cornerpanels/DDSTable';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
 import {
   Auction,
@@ -13,7 +11,6 @@ import {
   NSVulnerableBoards,
 } from 'shared/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
-import { TravellerLine } from 'shared/traveller/travellerLine';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
 import { Card } from 'shared/types';
 
@@ -21,7 +18,7 @@ export default function BridgeBoard(props: {
   board: Board;
   auction: Auction | null;
   bridgePlay: BridgePlay | null;
-  boardScore: TravellerLine;
+  // boardScore: TravellerLine;
   validNextCards: Card[];
   playItAgain: boolean;
   contestant: ContestantId | null;
@@ -69,18 +66,18 @@ export default function BridgeBoard(props: {
             />
           )}
         </div>
-        {(() => {
-          if (props.playItAgain) {
-            return <DDSTable deal={props.board.deal} />;
-          } else if (props.boardScore && props.contestant) {
-            return (
-              <Result
-                boardScore={props.boardScore}
-                contestant={props.contestant}
-              />
-            );
-          }
-        })()}
+        {/*{(() => {*/}
+        {/*  if (props.playItAgain) {*/}
+        {/*    return <DDSTable deal={props.board.deal} />;*/}
+        {/*  } else if (props.boardScore && props.contestant) {*/}
+        {/*    return (*/}
+        {/*      <Result*/}
+        {/*        boardScore={props.boardScore}*/}
+        {/*        contestant={props.contestant}*/}
+        {/*      />*/}
+        {/*    );*/}
+        {/*  }*/}
+        {/*})()}*/}
       </div>
     </>
   );
