@@ -1,10 +1,10 @@
 'use client';
 
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
-import Counties from '@/app/components/map/Counties';
-import PoiMarkers from '@/app/components/map/PoiMarkers';
-import { Country, County, Poi } from '@/app/model/map/types';
-import { defaultBounds } from '@/app/model/map/constants';
+import Counties from '@/app/clubs/components/Counties';
+import PoiMarkers from '@/app/clubs/components/PoiMarkers';
+import { Country, County, Poi } from '@/app/clubs/model/types';
+import { defaultBounds } from '@/app/clubs/model/constants';
 
 const containerStyle = {
   width: '100%',

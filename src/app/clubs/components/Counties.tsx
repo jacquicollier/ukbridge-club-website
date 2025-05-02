@@ -2,8 +2,8 @@
 
 import { useMap } from '@vis.gl/react-google-maps';
 import { useEffect, useRef, useState } from 'react';
-import { Coordinate, Country, County } from '@/app/model/map/types';
-import { defaultBounds } from '@/app/model/map/constants';
+import { Coordinate, Country, County } from '@/app/clubs/model/types';
+import { defaultBounds } from '@/app/clubs/model/constants';
 
 const Counties = ({
   country,
