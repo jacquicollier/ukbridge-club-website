@@ -1,34 +1,24 @@
-import { parseStringPromise } from 'xml2js';
-import { USEBIORecordOfPlayGenerator } from '../../../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/usebio/USEBIORecordOfPlayGenerator';
-import { UsebioFile } from '../../../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/usebio/model';
-import { getAndParseObject, putObject } from '@/app/api/clubs/utils/s3';
+// import { parseStringPromise } from 'xml2js';
+// import { UsebioFile } from '../../../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/usebio/model';
+import { putObject } from '@/app/api/clubs/utils/s3';
 
-export async function GET(
-  _req: Request,
-  {
-    params,
-  }: {
-    params: Promise<{ club: string; date: string; game: string }>;
-  },
-) {
+export async function GET() {
   try {
-    const { club, date, game } = await params;
+    // const { club, date, game } = await params;
 
-    const usebioFile = await getAndParseObject<UsebioFile>(
-      `${club}.ukbridge.club`,
-      `results/${date}/${game}/usebio.xml`,
-      {
-        parser: async (fileContent: string) => {
-          return (await parseStringPromise(fileContent, {
-            explicitArray: false,
-          })) as UsebioFile;
-        },
-      },
-    );
+    // const usebioFile = await getAndParseObject<UsebioFile>(
+    //   `${club}.ukbridge.club`,
+    //   `results/${date}/${game}/usebio.xml`,
+    //   {
+    //     parser: async (fileContent: string) => {
+    //       return (await parseStringPromise(fileContent, {
+    //         explicitArray: false,
+    //       })) as UsebioFile;
+    //     },
+    //   },
+    // );
 
-    const recordOfPlay = JSON.stringify(
-      new USEBIORecordOfPlayGenerator(usebioFile.USEBIO).recordOfPlay(),
-    );
+    const recordOfPlay = '';
 
     // Return JSON response
     return new Response(recordOfPlay, {
