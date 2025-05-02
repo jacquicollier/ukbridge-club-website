@@ -1,12 +1,13 @@
-import { TravellerLine } from 'shared/traveller/travellerLine';
 import { Card, Direction } from 'shared/types';
 import { Directions, rankOrder, suitOrder } from './boards/model';
+import { TravellerLine } from './usebio/model';
 
 export function getResult(boardScore: TravellerLine) {
-  if (!boardScore.tricks) {
-    return 'Pass';
-  }
-  return `${boardScore.contract}${calculateDifference(boardScore.contract, Number(boardScore.tricks))} ${boardScore.declarer}`;
+  return 'Pass';
+  // if (!boardScore.tricks) {
+  //   return 'Pass';
+  // }
+  // return `${boardScore.contract}${calculateDifference(boardScore.contract, Number(boardScore.tricks))} ${boardScore.declarer}`;
 }
 
 export function determineDealer(boardNumber: number): Direction {
@@ -38,23 +39,23 @@ function convertHandToPbn(cards: Card[]): string {
     .join('.');
 }
 
-function calculateDifference(contract: string, tricksMade: number): string {
-  // Remove doubling/redoubling indicators (x or xx) from the contract
-  contract = contract.replace(/x{1,2}$/i, '');
-
-  // Extract the numeric part from the contract
-  const match = contract.match(/(\d+)/);
-  if (match) {
-    const contractLevel = parseInt(match[1], 10);
-    const requiredTricks = contractLevel + 6;
-    const difference = tricksMade - requiredTricks;
-    if (difference < 0) {
-      return `${difference}`;
-    } else if (difference > 0) {
-      return `+${difference}`;
-    }
-    return '=';
-  } else {
-    throw new Error('Invalid contract format');
-  }
-}
+// function calculateDifference(contract: string, tricksMade: number): string {
+//   // Remove doubling/redoubling indicators (x or xx) from the contract
+//   contract = contract.replace(/x{1,2}$/i, '');
+//
+//   // Extract the numeric part from the contract
+//   const match = contract.match(/(\d+)/);
+//   if (match) {
+//     const contractLevel = parseInt(match[1], 10);
+//     const requiredTricks = contractLevel + 6;
+//     const difference = tricksMade - requiredTricks;
+//     if (difference < 0) {
+//       return `${difference}`;
+//     } else if (difference > 0) {
+//       return `+${difference}`;
+//     }
+//     return '=';
+//   } else {
+//     throw new Error('Invalid contract format');
+//   }
+// }

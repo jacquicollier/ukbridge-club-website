@@ -53,7 +53,7 @@ export interface Board {
 }
 
 export interface BoardResult {
-  boardScore: TravellerLine;
+  // boardScore: TravellerLine;
   auction: Auction | null;
   playedCards: Card[] | null;
 }
