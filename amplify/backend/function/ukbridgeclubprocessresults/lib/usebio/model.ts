@@ -25,8 +25,14 @@ interface EventAttributes {
 }
 
 interface Session {
+  PARTICIPANTS?: Participants;
   SECTION: UsebioSection[] | UsebioSection;
   HANDSET?: HandSet;
+  MATCH?: Match[];
+}
+
+export interface Match {
+  BOARD: UsebioBoard[];
 }
 
 export interface UsebioSection {
@@ -40,6 +46,12 @@ interface SectionAttributes {
 }
 
 export interface Participants {
+  TEAM?: Team[];
+  PAIR?: Pair[];
+  PLAYER?: Player[];
+}
+
+export interface Team {
   PAIR: Pair[];
 }
 
@@ -59,6 +71,7 @@ interface MasterPoints {
 
 interface Player {
   PLAYER_NAME: string;
+  PLAYER_NUMBER?: string;
   CLUB_ID_NUMBER: string;
   NATIONAL_ID_NUMBER: string;
 }
@@ -69,15 +82,21 @@ export interface UsebioBoard {
 }
 
 export interface TravellerLine {
-  NS_PAIR_NUMBER: string;
-  EW_PAIR_NUMBER: string;
+  NS_PAIR_NUMBER?: string;
+  EW_PAIR_NUMBER?: string;
+  N_PLAYER_NUMBER?: string;
+  S_PLAYER_NUMBER?: string;
+  E_PLAYER_NUMBER?: string;
+  W_PLAYER_NUMBER?: string;
   CONTRACT: string;
   PLAYED_BY: string;
   LEAD: string;
   TRICKS: string;
   SCORE: string;
-  NS_MATCH_POINTS: string;
-  EW_MATCH_POINTS: string;
+  NS_MATCH_POINTS?: string;
+  EW_MATCH_POINTS?: string;
+  NS_CROSS_IMP_POINTS?: string;
+  EW_CROSS_IMP_POINTS?: string;
   LIN_DATA?: string;
 }
 
@@ -98,8 +117,8 @@ export interface Hand {
   CLUBS: string;
 }
 
-type EventType = 'PAIRS';
-type BoardScoringMethod = 'IMPS' | 'MATCH_POINTS';
+type EventType = 'MP_PAIRS' | 'PAIRS' | 'INDIVIDUAL' | 'TEAMS';
+export type BoardScoringMethod = 'IMPS' | 'MATCH_POINTS';
 type MatchScoringMethod = 'VPS';
 type ScoringMethod = 'VP';
 type PairwiseScoringMethod = 'CROSS_IMPS';

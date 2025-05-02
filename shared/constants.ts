@@ -1,5 +1,4 @@
 import { Card, ContestantDirection, Direction, Rank, Suit } from './types';
-import { TravellerLine } from './traveller/travellerLine';
 
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 
@@ -54,7 +53,7 @@ export interface Board {
 }
 
 export interface BoardResult {
-  boardScore: TravellerLine;
+  // boardScore: TravellerLine;
   auction: Auction | null;
   playedCards: Card[] | null;
 }

@@ -1,11 +1,10 @@
-import { MasterPointType } from '../types';
+type MasterPointType = 'BLACK' | 'GREEN' | 'BLUE';
 
 interface BaseSessionScore {
   masterPoints?: number;
   masterPointType?: MasterPointType;
   contestant: string;
-  names: string[];
-  position: string;
+  position: string; // string to handle e.g., 7= for two contestants with the same score
 }
 
 export interface PairMPSessionScore extends BaseSessionScore {
@@ -19,4 +18,9 @@ export interface PairIMPSessionScore extends BaseSessionScore {
   imps: number;
 }
 
-export type SessionScore = PairMPSessionScore | PairIMPSessionScore;
+export type Model = PairMPSessionScore | PairIMPSessionScore;
+
+export interface SectionSessionScores {
+  name: string;
+  sessionScores: Model[];
+}

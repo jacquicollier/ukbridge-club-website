@@ -1,0 +1,2255 @@
+[
+  {
+    "type": "PAIR_IMP",
+    "board": "1",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "4S",
+        "lead": "D7",
+        "declarer": "S",
+        "score": "480",
+        "tricks": 12,
+        "nsCrossImps": -1.14,
+        "ewCrossImps": 1.14
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "6S",
+        "lead": "S2",
+        "declarer": "S",
+        "score": "980",
+        "tricks": 12,
+        "nsCrossImps": 10.86,
+        "ewCrossImps": -10.86
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "4S",
+        "lead": "S2",
+        "declarer": "S",
+        "score": "450",
+        "tricks": 11,
+        "nsCrossImps": -2.14,
+        "ewCrossImps": 2.14
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "5S",
+        "lead": "D3",
+        "declarer": "S",
+        "score": "450",
+        "tricks": 11,
+        "nsCrossImps": -2.14,
+        "ewCrossImps": 2.14
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "4S",
+        "lead": "HJ",
+        "declarer": "S",
+        "score": "480",
+        "tricks": 12,
+        "nsCrossImps": -1.14,
+        "ewCrossImps": 1.14
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "42",
+        "lead": "DA",
+        "declarer": "S",
+        "score": "480",
+        "tricks": 12,
+        "nsCrossImps": -1.14,
+        "ewCrossImps": 1.14
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "3NT",
+        "lead": "DJ",
+        "declarer": "N",
+        "score": "430",
+        "tricks": 10,
+        "nsCrossImps": -3,
+        "ewCrossImps": 3
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "4S",
+        "lead": "DJ",
+        "declarer": "S",
+        "score": "510",
+        "tricks": 13,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "2",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "2HX",
+        "lead": "CJ",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 7,
+        "nsCrossImps": 6,
+        "ewCrossImps": -6
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "2H",
+        "lead": "S3",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 0.86,
+        "ewCrossImps": -0.86
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "2HX",
+        "lead": "D5",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 7,
+        "nsCrossImps": 6,
+        "ewCrossImps": -6
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "3NT",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 6,
+        "nsCrossImps": -4.86,
+        "ewCrossImps": 4.86
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "3NT",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 6,
+        "nsCrossImps": -4.86,
+        "ewCrossImps": 4.86
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "2S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 6,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "3NT",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 7,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "2H",
+        "lead": "D4",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 0.86,
+        "ewCrossImps": -0.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "3",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "7D",
+        "lead": "H7",
+        "declarer": "E",
+        "score": "-2140",
+        "tricks": 13,
+        "nsCrossImps": -12.29,
+        "ewCrossImps": 12.29
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "5C",
+        "lead": "HK",
+        "declarer": "W",
+        "score": "-640",
+        "tricks": 13,
+        "nsCrossImps": 11.29,
+        "ewCrossImps": -11.29
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "7C",
+        "lead": "SK",
+        "declarer": "W",
+        "score": "-2140",
+        "tricks": 13,
+        "nsCrossImps": -12.29,
+        "ewCrossImps": 12.29
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "5HX",
+        "lead": "CA",
+        "declarer": "S",
+        "score": "-500",
+        "tricks": 8,
+        "nsCrossImps": 12.86,
+        "ewCrossImps": -12.86
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "6C",
+        "lead": "SK",
+        "declarer": "W",
+        "score": "-1390",
+        "tricks": 13,
+        "nsCrossImps": -0.43,
+        "ewCrossImps": 0.43
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "6C",
+        "lead": "SK",
+        "declarer": "W",
+        "score": "-1370",
+        "tricks": 12,
+        "nsCrossImps": 0.29,
+        "ewCrossImps": -0.29
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "6C",
+        "lead": "SK",
+        "declarer": "W",
+        "score": "-1370",
+        "tricks": 12,
+        "nsCrossImps": 0.29,
+        "ewCrossImps": -0.29
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "6C",
+        "lead": "SK",
+        "declarer": "W",
+        "score": "-1370",
+        "tricks": 12,
+        "nsCrossImps": 0.29,
+        "ewCrossImps": -0.29
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "4",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "3NT",
+        "lead": "C10",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": -4.43,
+        "ewCrossImps": 4.43
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "1NT",
+        "lead": "HA",
+        "declarer": "S",
+        "score": "150",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "3NT",
+        "lead": "HA",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 6,
+        "nsCrossImps": -9,
+        "ewCrossImps": 9
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "2NT",
+        "lead": "HA",
+        "declarer": "S",
+        "score": "120",
+        "tricks": 8,
+        "nsCrossImps": 1.57,
+        "ewCrossImps": -1.57
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "1H",
+        "lead": "S4",
+        "declarer": "S",
+        "score": "80",
+        "tricks": 7,
+        "nsCrossImps": 0.57,
+        "ewCrossImps": -0.57
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "2NT",
+        "lead": "C5",
+        "declarer": "N",
+        "score": "180",
+        "tricks": 10,
+        "nsCrossImps": 3.57,
+        "ewCrossImps": -3.57
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "1NT",
+        "lead": "HA",
+        "declarer": "S",
+        "score": "150",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "1NT",
+        "lead": "HK",
+        "declarer": "S",
+        "score": "150",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "5",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "3NT",
+        "lead": "SQ",
+        "declarer": "S",
+        "score": "600",
+        "tricks": 9,
+        "nsCrossImps": 8,
+        "ewCrossImps": -8
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "3NT",
+        "lead": "SQ",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": -7.43,
+        "ewCrossImps": 7.43
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "3NT",
+        "lead": "SK",
+        "declarer": "S",
+        "score": "600",
+        "tricks": 9,
+        "nsCrossImps": 8,
+        "ewCrossImps": -8
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "1NT",
+        "lead": "SK",
+        "declarer": "S",
+        "score": "90",
+        "tricks": 7,
+        "nsCrossImps": -3.43,
+        "ewCrossImps": 3.43
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "3NT",
+        "lead": "SQ",
+        "declarer": "S",
+        "score": "600",
+        "tricks": 9,
+        "nsCrossImps": 8,
+        "ewCrossImps": -8
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "3NT",
+        "lead": "S8",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": -7.43,
+        "ewCrossImps": 7.43
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "2NT",
+        "lead": "SK",
+        "declarer": "S",
+        "score": "120",
+        "tricks": 8,
+        "nsCrossImps": -2.29,
+        "ewCrossImps": 2.29
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "2S",
+        "lead": "DK",
+        "declarer": "W",
+        "score": "100",
+        "tricks": 6,
+        "nsCrossImps": -3.43,
+        "ewCrossImps": 3.43
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "6",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "2S",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": -1.71,
+        "ewCrossImps": 1.71
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 8,
+        "nsCrossImps": 5.43,
+        "ewCrossImps": -5.43
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 8,
+        "nsCrossImps": 5.43,
+        "ewCrossImps": -5.43
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "-620",
+        "tricks": 10,
+        "nsCrossImps": -11.71,
+        "ewCrossImps": 11.71
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "1NT",
+        "lead": "H2",
+        "declarer": "E",
+        "score": "-180",
+        "tricks": 10,
+        "nsCrossImps": -3.86,
+        "ewCrossImps": 3.86
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "HK",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 8,
+        "nsCrossImps": 5.43,
+        "ewCrossImps": -5.43
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 8,
+        "nsCrossImps": 5.43,
+        "ewCrossImps": -5.43
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "1NT",
+        "lead": "H5",
+        "declarer": "E",
+        "score": "-210",
+        "tricks": 11,
+        "nsCrossImps": -4.43,
+        "ewCrossImps": 4.43
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "7",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "4S",
+        "lead": "D4",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "4S",
+        "lead": "C6",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "C5",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "4S",
+        "lead": "C6",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "8",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "14",
+        "contract": "2C",
+        "lead": "DK",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 7,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "13",
+        "ew": "15",
+        "contract": "3C",
+        "lead": "DA",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "2S",
+        "lead": "DJ",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 4,
+        "nsCrossImps": 3.43,
+        "ewCrossImps": -3.43
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "2S",
+        "lead": "DJ",
+        "declarer": "E",
+        "score": "150",
+        "tricks": 5,
+        "nsCrossImps": 2,
+        "ewCrossImps": -2
+      },
+      {
+        "ns": "10",
+        "ew": "3",
+        "contract": "3C",
+        "lead": "DA",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "3NTX",
+        "lead": "D7",
+        "declarer": "W",
+        "score": "-550",
+        "tricks": 9,
+        "nsCrossImps": -12.43,
+        "ewCrossImps": 12.43
+      },
+      {
+        "ns": "5",
+        "ew": "8",
+        "contract": "3C",
+        "lead": "DK",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "2HX",
+        "lead": "C4",
+        "declarer": "E",
+        "score": "500",
+        "tricks": 5,
+        "nsCrossImps": 9.86,
+        "ewCrossImps": -9.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "9",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "3NT",
+        "lead": "DJ",
+        "declarer": "W",
+        "score": "-720",
+        "tricks": 13,
+        "nsCrossImps": 15.86,
+        "ewCrossImps": -15.86
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "7NT",
+        "lead": "DJ",
+        "declarer": "W",
+        "score": "-2220",
+        "tricks": 13,
+        "nsCrossImps": -4.29,
+        "ewCrossImps": 4.29
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "7H",
+        "lead": "H9",
+        "declarer": "W",
+        "score": "-2210",
+        "tricks": 13,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "6NT",
+        "lead": "S10",
+        "declarer": "W",
+        "score": "-1470",
+        "tricks": 13,
+        "nsCrossImps": 8.71,
+        "ewCrossImps": -8.71
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "7H",
+        "lead": "S10",
+        "declarer": "W",
+        "score": "-2210",
+        "tricks": 13,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "7NT",
+        "lead": "S10",
+        "declarer": "W",
+        "score": "-2220",
+        "tricks": 13,
+        "nsCrossImps": -4.29,
+        "ewCrossImps": 4.29
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "7H",
+        "lead": "DJ",
+        "declarer": "W",
+        "score": "-2210",
+        "tricks": 13,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "7H",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "-2210",
+        "tricks": 13,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "10",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "2H",
+        "lead": "DK",
+        "declarer": "E",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": 0.57,
+        "ewCrossImps": -0.57
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "6HX",
+        "lead": "HA",
+        "declarer": "S",
+        "score": "-2300",
+        "tricks": 4,
+        "nsCrossImps": -19.29,
+        "ewCrossImps": 19.29
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "3D",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "110",
+        "tricks": 9,
+        "nsCrossImps": 7,
+        "ewCrossImps": -7
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "2H",
+        "lead": "CK",
+        "declarer": "W",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": 0.57,
+        "ewCrossImps": -0.57
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "3D",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "110",
+        "tricks": 9,
+        "nsCrossImps": 7,
+        "ewCrossImps": -7
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "2H",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 1.29,
+        "ewCrossImps": -1.29
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "3D",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": 1.57,
+        "ewCrossImps": -1.57
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "2H",
+        "lead": "S7",
+        "declarer": "W",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 1.29,
+        "ewCrossImps": -1.29
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "11",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "6S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "980",
+        "tricks": 12,
+        "nsCrossImps": 10.14,
+        "ewCrossImps": -10.14
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "3S",
+        "lead": "H3",
+        "declarer": "N",
+        "score": "200",
+        "tricks": 11,
+        "nsCrossImps": -6.43,
+        "ewCrossImps": 6.43
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "5S",
+        "lead": "H3",
+        "declarer": "N",
+        "score": "480",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "6S",
+        "lead": "H3",
+        "declarer": "N",
+        "score": "980",
+        "tricks": 12,
+        "nsCrossImps": 10.14,
+        "ewCrossImps": -10.14
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "D7",
+        "declarer": "N",
+        "score": "450",
+        "tricks": 11,
+        "nsCrossImps": -0.86,
+        "ewCrossImps": 0.86
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "450",
+        "tricks": 11,
+        "nsCrossImps": -0.86,
+        "ewCrossImps": 0.86
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "6S",
+        "lead": "D7",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 11,
+        "nsCrossImps": -11.14,
+        "ewCrossImps": 11.14
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "4S",
+        "lead": "H3",
+        "declarer": "N",
+        "score": "450",
+        "tricks": 11,
+        "nsCrossImps": -0.86,
+        "ewCrossImps": 0.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "12",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "2NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-150",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "3NT",
+        "lead": "HK",
+        "declarer": "W",
+        "score": "-430",
+        "tricks": 10,
+        "nsCrossImps": -4.86,
+        "ewCrossImps": 4.86
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "W",
+        "score": "-430",
+        "tricks": 10,
+        "nsCrossImps": -4.86,
+        "ewCrossImps": 4.86
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "3S",
+        "lead": "C6",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": 4.14,
+        "ewCrossImps": -4.14
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "3NT",
+        "lead": "HK",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -4,
+        "ewCrossImps": 4
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "4C",
+        "lead": "C9",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 9,
+        "nsCrossImps": 7.71,
+        "ewCrossImps": -7.71
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "3C",
+        "lead": "D3",
+        "declarer": "W",
+        "score": "-130",
+        "tricks": 10,
+        "nsCrossImps": 3.29,
+        "ewCrossImps": -3.29
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "13",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-660",
+        "tricks": 11,
+        "nsCrossImps": 1,
+        "ewCrossImps": -1
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-720",
+        "tricks": 13,
+        "nsCrossImps": -1.29,
+        "ewCrossImps": 1.29
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-660",
+        "tricks": 11,
+        "nsCrossImps": 1,
+        "ewCrossImps": -1
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-660",
+        "tricks": 11,
+        "nsCrossImps": 1,
+        "ewCrossImps": -1
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "3NT",
+        "lead": "C3",
+        "declarer": "W",
+        "score": "-720",
+        "tricks": 13,
+        "nsCrossImps": -1.29,
+        "ewCrossImps": 1.29
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-660",
+        "tricks": 11,
+        "nsCrossImps": 1,
+        "ewCrossImps": -1
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "3NT",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "-720",
+        "tricks": 13,
+        "nsCrossImps": -1.29,
+        "ewCrossImps": 1.29
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "3NT",
+        "lead": "C3",
+        "declarer": "W",
+        "score": "-690",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "14",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": 4.29,
+        "ewCrossImps": -4.29
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "2H",
+        "lead": "H5",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 0.29,
+        "ewCrossImps": -0.29
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": 4.29,
+        "ewCrossImps": -4.29
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": 4.29,
+        "ewCrossImps": -4.29
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "2H",
+        "lead": "DA",
+        "declarer": "W",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": 0.29,
+        "ewCrossImps": -0.29
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "3NTX",
+        "lead": "S3",
+        "declarer": "S",
+        "score": "-500",
+        "tricks": 6,
+        "nsCrossImps": -8.86,
+        "ewCrossImps": 8.86
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "1NT",
+        "lead": "CQ",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 4.29,
+        "ewCrossImps": -4.29
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "2SX",
+        "lead": "C3",
+        "declarer": "S",
+        "score": "-500",
+        "tricks": 5,
+        "nsCrossImps": -8.86,
+        "ewCrossImps": 8.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "15",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "1NT",
+        "lead": "C7",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "1NT",
+        "lead": "C7",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "1NT",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "-90",
+        "tricks": 7,
+        "nsCrossImps": -1.71,
+        "ewCrossImps": 1.71
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "2D",
+        "lead": "H8",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 9,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "1NT",
+        "lead": "S7",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "1NT",
+        "lead": "C2",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "1NT",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 6,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "3NT",
+        "lead": "H5",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -9.14,
+        "ewCrossImps": 9.14
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "16",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "15",
+        "contract": "3C",
+        "lead": "DK",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 8,
+        "nsCrossImps": 1.86,
+        "ewCrossImps": -1.86
+      },
+      {
+        "ns": "14",
+        "ew": "16",
+        "contract": "1NT",
+        "lead": "SQ",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsCrossImps": -0.43,
+        "ewCrossImps": 0.43
+      },
+      {
+        "ns": "1",
+        "ew": "13",
+        "contract": "1NT",
+        "lead": "DQ",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 6,
+        "nsCrossImps": 1.86,
+        "ewCrossImps": -1.86
+      },
+      {
+        "ns": "12",
+        "ew": "3",
+        "contract": "4H",
+        "lead": "DJ",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 6,
+        "nsCrossImps": -3,
+        "ewCrossImps": 3
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "2D",
+        "lead": "H2",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 9,
+        "nsCrossImps": -0.29,
+        "ewCrossImps": 0.29
+      },
+      {
+        "ns": "10",
+        "ew": "5",
+        "contract": "2DX",
+        "lead": "SK",
+        "declarer": "E",
+        "score": "-180",
+        "tricks": 8,
+        "nsCrossImps": -2.57,
+        "ewCrossImps": 2.57
+      },
+      {
+        "ns": "6",
+        "ew": "9",
+        "contract": "2D",
+        "lead": "C5",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 8,
+        "nsCrossImps": 0.71,
+        "ewCrossImps": -0.71
+      },
+      {
+        "ns": "8",
+        "ew": "7",
+        "contract": "2H",
+        "lead": "DJ",
+        "declarer": "S",
+        "score": "-50",
+        "tricks": 7,
+        "nsCrossImps": 1.86,
+        "ewCrossImps": -1.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "17",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "490",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "490",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "6NT",
+        "lead": "D7",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 11,
+        "nsCrossImps": -11.43,
+        "ewCrossImps": 11.43
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "4NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "490",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "520",
+        "tricks": 13,
+        "nsCrossImps": 0.86,
+        "ewCrossImps": -0.86
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "490",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "3NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "490",
+        "tricks": 12,
+        "nsCrossImps": -0.14,
+        "ewCrossImps": 0.14
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "6NT",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "990",
+        "tricks": 12,
+        "nsCrossImps": 11.29,
+        "ewCrossImps": -11.29
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "18",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "3NT",
+        "lead": "HJ",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -5,
+        "ewCrossImps": 5
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "3D",
+        "lead": "S3",
+        "declarer": "W",
+        "score": "-110",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "3D",
+        "lead": "S3",
+        "declarer": "W",
+        "score": "-110",
+        "tricks": 9,
+        "nsCrossImps": 2.57,
+        "ewCrossImps": -2.57
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "3NT",
+        "lead": "HJ",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -5,
+        "ewCrossImps": 5
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "3NT",
+        "lead": "HJ",
+        "declarer": "W",
+        "score": "-430",
+        "tricks": 10,
+        "nsCrossImps": -5.86,
+        "ewCrossImps": 5.86
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3NT",
+        "lead": "HJ",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsCrossImps": -5,
+        "ewCrossImps": 5
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "3NT",
+        "lead": "HJ",
+        "declarer": "W",
+        "score": "200",
+        "tricks": 5,
+        "nsCrossImps": 9.43,
+        "ewCrossImps": -9.43
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3D",
+        "lead": "S3",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsCrossImps": 6.29,
+        "ewCrossImps": -6.29
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "19",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "2C",
+        "lead": "H3",
+        "declarer": "S",
+        "score": "150",
+        "tricks": 11,
+        "nsCrossImps": -3.71,
+        "ewCrossImps": 3.71
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "3NT",
+        "lead": "SJ",
+        "declarer": "N",
+        "score": "430",
+        "tricks": 10,
+        "nsCrossImps": 4,
+        "ewCrossImps": -4
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "3NT",
+        "lead": "C2",
+        "declarer": "S",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 3,
+        "ewCrossImps": -3
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "2S",
+        "lead": "D7",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsCrossImps": -3.71,
+        "ewCrossImps": 3.71
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "3NT",
+        "lead": "SJ",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 8,
+        "nsCrossImps": -8.57,
+        "ewCrossImps": 8.57
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3NT",
+        "lead": "H2",
+        "declarer": "S",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 3,
+        "ewCrossImps": -3
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "3NT",
+        "lead": "H3",
+        "declarer": "S",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 3,
+        "ewCrossImps": -3
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3NT",
+        "lead": "H2",
+        "declarer": "S",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 3,
+        "ewCrossImps": -3
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "20",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "1H",
+        "lead": "S6",
+        "declarer": "E",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "1NT",
+        "lead": "S6",
+        "declarer": "E",
+        "score": "-150",
+        "tricks": 9,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "2H",
+        "lead": "S5",
+        "declarer": "W",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "2H",
+        "lead": "S5",
+        "declarer": "W",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "1NT",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "-90",
+        "tricks": 7,
+        "nsCrossImps": 1.57,
+        "ewCrossImps": -1.57
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "1NT",
+        "lead": "C10",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsCrossImps": 1.57,
+        "ewCrossImps": -1.57
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "2H",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "-140",
+        "tricks": 9,
+        "nsCrossImps": -0.71,
+        "ewCrossImps": 0.71
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "1NT",
+        "lead": "D8",
+        "declarer": "W",
+        "score": "-120",
+        "tricks": 8,
+        "nsCrossImps": 0.43,
+        "ewCrossImps": -0.43
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "21",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "2H",
+        "lead": "D9",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsCrossImps": 4.43,
+        "ewCrossImps": -4.43
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "PASS",
+        "declarer": "N",
+        "score": "0",
+        "tricks": 0,
+        "nsCrossImps": 0.14,
+        "ewCrossImps": -0.14
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "1NT",
+        "lead": "S3",
+        "declarer": "N",
+        "score": "90",
+        "tricks": 7,
+        "nsCrossImps": 2.86,
+        "ewCrossImps": -2.86
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": -2.71,
+        "ewCrossImps": 2.71
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "PASS",
+        "declarer": "N",
+        "score": "0",
+        "tricks": 0,
+        "nsCrossImps": 0.14,
+        "ewCrossImps": -0.14
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 7,
+        "nsCrossImps": -5.43,
+        "ewCrossImps": 5.43
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "2H",
+        "lead": "SJ",
+        "declarer": "S",
+        "score": "110",
+        "tricks": 8,
+        "nsCrossImps": 3.29,
+        "ewCrossImps": -3.29
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3H",
+        "lead": "SJ",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsCrossImps": -2.71,
+        "ewCrossImps": 2.71
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "22",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "1H",
+        "lead": "S6",
+        "declarer": "W",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": -2.71,
+        "ewCrossImps": 2.71
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "3D",
+        "lead": "D3",
+        "declarer": "W",
+        "score": "200",
+        "tricks": 7,
+        "nsCrossImps": 6,
+        "ewCrossImps": -6
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "1NT",
+        "lead": "C10",
+        "declarer": "W",
+        "score": "-90",
+        "tricks": 7,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "3H",
+        "lead": "D10",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 8,
+        "nsCrossImps": 3.43,
+        "ewCrossImps": -3.43
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "1H",
+        "lead": "D10",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 8,
+        "nsCrossImps": -2.71,
+        "ewCrossImps": 2.71
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "1H",
+        "lead": "D10",
+        "declarer": "E",
+        "score": "-80",
+        "tricks": 7,
+        "nsCrossImps": -1.86,
+        "ewCrossImps": 1.86
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "PASS",
+        "declarer": "N",
+        "score": "0",
+        "tricks": 0,
+        "nsCrossImps": 0.71,
+        "ewCrossImps": -0.71
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "2S",
+        "lead": "C4",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 7,
+        "nsCrossImps": -0.86,
+        "ewCrossImps": 0.86
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "23",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "4H",
+        "lead": "D7",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": 1.14,
+        "ewCrossImps": -1.14
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "4H",
+        "lead": "S2",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": 1.14,
+        "ewCrossImps": -1.14
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "4H",
+        "lead": "S4",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": 1.14,
+        "ewCrossImps": -1.14
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "4H",
+        "lead": "S9",
+        "declarer": "S",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 2.14,
+        "ewCrossImps": -2.14
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "4H",
+        "lead": "S4",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": 1.14,
+        "ewCrossImps": -1.14
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "4H",
+        "lead": "D7",
+        "declarer": "S",
+        "score": "650",
+        "tricks": 11,
+        "nsCrossImps": 2.14,
+        "ewCrossImps": -2.14
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "4H",
+        "lead": "H7",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsCrossImps": 1.14,
+        "ewCrossImps": -1.14
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3H",
+        "lead": "S4",
+        "declarer": "S",
+        "score": "170",
+        "tricks": 10,
+        "nsCrossImps": -10,
+        "ewCrossImps": 10
+      }
+    ]
+  },
+  {
+    "type": "PAIR_IMP",
+    "board": "24",
+    "lines": [
+      {
+        "ns": "17",
+        "ew": "16",
+        "contract": "4S",
+        "lead": "DK",
+        "declarer": "E",
+        "score": "150",
+        "tricks": 7,
+        "nsCrossImps": 3,
+        "ewCrossImps": -3
+      },
+      {
+        "ns": "15",
+        "ew": "1",
+        "contract": "5D",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 10,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "2",
+        "ew": "14",
+        "contract": "5D",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-50",
+        "tricks": 10,
+        "nsCrossImps": -2,
+        "ewCrossImps": 2
+      },
+      {
+        "ns": "3",
+        "ew": "13",
+        "contract": "3NT",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 8.57,
+        "ewCrossImps": -8.57
+      },
+      {
+        "ns": "12",
+        "ew": "5",
+        "contract": "2HX",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "-300",
+        "tricks": 6,
+        "nsCrossImps": -7.86,
+        "ewCrossImps": 7.86
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3NT",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 7,
+        "nsCrossImps": -3.57,
+        "ewCrossImps": 3.57
+      },
+      {
+        "ns": "7",
+        "ew": "10",
+        "contract": "3S",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "-150",
+        "tricks": 6,
+        "nsCrossImps": -4.71,
+        "ewCrossImps": 4.71
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3NT",
+        "lead": "C7",
+        "declarer": "S",
+        "score": "400",
+        "tricks": 9,
+        "nsCrossImps": 8.57,
+        "ewCrossImps": -8.57
+      }
+    ]
+  }
+]

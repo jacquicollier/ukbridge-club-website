@@ -1,0 +1,1976 @@
+[
+  {
+    "type": "PAIR_MP",
+    "board": "1",
+    "lines": [
+      {
+        "ns": "11",
+        "ew": "12",
+        "contract": "1N",
+        "lead": "HK",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "9",
+        "ew": "10",
+        "contract": "1N",
+        "lead": "H7",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "3",
+        "ew": "4",
+        "contract": "2N",
+        "lead": "H7",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "13",
+        "ew": "14",
+        "contract": "2N",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "5",
+        "ew": "6",
+        "contract": "3C",
+        "lead": "S3",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 8,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "15",
+        "ew": "16",
+        "contract": "2N",
+        "lead": "S3",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "1",
+        "ew": "2",
+        "contract": "2N",
+        "lead": "HK",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "7",
+        "ew": "8",
+        "contract": "2N",
+        "lead": "H7",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 7,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "2",
+    "lines": [
+      {
+        "ns": "11",
+        "ew": "12",
+        "contract": "3N",
+        "lead": "S8",
+        "declarer": "S",
+        "score": "660",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "9",
+        "ew": "10",
+        "contract": "5C",
+        "lead": "SK",
+        "declarer": "N",
+        "score": "600",
+        "tricks": 11,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "3",
+        "ew": "4",
+        "contract": "3C",
+        "lead": "SK",
+        "declarer": "N",
+        "score": "150",
+        "tricks": 11,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "1",
+        "ew": "2",
+        "contract": "3N",
+        "lead": "H4",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "5",
+        "ew": "6",
+        "contract": "6C",
+        "lead": "SK",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 11,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "7",
+        "ew": "8",
+        "contract": "3N",
+        "lead": "S2",
+        "declarer": "S",
+        "score": "660",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "15",
+        "ew": "16",
+        "contract": "5C",
+        "lead": "S8",
+        "declarer": "S",
+        "score": "600",
+        "tricks": 11,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "13",
+        "ew": "14",
+        "contract": "4HX",
+        "lead": "CA",
+        "declarer": "E",
+        "score": "300",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "3",
+    "lines": [
+      {
+        "ns": "11",
+        "ew": "12",
+        "contract": "5DX",
+        "lead": "CA",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 9,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "9",
+        "ew": "10",
+        "contract": "5DX",
+        "lead": "CK",
+        "declarer": "S",
+        "score": "-500",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "3",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "HQ",
+        "declarer": "W",
+        "score": "-710",
+        "tricks": 13,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "5",
+        "ew": "6",
+        "contract": "3S",
+        "lead": "DK",
+        "declarer": "E",
+        "score": "-230",
+        "tricks": 12,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "15",
+        "ew": "16",
+        "contract": "2S",
+        "lead": "H5",
+        "declarer": "E",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "1",
+        "ew": "2",
+        "contract": "5DX",
+        "lead": "CA",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 9,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "7",
+        "ew": "8",
+        "contract": "4S",
+        "lead": "H5",
+        "declarer": "E",
+        "score": "-650",
+        "tricks": 11,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "13",
+        "ew": "14",
+        "contract": "3S",
+        "lead": "H5",
+        "declarer": "E",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "4",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "12",
+        "contract": "2S",
+        "lead": "CA",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "2N",
+        "lead": "C5",
+        "declarer": "N",
+        "score": "120",
+        "tricks": 8,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "15",
+        "ew": "14",
+        "contract": "3S",
+        "lead": "C5",
+        "declarer": "N",
+        "score": "200",
+        "tricks": 11,
+        "nsMatchPoints": 12,
+        "ewMatchPoints": 2
+      },
+      {
+        "ns": "5",
+        "ew": "4",
+        "contract": "3N",
+        "lead": "C5",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "1",
+        "ew": "16",
+        "contract": "3N",
+        "lead": "D5",
+        "declarer": "S",
+        "score": "-300",
+        "tricks": 6,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "11",
+        "ew": "10",
+        "contract": "2S",
+        "lead": "D3",
+        "declarer": "N",
+        "score": "110",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "3C",
+        "lead": "S10",
+        "declarer": "E",
+        "score": "300",
+        "tricks": 6,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "3",
+        "ew": "2",
+        "contract": "2S",
+        "lead": "CA",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "5",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "12",
+        "contract": "5H",
+        "lead": "C2",
+        "declarer": "E",
+        "score": "-510",
+        "tricks": 13,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "11",
+        "ew": "10",
+        "contract": "4H",
+        "lead": "C2",
+        "declarer": "E",
+        "score": "-510",
+        "tricks": 13,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "3",
+        "ew": "2",
+        "contract": "4H",
+        "lead": "DQ",
+        "declarer": "E",
+        "score": "-510",
+        "tricks": 13,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "1",
+        "ew": "16",
+        "contract": "4H",
+        "lead": "DQ",
+        "declarer": "E",
+        "score": "-510",
+        "tricks": 13,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "6H",
+        "lead": "DQ",
+        "declarer": "E",
+        "score": "-1010",
+        "tricks": 13,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "15",
+        "ew": "14",
+        "contract": "6H",
+        "lead": "C2",
+        "declarer": "E",
+        "score": "-1010",
+        "tricks": 13,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "5",
+        "ew": "4",
+        "contract": "5H",
+        "lead": "C2",
+        "declarer": "E",
+        "score": "-510",
+        "tricks": 13,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "6H",
+        "lead": "DQ",
+        "declarer": "E",
+        "score": "-1010",
+        "tricks": 13,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "6",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "12",
+        "contract": "1S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "110",
+        "tricks": 8,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "1",
+        "ew": "16",
+        "contract": "1S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "110",
+        "tricks": 8,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "11",
+        "ew": "10",
+        "contract": "2S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "110",
+        "tricks": 8,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "3",
+        "ew": "2",
+        "contract": "2D",
+        "lead": "SK",
+        "declarer": "S",
+        "score": "-50",
+        "tricks": 7,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 11
+      },
+      {
+        "ns": "5",
+        "ew": "4",
+        "contract": "2S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "9",
+        "ew": "8",
+        "contract": "3C",
+        "lead": "HA",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 9,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "15",
+        "ew": "14",
+        "contract": "2S",
+        "lead": "H10",
+        "declarer": "S",
+        "score": "110",
+        "tricks": 8,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "7",
+        "ew": "6",
+        "contract": "2S",
+        "lead": "H9",
+        "declarer": "S",
+        "score": "-50",
+        "tricks": 7,
+        "nsMatchPoints": 3,
+        "ewMatchPoints": 11
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "7",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "10",
+        "contract": "4H",
+        "lead": "D8",
+        "declarer": "W",
+        "score": "100",
+        "tricks": 9,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "9",
+        "ew": "6",
+        "contract": "4S",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "620",
+        "tricks": 10,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "1",
+        "ew": "14",
+        "contract": "4S",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "15",
+        "ew": "12",
+        "contract": "3S",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "170",
+        "tricks": 10,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "5",
+        "ew": "2",
+        "contract": "3S",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "170",
+        "tricks": 10,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "3",
+        "ew": "16",
+        "contract": "3S",
+        "lead": "HK",
+        "declarer": "N",
+        "score": "170",
+        "tricks": 10,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "7",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "11",
+        "ew": "8",
+        "contract": "3C",
+        "lead": "SA",
+        "declarer": "E",
+        "score": "500",
+        "tricks": 4,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "8",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "10",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "15",
+        "ew": "12",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "9",
+        "ew": "6",
+        "contract": "3C",
+        "lead": "D4",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 9,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "1",
+        "ew": "14",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "3",
+        "ew": "16",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "5",
+        "ew": "2",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "7",
+        "ew": "4",
+        "contract": "1N",
+        "lead": "H7",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "11",
+        "ew": "8",
+        "contract": "1N",
+        "lead": "H6",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "9",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "10",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "120",
+        "tricks": 8,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "15",
+        "ew": "12",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "90",
+        "tricks": 7,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "9",
+        "ew": "6",
+        "contract": "3H",
+        "lead": "C6",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "1",
+        "ew": "14",
+        "contract": "4H",
+        "lead": "H4",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "3",
+        "ew": "16",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "-50",
+        "tricks": 6,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "5",
+        "ew": "2",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "90",
+        "tricks": 7,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "7",
+        "ew": "4",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "150",
+        "tricks": 9,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "11",
+        "ew": "8",
+        "contract": "1N",
+        "lead": "D5",
+        "declarer": "N",
+        "score": "150",
+        "tricks": 9,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "10",
+    "lines": [
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "1N",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 5,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "5",
+        "ew": "16",
+        "contract": "1N",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "1N",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 5,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "13",
+        "ew": "8",
+        "contract": "1N",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 6,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "7",
+        "ew": "2",
+        "contract": "1N",
+        "lead": "S2",
+        "declarer": "E",
+        "score": "-120",
+        "tricks": 8,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "3",
+        "ew": "14",
+        "contract": "1N",
+        "lead": "C2",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "2H",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "100",
+        "tricks": 7,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "15",
+        "ew": "10",
+        "contract": "3D",
+        "lead": "S6",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "11",
+    "lines": [
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "6CX",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 11,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "5H",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "-450",
+        "tricks": 11,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "13",
+        "ew": "8",
+        "contract": "5CX",
+        "lead": "H5",
+        "declarer": "N",
+        "score": "550",
+        "tricks": 11,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "5",
+        "ew": "16",
+        "contract": "6H",
+        "lead": "SA",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 11,
+        "nsMatchPoints": 12,
+        "ewMatchPoints": 2
+      },
+      {
+        "ns": "15",
+        "ew": "10",
+        "contract": "5H",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "-450",
+        "tricks": 11,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "3",
+        "ew": "14",
+        "contract": "2H",
+        "lead": "CQ",
+        "declarer": "W",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "7",
+        "ew": "2",
+        "contract": "5H",
+        "lead": "CA",
+        "declarer": "E",
+        "score": "-450",
+        "tricks": 11,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "5CX",
+        "lead": "DA",
+        "declarer": "N",
+        "score": "-100",
+        "tricks": 10,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "12",
+    "lines": [
+      {
+        "ns": "9",
+        "ew": "4",
+        "contract": "3N",
+        "lead": "SJ",
+        "declarer": "N",
+        "score": "660",
+        "tricks": 11,
+        "nsMatchPoints": 12,
+        "ewMatchPoints": 2
+      },
+      {
+        "ns": "1",
+        "ew": "12",
+        "contract": "3N",
+        "lead": "C3",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "5",
+        "ew": "16",
+        "contract": "3N",
+        "lead": "H10",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "15",
+        "ew": "10",
+        "contract": "3N",
+        "lead": "CJ",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "13",
+        "ew": "8",
+        "contract": "2CXX",
+        "lead": "H9",
+        "declarer": "S",
+        "score": "1160",
+        "tricks": 9,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "7",
+        "ew": "2",
+        "contract": "2N",
+        "lead": "D4",
+        "declarer": "S",
+        "score": "210",
+        "tricks": 11,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "3",
+        "ew": "14",
+        "contract": "3N",
+        "lead": "H10",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "11",
+        "ew": "6",
+        "contract": "3N",
+        "lead": "C3",
+        "declarer": "N",
+        "score": "630",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "13",
+    "lines": [
+      {
+        "ns": "9",
+        "ew": "2",
+        "contract": "2S",
+        "lead": "HK",
+        "declarer": "E",
+        "score": "200",
+        "tricks": 6,
+        "nsMatchPoints": 12,
+        "ewMatchPoints": 2
+      },
+      {
+        "ns": "1",
+        "ew": "10",
+        "contract": "2N",
+        "lead": "HK",
+        "declarer": "E",
+        "score": "300",
+        "tricks": 5,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "13",
+        "ew": "6",
+        "contract": "3H",
+        "lead": "S7",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "7",
+        "ew": "16",
+        "contract": "3H",
+        "lead": "S7",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "4HX",
+        "lead": "S7",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 9,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "15",
+        "ew": "8",
+        "contract": "3H",
+        "lead": "S7",
+        "declarer": "S",
+        "score": "-200",
+        "tricks": 7,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "3",
+        "ew": "12",
+        "contract": "2N",
+        "lead": "S5",
+        "declarer": "N",
+        "score": "120",
+        "tricks": 8,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "5",
+        "ew": "14",
+        "contract": "3H",
+        "lead": "S7",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "14",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "6",
+        "contract": "2H",
+        "lead": "S2",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 7,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "1",
+        "ew": "10",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "7",
+        "ew": "16",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "9",
+        "ew": "2",
+        "contract": "2S",
+        "lead": "C10",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 6,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "3",
+        "ew": "12",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "-90",
+        "tricks": 7,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "15",
+        "ew": "8",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "50",
+        "tricks": 6,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "5",
+        "ew": "14",
+        "contract": "1N",
+        "lead": "S4",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 5,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "15",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "6",
+        "contract": "4S",
+        "lead": "H10",
+        "declarer": "E",
+        "score": "-420",
+        "tricks": 10,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "11",
+        "ew": "4",
+        "contract": "3N",
+        "lead": "C7",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsMatchPoints": 11,
+        "ewMatchPoints": 3
+      },
+      {
+        "ns": "7",
+        "ew": "16",
+        "contract": "3N",
+        "lead": "CQ",
+        "declarer": "E",
+        "score": "-430",
+        "tricks": 10,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "1",
+        "ew": "10",
+        "contract": "4S",
+        "lead": "CQ",
+        "declarer": "E",
+        "score": "-420",
+        "tricks": 10,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "9",
+        "ew": "2",
+        "contract": "3N",
+        "lead": "CQ",
+        "declarer": "E",
+        "score": "-430",
+        "tricks": 10,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "3",
+        "ew": "12",
+        "contract": "3N",
+        "lead": "C7",
+        "declarer": "W",
+        "score": "-430",
+        "tricks": 10,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "15",
+        "ew": "8",
+        "contract": "3N",
+        "lead": "C3",
+        "declarer": "W",
+        "score": "-400",
+        "tricks": 9,
+        "nsMatchPoints": 11,
+        "ewMatchPoints": 3
+      },
+      {
+        "ns": "5",
+        "ew": "14",
+        "contract": "2S",
+        "lead": "CQ",
+        "declarer": "E",
+        "score": "-170",
+        "tricks": 10,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "16",
+    "lines": [
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "3S",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "-170",
+        "tricks": 10,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "13",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "C4",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "3",
+        "ew": "10",
+        "contract": "4S",
+        "lead": "H6",
+        "declarer": "W",
+        "score": "-650",
+        "tricks": 11,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "1",
+        "ew": "8",
+        "contract": "4S",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "-650",
+        "tricks": 11,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "15",
+        "ew": "6",
+        "contract": "4S",
+        "lead": "C4",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "9",
+        "ew": "16",
+        "contract": "4S",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "5",
+        "ew": "12",
+        "contract": "4S",
+        "lead": "S3",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "7",
+        "ew": "14",
+        "contract": "4S",
+        "lead": "H7",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "17",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "S6",
+        "declarer": "E",
+        "score": "-450",
+        "tricks": 11,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "2S",
+        "lead": "H9",
+        "declarer": "E",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "3",
+        "ew": "10",
+        "contract": "2N",
+        "lead": "D7",
+        "declarer": "W",
+        "score": "-150",
+        "tricks": 9,
+        "nsMatchPoints": 8,
+        "ewMatchPoints": 6
+      },
+      {
+        "ns": "15",
+        "ew": "6",
+        "contract": "2S",
+        "lead": "H9",
+        "declarer": "E",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 5,
+        "ewMatchPoints": 9
+      },
+      {
+        "ns": "9",
+        "ew": "16",
+        "contract": "3H",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "-140",
+        "tricks": 9,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "1",
+        "ew": "8",
+        "contract": "5SX",
+        "lead": "DA",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 10,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "5",
+        "ew": "12",
+        "contract": "3N",
+        "lead": "DQ",
+        "declarer": "W",
+        "score": "100",
+        "tricks": 7,
+        "nsMatchPoints": 13,
+        "ewMatchPoints": 1
+      },
+      {
+        "ns": "7",
+        "ew": "14",
+        "contract": "4S",
+        "lead": "DA",
+        "declarer": "E",
+        "score": "-450",
+        "tricks": 11,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "18",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "4",
+        "contract": "2S",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "15",
+        "ew": "6",
+        "contract": "3D",
+        "lead": "H4",
+        "declarer": "E",
+        "score": "-110",
+        "tricks": 9,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      },
+      {
+        "ns": "3",
+        "ew": "10",
+        "contract": "3S",
+        "lead": "D3",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "11",
+        "ew": "2",
+        "contract": "3H",
+        "lead": "S10",
+        "declarer": "W",
+        "score": "150",
+        "tricks": 6,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "9",
+        "ew": "16",
+        "contract": "4D",
+        "lead": "S6",
+        "declarer": "E",
+        "score": "100",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "5",
+        "ew": "12",
+        "contract": "3S",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "1",
+        "ew": "8",
+        "contract": "3H",
+        "lead": "S10",
+        "declarer": "W",
+        "score": "50",
+        "tricks": 8,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "7",
+        "ew": "14",
+        "contract": "2S",
+        "lead": "HQ",
+        "declarer": "N",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "19",
+    "lines": [
+      {
+        "ns": "5",
+        "ew": "10",
+        "contract": "4H",
+        "lead": "C6",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "13",
+        "ew": "2",
+        "contract": "4H",
+        "lead": "C6",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "11",
+        "ew": "16",
+        "contract": "4H",
+        "lead": "C6",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "15",
+        "ew": "4",
+        "contract": "3N",
+        "lead": "D5",
+        "declarer": "W",
+        "score": "-600",
+        "tricks": 9,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "1",
+        "ew": "6",
+        "contract": "4H",
+        "lead": "DJ",
+        "declarer": "E",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "7",
+        "ew": "12",
+        "contract": "4H",
+        "lead": "C6",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "3",
+        "ew": "8",
+        "contract": "4H",
+        "lead": "C6",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      },
+      {
+        "ns": "9",
+        "ew": "14",
+        "contract": "4H",
+        "lead": "H10",
+        "declarer": "W",
+        "score": "-620",
+        "tricks": 10,
+        "nsMatchPoints": 6,
+        "ewMatchPoints": 8
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "20",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "2",
+        "contract": "2D",
+        "lead": "SJ",
+        "declarer": "N",
+        "score": "90",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "15",
+        "ew": "4",
+        "contract": "3H",
+        "lead": "HQ",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "11",
+        "ew": "16",
+        "contract": "2S",
+        "lead": "H8",
+        "declarer": "W",
+        "score": "300",
+        "tricks": 5,
+        "nsMatchPoints": 12,
+        "ewMatchPoints": 2
+      },
+      {
+        "ns": "7",
+        "ew": "12",
+        "contract": "3H",
+        "lead": "S3",
+        "declarer": "S",
+        "score": "140",
+        "tricks": 9,
+        "nsMatchPoints": 7,
+        "ewMatchPoints": 7
+      },
+      {
+        "ns": "5",
+        "ew": "10",
+        "contract": "3H",
+        "lead": "D8",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "3",
+        "ew": "8",
+        "contract": "3H",
+        "lead": "C8",
+        "declarer": "S",
+        "score": "-100",
+        "tricks": 8,
+        "nsMatchPoints": 1,
+        "ewMatchPoints": 13
+      },
+      {
+        "ns": "1",
+        "ew": "6",
+        "contract": "3H",
+        "lead": "D3",
+        "declarer": "S",
+        "score": "170",
+        "tricks": 10,
+        "nsMatchPoints": 10,
+        "ewMatchPoints": 4
+      },
+      {
+        "ns": "9",
+        "ew": "14",
+        "contract": "4H",
+        "lead": "S3",
+        "declarer": "S",
+        "score": "620",
+        "tricks": 10,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "board": "21",
+    "lines": [
+      {
+        "ns": "13",
+        "ew": "2",
+        "contract": "5S",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "15",
+        "ew": "4",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "7",
+        "ew": "12",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "1",
+        "ew": "6",
+        "contract": "4SX",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "990",
+        "tricks": 11,
+        "nsMatchPoints": 14,
+        "ewMatchPoints": 0
+      },
+      {
+        "ns": "3",
+        "ew": "8",
+        "contract": "4S",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "650",
+        "tricks": 11,
+        "nsMatchPoints": 9,
+        "ewMatchPoints": 5
+      },
+      {
+        "ns": "5",
+        "ew": "10",
+        "contract": "4H",
+        "lead": "SA",
+        "declarer": "W",
+        "score": "100",
+        "tricks": 8,
+        "nsMatchPoints": 2,
+        "ewMatchPoints": 12
+      },
+      {
+        "ns": "11",
+        "ew": "16",
+        "contract": "4DX",
+        "lead": "S9",
+        "declarer": "E",
+        "score": "300",
+        "tricks": 8,
+        "nsMatchPoints": 4,
+        "ewMatchPoints": 10
+      },
+      {
+        "ns": "9",
+        "ew": "14",
+        "contract": "6SX",
+        "lead": "HA",
+        "declarer": "N",
+        "score": "-200",
+        "tricks": 11,
+        "nsMatchPoints": 0,
+        "ewMatchPoints": 14
+      }
+    ]
+  }
+]

@@ -1,14 +1,14 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { generateBoards } from '../lib/boards/boards-generator';
 import { loadPBN } from '../lib/pbn/pbnConverter';
-import { Board } from '../lib/boards/model';
 import { PBNHand } from '../lib/pbn/model';
 import { loadUsebio } from '../lib/usebio/usebioConverter';
+import { Contestant } from 'shared/contestants/contestant';
 import { cases } from './constants';
+import { generateTravellers } from '../lib/travellers/travellers-generator';
 
-describe('Boards Generator', () => {
-  test.each(cases)('should generate boards from "%s"', async (folder) => {
+describe('Travellers Generator', () => {
+  test.each(cases)('should generate travellers from "%s"\'', async (folder) => {
     const usebioFilePath = path.resolve(
       __dirname,
       `payloads/${folder}/usebio.xml`,
@@ -25,14 +25,14 @@ describe('Boards Generator', () => {
       pbnFile = loadPBN(pbn);
     }
 
-    const boards = generateBoards(usebioFile, pbnFile);
-    const boardsJson: Board[] = JSON.parse(
+    const travellers = generateTravellers(usebioFile, pbnFile);
+    const travellersJson: Contestant[] = JSON.parse(
       fs.readFileSync(
-        path.resolve(__dirname, `payloads/${folder}/boards.json`),
+        path.resolve(__dirname, `payloads/${folder}/travellers.json`),
         'utf-8',
       ),
     );
 
-    expect(boards).toMatchObject(boardsJson);
+    expect(travellers).toMatchObject(travellersJson);
   });
 });
