@@ -1,7 +1,6 @@
 'use client';
 
-import { SessionScore } from '../../../../../../../../../shared/session/sessionscore';
-import { useRouter } from 'next/navigation';
+import { SessionScore } from 'shared/session/sessionscore';
 
 export default function MPTable({
   scores,
@@ -10,7 +9,7 @@ export default function MPTable({
   scores: SessionScore[];
   title: string;
 }) {
-  const router = useRouter();
+  // const router = useRouter();
 
   if (scores.length === 0) {
     return <>No results available.</>;
@@ -71,11 +70,11 @@ export default function MPTable({
       <tbody className='text-xs md:text-base'>
         {sortedScores.map((score, rowIndex) => (
           <tr
-            onClick={() =>
-              router.push(
-                `${window.location.pathname}/${score.direction ? score.direction + score.contestant : score.contestant}`,
-              )
-            }
+            // onClick={() =>
+            //   router.push(
+            //     `${window.location.pathname}/${score.direction ? score.direction + score.contestant : score.contestant}`,
+            //   )
+            // }
             key={rowIndex}
             className={`cursor-pointer border border-gray-300 ${
               rowIndex % 2 === 0 ? 'bg-gray-100' : 'bg-white'
