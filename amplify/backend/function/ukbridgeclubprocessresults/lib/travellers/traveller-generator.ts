@@ -4,17 +4,13 @@ import {
   UsebioBoard,
   UsebioSection,
 } from '../usebio/model';
-import {
-  IndividualTraveller,
-  PairIMPTravellerLine,
-  TeamTraveller,
-  Traveller,
-} from './model';
+import { IndividualTraveller, TeamTraveller, Traveller } from './model';
 import {
   mapToIndividualLine,
   mapToPairIMPLine,
   mapToPairMPLine,
 } from './utils';
+import { PairIMPLine } from '../model';
 
 export function generatePairsTravellerForBoard(
   scoringMethod: string,
@@ -71,7 +67,7 @@ export function generateTeamsTravellerForMatch(match: Match): TeamTraveller[] {
 export function mergeTravellerPayload(
   payload: TeamTraveller[],
 ): TeamTraveller[] {
-  const boardMap = new Map<number, PairIMPTravellerLine[]>();
+  const boardMap = new Map<number, PairIMPLine[]>();
 
   payload.forEach(({ board, lines }) => {
     const current = boardMap.get(board) ?? [];

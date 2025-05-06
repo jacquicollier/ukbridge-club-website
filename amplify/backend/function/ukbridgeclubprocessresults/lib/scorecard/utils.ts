@@ -1,14 +1,22 @@
 import { TravellerLine } from '../usebio/model';
 import { Direction } from '../boards/model';
-import { IndividualLine, PairIMPLine, PairMPLine } from '../model';
+import {
+  IndividualScoreCardLine,
+  PairIMPScoreCardLine,
+  PairMPScoreCardLine,
+} from './model';
 
 function safeNumber(value: string): number | null {
   const num = Number(value);
   return isNaN(num) ? null : num;
 }
 
-export function mapToPairMPLine(line: TravellerLine): PairMPLine {
+export function mapToPairMPScoreCardLine(
+  board: number,
+  line: TravellerLine,
+): PairMPScoreCardLine {
   return {
+    board,
     ns: line.NS_PAIR_NUMBER!,
     ew: line.EW_PAIR_NUMBER!,
     contract: line.CONTRACT,
@@ -21,8 +29,12 @@ export function mapToPairMPLine(line: TravellerLine): PairMPLine {
   };
 }
 
-export function mapToPairIMPLine(line: TravellerLine): PairIMPLine {
+export function mapToPairIMPScoreCardLine(
+  board: number,
+  line: TravellerLine,
+): PairIMPScoreCardLine {
   return {
+    board,
     ns: line.NS_PAIR_NUMBER!,
     ew: line.EW_PAIR_NUMBER!,
     contract: line.CONTRACT,
@@ -35,8 +47,12 @@ export function mapToPairIMPLine(line: TravellerLine): PairIMPLine {
   };
 }
 
-export function mapToIndividualLine(line: TravellerLine): IndividualLine {
+export function mapToIndividualScoreCardLine(
+  board: number,
+  line: TravellerLine,
+): IndividualScoreCardLine {
   return {
+    board,
     n: line.N_PLAYER_NUMBER!,
     s: line.S_PLAYER_NUMBER!,
     e: line.E_PLAYER_NUMBER!,

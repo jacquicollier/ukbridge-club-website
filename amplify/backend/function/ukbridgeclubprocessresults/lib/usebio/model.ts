@@ -46,9 +46,14 @@ interface SectionAttributes {
 }
 
 export interface Participants {
+  $?: ParticipantAttributes;
   TEAM?: Team[];
   PAIR?: Pair[];
   PLAYER?: Player[];
+}
+
+interface ParticipantAttributes {
+  EVENT_TYPE: string;
 }
 
 export interface Team {
