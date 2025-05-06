@@ -1,0 +1,213 @@
+[
+  {
+    "type": "PAIR_MP",
+    "section": "A",
+    "lines": [
+      {
+        "contestant": "1",
+        "position": "31",
+        "percentage": "40.89"
+      },
+      {
+        "masterPoints": "42",
+        "masterPointType": "BLACK",
+        "contestant": "2",
+        "position": "6",
+        "percentage": "58.08"
+      },
+      {
+        "contestant": "3",
+        "position": "14",
+        "percentage": "53.71"
+      },
+      {
+        "contestant": "4",
+        "position": "30",
+        "percentage": "42.35"
+      },
+      {
+        "contestant": "5",
+        "position": "29",
+        "percentage": "42.59"
+      },
+      {
+        "masterPoints": "30",
+        "masterPointType": "BLACK",
+        "contestant": "6",
+        "position": "8",
+        "percentage": "57.41"
+      },
+      {
+        "contestant": "7",
+        "position": "19",
+        "percentage": "50.66"
+      },
+      {
+        "contestant": "8",
+        "position": "25",
+        "percentage": "45.06"
+      },
+      {
+        "masterPoints": "18",
+        "masterPointType": "BLACK",
+        "contestant": "9",
+        "position": "10",
+        "percentage": "54.48"
+      },
+      {
+        "masterPoints": "60",
+        "masterPointType": "BLACK",
+        "contestant": "10",
+        "position": "3",
+        "percentage": "60.01"
+      },
+      {
+        "contestant": "12",
+        "position": "13",
+        "percentage": "53.87"
+      },
+      {
+        "contestant": "13",
+        "position": "35",
+        "percentage": "31.46"
+      },
+      {
+        "contestant": "14",
+        "position": "26",
+        "percentage": "43.76"
+      },
+      {
+        "masterPoints": "72",
+        "masterPointType": "BLACK",
+        "contestant": "15",
+        "position": "1",
+        "percentage": "67.18"
+      },
+      {
+        "contestant": "16",
+        "position": "17",
+        "percentage": "50.98"
+      },
+      {
+        "contestant": "17",
+        "position": "24",
+        "percentage": "45.67"
+      },
+      {
+        "contestant": "18",
+        "position": "15",
+        "percentage": "51.32"
+      }
+    ]
+  },
+  {
+    "type": "PAIR_MP",
+    "section": "B",
+    "lines": [
+      {
+        "contestant": "19",
+        "position": "18",
+        "percentage": "50.76"
+      },
+      {
+        "contestant": "20",
+        "position": "34",
+        "percentage": "36"
+      },
+      {
+        "contestant": "21",
+        "position": "16",
+        "percentage": "51.03"
+      },
+      {
+        "masterPoints": "36",
+        "masterPointType": "BLACK",
+        "contestant": "22",
+        "position": "7",
+        "percentage": "57.53"
+      },
+      {
+        "masterPoints": "12",
+        "masterPointType": "BLACK",
+        "contestant": "23",
+        "position": "11",
+        "percentage": "54.04"
+      },
+      {
+        "masterPoints": "66",
+        "masterPointType": "BLACK",
+        "contestant": "24",
+        "position": "2",
+        "percentage": "64.87"
+      },
+      {
+        "masterPoints": "24",
+        "masterPointType": "BLACK",
+        "contestant": "25",
+        "position": "9",
+        "percentage": "55.89"
+      },
+      {
+        "contestant": "26",
+        "position": "27",
+        "percentage": "43.18"
+      },
+      {
+        "contestant": "27",
+        "position": "22",
+        "percentage": "47.64"
+      },
+      {
+        "contestant": "28",
+        "position": "20",
+        "percentage": "48.62"
+      },
+      {
+        "contestant": "29",
+        "position": "28",
+        "percentage": "42.72"
+      },
+      {
+        "contestant": "30",
+        "position": "23",
+        "percentage": "47.1"
+      },
+      {
+        "masterPoints": "48",
+        "masterPointType": "BLACK",
+        "contestant": "31",
+        "position": "5",
+        "percentage": "58.27"
+      },
+      {
+        "masterPoints": "54",
+        "masterPointType": "BLACK",
+        "contestant": "32",
+        "position": "4",
+        "percentage": "58.96"
+      },
+      {
+        "contestant": "33",
+        "position": "21",
+        "percentage": "48.16"
+      },
+      {
+        "masterPoints": "6",
+        "masterPointType": "BLACK",
+        "contestant": "34",
+        "position": "12",
+        "percentage": "53.93"
+      },
+      {
+        "contestant": "35",
+        "position": "33",
+        "percentage": "40.69"
+      },
+      {
+        "contestant": "36",
+        "position": "32",
+        "percentage": "40.73"
+      }
+    ]
+  }
+]

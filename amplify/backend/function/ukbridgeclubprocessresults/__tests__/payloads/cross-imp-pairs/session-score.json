@@ -1,0 +1,92 @@
+[
+  {
+    "type": "PAIR_IMP",
+    "lines": [
+      {
+        "contestant": "1",
+        "position": "12",
+        "imps": "-8.86"
+      },
+      {
+        "contestant": "2",
+        "position": "9",
+        "imps": "-1.94"
+      },
+      {
+        "contestant": "3",
+        "position": "13",
+        "imps": "-11.86"
+      },
+      {
+        "contestant": "4",
+        "position": "6",
+        "imps": "8.57"
+      },
+      {
+        "contestant": "5",
+        "position": "2",
+        "imps": "37.71"
+      },
+      {
+        "contestant": "6",
+        "position": "7",
+        "imps": "4.86"
+      },
+      {
+        "contestant": "7",
+        "position": "3",
+        "imps": "33.43"
+      },
+      {
+        "contestant": "8",
+        "position": "16",
+        "imps": "-33.29"
+      },
+      {
+        "contestant": "9",
+        "position": "8",
+        "imps": "2.29"
+      },
+      {
+        "contestant": "10",
+        "position": "15",
+        "imps": "-29.71"
+      },
+      {
+        "contestant": "11",
+        "position": "11",
+        "imps": "-7"
+      },
+      {
+        "contestant": "12",
+        "position": "10",
+        "imps": "-4.29"
+      },
+      {
+        "contestant": "13",
+        "position": "5",
+        "imps": "18"
+      },
+      {
+        "contestant": "14",
+        "position": "14",
+        "imps": "-20.14"
+      },
+      {
+        "contestant": "15",
+        "position": "17",
+        "imps": "-51.14"
+      },
+      {
+        "contestant": "16",
+        "position": "1",
+        "imps": "53.57"
+      },
+      {
+        "contestant": "17",
+        "position": "4",
+        "imps": "21.29"
+      }
+    ]
+  }
+]

@@ -1,14 +1,5 @@
 import { Card, Direction } from 'shared/types';
 import { Directions, rankOrder, suitOrder } from './boards/model';
-import { TravellerLine } from './usebio/model';
-
-export function getResult(boardScore: TravellerLine) {
-  return 'Pass';
-  // if (!boardScore.tricks) {
-  //   return 'Pass';
-  // }
-  // return `${boardScore.contract}${calculateDifference(boardScore.contract, Number(boardScore.tricks))} ${boardScore.declarer}`;
-}
 
 export function determineDealer(boardNumber: number): Direction {
   const directions: Direction[] = ['N', 'E', 'S', 'W'];

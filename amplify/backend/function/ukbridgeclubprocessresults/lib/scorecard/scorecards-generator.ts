@@ -1,6 +1,7 @@
 import { PBNHand } from 'lib/pbn/model';
 import {
   Match,
+  Session,
   TravellerLine,
   UsebioBoard,
   UsebioFile,
@@ -56,7 +57,7 @@ export function generateScoreCards(
 }
 
 function handlePairsEvent(
-  session: UsebioFile['USEBIO']['EVENT']['SESSION'],
+  session: Session,
   boards: UsebioBoard[] | undefined,
   crossImps: boolean,
 ): ScoreCard[] {

@@ -1,0 +1,72 @@
+[
+  {
+    "type": "PAIR_MP",
+    "lines": [
+      {
+        "contestant": "1",
+        "position": "1",
+        "percentage": "62.01923"
+      },
+      {
+        "contestant": "11",
+        "position": "2",
+        "percentage": "60.5042"
+      },
+      {
+        "contestant": "14",
+        "position": "3",
+        "percentage": "53.846153"
+      },
+      {
+        "contestant": "12",
+        "position": "4",
+        "percentage": "52.521008"
+      },
+      {
+        "contestant": "6",
+        "position": "5",
+        "percentage": "50.48077"
+      },
+      {
+        "contestant": "2",
+        "position": "6",
+        "percentage": "48.557693"
+      },
+      {
+        "contestant": "4",
+        "position": "7",
+        "percentage": "48.076923"
+      },
+      {
+        "contestant": "8",
+        "position": "8",
+        "percentage": "47.61905"
+      },
+      {
+        "contestant": "9",
+        "position": "9=",
+        "percentage": "46.218487"
+      },
+      {
+        "contestant": "13",
+        "position": "9=",
+        "percentage": "46.218487"
+      },
+      {
+        "contestant": "10",
+        "position": "11",
+        "percentage": "45.37815"
+      },
+      {
+        "contestant": "3",
+        "position": "12",
+        "percentage": "44.71154"
+      },
+      {
+        "contestant": "5",
+        "position": "13",
+        "percentage": "43.75"
+      }
+    ]
+  }
+]
