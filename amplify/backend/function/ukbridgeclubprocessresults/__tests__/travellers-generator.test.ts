@@ -3,9 +3,9 @@ import * as path from 'path';
 import { loadPBN } from '../lib/pbn/pbnConverter';
 import { PBNHand } from '../lib/pbn/model';
 import { loadUsebio } from '../lib/usebio/usebioConverter';
-import { Contestant } from 'shared/contestants/contestant';
 import { cases } from './constants';
 import { generateTravellers } from '../lib/travellers/travellers-generator';
+import { Traveller } from '../lib/travellers/model';
 
 describe('Travellers Generator', () => {
   test.each(cases)('should generate travellers from "%s"\'', async (folder) => {
@@ -26,7 +26,7 @@ describe('Travellers Generator', () => {
     }
 
     const travellers = generateTravellers(usebioFile, pbnFile);
-    const travellersJson: Contestant[] = JSON.parse(
+    const travellersJson: Traveller[] = JSON.parse(
       fs.readFileSync(
         path.resolve(__dirname, `payloads/${folder}/travellers.json`),
         'utf-8',
