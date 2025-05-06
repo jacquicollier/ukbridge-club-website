@@ -33,7 +33,7 @@ describe('Session Score Generator', () => {
       const sessionScores = generateSessionScores(usebioFile, pbnFile);
       const sessionScoresJson: SessionScore[] = JSON.parse(
         fs.readFileSync(
-          path.resolve(__dirname, `payloads/${folder}/session-score.json`),
+          path.resolve(__dirname, `payloads/${folder}/session-scores.json`),
           'utf-8',
         ),
       );

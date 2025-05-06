@@ -14,6 +14,7 @@ import { loadUsebio } from './usebio/usebioConverter';
 import { generateContestants } from './contestants/contestants-generator';
 import { generateTravellers } from './travellers/travellers-generator';
 import { generateScoreCards } from './scorecard/scorecards-generator';
+import { generateSessionScores } from './session-score/session-score-generator';
 
 const s3 = new S3Client({});
 
@@ -105,6 +106,11 @@ async function writeOutputs(
       bucket,
       `${base}scorecard.json`,
       generateScoreCards(usebioFile, pbnFile),
+    ),
+    saveJsonToS3(
+      bucket,
+      `${base}session-scores.json`,
+      generateSessionScores(usebioFile, pbnFile),
     ),
   ]);
 }
