@@ -1,26 +1,66 @@
 type MasterPointType = 'BLACK' | 'GREEN' | 'BLUE';
 
-interface BaseSessionScore {
+interface BaseSessionScoreLine {
   masterPoints?: number;
   masterPointType?: MasterPointType;
-  contestant: string;
   position: string; // string to handle e.g., 7= for two contestants with the same score
+}
+
+interface BaseContestantSessionScoreLine extends BaseSessionScoreLine {
+  contestant: string;
+}
+
+interface BaseSessionScore {
+  section?: string;
+}
+
+export interface PairMPSessionScoreLine extends BaseContestantSessionScoreLine {
+  percentage: number;
 }
 
 export interface PairMPSessionScore extends BaseSessionScore {
   type: 'PAIR_MP';
-  matchPoints: number;
-  tops: number;
+  lines: PairMPSessionScoreLine[];
+}
+
+export interface PairIMPSessionScoreLine
+  extends BaseContestantSessionScoreLine {
+  imps: number;
 }
 
 export interface PairIMPSessionScore extends BaseSessionScore {
   type: 'PAIR_IMP';
+  lines: PairIMPSessionScoreLine[];
+}
+
+export interface IndividualSessionScoreLine
+  extends BaseContestantSessionScoreLine {
+  percentage: number;
+}
+
+export interface IndividualSessionScore extends BaseSessionScore {
+  type: 'INDIVIDUAL';
+  lines: IndividualSessionScoreLine[];
+}
+
+export interface TeamsSessionScoreLine extends BaseSessionScoreLine {
   imps: number;
+  pairs: TeamPairScoreLine[];
 }
 
-export type Model = PairMPSessionScore | PairIMPSessionScore;
-
-export interface SectionSessionScores {
-  name: string;
-  sessionScores: Model[];
+export interface TeamPairScoreLine {
+  contestant: string;
+  imps: number;
+  boardsPlayed: number;
 }
+
+export interface TeamsSessionScore extends BaseSessionScore {
+  type: 'TEAM';
+  lines: TeamsSessionScoreLine[];
+}
+
+export type SessionScore =
+  | PairMPSessionScore
+  | PairIMPSessionScore
+  | IndividualSessionScore
+  | TeamsSessionScore;

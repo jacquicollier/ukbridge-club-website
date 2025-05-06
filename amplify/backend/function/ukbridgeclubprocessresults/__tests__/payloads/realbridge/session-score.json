@@ -1,0 +1,87 @@
+[
+  {
+    "type": "PAIR_MP",
+    "lines": [
+      {
+        "contestant": "1",
+        "position": "4",
+        "percentage": "53.40"
+      },
+      {
+        "contestant": "2",
+        "position": "2",
+        "percentage": "56.46"
+      },
+      {
+        "contestant": "3",
+        "position": "8",
+        "percentage": "35.71"
+      },
+      {
+        "contestant": "4",
+        "position": "8",
+        "percentage": "42.86"
+      },
+      {
+        "contestant": "5",
+        "position": "2",
+        "percentage": "54.42"
+      },
+      {
+        "contestant": "6",
+        "position": "4",
+        "percentage": "49.32"
+      },
+      {
+        "contestant": "7",
+        "position": "6",
+        "percentage": "48.30"
+      },
+      {
+        "contestant": "8",
+        "position": "5=",
+        "percentage": "47.96"
+      },
+      {
+        "contestant": "9",
+        "position": "7",
+        "percentage": "45.58"
+      },
+      {
+        "contestant": "10",
+        "position": "1",
+        "percentage": "59.18"
+      },
+      {
+        "contestant": "11",
+        "position": "1",
+        "percentage": "59.52"
+      },
+      {
+        "contestant": "12",
+        "position": "7",
+        "percentage": "45.24"
+      },
+      {
+        "contestant": "13",
+        "position": "3",
+        "percentage": "54.08"
+      },
+      {
+        "contestant": "14",
+        "position": "5=",
+        "percentage": "47.96"
+      },
+      {
+        "contestant": "15",
+        "position": "5",
+        "percentage": "48.98"
+      },
+      {
+        "contestant": "16",
+        "position": "3",
+        "percentage": "51.02"
+      }
+    ]
+  }
+]

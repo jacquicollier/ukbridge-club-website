@@ -24,7 +24,7 @@ interface EventAttributes {
   EVENT_TYPE: EventType;
 }
 
-interface Session {
+export interface Session {
   PARTICIPANTS?: Participants;
   SECTION: UsebioSection[] | UsebioSection;
   HANDSET?: HandSet;
@@ -58,20 +58,21 @@ interface ParticipantAttributes {
 
 export interface Team {
   PAIR: Pair[];
+  PLACE: string;
+  MASTER_POINTS?: MasterPoints;
+  TOTAL_SCORE?: number;
 }
 
 export interface Pair {
   PAIR_NUMBER: string;
   DIRECTION?: string;
-  PERCENTAGE: string;
+  PERCENTAGE?: number;
   PLACE: string;
   PLAYER: Player[];
   MASTER_POINTS?: MasterPoints;
-}
-
-interface MasterPoints {
-  MASTER_POINTS_AWARDED: string;
-  MASTER_POINT_TYPE: MasterPointType;
+  TOTAL_SCORE?: number;
+  BOARDS_PLAYED?: number;
+  PAIR_IMPS?: number;
 }
 
 interface Player {
@@ -79,6 +80,14 @@ interface Player {
   PLAYER_NUMBER?: string;
   CLUB_ID_NUMBER: string;
   NATIONAL_ID_NUMBER: string;
+  MASTER_POINTS?: MasterPoints;
+  PLACE: string;
+  PERCENTAGE?: number;
+}
+
+interface MasterPoints {
+  MASTER_POINTS_AWARDED: number;
+  MASTER_POINT_TYPE: MasterPointType;
 }
 
 export interface UsebioBoard {
