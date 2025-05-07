@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { listFolders, putObject } from '@/app/api/clubs/utils/s3';
+import { listFolders, putObject } from '@/app/api/utils/s3';
 
 export async function GET(
   _req: Request,

@@ -1,42 +1,37 @@
 'use client';
 
-import { SessionScore } from 'shared/session/sessionscore';
+import {
+  Contestant,
+  PairMPSessionScore,
+} from '@/app/club/[club]/results/sessions/[date]/[game]/model';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function MPTable({
-  scores,
-  title,
+  score,
+  contestants,
 }: {
-  scores: SessionScore[];
-  title: string;
+  score: PairMPSessionScore;
+  contestants: Contestant[];
 }) {
-  // const router = useRouter();
+  const pathname = usePathname();
 
-  if (scores.length === 0) {
+  if (score.lines.length === 0) {
     return <>No results available.</>;
   }
 
-  const sortedScores = scores.sort((a, b) => {
-    if (a.type == 'PAIR_MP' && b.type == 'PAIR_MP') {
-      return (
-        Number(((b.matchPoints / b.tops) * 100).toFixed(2)) -
-        Number(((a.matchPoints / a.tops) * 100).toFixed(2))
-      );
-    }
-    return 0;
-  });
-
-  const score = scores[0];
+  const sortedScores = score.lines.sort((a, b) => b.percentage - a.percentage);
 
   return (
     <table className='min-w-full table-fixed border-collapse border border-gray-300 shadow-lg'>
       <thead className='w-full text-sm text-white md:text-base'>
-        {title && (
+        {score.section && (
           <tr>
             <th
               colSpan={7}
               className='border border-gray-400 bg-gray-600 p-2 text-center'
             >
-              {title}
+              {score.section}
             </th>
           </tr>
         )}
@@ -46,21 +41,9 @@ export default function MPTable({
           <th className='w-[70%] border border-gray-400 p-1 text-center'>
             Players
           </th>
-          {score.type === 'PAIR_MP' ? (
-            <>
-              <th className='w-[5%] border border-gray-400 p-1 text-center'>
-                Match Points
-              </th>
-              <th className='w-[5%] border border-gray-400 p-1 text-center'>
-                Tops
-              </th>
-              <th className='w-[5%] border border-gray-400 p-1 text-center'>
-                Score %
-              </th>
-            </>
-          ) : (
-            <th>{score.imps}</th>
-          )}
+          <th className='w-[5%] border border-gray-400 p-1 text-center'>
+            Score %
+          </th>
           <th className='w-[5%] border border-gray-400 p-1 text-center'>
             Master Points
           </th>
@@ -70,49 +53,56 @@ export default function MPTable({
       <tbody className='text-xs md:text-base'>
         {sortedScores.map((score, rowIndex) => (
           <tr
-            // onClick={() =>
-            //   router.push(
-            //     `${window.location.pathname}/${score.direction ? score.direction + score.contestant : score.contestant}`,
-            //   )
-            // }
             key={rowIndex}
-            className={`cursor-pointer border border-gray-300 ${
-              rowIndex % 2 === 0 ? 'bg-gray-100' : 'bg-white'
-            }`}
+            className={`cursor-pointer border border-gray-300 ${rowIndex % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}
           >
             <td className='border border-gray-300 p-1 text-center'>
-              {score.position}
+              <Link
+                href={pathname + '/' + score.contestant}
+                className='contents'
+              >
+                <div className='size-full'>{score.position}</div>
+              </Link>
             </td>
             <td className='border border-gray-300 p-1 text-center'>
-              {score.contestant}
+              <Link
+                href={pathname + '/' + score.contestant}
+                className='contents'
+              >
+                <div className='size-full'>{score.contestant}</div>
+              </Link>
             </td>
-            <td className='border border-gray-300 p-1'>
-              {score.names.map((player, playerIndex) => (
-                <span key={playerIndex}>
-                  {player}
-                  {playerIndex < score.names.length - 1 ? ', ' : ''}
-                </span>
-              ))}
-            </td>
-            {score.type === 'PAIR_MP' ? (
-              <>
-                <td className='border border-gray-300 p-1 text-center'>
-                  {score.matchPoints}
-                </td>
-                <td className='border border-gray-300 p-1 text-center'>
-                  {score.tops}
-                </td>
-                <td className='border border-gray-300 p-1 text-center'>
-                  {((score.matchPoints / score.tops) * 100).toFixed(2)}
-                </td>
-              </>
-            ) : (
-              <td className='border border-gray-300 p-1 text-center'>
-                {score.imps}
-              </td>
-            )}
             <td className='border border-gray-300 p-1 text-center'>
-              {score.masterPoints}
+              <Link
+                href={pathname + '/' + score.contestant}
+                className='contents'
+              >
+                <div className='size-full'>
+                  {contestants
+                    .find((contestant) => {
+                      return contestant.id === score.contestant;
+                    })
+                    ?.names.join(', ')}
+                </div>
+              </Link>
+            </td>
+            <td className='border border-gray-300 p-1 text-center'>
+              <Link
+                href={pathname + '/' + score.contestant}
+                className='contents'
+              >
+                <div className='size-full'>
+                  {Number(score.percentage).toFixed(2)}
+                </div>
+              </Link>
+            </td>
+            <td className='border border-gray-300 p-1 text-center'>
+              <Link
+                href={pathname + '/' + score.contestant}
+                className='contents'
+              >
+                <div className='size-full'>{score.masterPoints}</div>
+              </Link>
             </td>
           </tr>
         ))}

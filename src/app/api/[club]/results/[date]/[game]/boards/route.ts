@@ -9,10 +9,9 @@ export async function GET(
       club: string;
       date: string;
       game: string;
-      contestant: string;
     }>;
   },
 ) {
-  const { club, date, game, contestant } = await params;
-  return getJSONForClub(club, `results/${date}/${game}/scorecard.json`);
+  const { club, date, game } = await params;
+  return getJSONForClub(club, `results/${date}/${game}/boards.json`);
 }

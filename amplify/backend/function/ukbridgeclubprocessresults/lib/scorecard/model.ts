@@ -1,4 +1,5 @@
 import { IndividualLine, PairIMPLine, PairMPLine } from '../model';
+import { Card, Direction } from 'shared/types';
 
 interface BaseScoreCard {
   contestant: string;
