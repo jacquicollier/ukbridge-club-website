@@ -3,16 +3,15 @@ import DealerAndVul from '@/app/components/hand/cornerpanels/DealerAndVul';
 import Deal from '@/app/components/hand/board/Deal';
 import CurrentTrickCards from '@/app/components/hand/board/CurrentTrickCards';
 import CollapsiblePanel from '@/app/components/layout/CollapsiblePanel';
-import {
-  Auction,
-  Board,
-  ContestantId,
-  EWVulnerableBoards,
-  NSVulnerableBoards,
-} from 'shared/constants';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
 import PointCountTable from '@/app/components/hand/cornerpanels/PointCountTable';
-import { Card } from 'shared/types';
+import { Board } from '@/app/club/[club]/results/sessions/[date]/[game]/[contestant]/model';
+import {
+  Auction,
+  Card,
+  EWVulnerableBoards,
+  NSVulnerableBoards,
+} from '@/app/components/hand/board/model';
 
 export default function BridgeBoard(props: {
   board: Board;
@@ -21,7 +20,7 @@ export default function BridgeBoard(props: {
   // boardScore: TravellerLine;
   validNextCards: Card[];
   playItAgain: boolean;
-  contestant: ContestantId | null;
+  // contestant: ContestantId | null;
 }) {
   return (
     <>

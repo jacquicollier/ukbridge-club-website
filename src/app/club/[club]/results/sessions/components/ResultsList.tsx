@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Result } from '../../../../../../../shared/types';
 
 export default function ResultsList({
   club,
@@ -69,3 +68,10 @@ export default function ResultsList({
     </div>
   );
 }
+
+type Result = {
+  title: string;
+  date: string;
+  // realBridgeLink: string | null;
+  resultsLink: string;
+};

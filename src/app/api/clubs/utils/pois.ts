@@ -1,5 +1,5 @@
 import { Poi } from '@/app/clubs/model/types';
-import { getAndParseObject } from '@/app/api/clubs/utils/s3';
+import { getAndParseObject } from '@/app/api/utils/s3';
 
 let pois: Poi[] | null = null;
 

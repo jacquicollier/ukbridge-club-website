@@ -1,6 +1,10 @@
-import { Card, Suit } from 'shared/types';
-import { rankOrder, SuitMap } from 'shared/constants';
 import { Button } from '@aws-amplify/ui-react';
+import {
+  Card,
+  rankOrder,
+  Suit,
+  SuitMap,
+} from '@/app/components/hand/board/model';
 
 export default function Hand(props: {
   cards: Card[];

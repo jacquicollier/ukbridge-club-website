@@ -1,11 +1,11 @@
 import Switch from 'react-switch';
 import { BarChart } from 'lucide-react';
 // import { TravellerLine } from 'shared/traveller/travellerLine';
-import { ContestantId } from 'shared/constants';
+// import { ContestantId } from 'shared/constants';
 
 export default function BridgeDealHeader(props: {
   board: number;
-  contestant: ContestantId | null;
+  // contestant: ContestantId | null;
   playItAgain: boolean;
   // boardScore: TravellerLine;
   hasScores: boolean;

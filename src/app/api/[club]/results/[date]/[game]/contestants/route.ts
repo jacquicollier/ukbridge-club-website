@@ -13,5 +13,5 @@ export async function GET(
   },
 ) {
   const { club, date, game } = await params;
-  return getJSONForClub(club, `results/${date}/${game}/scorecard.json`);
+  return getJSONForClub(club, `results/${date}/${game}/contestants.json`);
 }

@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { Result } from '../../../../../../shared/types';
-import { listFolders } from '@/app/api/clubs/utils/s3';
+import { listFolders } from '@/app/api/utils/s3';
 
 export async function GET(
   _req: Request,
@@ -35,3 +34,10 @@ export async function GET(
     );
   }
 }
+
+type Result = {
+  title: string;
+  date: string;
+  // realBridgeLink: string | null;
+  resultsLink: string;
+};

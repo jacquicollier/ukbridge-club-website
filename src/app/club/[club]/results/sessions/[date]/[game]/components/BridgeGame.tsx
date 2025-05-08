@@ -1,9 +1,9 @@
 'use client';
 
-import { Card, Direction } from '../../../../../../../../../shared/types';
 import { useState } from 'react';
 import { CardSource } from '@/app/components/hand/board/CardSource';
 import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
+import { Card, Direction } from '@/app/components/hand/board/model';
 
 const BridgeGame: React.FC = () => {
   const initialCards: Card[] = [

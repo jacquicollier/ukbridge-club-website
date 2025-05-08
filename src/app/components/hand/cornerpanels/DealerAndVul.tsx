@@ -1,5 +1,8 @@
-import { EWVulnerableBoards, NSVulnerableBoards } from 'shared/constants';
 import { determineDealer } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/utils';
+import {
+  EWVulnerableBoards,
+  NSVulnerableBoards,
+} from '@/app/components/hand/board/model';
 
 export default function DealerAndVul(props: { board: number }) {
   function findVulnerability() {

@@ -6,8 +6,8 @@ import {
   UsebioSection,
   Pair,
 } from '../usebio/model';
-import { Contestant } from 'shared/contestants/contestant';
 import { PBNHand } from '../pbn/model';
+import { Contestant } from './model';
 
 export function generateContestants(
   usebioFile: UsebioFile | null,

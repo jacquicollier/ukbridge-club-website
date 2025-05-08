@@ -8,7 +8,7 @@ import {
 } from '@aws-sdk/client-s3';
 import { Readable } from 'node:stream';
 
-export const s3 = new S3Client({
+const s3 = new S3Client({
   region: process.env.S3_AWS_REGION!,
   credentials: {
     accessKeyId: process.env.S3_AWS_ACCESS_KEY!,

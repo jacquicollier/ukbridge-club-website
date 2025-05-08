@@ -1,4 +1,5 @@
-import { allCards, Direction, Suit } from './model';
+import { allCards, Suit } from './model';
+import { Direction } from '../model';
 
 export function createDealFromLIN(linString: string): {
   [key in Direction]: string[];

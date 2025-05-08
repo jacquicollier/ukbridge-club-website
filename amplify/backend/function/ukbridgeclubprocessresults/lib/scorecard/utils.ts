@@ -1,10 +1,10 @@
 import { TravellerLine } from '../usebio/model';
-import { Direction } from '../boards/model';
 import {
   IndividualScoreCardLine,
   PairIMPScoreCardLine,
   PairMPScoreCardLine,
 } from './model';
+import { Direction } from '../model';
 
 function safeNumber(value: string): number | null {
   const num = Number(value);

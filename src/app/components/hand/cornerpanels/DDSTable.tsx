@@ -2,10 +2,14 @@
 
 import { Button } from '@aws-amplify/ui-react';
 import { useDDS } from '@/app/context/DDSContext';
-import { Card, Direction, Suit } from 'shared/types';
 import { useEffect, useState } from 'react';
-import { SuitMap } from 'shared/constants';
 import { generatePbnString } from '../../../../../amplify/backend/function/ukbridgeclubprocessresults/lib/utils';
+import {
+  Card,
+  Direction,
+  Suit,
+  SuitMap,
+} from '@/app/components/hand/board/model';
 
 export default function DDSTable(props: {
   deal: { [key in Direction]: Card[] };

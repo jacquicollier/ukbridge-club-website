@@ -1,5 +1,4 @@
-import { SuitMap } from 'shared/constants';
-import { Card, Direction } from 'shared/types';
+import { Card, Direction, SuitMap } from '@/app/components/hand/board/model';
 
 export default function CurrentTrickCard({
   player,

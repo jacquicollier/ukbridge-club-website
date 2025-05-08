@@ -1,4 +1,5 @@
-export type Direction = 'N' | 'E' | 'S' | 'W';
+import { Direction } from '../model';
+
 export const Directions: Direction[] = ['N', 'E', 'S', 'W'];
 
 export type Suit = 'S' | 'H' | 'D' | 'C';

@@ -1,6 +1,7 @@
-import { Board, Direction } from './model';
+import { Board } from './model';
 import { Usebio, UsebioBoard } from '../usebio/model';
 import { createDealFromLIN } from './lin-deal-extractor';
+import { Direction } from '../model';
 
 export function createDealFromEventBoards(usebio: Usebio): Board[] {
   if (

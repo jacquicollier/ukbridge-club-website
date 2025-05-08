@@ -1,4 +1,3 @@
-import { PBNHand } from 'lib/pbn/model';
 import {
   Match,
   Session,
@@ -6,7 +5,7 @@ import {
   UsebioBoard,
   UsebioFile,
   UsebioSection,
-} from 'lib/usebio/model';
+} from '../usebio/model';
 import {
   IndividualScoreCard,
   PairIMPScoreCard,
@@ -20,6 +19,7 @@ import {
   mapToPairIMPScoreCardLine,
   mapToPairMPScoreCardLine,
 } from './utils';
+import { PBNHand } from '../pbn/model';
 
 /**
  * Entry point for generating scorecards from a USEBIO file.
