@@ -7,11 +7,11 @@ import PairMPScoreCardComponent from '@/app/club/[club]/results/sessions/[date]/
 export default function PairMPScoreCardsComponent({
   scorecard,
   boards,
-  contestant,
+  // contestant,
 }: {
   scorecard: PairMPScoreCard;
   boards: Board[];
-  contestant: string;
+  // contestant: string;
 }) {
   if (scorecard.lines.length === 0) {
     return <>No results available.</>;
@@ -26,7 +26,7 @@ export default function PairMPScoreCardsComponent({
               key={index}
               boards={boards}
               pairMPScoreCardLine={pairMPScoreCardLine}
-              contestant={contestant}
+              // contestant={contestant}
             />
           );
         })}

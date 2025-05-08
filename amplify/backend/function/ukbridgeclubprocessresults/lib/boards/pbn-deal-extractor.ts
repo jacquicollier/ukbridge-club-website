@@ -1,5 +1,6 @@
 import { PBNHand } from '../pbn/model';
-import { Board, Direction, Directions, suitOrder } from './model';
+import { Board, Directions, suitOrder } from './model';
+import { Direction } from '../model';
 
 export function createDealFromPBN(pbnFile: PBNHand[]): Board[] {
   return pbnFile.map((hand) => {

@@ -1,4 +1,4 @@
-import { Card } from 'shared/types';
+import { Card } from '@/app/components/hand/board/model';
 
 export type Direction = 'N' | 'E' | 'S' | 'W';
 

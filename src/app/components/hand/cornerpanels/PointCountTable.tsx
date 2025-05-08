@@ -1,4 +1,4 @@
-import { Card, Direction } from '../../../../../shared/types';
+import { Card, Direction } from '@/app/components/hand/board/model';
 
 export default function PointCountTable(props: {
   deal: { [key in Direction]: Card[] };

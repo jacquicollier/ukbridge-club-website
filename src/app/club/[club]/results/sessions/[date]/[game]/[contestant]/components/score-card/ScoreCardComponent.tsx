@@ -32,7 +32,7 @@ export default async function ScoreCardComponent({
     <PairMPScoreCardsComponent
       scorecard={scorecard}
       boards={boards}
-      contestant={contestant}
+      // contestant={contestant}
     />
   ) : null;
 }

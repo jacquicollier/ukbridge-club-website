@@ -1,5 +1,5 @@
-import { Card, Direction } from 'shared/types';
 import { Directions, rankOrder, suitOrder } from './boards/model';
+import { Card, Direction } from './model';
 
 export function determineDealer(boardNumber: number): Direction {
   const directions: Direction[] = ['N', 'E', 'S', 'W'];

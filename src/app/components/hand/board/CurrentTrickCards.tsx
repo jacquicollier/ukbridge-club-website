@@ -1,5 +1,5 @@
 import CurrentTrickCard from '@/app/components/hand/board/CurrentTrickCard';
-import { Card, Direction } from 'shared/types';
+import { Card, Direction } from '@/app/components/hand/board/model';
 
 export default function CurrentTrickCards(props: {
   currentLeader: Direction;

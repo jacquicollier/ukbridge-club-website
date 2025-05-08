@@ -3,18 +3,17 @@
 // import BridgeBoard from '@/app/components/hand/board/BridgeBoard';
 import { useState } from 'react';
 // import BridgePlayPanel from '@/app/components/play/BridgePlayPanel';
-import { ContestantDirection } from 'shared/types';
 import BridgeDealHeader from '@/app/components/play/BridgeDealHeader';
-import { Board, BoardResult, ContestantId } from 'shared/constants';
+import { Board } from '@/app/club/[club]/results/sessions/[date]/[game]/[contestant]/model';
 // import { CardSource } from '@/app/components/hand/board/CardSource';
 // import { BridgePlay } from '@/app/components/hand/board/BridgePlay';
 // import BoardScores from '@/app/components/hand/board/BoardScores';
 
 export default function BridgeDealPlay(props: {
   board: Board;
-  boardResult: BoardResult;
-  players: Map<ContestantDirection, string[]>;
-  contestant: ContestantId | null;
+  // boardResult: BoardResult;
+  // players: Map<ContestantDirection, string[]>;
+  // contestant: ContestantId | null;
   backgroundColor: string;
 }) {
   // const boardScores = props.board.results.map((it) => it.boardScore);
@@ -76,7 +75,7 @@ export default function BridgeDealPlay(props: {
     <div className='relative m-2 flex aspect-square w-full max-w-[450px] flex-col items-center'>
       <BridgeDealHeader
         board={props.board.boardNumber}
-        contestant={props.contestant}
+        // contestant={props.contestant}
         playItAgain={playItAgain}
         // boardScore={props.boardResult.boardScore}
         hasScores={false}

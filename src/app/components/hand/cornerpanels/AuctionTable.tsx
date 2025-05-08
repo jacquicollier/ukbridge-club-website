@@ -1,4 +1,4 @@
-import { Auction, Directions } from 'shared/constants';
+import { Auction, Directions } from '@/app/components/hand/board/model';
 
 export default function AuctionTable(props: { auction: Auction }) {
   // Determine the starting index based on the first bid position

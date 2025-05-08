@@ -1,5 +1,5 @@
-import { Card, Direction } from '../../../../../shared/types';
 import Hand from '@/app/components/hand/board/Hand';
+import { Card, Direction } from '@/app/components/hand/board/model';
 
 export default function Deal(props: {
   deal: { [key in Direction]: Card[] };

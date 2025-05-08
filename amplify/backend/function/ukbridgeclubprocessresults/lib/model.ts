@@ -1,4 +1,25 @@
-import { Direction } from './boards/model';
+export type Direction = 'N' | 'E' | 'S' | 'W';
+
+export type Rank =
+  | 'A'
+  | 'K'
+  | 'Q'
+  | 'J'
+  | 'T'
+  | '9'
+  | '8'
+  | '7'
+  | '6'
+  | '5'
+  | '4'
+  | '3'
+  | '2';
+export type Suit = 'S' | 'H' | 'D' | 'C';
+
+export type Card = {
+  rank: Rank;
+  suit: Suit;
+};
 
 export interface BaseLine {
   contract: string | null;
