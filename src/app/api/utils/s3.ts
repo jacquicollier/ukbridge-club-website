@@ -33,6 +33,7 @@ export async function listFolders<T = string>(
   });
 
   const response = await s3.send(command);
+
   const folders =
     response.CommonPrefixes?.map((prefix) => mapFn(prefix.Prefix!)) || [];
 
