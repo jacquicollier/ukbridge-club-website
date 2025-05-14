@@ -1,5 +1,6 @@
 import {
   Event,
+  MasterPointType,
   Participants,
   UsebioFile,
   UsebioSection,
@@ -43,20 +44,33 @@ function handlePairsEvent(event: Event): SessionScore[] {
 
     if (sections.length > 0) {
       return sections.flatMap((section) =>
-        handlePairsEventForSection(section, section.PARTICIPANTS),
+        handlePairsEventForSection(
+          section,
+          event.MASTER_POINT_TYPE,
+          section.PARTICIPANTS,
+        ),
       );
     }
-    return handlePairsEventForSection(null, event.SESSION.PARTICIPANTS!);
+    return handlePairsEventForSection(
+      null,
+      event.MASTER_POINT_TYPE,
+      event.SESSION.PARTICIPANTS!,
+    );
   }
 
   if (event.PARTICIPANTS) {
-    return handlePairsEventForSection(null, event.PARTICIPANTS);
+    return handlePairsEventForSection(
+      null,
+      event.MASTER_POINT_TYPE,
+      event.PARTICIPANTS,
+    );
   }
   return [];
 }
 
 function handlePairsEventForSection(
   section: UsebioSection | null,
+  masterpointType: MasterPointType | undefined,
   participants: Participants,
 ): SessionScore[] {
   if (participants.$?.EVENT_TYPE === 'CROSS_IMP') {
@@ -65,9 +79,18 @@ function handlePairsEventForSection(
         type: 'PAIR_IMP',
         ...(section?.$?.SECTION_ID ? { section: section?.$?.SECTION_ID } : {}),
         lines: participants.PAIR!.map((pair) => {
+          let mpType = undefined;
+          if (pair.MASTER_POINTS?.MASTER_POINTS_AWARDED) {
+            if (masterpointType) {
+              mpType = masterpointType;
+            } else {
+              mpType = pair.MASTER_POINTS?.MASTER_POINT_TYPE;
+            }
+          }
+
           return {
             masterPoints: pair.MASTER_POINTS?.MASTER_POINTS_AWARDED,
-            masterPointType: pair.MASTER_POINTS?.MASTER_POINT_TYPE,
+            masterPointType: mpType,
             contestant: pair.PAIR_NUMBER,
             position: pair.PLACE,
             imps: pair.TOTAL_SCORE,
@@ -81,9 +104,23 @@ function handlePairsEventForSection(
         type: 'PAIR_MP',
         ...(section?.$?.SECTION_ID ? { section: section?.$?.SECTION_ID } : {}),
         lines: participants.PAIR!.map((pair) => {
+          let mpType = undefined;
+          if (
+            pair.MASTER_POINTS?.MASTER_POINTS_AWARDED ||
+            pair.MASTER_POINTS_AWARDED
+          ) {
+            if (masterpointType) {
+              mpType = masterpointType;
+            } else {
+              mpType = pair.MASTER_POINTS?.MASTER_POINT_TYPE;
+            }
+          }
+
           return {
-            masterPoints: pair.MASTER_POINTS?.MASTER_POINTS_AWARDED,
-            masterPointType: pair.MASTER_POINTS?.MASTER_POINT_TYPE,
+            masterPoints:
+              pair.MASTER_POINTS?.MASTER_POINTS_AWARDED ??
+              pair.MASTER_POINTS_AWARDED,
+            masterPointType: mpType,
             contestant: pair.PAIR_NUMBER,
             position: pair.PLACE,
             percentage: pair.PERCENTAGE,

@@ -13,7 +13,7 @@ export async function GET(
 
   try {
     return NextResponse.json(
-      listFolders(`${club}.ukbridge.club`, 'results/', {
+      await listFolders(`${club}.ukbridge.club`, 'results/', {
         mapFn: (prefix: string) => prefix.split('/')[1],
         reverse: true,
       }),

@@ -17,6 +17,7 @@ export interface Event {
   WINNER_TYPE: number | null;
   PARTICIPANTS?: Participants;
   BOARD?: UsebioBoard[];
+  MASTER_POINT_TYPE?: MasterPointType;
   // SESSION: Session | Session[]
 }
 
@@ -70,6 +71,7 @@ export interface Pair {
   PLACE: string;
   PLAYER: Player[];
   MASTER_POINTS?: MasterPoints;
+  MASTER_POINTS_AWARDED?: number;
   TOTAL_SCORE?: number;
   BOARDS_PLAYED?: number;
   PAIR_IMPS?: number;
@@ -137,4 +139,4 @@ type MatchScoringMethod = 'VPS';
 type ScoringMethod = 'VP';
 type PairwiseScoringMethod = 'CROSS_IMPS';
 type Direction = 'North' | 'East' | 'South' | 'West';
-type MasterPointType = 'Green' | 'Blue' | 'Black';
+export type MasterPointType = 'Green' | 'Blue' | 'Black';
